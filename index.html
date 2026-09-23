@@ -385,11 +385,20 @@ a{color:inherit}
   /* It scrolls inside the page's own gutter rather than bleeding to the edges: a
      child that starts left of its parent's content box is counted by the browser as
      overflow, and the whole page picked up a sideways scrollbar because of it. */
-  .kpis{gap:7px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
-    -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 26px),transparent);
-    mask-image:linear-gradient(90deg,#000 calc(100% - 26px),transparent)}
-  .kpis::-webkit-scrollbar{display:none}
-  .kpi{flex:0 0 auto;min-width:0}
+  /* These five are the headline numbers: what you own, what is coming, what it is
+     worth. They used to be one nowrap row that scrolled sideways behind a fade. At
+     320px that shrank each tile to 53px, so "£3,596.76" had nowhere to go and the
+     value of the collection was the thing you could not read without discovering a
+     sideways scroll you had no reason to look for. A number you have to go hunting for
+     is not a headline.
+
+     Two columns on a phone, three on a large phone or small tablet. Five is odd, so the
+     last tile takes the full width rather than leaving a hole. Nothing scrolls, nothing
+     is clipped, and every figure is legible at arm's length. */
+  .kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;
+    flex-wrap:initial;overflow:visible;-webkit-mask-image:none;mask-image:none}
+  .kpis .kpi:last-child{grid-column:1 / -1}
+  .kpi{min-width:0}
   /* The explanation under the bar is worth reading once, not every time you open
      the page, so it starts at two lines and opens on a tap. */
   .plabel #ptext{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -887,13 +896,19 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
    filter/sort/view - and everything else moved into the drawer or a sheet. */
 @media(max-width:640px){
   .grid{grid-template-columns:repeat(auto-fill,minmax(152px,1fr));gap:10px}
-  .kpi{min-width:0;flex:1 1 74px;padding:8px 10px} .kpi b{font-size:17px}
+  .kpi{min-width:0;padding:10px 12px} .kpi b{font-size:18px}
   .c .t{font-size:12px}
   /* Stacked, the title must not grow: flex:1 in a column means grow DOWNWARDS, and
      it opened a 200px hole between the heading and the numbers. */
   .hero-top{flex-direction:column;align-items:stretch;gap:12px}
   .hero-id{flex:0 0 auto}
   .kpis{gap:6px}
+}
+/* Three across once there is room for them, which keeps the block short without
+   making any single figure cramped. */
+@media(min-width:481px) and (max-width:760px){
+  .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kpis .kpi:last-child{grid-column:auto}
 }
 @media(max-width:360px){
   /* minmax(0,...) rather than 1fr: a card's widest unbreakable pill was setting the
