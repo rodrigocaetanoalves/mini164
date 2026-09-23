@@ -195,8 +195,17 @@ a{color:inherit}
   width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .skipnav:focus{width:auto;height:auto;clip-path:none}
 
+/* The appbar spans the full width so its background and bottom border do, but its
+   CONTENTS have to line up with the content column below, and that column is a .wrap:
+   max-width 1560, centred, 16px gutters. The rail and the toolbar get this for free
+   because each holds a .wrap of its own. The appbar does not, so it reproduces the same
+   geometry here. The max() is the centring: while the column is narrower than 1560 the
+   gutter is a flat 16px, and once it is wider the extra space splits either side, the
+   way margin:0 auto would. Without this the wordmark sat 2px out at every width, and
+   flush against the drawer edge once the drawer pinned open, which is where it showed. */
 .appbar{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:12px;
-  padding:0 14px;height:56px;background:color-mix(in srgb,var(--bg) 86%,transparent);
+  padding:0 max(16px, calc((100% - 1560px) / 2 + 16px));
+  height:56px;background:color-mix(in srgb,var(--bg) 86%,transparent);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line)}
 .navbtn{width:40px;height:40px;flex:0 0 40px;border:1px solid var(--line);background:var(--card);
@@ -280,7 +289,11 @@ a{color:inherit}
   .drawer{width:272px;transform:none;visibility:visible;box-shadow:none;background:var(--bg)}
   .scrim{display:none}
   .navbtn{display:none}
-  .appbar,.railwrap,.toolbar{padding-left:0}
+  /* The rail and the toolbar each wrap their contents in a .wrap, which supplies the
+     gutter, so their own padding would double it. The appbar is not in this list: its
+     padding IS its gutter, and zeroing it is what pushed the wordmark against the
+     drawer. */
+  .railwrap,.toolbar{padding-left:0}
   .dr-scroll{padding-top:14px}
 }
 
