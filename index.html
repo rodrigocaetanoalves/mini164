@@ -629,7 +629,16 @@ input[type=search]:focus,select:focus{border-color:var(--acc)}
    own copy records. The fact that the manufacturer made one at all is this: a small
    diamond in the corner of the photo, the same discreet mark it was before, which says
    there is one out there to find. */
-.c .ph .chasedot{position:absolute;top:6px;right:7px;z-index:3;font-size:11px;line-height:1;
+/* Three marks, three corners. The ownership tick owns the top right of the card, so the
+   diamond cannot also live there: on any car that is both owned and had a chase made, and
+   there are plenty, the diamond sat on the tick. It was only ever visible on those cards,
+   which is why it survived so long.
+
+   Bottom right of the photograph instead. It keeps the diamond on the picture, where it
+   belongs, and away from the tick in both views. qa/badges.js measures the rectangles at
+   six widths rather than trusting these co-ordinates, because anything positioned into a
+   corner by hand collides with something eventually. */
+.c .ph .chasedot{position:absolute;bottom:6px;right:7px;z-index:3;font-size:11px;line-height:1;
   color:var(--gold,#d9a441);text-shadow:0 1px 3px rgba(0,0,0,.65);pointer-events:auto}
 .c.miss .ph img{filter:grayscale(1) contrast(.9) opacity(.5)}
 .c.miss .t{color:var(--tx2)}
@@ -677,7 +686,15 @@ input[type=search]:focus,select:focus{border-color:var(--acc)}
 .grid.list .c::after{border-radius:12px;box-shadow:3px 3px 0 -1px color-mix(in srgb,var(--bc,var(--acc)) 55%,transparent)}
 .grid.list .c::before{top:-4px;right:11px;width:8px;height:8px}
 .grid.list .c .ph{flex:0 0 74px;width:74px;aspect-ratio:1/1;margin:5px 0 5px 5px;border-radius:9px}
-.grid.list .c .scale{top:4px;left:4px;padding:2px 4px;font-size:9px}
+/* In list view the photograph is a 74px thumbnail carrying three marks: the ownership
+   tick, the chase diamond and the scale. The tick moves to the left here so it stays over
+   the picture rather than floating off across the text, which put it exactly on top of
+   the scale pill: "1:64" with a green tick sitting on it.
+
+   The scale moves to the opposite corner rather than being dropped. It is the least
+   surprising of the three, since everything here is 1:64, but taking a fact off the card
+   to solve a collision is the wrong trade, and there is a free corner. */
+.grid.list .c .scale{top:auto;bottom:4px;left:4px;padding:2px 4px;font-size:9px}
 .grid.list .c .meta{padding:9px 12px;justify-content:center}
 .grid.list .c .t{margin-top:3px;min-height:0;-webkit-line-clamp:2;font-size:13.5px}
 .grid.list .c .numrow{margin-top:6px}
