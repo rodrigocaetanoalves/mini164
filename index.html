@@ -562,9 +562,23 @@ input[type=search]:focus,select:focus{border-color:var(--acc)}
 @media(min-width:900px){ .grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:15px} }
 @media(min-width:1700px){ .grid{grid-template-columns:repeat(auto-fill,minmax(232px,1fr))} }
 
+/* Six hundred cards in the document is six hundred cards the browser lays out, paints
+   and composites on every scroll, and on a throttled phone that showed as a worst frame
+   of 86ms against a 34ms budget: visible stutter while flicking a catalogue of this
+   size, which is the single most common thing anybody does here.
+
+   content-visibility lets the browser skip all of that for a card that is nowhere near
+   the screen, and contain-intrinsic-size tells it how much room to leave so the
+   scrollbar does not jump about as cards come and go. The card still exists, is still
+   found by search, and is still reachable by keyboard; it is only the rendering that
+   waits until it is nearly needed. Anything off screen costs nothing. */
 .c{position:relative;background:var(--card);border:1px solid var(--line2);border-radius:14px;
   cursor:pointer;display:flex;flex-direction:column;
+  content-visibility:auto;contain-intrinsic-size:auto 330px;
   transition:transform .13s ease,border-color .13s ease,box-shadow .13s ease}
+/* In list view a row is much shorter than a card, and a wrong guess here is what makes
+   a scrollbar lurch. */
+.grid.list .c{contain-intrinsic-size:auto 108px}
 /* The offset shadow is the catalogue's colour. It is what makes a mixed list
    readable without a badge on every card. */
 .c::after{content:"";position:absolute;inset:0;border-radius:14px;pointer-events:none;
@@ -909,6 +923,33 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 @media(min-width:481px) and (max-width:760px){
   .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
   .kpis .kpi:last-child{grid-column:auto}
+}
+/* ---- THE DETAIL PANEL AS A SHEET ON A PHONE ------------------------------
+   On a desktop this is a dialog floating in the middle of the screen, which is right
+   there. On a phone the same thing became a 350px box with 2,163px of content inside it
+   and the Close button sitting in that content, so the moment you scrolled to read the
+   spec the way out went with it. You were left with the back gesture or a guess.
+
+   A phone gets a sheet instead: anchored to the bottom edge, full width, rounded only at
+   the top, rising to 92% of the visible height. That is the shape a phone user already
+   knows from every other application, and it puts the panel where the thumb is rather
+   than in the middle of the screen where it is not.
+
+   dvh rather than vh because Safari's address bar changes the viewport as you scroll,
+   and vh is measured against the tallest state, which is how a sheet ends up taller
+   than the screen it is on. The bottom padding clears the home indicator. */
+@media(max-width:760px){
+  .mask{place-items:end center;padding:0}
+  .modal{max-height:92dvh;border-radius:20px 20px 0 0;border-bottom:0;
+    padding-bottom:env(safe-area-inset-bottom,0px)}
+  /* A grab handle, so it reads as a sheet before you touch it. */
+  .modal .body{padding:18px 16px calc(22px + env(safe-area-inset-bottom,0px))}
+  /* The way out stays put. .modal is the scrolling box, so a sticky child pins itself to
+     its top edge and rides the content down instead of disappearing up it. */
+  .modal .close{position:sticky;top:6px;z-index:5;
+    background:color-mix(in srgb,var(--card) 92%,transparent);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    min-height:40px;padding-left:16px;padding-right:16px}
 }
 @media(max-width:360px){
   /* minmax(0,...) rather than 1fr: a card's widest unbreakable pill was setting the
@@ -1414,9 +1455,8 @@ function recount(){
   if(typeof paintBrands==="function") paintBrands();
   if(typeof fillMarques==="function") fillMarques();
   if(typeof paintNav==="function"){ paintNav(); paintDrawerCard(); paintHero();
-/* after the first paint, never before it */
-if(typeof requestIdleCallback==="function") requestIdleCallback(()=>loadPhotos(),{timeout:800});
-else setTimeout(loadPhotos,60); }
+/* Photographs start once the cars are actually on screen. See queuePhotos. */
+queuePhotos(); }
   const nch=DATA.filter(d=>inLine(d)&&copiesOf(d).some(c=>/chase/i.test(c.x||""))).length;
   const chip=$("#chaseonly");
   if(chip){ chip.textContent = nch ? `Chases only (${nch})` : "Chases only";
@@ -2589,11 +2629,49 @@ function render(){
     if(h) $("#kpis").innerHTML=h;
     else if(KPI_DEFAULT) $("#kpis").innerHTML=KPI_DEFAULT;
   }
-  $("#grid").innerHTML=current.slice(0,600).map(card).join("");
-  if(current.length>600){
-    $("#grid").insertAdjacentHTML("beforeend",
-      `<div style="grid-column:1/-1;text-align:center;padding:18px"><button class="chip" id="more">Show the remaining ${current.length-600}</button></div>`);
-    $("#more").onclick=()=>{ $("#grid").innerHTML=current.map(card).join(""); };
+  paintGrid(true);
+}
+
+/* How many cards to put in the document at once.
+
+   It was a flat 600, and "show the remaining" then put ALL of them in, which on the full
+   catalogue is 3,300 cards in one go. On a phone, throttled, six hundred alone was
+   costing a worst scroll frame of 86ms, and three thousand three hundred is not a thing
+   anybody should be able to ask for by accident.
+
+   A phone gets 150, which is still seventy-five rows of two before the button appears,
+   more than anyone scrolls in one sitting, and it renders in a quarter of the time. The
+   button now adds one more page rather than everything, so the cost of pressing it is
+   the same every time instead of growing with the catalogue. */
+function pageStep(){
+  try{ return window.matchMedia("(max-width:760px)").matches ? 150 : 600; }
+  catch(e){ return 600; }
+}
+let shownN = 0;
+function paintGrid(reset){
+  const step = pageStep(), g = $("#grid");
+  if(reset){
+    shownN = Math.min(current.length, step);
+    g.innerHTML = current.slice(0, shownN).map(card).join("");
+  }else{
+    /* Append rather than rebuild: the cards already on screen do not need making twice,
+       and not touching them is what keeps your place on the page when you ask for more. */
+    const from = shownN;
+    shownN = Math.min(current.length, shownN + step);
+    const w = document.getElementById("morewrap"); if(w) w.remove();
+    g.insertAdjacentHTML("beforeend", current.slice(from, shownN).map(card).join(""));
+  }
+  const old = document.getElementById("morewrap"); if(old) old.remove();
+  /* The cars are in the document; the photographs may now start. */
+  if(shownN > 0 && typeof queuePhotos === "function") queuePhotos();
+  const left = current.length - shownN;
+  if(left > 0){
+    const next = Math.min(left, step);
+    g.insertAdjacentHTML("beforeend",
+      `<div id="morewrap" style="grid-column:1/-1;text-align:center;padding:18px">` +
+      `<button class="chip" id="more">Show ${next} more` +
+      `<span style="opacity:.6;margin-left:8px">${left} still to come</span></button></div>`);
+    $("#more").onclick = () => paintGrid(false);
   }
 }
 
@@ -4286,6 +4364,29 @@ addEventListener("beforeunload", e => {
    after the first paint. The page is useful before they land: a card without its
    photo still has its number, its name and both of its buttons.
    ------------------------------------------------------------ */
+/* "After the first paint" used to be an 800ms deadline on an idle callback, which is a
+   guess, and on a throttled phone it is the wrong guess: the first paint took longer
+   than that, the deadline fired anyway, and parsing thirteen megabytes of JSON then
+   blocked the very render that would have put the cars on screen. The served build came
+   out SLOWER than the 34MB offline copy, which is how this was found.
+
+   So it waits for the paint itself rather than for a clock. Two frames after the grid
+   first has cards in it, the browser has certainly shown them, and only then does the
+   idle callback get queued, now with a deadline long enough that it means "when there is
+   a gap" rather than "in a moment, ready or not". */
+let photosQueued = false;
+function queuePhotos(){
+  if(photosQueued) return;
+  photosQueued = true;
+  const go = () => {
+    if(typeof requestIdleCallback === "function") requestIdleCallback(() => loadPhotos(), {timeout:6000});
+    else setTimeout(loadPhotos, 200);
+  };
+  if(typeof requestAnimationFrame === "function")
+    requestAnimationFrame(() => requestAnimationFrame(go));
+  else setTimeout(go, 100);
+}
+
 async function loadPhotos(){
   if(typeof PHOTO_PARTS==="undefined" || !PHOTO_PARTS.length) return;
   let got=0, failed=0;
