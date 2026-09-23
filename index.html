@@ -939,6 +939,33 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 .curpick{width:calc(100% - 22px);margin:0 11px;background:var(--bg2);border:1px solid var(--line);
   border-radius:9px;color:var(--tx);padding:8px 9px;font:500 13px/1 Inter,sans-serif}
 .curnote{margin:7px 11px 9px;font:400 10.5px/1.45 Inter,sans-serif;color:var(--tx3)}
+
+/* ---- TOUCH TARGETS ON A PHONE -------------------------------------------
+   Measured at 320, 375, 390 and 430 with qa/responsive.js: every control in the
+   chrome came out between 30 and 35px tall, against the 44px a thumb actually needs.
+   The card's own own/want buttons were already right, carrying a transparent 44px
+   ::before behind a 30px face, so they are left alone; this is the rest of the app
+   catching up with them.
+
+   Height only. Widths were already fine and stretching them would cost the rail its
+   density, which is the thing that makes browsing a thousand cars on a phone bearable. */
+@media(max-width:767px){
+  .brands button, .lines button{min-height:44px;padding-top:0;padding-bottom:0;
+    display:inline-flex;align-items:center}
+  .tbtn, .skinbtn, .scanbtn, .iconbtn{min-height:44px}
+  .navbtn{min-width:44px;min-height:44px}
+  .heromore{min-height:44px;padding-left:12px;padding-right:12px}
+  /* "Show the remaining 677" is the single most-tapped control when browsing a
+     catalogue this size on a phone, and it was the shortest thing on the page. */
+  #more.chip{min-height:44px;display:inline-flex;align-items:center}
+  /* Searching while standing in a shop is the main mobile use, so the box it is typed
+     into should not be a pixel short of comfortable. */
+  #q{min-height:46px}
+  /* The skip link is for a screen reader and a keyboard, and it was being cut off in
+     its own box while invisible. It only needs to be legible when focused. */
+  .skipnav:focus{min-height:44px;display:inline-flex;align-items:center;width:auto;
+    white-space:nowrap;padding:0 14px}
+}
 </style>
 
 <a class="skipnav" href="#grid">Skip to the cars</a>
@@ -958,7 +985,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   <div class="wordmark">
     <!-- The page carries more than one maker now, and the name should not read as
          a Mini GT product. Mini GT is still the heart of it, hence 164. -->
-    <h1>Mini<span>164</span></h1><small>1:64 collection</small>
+    <h1>MINI<span>164</span></h1><small>1:64 collection</small>
   </div>
   <div class="appbar-r">
     <span class="chip" id="editmode" title="Turn on to change what you own">Edit</span>
@@ -1904,7 +1931,7 @@ function paintHero(){
   if(hero) hero.style.setProperty("--bc", brand==="__all"?"var(--acc)":brandColourName(brand));
   if(eb) eb.textContent = brand==="__all" ? "All catalogues" : brand;
   if(ti) ti.textContent = d.t;
-  document.title = (v==="all"?"Mini164":d.t+" · Mini164");
+  document.title = (v==="all"?"MINI164":d.t+" · MINI164");
 }
 
 /* ------------------------------------------------------------
@@ -2159,6 +2186,25 @@ function matchesQ(d){
     // the loose match only helps when you typed a prefix, e.g. mgt1250 finding
     // MGT01250-BL. On a bare number it would drag in every number containing it.
     if(pre && (d.n||"").toLowerCase().replace(/[^a-z0-9]/g,"").includes(ql.replace(/[^a-z0-9]/g,""))) return true;
+    /* Stopping here is right when a prefix was typed: MGT00050 means one number and
+       nothing else. On a BARE number it was wrong, and badly so. A collector types 911
+       meaning the Porsche, 488 meaning the Ferrari, 300 meaning the ZX, and every one
+       of those found nothing but the car whose catalogue number happened to be that.
+
+       Falling all the way through to the ordinary name search is the other extreme:
+       "50" as a substring is inside 1950, 250, 350Z and Countach 5000, which is 186
+       cars and no use to anybody. So a bare number matches the number, or the number
+       as a WHOLE WORD in the name. 911 finds the Porsches, 488 finds the Ferraris,
+       50 finds only a car actually called 50. */
+    if(pre) return false;
+    /* A letter may follow: 720 should find the 720S and 911 should find a 911R. A
+       digit may not, or 50 would drag in every 500 and 5000. */
+    /* Two digits at least. A single digit as a word is in half the catalogue, and
+       typing 7 means catalogue number 7, not every car with a 7 in its name. */
+    if(String(want).length < 2) return false;
+    const asWord = new RegExp("(^|[^0-9a-z])" + want + "(?![0-9])", "i");
+    if(asWord.test(d.t || "")) return true;
+    if(asWord.test(d.m || "")) return true;
     return false;
   }
   /* The shops do not all spell a Pop Race number the same way: the catalogue carries
@@ -2289,7 +2335,11 @@ function card(d,idx){
     const _low = d.sh.length ? Math.min(...d.sh.map(z=>z[1])) : null;
     const _hit = d.mx!=null && _low!=null && _low<=d.mx;
     pills.push(`<span class="pill p-want">${["","want","priority","grail"][d.w]}${d.mx?` ≤ ${gbp(d.mx)}`:""}</span>`);
+    /* Wanting a car used to hide its price, which is backwards: the want list is
+       exactly where the price matters most. The shop price shows either way, and the
+       ceiling only changes how it is worded. */
     if(_hit) pills.push(`<span class="pill p-buy">under your ceiling at ${gbp(_low)}</span>`);
+    else if(_low!=null) pills.push(`<span class="pill p-buy">buy ${gbp(_low)}</span>`);
   }
   else if(d.sh.length) pills.push(`<span class="pill p-buy">buy ${gbp(Math.min(...d.sh.map(z=>z[1])))}</span>`);
 
@@ -3396,7 +3446,7 @@ function fsPayload(){
   const owned = DATA.filter(d => d.o === 1).length;
   return JSON.stringify({
     savedAt: new Date().toISOString(),
-    note: "Written automatically by the Mini164 page. Keep it next to the HTML.",
+    note: "Written automatically by the MINI164 page. Keep it next to the HTML.",
     owned, edits: EDITS
   }, null, 1);
 }
@@ -3429,7 +3479,7 @@ async function fsPick(){
   try{
     const h = await window.showSaveFilePicker({
       suggestedName: "Mini164_collection.json",
-      types: [{description: "Mini164 collection data", accept: {"application/json": [".json"]}}]
+      types: [{description: "MINI164 collection data", accept: {"application/json": [".json"]}}]
     });
     FSH = h; await idbPut(h);
     await fsFlush();
@@ -4498,7 +4548,7 @@ const SCAN = (()=>{
 
 <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gatemark">
   <div class="gatebox">
-    <h1 class="gatemark" id="gatemark">Mini<em>164</em></h1>
+    <h1 class="gatemark" id="gatemark">MINI<em>164</em></h1>
     <p class="gatesub" id="gatesub">1:64 collection</p>
     <div class="gatecard">
       <div class="gatetabs" id="gatetabs" role="group" aria-label="Sign in or create an account">
