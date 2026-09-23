@@ -1,0 +1,9 @@
+# The photo files never change without changing their names, so they can be cached
+# hard. This is what keeps a second visit almost free, and what keeps the bandwidth
+# bill at nothing once a few friends are using it.
+/p/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# The page itself changes every time the catalogue is rebuilt, so it is always checked.
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
