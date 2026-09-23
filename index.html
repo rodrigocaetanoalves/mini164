@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MINI164</title>
+<meta name="description" content="A 1:64 diecast collection tracker: Mini GT, Tarmac Works, PARA64, Pop Race, XCarToys, Schuco and BBR.">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="color-scheme" content="dark light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- The webfont is a nicety, not a requirement: every rule falls back to a system
@@ -3478,7 +3489,7 @@ async function fsPick(){
   if(!fsSupported()){ alert("This browser cannot write files directly. Use Backup instead."); return; }
   try{
     const h = await window.showSaveFilePicker({
-      suggestedName: "Mini164_collection.json",
+      suggestedName: "MINI164_collection.json",
       types: [{description: "MINI164 collection data", accept: {"application/json": [".json"]}}]
     });
     FSH = h; await idbPut(h);
@@ -5263,6 +5274,9 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
 /* Last thing on the page: everything the boot needs is defined by now. */
 (function(){ if(AUTH) AUTH.boot(); })();
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
