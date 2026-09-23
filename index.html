@@ -4523,6 +4523,7 @@ const SCAN = (()=>{
       </form>
       <div class="gatefoot">
         <button type="button" class="linkbtn" id="gateforgot">Forgot your password?</button>
+        <button type="button" class="linkbtn" id="gateresend" hidden>Send the confirmation email again</button>
         <button type="button" class="linkbtn" id="gateback" hidden>Back to sign in</button>
       </div>
       <div class="gatemsg" id="gatemsg" role="status" aria-live="polite"></div>
@@ -4611,16 +4612,30 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     const t = await r.text();
     return t ? JSON.parse(t) : null;
   }
+  /* The prose of these errors changes between releases and is not always in English, but
+     the machine code beside it is stable. Carrying the code along means friendly() can
+     recognise a failure by what it IS rather than by how it happens to be worded, and
+     anything it does not recognise has the code stripped off again before a person sees
+     it. The rate limiter arrived as "For security purposes, you can only request this
+     after 60 seconds", which no pattern matching on the word "rate" would ever catch. */
   async function errText(r){
     try{
       const j = await r.json();
-      return j.message || j.error_description || j.msg || j.error || ("HTTP " + r.status);
+      const code = j.error_code || j.code || "";
+      const msg = j.message || j.error_description || j.msg || j.error || ("HTTP " + r.status);
+      return code ? "[" + code + "] " + msg : msg;
     }catch(e){ return "HTTP " + r.status; }
   }
 
   /* ---------- account actions ---------- */
+  /* Where a confirmation or reset link should bring somebody back to: this page, wherever
+     it happens to be served from. Supabase checks it against the project's redirect allow
+     list and silently falls back to the Site URL if it is not there, so this has to be
+     right in both places. */
+  function backHere(){ return location.origin + location.pathname; }
+
   async function signUp(email, password, name){
-    const r = await fetch(A + "/signup", {
+    const r = await fetch(A + "/signup?redirect_to=" + encodeURIComponent(backHere()), {
       method:"POST", headers:{ "apikey":SUPA.key, "Content-Type":"application/json" },
       body: JSON.stringify({ email, password, data:{ display_name: name || null } }) });
     if(!r.ok) throw new Error(await errText(r));
@@ -4629,6 +4644,12 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
        a user. Saying so is kinder than a spinner that never resolves. */
     if(j && j.access_token){ saveSession(j); return { signedIn:true }; }
     return { signedIn:false, confirm:true };
+  }
+  async function resendConfirm(email){
+    const r = await fetch(A + "/resend?redirect_to=" + encodeURIComponent(backHere()), {
+      method:"POST", headers:{ "apikey":SUPA.key, "Content-Type":"application/json" },
+      body: JSON.stringify({ type:"signup", email }) });
+    if(!r.ok) throw new Error(await errText(r));
   }
   async function signIn(email, password){
     const r = await fetch(A + "/token?grant_type=password", {
@@ -4649,7 +4670,7 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
   async function sendReset(email){
     const r = await fetch(A + "/recover", {
       method:"POST", headers:{ "apikey":SUPA.key, "Content-Type":"application/json" },
-      body: JSON.stringify({ email, redirect_to: location.origin + location.pathname }) });
+      body: JSON.stringify({ email, redirect_to: backHere() }) });
     if(!r.ok) throw new Error(await errText(r));
   }
   async function setPassword(password){
@@ -4878,6 +4899,7 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     g("passhint").hidden = !(up || rs);
     g("gateforgot").hidden = rs || fg;
     g("gateback").hidden = !(rs || fg);
+    g("gateresend").hidden = true;
     g("g-pass").autocomplete = (up || rs) ? "new-password" : "current-password";
     g("g-email").closest(".fld").hidden = rs;
     txt(g("gatego"), up ? "Create account" : rs ? "Set new password" : fg ? "Email me a link" : "Sign in");
@@ -4901,6 +4923,18 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     };
     g("gateforgot").onclick = () => showGate("forgot");
     g("gateback").onclick  = () => showGate("in");
+    g("gateresend").onclick = async () => {
+      const email = g("g-email").value.trim();
+      if(!email) return say("Put your email address in the box first.");
+      const b = g("gateresend"); b.disabled = true;
+      try{
+        await resendConfirm(email);
+        say("Sent. Open the link in that email, and it will bring you back here signed in.",
+            "good");
+        b.hidden = true;
+      }catch(err){ say(friendly(err.message || String(err))); }
+      finally{ b.disabled = false; }
+    };
     g("gateform").onsubmit = async e => {
       e.preventDefault();
       const go = g("gatego");
@@ -4929,7 +4963,12 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
           toast("Password changed.");
         }
       }catch(err){
-        say(friendly(err.message || String(err)));
+        const raw = err.message || String(err);
+        say(friendly(raw));
+        /* An unconfirmed address is the one failure a person can fix from here, so the
+           way to fix it appears instead of being described. */
+        const rs = g("gateresend");
+        if(rs) rs.hidden = !/email.?not.?confirmed/i.test(raw);
       }finally{ go.disabled = false; }
     };
   }
@@ -4940,10 +4979,14 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     if(/email not confirmed/i.test(s))       return "Confirm your email address first: check your inbox for the link.";
     if(/already registered|already been registered/i.test(s)) return "There is already an account with that email. Sign in, or reset the password.";
     if(/password should be at least/i.test(s)) return "That password is too short.";
-    if(/rate limit|too many requests|over_email_send_rate/i.test(s))
+    if(/over_email_send_rate|email rate limit|only request this after/i.test(s))
+      return "The email service will not send another message just yet. It allows only a "
+           + "few an hour. Wait a few minutes, then use the resend link rather than "
+           + "signing up again.";
+    if(/rate limit|too many requests/i.test(s))
       return "Too many attempts just now. Wait a minute and try again.";
     if(/weak.?password|pwned/i.test(s)) return "That password has appeared in a known breach. Please choose another.";
-    return s;
+    return s.replace(/^\[[a-z0-9_]+\]\s*/i, "");
   }
 
   /* ---------- the account panel ---------- */
