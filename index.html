@@ -994,7 +994,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   .modal .close{position:sticky;top:6px;z-index:5;
     background:color-mix(in srgb,var(--card) 92%,transparent);
     backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-    min-height:40px;padding-left:16px;padding-right:16px}
+    min-height:44px;padding-left:16px;padding-right:16px}
 }
 @media(max-width:360px){
   /* minmax(0,...) rather than 1fr: a card's widest unbreakable pill was setting the
@@ -1080,6 +1080,17 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   .tbtn, .skinbtn, .scanbtn, .iconbtn{min-height:44px}
   .navbtn{min-width:44px;min-height:44px}
   .heromore{min-height:44px;padding-left:12px;padding-right:12px}
+  /* Grid or list is the most-pressed pair of buttons on a phone after the tick, and both
+     were 34x30 inside a padded shell. The shell keeps its shape; the buttons inside it
+     grow to something a thumb can actually land on. The painted face stays 40px so the
+     toolbar row does not grow; a transparent strip behind it carries the last 4px, the
+     same trick the card's own and want buttons already use. The shell is 2px of padding
+     either side of a 40px face, so 44px of hit area lands exactly inside it and cannot
+     reach a neighbouring control. */
+  .viewtog button{width:44px;height:40px;position:relative}
+  .viewtog button::before{content:"";position:absolute;left:0;width:44px;height:44px;
+    top:50%;transform:translateY(-50%)}
+  .viewtog{padding:2px}
   /* "Show the remaining 677" is the single most-tapped control when browsing a
      catalogue this size on a phone, and it was the shortest thing on the page. */
   #more.chip{min-height:44px;display:inline-flex;align-items:center}
