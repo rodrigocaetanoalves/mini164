@@ -569,8 +569,19 @@ a{color:inherit}
 .tabs{display:none}
 input[type=search],select{background:var(--card);border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:10px 12px;font:500 14px Inter,sans-serif;outline:none}
 input[type=search]:focus,select:focus{border-color:var(--acc)}
+/* The search box and the selects set outline:none as part of their look, and a bare
+   :focus-visible is a weaker selector than input[type=search], so a keyboard user
+   landing in the search box saw nothing at all. Same selector strength, stated after,
+   so the ring comes back for exactly those two. */
+input[type=search]:focus-visible,select:focus-visible,textarea:focus-visible,
+input[type=text]:focus-visible,input[type=number]:focus-visible,input[type=email]:focus-visible,
+input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font:600 12.5px Inter,sans-serif;color:var(--tx2);cursor:pointer;user-select:none}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font:600 12.5px Inter,sans-serif;color:var(--tx2);cursor:pointer;user-select:none;
+  /* These are real buttons now, so that a keyboard can reach them and a screen reader
+     is told they are pressed. A button brings its own font, alignment and line box, all
+     of which have to be put back to what the span looked like. */
+  line-height:1.35;text-align:center;-webkit-appearance:none;appearance:none;margin:0}
 .chip:hover{color:var(--tx);border-color:var(--line2)}
 .chip.on{border-color:var(--acc);color:var(--tx);box-shadow:inset 0 0 0 1px var(--acc);
   background:color-mix(in srgb,var(--acc) 14%,var(--card))}
@@ -1124,7 +1135,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
     <h1>MINI<span>164</span></h1><small>1:64 collection</small>
   </div>
   <div class="appbar-r">
-    <span class="chip" id="editmode" title="Turn on to change what you own">Edit</span>
+    <button type="button" class="chip" id="editmode" aria-pressed="false" title="Turn on to change what you own">Edit</button>
     <div class="skinwrap">
       <button class="skinbtn" id="skinbtn" aria-haspopup="true" aria-expanded="false" title="Colourway and currency">
         <span class="dot" id="skindot"></span><span id="skinname">Garage</span><span class="caret">&#9662;</span>
@@ -1255,12 +1266,12 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
     <select id="marque"></select>
     <p class="fl">Only show</p>
     <div class="chiprow">
-      <span class="chip" id="relonly">Released only</span>
-      <span class="chip chase-chip" id="chaseonly">Chases only</span>
-      <span class="chip" id="chaseexists" title="Models that had a chase version made">Chase exists</span>
-      <span class="chip" id="chasehunt" title="Cars on your shelf that had a chase made, where you have not recorded holding the chase. Mini GT chases are blind: the box looks identical and the only tell is a card inside, so this is the list worth checking against your shelf">Chase still to find</span>
-      <span class="chip" id="collabonly" title="Releases made with another maker, a retailer or an event">Collaborations</span>
-      <span class="chip" id="canctoggle" title="Numbers that were allocated and then cancelled">Cancelled</span>
+      <button type="button" class="chip" id="relonly" aria-pressed="false">Released only</button>
+      <button type="button" class="chip chase-chip" id="chaseonly" aria-pressed="false">Chases only</button>
+      <button type="button" class="chip" id="chaseexists" aria-pressed="false" title="Models that had a chase version made">Chase exists</button>
+      <button type="button" class="chip" id="chasehunt" aria-pressed="false" title="Cars on your shelf that had a chase made, where you have not recorded holding the chase. Mini GT chases are blind: the box looks identical and the only tell is a card inside, so this is the list worth checking against your shelf">Chase still to find</button>
+      <button type="button" class="chip" id="collabonly" aria-pressed="false" title="Releases made with another maker, a retailer or an event">Collaborations</button>
+      <button type="button" class="chip" id="canctoggle" aria-pressed="false" title="Numbers that were allocated and then cancelled">Cancelled</button>
     </div>
   </div>
   <div class="sheetfoot"><button class="btn sec" id="filterclear">Clear all filters</button></div>
@@ -3402,15 +3413,32 @@ $("#q").oninput=e=>{ q=e.target.value.trim(); document.getElementById("qclear").
 document.getElementById("qclear").onclick=()=>{ q=""; $("#q").value=""; document.getElementById("qclear").classList.remove("on"); $("#q").focus(); render(); };
 $("#marque").onchange=e=>{ marque=e.target.value; render(); };
 $("#sort").onchange=e=>{ sort=e.target.value; render(); };
-$("#relonly").onclick=e=>{ relOnly=!relOnly; e.target.classList.toggle("on",relOnly); render(); };
-$("#chaseonly").onclick=e=>{ chaseOnly=!chaseOnly; e.target.classList.toggle("on",chaseOnly); render(); };
-$("#canctoggle").onclick=e=>{ showCanc=!showCanc; e.target.classList.toggle("on",showCanc); recount(); render(); };
+$("#relonly").onclick=e=>{ relOnly=!relOnly; e.currentTarget.classList.toggle("on",relOnly); render(); };
+$("#chaseonly").onclick=e=>{ chaseOnly=!chaseOnly; e.currentTarget.classList.toggle("on",chaseOnly); render(); };
+$("#canctoggle").onclick=e=>{ showCanc=!showCanc; e.currentTarget.classList.toggle("on",showCanc); recount(); render(); };
 /* "Chase exists" filters to numbers the manufacturer made a chase variant of,
    whether or not you have one. It had a count and no handler, so it looked
    live and did nothing. */
-$("#chaseexists").onclick=e=>{ chaseMade=!chaseMade; e.target.classList.toggle("on",chaseMade); render(); };
-$("#chasehunt").onclick=e=>{ chaseHunt=!chaseHunt; e.target.classList.toggle("on",chaseHunt); render(); };
-$("#collabonly").onclick=e=>{ collabOnly=!collabOnly; e.target.classList.toggle("on",collabOnly); render(); };
+$("#chaseexists").onclick=e=>{ chaseMade=!chaseMade; e.currentTarget.classList.toggle("on",chaseMade); render(); };
+$("#chasehunt").onclick=e=>{ chaseHunt=!chaseHunt; e.currentTarget.classList.toggle("on",chaseHunt); render(); };
+$("#collabonly").onclick=e=>{ collabOnly=!collabOnly; e.currentTarget.classList.toggle("on",collabOnly); render(); };
+/* The seven filter chips are toggles, and every one of them is turned on and off from
+   several places: its own click, the "clear this filter" pill above the grid, and the
+   jump that opens a cancelled number. Writing aria-pressed at each of those sites would
+   mean remembering it at the next one too, so the class stays the single truth and this
+   mirrors it. A screen reader then hears "Chase still to find, pressed" instead of a
+   word with no state at all. */
+(function mirrorChipState(){
+  const ids = ["editmode","relonly","chaseonly","chaseexists","chasehunt",
+               "collabonly","canctoggle"];
+  const els = ids.map(i=>document.getElementById(i)).filter(Boolean);
+  const sync = el => { try{ el.setAttribute("aria-pressed", el.classList.contains("on") ? "true" : "false"); }catch(e){} };
+  els.forEach(sync);
+  if(typeof MutationObserver !== "function") return;
+  const mo = new MutationObserver(ms => { for(const m of ms) sync(m.target); });
+  els.forEach(el => mo.observe(el, {attributes:true, attributeFilter:["class"]}));
+})();
+
 /* ---------- colourways ----------
    Each skin is a set of CSS variables; picking one just sets data-skin on
    <html>. The swatches below are the accent, the owned colour and the page
