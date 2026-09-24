@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>MINI164</title>
 <meta name="description" content="A 1:64 diecast collection tracker: Mini GT, Tarmac Works, PARA64, Pop Race, XCarToys, Schuco and BBR.">
-<meta name="theme-color" content="#0b0b0d">
+<meta name="theme-color" content="#08080a">
 <meta name="color-scheme" content="dark light">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -34,20 +34,29 @@
    is just a new set of them. data-skin on <html> picks one,
    data-theme picks light or dark. Both are remembered.
    ============================================================ */
-/* Garage - the original, pushed harder */
+/* Garage - black and red.
+   The greys are neutral rather than blue: a blue-grey surface under a red accent
+   reads cold and slightly cheap, and it was what made the old page look like a
+   dashboard rather than a display case. The blacks go deeper so a photographed car
+   sits on nothing at all, and one hot red does the work that an orange and an orange
+   highlight were sharing.
+   The semantic colours stay: green still means it is on your shelf, amber still means
+   it is coming, blue still means a shop has it today. Those are meanings, not
+   decoration, and recolouring them to match a mood would cost the page more than it
+   gained. */
 :root{
-  --bg:#0a0b0e; --bg2:#131419; --card:#16171d; --card2:#1d1f27;
-  --line:#282b34; --line2:#373b46;
-  --tx:#f2f4f8; --tx2:#a3aab8; --tx3:#727a88;
-  --acc:#ff5f14; --acc2:#ff8340; --own:#16e08a; --order:#ffb31f; --buy:#4d9bff;
+  --bg:#08080a; --bg2:#0f0f13; --card:#141418; --card2:#1c1c22;
+  --line:#26262e; --line2:#35353f;
+  --tx:#f6f6f8; --tx2:#a4a4af; --tx3:#71717d;
+  --acc:#ff3b30; --acc2:#ff7a72; --own:#1fd98a; --order:#ffa62e; --buy:#4d9bff;
   --gold:#ffcc17; --danger:#ff4d4d; --onacc:#fff;
   --r:14px;
 }
 :root[data-theme="light"]{
-  --bg:#f5f6f9; --bg2:#ffffff; --card:#ffffff; --card2:#eff2f6;
-  --line:#dfe3ea; --line2:#c8cfda;
-  --tx:#0f1115; --tx2:#505a6b; --tx3:#7d8799;
-  --acc:#d94409; --acc2:#b53605; --own:#00875a; --order:#a35c00; --buy:#1558d6;
+  --bg:#f6f6f8; --bg2:#ffffff; --card:#ffffff; --card2:#f0f0f3;
+  --line:#e2e2e7; --line2:#cacad2;
+  --tx:#101012; --tx2:#55555f; --tx3:#7f7f8a;
+  --acc:#c8102e; --acc2:#9c0a23; --own:#00875a; --order:#a35c00; --buy:#1558d6;
   --gold:#8f6d00; --danger:#c31c1c;
 }
 
@@ -1471,6 +1480,17 @@ h2,h3{font-family:var(--display)}
   .hero-title{font-size:clamp(30px,9.5vw,44px)}
   .brands button{padding:10px 15px}
 }
+
+/* The drawer was ten outlined tiles in ten colours, one per destination, which on a
+   black page is ten competing accents in a column. The colour coding is useful and it
+   stays, but it moves to the mark inside the tile: the tile itself is now a plain
+   surface like everything else, so the eye reads a list first and a colour second.
+   Where you are standing is red, because that is the page's one accent. */
+.dr-item .ic{border-color:var(--line);background:var(--card)}
+.dr-item:hover .ic{border-color:var(--line2)}
+.dr-item.on .ic{border-color:color-mix(in srgb,var(--acc) 55%,transparent);
+  background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc)!important}
+.dr-item.on .ic svg{stroke:var(--acc)}
 </style>
 
 <a class="skipnav" href="#grid">Skip to the cars</a>
@@ -4049,7 +4069,7 @@ $("#noboxes").onclick=e=>{ noBoxes=!noBoxes; e.currentTarget.classList.toggle("o
    <html>. The swatches below are the accent, the owned colour and the page
    background, so the menu previews what you are choosing. */
 const SKINS=[
-  {id:"",         name:"Garage",   sw:["#ff5f14","#16e08a","#0a0b0e"], note:"orange and jade, the original"},
+  {id:"",         name:"Garage",   sw:["#ff3b30","#1fd98a","#08080a"], note:"black and red, the house colours"},
   {id:"amethyst", name:"Amethyst", sw:["#b14dff","#9bf03a","#08060f"], note:"purple and acid green"},
   {id:"nocturne", name:"Nocturne", sw:["#ffc61a","#2fd98a","#060708"], note:"charcoal and gold"},
   {id:"cobalt",   name:"Cobalt",   sw:["#1f7dff","#ffc800","#03081a"], note:"deep blue, gold and coral"},
@@ -5421,7 +5441,7 @@ const BADGE_TIERS = {
   signature: {name:"Signature", rank:5, a:"#ffb27a", b:"#b8390a", e:"#ffd7b8"}
 };
 const BADGE_ENAMEL = {
-  size:      {c:"#ff5f14", ink:"#ffffff"},
+  size:      {c:"#ff3b30", ink:"#ffffff"},
   garage:    {c:"#ffb31f", ink:"#1a1204"},
   range:     {c:"#4d9bff", ink:"#041226"},
   series:    {c:"#16e08a", ink:"#04291a"},
@@ -5498,8 +5518,12 @@ function badgeArt(def, st, size){
   const face = badgeFace(def);
   /* The band has to stay clear of the rim, and a four character figure needs more room
      than a one character one, so its width follows the figure rather than being fixed. */
-  const _bw = face ? (face.length >= 4 ? 32 : face.length === 3 ? 29 : 25) : 0;
-  const hex = def.cat === "honours";
+  const _bw = face ? (face.length >= 4 ? 30 : face.length === 3 ? 27 : 24) : 0;
+  /* The plate is a hexagon: a nut seen face on, which is the right object for a
+     workshop and the shape this started as. The four honours are the exception and
+     they are round, because they are the only badges nobody can earn and a different
+     silhouette says that across a room without a word. */
+  const hex = def.cat !== "honours";
 
   /* Unearned is the same object in the dark: same rim, same face, no light on it.
      It has to still look like a badge, or a wall of them reads as a wall of holes. */
@@ -5510,12 +5534,17 @@ function badgeArt(def, st, size){
   const enInk = earned ? en.ink : "#78838f";
   const gl   = earned ? "#ffffff" : "#7b8598";
 
+  /* A pointy-top hexagon, and a second one inset by the width of the rim. The dimple
+     at each corner is the head of a bolt holding the plate to its backing. */
   const shape = hex
-    ? '<polygon points="60,4 108,32 108,88 60,116 12,88 12,32"'
+    ? '<polygon points="60,3 109.3,31.5 109.3,88.5 60,117 10.7,88.5 10.7,31.5"'
     : '<circle cx="60" cy="60" r="56"';
   const shapeIn = hex
-    ? '<polygon points="60,13 100.2,36.5 100.2,83.5 60,107 19.8,83.5 19.8,36.5"'
+    ? '<polygon points="60,14 100.4,37.3 100.4,82.7 60,106 19.6,82.7 19.6,37.3"'
     : '<circle cx="60" cy="60" r="46.5"';
+  const dimples = hex
+    ? [[60,10.5],[102.6,35.2],[102.6,84.8],[60,109.5],[17.4,84.8],[17.4,35.2]]
+    : [];
 
   return '<svg class="bsvg" viewBox="0 0 120 120" width="' + (size||104) + '" height="' + (size||104) + '" '
    + 'role="img" aria-hidden="true" focusable="false">'
@@ -5543,16 +5572,18 @@ function badgeArt(def, st, size){
    + '<g clip-path="url(#' + id + 'c)">'
    +   '<polygon points="-6,92 126,26 126,52 -6,118" fill="url(#' + id + 's)"/>'
    + '</g>'
+   + dimples.map(pt => '<circle cx="' + pt[0] + '" cy="' + pt[1] + '" r="2.3" fill="'
+       + (earned ? "#0b0d11" : "#12151a") + '" opacity="0.8"/>').join("")
    + shapeIn + ' fill="none" stroke="#000000" stroke-opacity="0.45" stroke-width="1.4"/>'
    + (face
-      ? '<g transform="translate(46 17) scale(1.17)" fill="none" stroke="' + gl + '" '
+      ? '<g transform="translate(46 20) scale(1.17)" fill="none" stroke="' + gl + '" '
         + 'stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" '
         + 'opacity="' + (earned ? "0.95" : "0.5") + '">' + glyph + '</g>'
-        + '<rect x="' + (60 - _bw) + '" y="64" width="' + (_bw * 2) + '" height="25" rx="12.5" '
+        + '<rect x="' + (60 - _bw) + '" y="62" width="' + (_bw * 2) + '" height="24" rx="12" '
         + 'fill="' + enC + '"/>'
-        + '<rect x="' + (60 - _bw) + '" y="64" width="' + (_bw * 2) + '" height="25" rx="12.5" '
+        + '<rect x="' + (60 - _bw) + '" y="62" width="' + (_bw * 2) + '" height="24" rx="12" '
         + 'fill="none" stroke="#ffffff" stroke-opacity="' + (earned ? "0.32" : "0.1") + '" stroke-width="1"/>'
-        + '<text x="60" y="81.5" text-anchor="middle" fill="' + enInk + '" '
+        + '<text x="60" y="79" text-anchor="middle" fill="' + enInk + '" '
         + 'font-family="\'JetBrains Mono\', ui-monospace, monospace" font-size="17" '
         + 'font-weight="700" letter-spacing="-0.5">' + esc(face) + '</text>'
       : '<circle cx="60" cy="60" r="27" fill="' + enC + '" opacity="' + (earned ? "0.92" : "1") + '"/>'
