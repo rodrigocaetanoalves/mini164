@@ -1126,6 +1126,194 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   .skipnav:focus{min-height:44px;display:inline-flex;align-items:center;width:auto;
     white-space:nowrap;padding:0 14px}
 }
+
+/* =====================================================================
+   BADGES
+   The badge plate is metal on a recessed field, so the tier colours are
+   declared once here rather than inside the drawing code: the same SVG
+   then reads correctly on a light background, in the purple skin and in
+   high contrast, because it is asking the page what its own surfaces are.
+   ===================================================================== */
+:root{
+  --bd-field:#101218;      /* the recess behind a glyph */
+  --bd-track:rgba(255,255,255,.07);
+  --bd-off1:#2b3040;       /* an unearned plate: still a plate, just not metal */
+  --bd-off2:#1c2029;
+  --bd-off3:#3a4152;
+  --bd-off4:#7d879a;
+}
+:root[data-theme="light"]{
+  --bd-field:#eef1f6;
+  --bd-track:rgba(0,0,0,.08);
+  /* On white, a pale unearned plate and a chrome earned one were within a shade of
+     each other. The unearned one is pulled down and desaturated so the difference is
+     the material and not just the colour of the progress bar under it. */
+  --bd-off1:#bfc7d3; --bd-off2:#d8dee7; --bd-off3:#a4aebd; --bd-off4:#6d7787;
+}
+:root[data-theme="light"] .btile.b-earned{border-color:var(--line2);
+  box-shadow:inset 0 1px 0 #fff, 0 2px 6px rgba(15,17,21,.07)}
+#badges{max-width:100%}
+/* The hero's progress bar measures the catalogue selected on the rail. In the badges
+   room that is the wrong subject: the room is about the account, not about how much of
+   Mini GT is on the shelf. The bar is hidden here and nowhere else. */
+.hero.hero-account .prog,.hero.hero-account .plabel,
+.hero.hero-account .brandnote,.hero.hero-account #heromore{display:none}
+.bhead{padding:18px 20px;border:1px solid var(--line);border-radius:var(--r);
+  background:linear-gradient(160deg,var(--card2),var(--card) 62%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.bhead .sub{margin:0;max-width:74ch;color:var(--tx2);font-size:13.5px;line-height:1.6}
+.bprog{height:6px;border-radius:999px;background:var(--bd-track);overflow:hidden;margin:14px 0 0}
+.bprog>span{display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg,var(--own),var(--gold))}
+.bhead-r{display:flex;gap:10px;flex-wrap:wrap}
+.bkpi{min-width:92px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;
+  background:var(--bg2);text-align:left}
+.bkpi b{display:block;font:700 26px/1 'JetBrains Mono',ui-monospace,monospace;
+  font-variant-numeric:tabular-nums;letter-spacing:-.03em;color:var(--tx)}
+.bkpi i{display:block;margin-top:5px;font-style:normal;font-size:11px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--tx3)}
+.btiers{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.btchip{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border-radius:999px;
+  border:1px solid var(--line);background:var(--card);font-size:12px;color:var(--tx2)}
+.btchip b{color:var(--tx);font-variant-numeric:tabular-nums}
+.btchip i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.btchip.bt-steel i{background:linear-gradient(140deg,#8b95a6,#5a6473)}
+.btchip.bt-chrome i{background:linear-gradient(140deg,#dfe7f2,#94a3bb)}
+.btchip.bt-gold i{background:linear-gradient(140deg,#ffd875,#c8890f)}
+.btchip.bt-platinum i{background:linear-gradient(140deg,#9df0ff,#3f7fd6)}
+.btchip.bt-signature i{background:linear-gradient(140deg,#ff9a5a,#c2410c)}
+.bfilters{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 4px}
+.bfilters .chip b{margin-left:6px;color:var(--tx3);font-variant-numeric:tabular-nums}
+.bfilters .chip.on b{color:inherit}
+.bsec{margin:26px 0 0}
+.bsec h3{margin:0 0 4px;font-size:16px;letter-spacing:-.01em;display:flex;align-items:baseline;gap:10px}
+.bsec .bcount{font:600 11px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;
+  color:var(--tx3);font-variant-numeric:tabular-nums}
+.bsec .sub{margin:0 0 14px;color:var(--tx3);font-size:12.5px}
+.bnext{padding:18px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2)}
+.bgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.btile{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:14px;
+  border:1px solid var(--line);background:var(--card);position:relative;overflow:hidden}
+.btile::before{content:"";position:absolute;inset:0 0 auto;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.10),transparent)}
+.btile.b-earned{background:linear-gradient(155deg,var(--card2),var(--card) 70%);border-color:var(--line2)}
+.btile.b-locked{opacity:.72}
+.bart{flex:0 0 auto;line-height:0}
+.bart .bsvg{display:block}
+.bmeta{min-width:0;flex:1 1 auto}
+.bmeta b{display:block;font-size:14px;line-height:1.3;letter-spacing:-.01em;color:var(--tx)}
+.bmeta i{display:block;margin:4px 0 9px;font-style:normal;font-size:12px;line-height:1.5;color:var(--tx2)}
+.bbar{height:5px;border-radius:999px;background:var(--bd-track);overflow:hidden;margin:0 0 7px}
+.bbar>span{display:block;height:100%;border-radius:999px;background:var(--acc)}
+.btile.b-earned .bbar>span{background:var(--own)}
+.bnum{margin:0;font:600 11px/1.4 'JetBrains Mono',ui-monospace,monospace;color:var(--tx2);
+  font-variant-numeric:tabular-nums}
+.bwhen{margin:5px 0 0;font-size:11px;color:var(--tx3)}
+.btier{position:absolute;top:10px;right:12px;margin:0;font:700 9px/1 'JetBrains Mono',ui-monospace,monospace;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--tx3)}
+.btile.b-earned.bt-gold .btier{color:#c8890f}
+.btile.b-earned.bt-platinum .btier{color:#3f7fd6}
+.btile.b-earned.bt-signature .btier{color:var(--acc)}
+.bempty{margin:24px 0;color:var(--tx2)}
+.bfoot{margin:30px 0 0;padding:16px 18px;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--bg2);color:var(--tx3);font-size:12px;line-height:1.65;max-width:86ch}
+.bprofrow{display:flex;flex-wrap:wrap;gap:10px}
+.bprof{display:flex;flex-direction:column;align-items:center;gap:4px;width:64px;text-align:center}
+.bprof i{font-style:normal;font-size:9.5px;line-height:1.25;color:var(--tx3)}
+.dr-badge{display:flex;align-items:center;gap:8px;margin:2px 0 0;padding:9px 12px;
+  border:1px solid var(--line);border-radius:11px;background:var(--card);
+  font-size:12px;color:var(--tx2);width:100%;text-align:left;cursor:pointer}
+.dr-badge b{margin-left:auto;color:var(--tx);font-variant-numeric:tabular-nums}
+@media (max-width:767px){
+  .bhead{padding:18px 16px}
+  .bhead h2{font-size:22px}
+  .bgrid{grid-template-columns:1fr}
+  .bfilters .chip{min-height:44px}
+  .bkpi{min-width:0;flex:1 1 30%}
+}
+@media (prefers-reduced-motion:no-preference){
+  .btile{transition:border-color .16s ease, background .16s ease}
+}
+
+/* =====================================================================
+   SURFACE PASS
+   A flat card and a raised one read differently at a glance, and MINI164
+   was drawing everything on the same plane: the same fill, the same
+   hairline, nothing to say which surface is the object and which is the
+   table it sits on. What follows adds material and nothing else. No rule
+   here moves anything, changes a size or takes a feature away; each one
+   is a fill, a hairline highlight or a press state layered over what was
+   already there, and every one of them degrades to the old flat surface
+   if the browser does not understand it.
+   ===================================================================== */
+
+/* A single top hairline is what makes a dark surface read as lit from above.
+   It is drawn with an inset shadow rather than a border so it costs no layout. */
+.kpi,.panel,.dr-card,.bnext,.bfoot{
+  background-image:linear-gradient(168deg,color-mix(in srgb,var(--tx) 4%,transparent),transparent 58%);
+  box-shadow:inset 0 1px 0 color-mix(in srgb,var(--tx) 7%,transparent);
+}
+:root[data-theme="light"] .kpi,:root[data-theme="light"] .panel,
+:root[data-theme="light"] .dr-card,:root[data-theme="light"] .bnext,
+:root[data-theme="light"] .bfoot{
+  background-image:linear-gradient(168deg,color-mix(in srgb,var(--tx) 2%,transparent),transparent 58%);
+  box-shadow:inset 0 1px 0 #fff, 0 1px 2px rgba(15,17,21,.05);
+}
+
+/* Figures are the thing people came for, so they get the room to be read as
+   figures: tabular so columns line up, tighter so a five digit number does not
+   sprawl, and a size that survives a glance from arm's length. */
+.kpi b{font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+@media(min-width:900px){ .kpi b{font-size:21px} }
+.row .n,.panel b.cnt,.count{font-variant-numeric:tabular-nums}
+
+/* Press feedback. A card that does not move under the thumb feels broken on a
+   phone, and every one of these is already an interactive element. */
+@media (prefers-reduced-motion:no-preference){
+  .c:active{transform:translateY(1px) scale(.995)}
+  .chip:active,.iconbtn:active,.tbtn:active,.dr-item:active,.brands button:active,
+  .lines button:active,.excg:active{transform:translateY(1px)}
+}
+.dr-item,.chip,.iconbtn,.tbtn{transition:transform .1s ease,border-color .15s ease,background .15s ease}
+
+/* The rails scroll sideways and had the browser's default bar sitting under the
+   buttons. Thin, dim and out of the way, but still there and still grabbable. */
+.brands,.lines,.excrow{scrollbar-width:thin;scrollbar-color:var(--line2) transparent}
+.brands::-webkit-scrollbar,.lines::-webkit-scrollbar,.excrow::-webkit-scrollbar{height:6px}
+.brands::-webkit-scrollbar-thumb,.lines::-webkit-scrollbar-thumb,
+.excrow::-webkit-scrollbar-thumb{background:var(--line2);border-radius:99px}
+.brands::-webkit-scrollbar-track,.lines::-webkit-scrollbar-track,
+.excrow::-webkit-scrollbar-track{background:transparent}
+
+/* Selected text was the browser's blue on a near black page. */
+::selection{background:color-mix(in srgb,var(--acc) 38%,transparent);color:var(--tx)}
+
+/* The badge announcement. Its own corner, its own slot, so it never rubs out the
+   status toast the way a shared one did. */
+.bcheer{position:fixed;right:18px;bottom:18px;z-index:70;display:flex;align-items:center;gap:12px;
+  padding:12px 14px;border-radius:16px;border:1px solid var(--line2);
+  background:linear-gradient(155deg,var(--card2),var(--card) 70%);
+  box-shadow:0 18px 40px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08);
+  max-width:min(360px,calc(100vw - 36px));
+  opacity:0;transform:translateY(12px);pointer-events:none;
+  transition:opacity .25s ease,transform .25s ease}
+.bcheer.on{opacity:1;transform:none;pointer-events:auto}
+.bcheer-art{line-height:0;flex:0 0 auto}
+.bcheer-tx{min-width:0}
+.bcheer-tx i{display:block;font-style:normal;font:700 9px/1 'JetBrains Mono',ui-monospace,monospace;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--tx3)}
+.bcheer-tx b{display:block;margin-top:5px;font-size:14px;line-height:1.3;color:var(--tx)}
+.bcheer-go{margin-left:auto;flex:0 0 auto;min-height:36px;padding:0 12px;border-radius:10px;
+  border:1px solid var(--line2);background:var(--bg2);color:var(--tx);font:600 12px/1 inherit;cursor:pointer}
+.bcheer-x{position:absolute;top:4px;right:6px;width:26px;height:26px;border:0;background:none;
+  color:var(--tx3);font-size:16px;line-height:1;cursor:pointer;border-radius:8px}
+.bcheer-x:hover{color:var(--tx)}
+@media (max-width:767px){
+  .bcheer{left:12px;right:12px;bottom:calc(12px + var(--sab));max-width:none}
+  .bcheer-go{min-height:44px}
+  .bcheer-x{width:34px;height:34px}
+}
+@media (prefers-reduced-motion:reduce){ .bcheer{transition:none} }
 </style>
 
 <a class="skipnav" href="#grid">Skip to the cars</a>
@@ -1209,6 +1397,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
     <button data-v="exc">Exclusives</button>
     <button data-v="value">Value</button>
     <button data-v="stats">Progress</button>
+    <button data-v="badge">Badges</button>
   </div>
 </nav>
 
@@ -1321,6 +1510,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   <div class="grid" id="grid"></div>
   <div class="stats" id="stats" style="display:none"></div>
   <div id="value" style="display:none;padding:18px 0 60px"></div>
+  <section id="badges" style="display:none;padding:18px 0 60px" aria-label="Badges"></section>
   <div class="empty" id="empty" style="display:none">Nothing matches that.</div>
 </main>
 
@@ -1933,7 +2123,9 @@ const DEST=[
   {v:"dupe", t:"Duplicates", s:"Cars you hold twice", c:"var(--b-xcartoys)",
    i:'<rect x="4" y="4" width="12" height="12" rx="2"/><path d="M8 20h10a2 2 0 0 0 2-2V8"/>'},
   {v:"exc",  t:"Exclusives", s:"Where a car was sold", c:"var(--b-para64)",
-   i:'<path d="M12 3l2.5 5.5L20 9.5l-4 4 1 6-5-2.8L7 19.5l1-6-4-4 5.5-1z"/>'}
+   i:'<path d="M12 3l2.5 5.5L20 9.5l-4 4 1 6-5-2.8L7 19.5l1-6-4-4 5.5-1z"/>'},
+  {v:"badge",t:"Badges", s:"Milestones the collection has passed", c:"var(--gold)",
+   i:'<path d="M12 3.2l6.9 4v7.9l-6.9 4-6.9-4V7.2z"/><circle cx="12" cy="11.1" r="2.8"/>'}
 ];
 /* `view` is the truth; the tab strip is a mirror of it. Reading the DOM instead
    meant a view set in code and rendered correctly still drew the wrong empty
@@ -1964,6 +2156,9 @@ function destCounts(){
     if(d.o&&qtyOf(d)>1) c.dupe++;
     if(d.ex||d.bond) c.exc++;
   }
+  /* Badges are not rows, so they are not counted in the walk above: the number
+     comes off the ledger, which is already in memory. */
+  if(typeof badgeCount==="function"){ const n=badgeCount(); if(n) c.badge=n; }
   return c;
 }
 /* Painting the drawer costs a pass over the collection, so it is only done when
@@ -2088,6 +2283,23 @@ function destKpis(){
       ["","Cheapest all in", inStock.length?gbp(cheapest):"—", "buying every one of them at the lowest tracked price"]
     ]);
   }
+  /* The badges room answers about the whole account rather than the catalogue on
+     the rail, so its figures are deliberately unscoped. No money appears here:
+     a badge is a milestone, and what a shelf cost is nobody else's business. */
+  if(v==="badge" && typeof badgeState==="function"){
+    const st=badgeState(), got=st.list.filter(x=>x.earned);
+    const tier=t=>got.filter(x=>x.def.tier===t).length;
+    const near=st.list.filter(x=>!x.earned&&!x.def.manual&&x.pct>0).sort((a,b)=>b.pct-a.pct)[0];
+    return kpiHTML([
+      ["own","Earned", got.length.toLocaleString(), "badges you have reached"],
+      ["","On offer", st.list.length.toLocaleString(), "badges the engine knows about"],
+      ["","Gold and above", (tier("gold")+tier("platinum")+tier("signature")).toLocaleString()],
+      ["ord", near?("Closest · "+near.def.name):"Closest",
+        near?Math.round(near.pct*100)+"%":"—",
+        near?(near.value.toLocaleString()+" of "+near.target.toLocaleString()+" "+near.def.unit)
+            :"nothing in progress"]
+    ]);
+  }
   return null;
 }
 
@@ -2189,7 +2401,11 @@ function paintHero(){
   const eb=document.getElementById("heroEyebrow"), ti=document.getElementById("heroTitle");
   const hero=document.getElementById("hero");
   if(hero) hero.style.setProperty("--bc", brand==="__all"?"var(--acc)":brandColourName(brand));
-  if(eb) eb.textContent = brand==="__all" ? "All catalogues" : brand;
+  if(hero) hero.classList.toggle("hero-account", v==="badge");
+  /* The badges room is about the account rather than the catalogue on the rail,
+     so the eyebrow says so instead of naming a maker that has nothing to do with it. */
+  if(eb) eb.textContent = v==="badge" ? "Your milestones"
+                        : brand==="__all" ? "All catalogues" : brand;
   if(ti) ti.textContent = d.t;
   document.title = (v==="all"?"MINI164":d.t+" · MINI164");
 }
@@ -2462,7 +2678,13 @@ let _hayCache = new WeakMap();
    start-up, before that line has been reached, and a `let` read before its declaration
    throws: the page died on load with every card missing. */
 let _hayWarmed = false;
-function clearSearchCache(){ _hayCache = new WeakMap(); _hayWarmed = false; }
+function clearSearchCache(){ _hayCache = new WeakMap(); _hayWarmed = false;
+  /* The badge engine reads one context object built from the collection. Whatever
+     invalidates the search blob has changed the collection too, so the two go stale
+     at the same moment and the check is queued for an idle slice rather than run here. */
+  if(typeof clearBadgeCache==="function") clearBadgeCache();
+  if(typeof scheduleBadgeCheck==="function") scheduleBadgeCheck();
+}
 function _hayFor(d){
   let hay = _hayCache.get(d);
   if(hay === undefined){
@@ -2843,13 +3065,15 @@ function drawExcBar(){
 function render(){
   $("#stats").style.display = view==="stats"?"grid":"none";
   $("#value").style.display = view==="value"?"block":"none";
+  /* Additive: the badges room is its own surface, like stats and value. */
+  { const bx=document.getElementById("badges"); if(bx) bx.style.display = view==="badge"?"block":"none"; }
   /* Leave the display to CSS: the list mode is a flex column and an inline
      "grid" here quietly beat it, so the toggle changed nothing you could see. */
-  $("#grid").style.display  = (view==="stats"||view==="value")?"none":"";
+  $("#grid").style.display  = (view==="stats"||view==="value"||view==="badge")?"none":"";
   $("#excbar").style.display = view==="exc"?"block":"none";
   /* Filter, sort and the grid/list toggle have nothing to act on in front of a
      chart, so they step out of the way there rather than sit greyed out. */
-  const chartish = view==="stats"||view==="value";
+  const chartish = view==="stats"||view==="value"||view==="badge";
   const ctl=document.querySelector(".tb-ctl"); if(ctl) ctl.hidden=chartish;
   const af=document.getElementById("activef"); if(af) af.hidden=chartish;
   if(view!=="exc" && excGroup) excGroup="";     // a group must not follow you to another tab
@@ -2860,6 +3084,11 @@ function render(){
   current=subset();
   if(view==="stats"){ $("#empty").style.display="none"; $("#count").textContent=""; return drawStats(); }
   if(view==="value"){ $("#empty").style.display="none"; $("#count").textContent=""; return drawValue(); }
+  if(view==="badge"){ $("#empty").style.display="none"; $("#count").textContent="";
+    if(typeof drawBadges==="function") drawBadges();
+    if(typeof paintHero==="function") paintHero();
+    if(typeof destKpis==="function"){ const h=destKpis(); $("#kpis").innerHTML = h || KPI_DEFAULT || ""; }
+    return; }
   if(view==="exc") drawExcBar();
   /* On the duplicates view the useful number is how many spare copies you hold,
      not how many rows have one, so say both. */
@@ -3274,8 +3503,12 @@ function openCard(i){
      thing you want when three boxes are in transit: which order they are in. */
   if(d.ord){
     const o=d.ord, all=(typeof ORDERS!=="undefined"&&ORDERS[o.id])?ORDERS[o.id]:null;
+    /* A shop that gives you an order number gets it printed. eBay and Vinted give the
+       buyer no reference at all, so those purchases are grouped under a key of the
+       page's own making and it is never shown: printing an invented reference beside
+       the word "order" would read as a number the seller gave you. */
     rows.push([o.st==="received"?"Arrived in":"On the way in",
-      `<b>${esc(o.shop)} order #${esc(o.id)}</b> <span class='est'>placed ${fmtDate(o.date)}</span>`
+      `<b>${esc(o.shop)}${o.noref?" purchase":" order #"+esc(o.id)}</b> <span class='est'>placed ${fmtDate(o.date)}</span>`
       + (all?`<br><span class='est'>${all.lines.length} item${all.lines.length===1?"":"s"} in that order, ${gbp(all.total)} in all</span>`:"")
       + (o.st==="received"?"":`<br><span class='est'>counted as on the way, not as part of the collection, until you mark it arrived</span>`)]);
     if(o.pd!=null) rows.push(["Price on the order", gbp(o.pd)+(o.q>1?` <span class='est'>each, ${o.q} ordered</span>`:"")]);
@@ -3662,6 +3895,7 @@ const root=document.documentElement;
 function applySkin(id){
   if(id) root.dataset.skin=id; else root.removeAttribute("data-skin");
   try{localStorage.setItem("mgt-skin",id)}catch(_){}
+  if(typeof badgeAct==="function") badgeAct("skins", id||"garage");
   paintSkinUI();
 }
 function applyMode(m){
@@ -4368,7 +4602,8 @@ const CSV_COLS = [
   ["Bought from",   d => d.src && d.src !== "RRP" ? d.src : ""],
   /* The export has to carry the order too, or a spreadsheet cannot answer "what is
      still to come from that Modelmatic order". */
-  ["Order",         d => d.ord ? d.ord.shop + " #" + d.ord.id : ""],
+  ["Order",         d => d.ord ? (d.ord.noref ? d.ord.shop + " " + (d.ord.date || "")
+                                                : d.ord.shop + " #" + d.ord.id) : ""],
   ["Ordered on",    d => d.ord ? d.ord.date : ""],
   ["Est value",     d => valOf(d) ? valOf(d).toFixed(2) : ""],
   ["In stock at",   d => cheapestShop(d) ? cheapestShop(d)[0] : ""],
@@ -4845,6 +5080,8 @@ const SCAN = (()=>{
     if(!n){ miss(code); return; }
     const d=byNum.get(n);
     if(!d){ miss(code); return; }
+    /* A scan that found a car is the only kind worth counting. */
+    if(typeof badgeAct==="function") badgeAct("scans", 1);
     stop(); close();
     /* The scanner has to reach the whole shelf. Clearing the line was enough while
        there was one catalogue; with more than one, a Tarmac code scanned while Mini
@@ -4983,6 +5220,1025 @@ const SCAN = (()=>{
   $$("scantype").onkeydown=e=>{ if(e.key==="Enter") $$("scango").click(); };
   return {open:open_, close, lookup, hasDet};
 })();
+
+/* =====================================================================
+   BADGES
+   ---------------------------------------------------------------------
+   A badge here is not a picture. It is a rule with a number behind it:
+   a definition says what it takes, a function reads the collection and
+   says how far along you are, and the drawing is generated from that.
+   Nothing is hand-placed, nothing is awarded by hand except the four
+   honours at the bottom, and every figure on the page can be traced
+   back to a row you own.
+
+   Three promises the rest of the file keeps:
+     1. The engine reads ONE context object, built in a single pass over
+        the collection and cached. Rendering a badge never walks DATA.
+     2. A badge is earned when its own number crosses its own target.
+        There is no list of "who has what" anywhere; the ledger only
+        records WHEN something was first reached, so a badge cannot be
+        lost by deleting a car but also cannot be faked by adding one.
+     3. Where a historic date cannot be worked out from the receipts on
+        file, it is left empty and the page says so. It is never guessed.
+   ===================================================================== */
+
+const BADGE_TIERS = {
+  steel:     {name:"Steel",     rank:1, a:"#8b95a6", b:"#5a6473", e:"#aab3c1"},
+  chrome:    {name:"Chrome",    rank:2, a:"#dfe7f2", b:"#94a3bb", e:"#ffffff"},
+  gold:      {name:"Gold",      rank:3, a:"#ffd875", b:"#c8890f", e:"#ffe9ae"},
+  platinum:  {name:"Platinum",  rank:4, a:"#9df0ff", b:"#3f7fd6", e:"#d6f8ff"},
+  signature: {name:"Signature", rank:5, a:"#ff9a5a", b:"#c2410c", e:"#ffc79a"}
+};
+const BADGE_TIER_ORDER = ["steel","chrome","gold","platinum","signature"];
+
+/* Original artwork. The frame is a bolt plate: a hexagon with a dimple at each
+   corner and a recessed round field, which is a workshop object rather than
+   anything borrowed. Every glyph below is drawn here from plain geometry. */
+const BADGE_GLYPHS = {
+  car:'<path d="M4.2 14.9v-1.5l1.5-3.7a2.4 2.4 0 0 1 2.2-1.5h8.2a2.4 2.4 0 0 1 2.2 1.5l1.5 3.7v1.5"/><path d="M4.2 14.9h15.6"/><path d="M7.4 10.2h9.2"/><circle cx="8.1" cy="16.2" r="1.9"/><circle cx="15.9" cy="16.2" r="1.9"/>',
+  stack:'<rect x="3.2" y="5.4" width="12" height="4.2" rx="1.2"/><rect x="5.6" y="10.2" width="12" height="4.2" rx="1.2"/><rect x="8" y="15" width="12" height="4.2" rx="1.2"/>',
+  grid:'<rect x="4" y="4" width="6.6" height="6.6" rx="1.4"/><rect x="13.4" y="4" width="6.6" height="6.6" rx="1.4"/><rect x="4" y="13.4" width="6.6" height="6.6" rx="1.4"/><rect x="13.4" y="13.4" width="6.6" height="6.6" rx="1.4"/>',
+  ring:'<circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.4"/><path d="M12 3.8v3"/><path d="M12 17.2v3"/><path d="M3.8 12h3"/><path d="M17.2 12h3"/>',
+  nut:'<path d="M12 3.4l7.4 4.3v8.6L12 20.6 4.6 16.3V7.7z"/><circle cx="12" cy="12" r="3.3"/>',
+  key:'<circle cx="8" cy="8" r="3.6"/><path d="M10.6 10.6l8 8"/><path d="M15.4 15.4l2 2"/><path d="M17.6 13.2l2.2 2.2"/>',
+  spanner:'<path d="M15.6 4.4a4.6 4.6 0 0 0-5.9 5.9L4.4 15.6a1.9 1.9 0 0 0 0 2.7l1.3 1.3a1.9 1.9 0 0 0 2.7 0l5.3-5.3a4.6 4.6 0 0 0 5.9-5.9l-2.7 2.7-2.6-.7-.7-2.6z"/>',
+  globe:'<circle cx="12" cy="12" r="8.2"/><path d="M3.8 12h16.4"/><ellipse cx="12" cy="12" rx="3.6" ry="8.2"/>',
+  flag:'<path d="M6 20.4V4.2"/><path d="M6 5.2h10.6l-1.9 3.3 1.9 3.3H6z"/>',
+  crate:'<path d="M4 7.6l8-3.4 8 3.4v8.8l-8 3.4-8-3.4z"/><path d="M4 7.6l8 3.4 8-3.4"/><path d="M12 11v8.8"/>',
+  truck:'<path d="M2.8 7.4h9.6v8.4H2.8z"/><path d="M12.4 10.2h3.6l3.2 3v2.6h-6.8z"/><circle cx="7" cy="17.4" r="1.7"/><circle cx="16.4" cy="17.4" r="1.7"/>',
+  shop:'<path d="M4 9.4V19h16V9.4"/><path d="M3 9.4l1.6-4.2h14.8L21 9.4a2.4 2.4 0 0 1-4.2 1.5 2.4 2.4 0 0 1-4.3 0 2.4 2.4 0 0 1-4.3 0A2.4 2.4 0 0 1 3 9.4z"/>',
+  ladder:'<path d="M7.6 3.6v16.8"/><path d="M16.4 3.6v16.8"/><path d="M7.6 8h8.8"/><path d="M7.6 12h8.8"/><path d="M7.6 16h8.8"/>',
+  compass:'<circle cx="12" cy="12" r="8.2"/><path d="M15.2 8.8l-1.9 4.5-4.5 1.9 1.9-4.5z"/>',
+  route:'<rect x="2.8" y="7.6" width="9.4" height="8.8" rx="1.6"/><path d="M2.8 11.2h9.4"/><path d="M15.4 12h5.4"/><path d="M18 9.4L20.8 12 18 14.6"/>',
+  note:'<path d="M6 3.8h8.4L18.6 8v12.2H6z"/><path d="M14.2 3.8V8h4.4"/><path d="M8.8 12.6h6.6"/><path d="M8.8 16h4.4"/>',
+  barcode:'<path d="M4 5.4v13.2"/><path d="M7 5.4v13.2"/><path d="M9.6 5.4v13.2"/><path d="M13 5.4v13.2"/><path d="M15.4 5.4v13.2"/><path d="M18 5.4v13.2"/><path d="M20.4 5.4v13.2"/>',
+  seal:'<circle cx="12" cy="10" r="6"/><path d="M9.4 10.2l1.9 1.9 3.5-3.7"/><path d="M8.6 15.2l-1.2 5 4.6-2.2 4.6 2.2-1.2-5"/>',
+  quill:'<path d="M4.4 19.6c5.6-.6 9-3 11.4-6.4 2-2.8 2.6-6 2.6-9-3.6 1.2-7 2.6-9.6 5.2-2.2 2.2-3.4 5-4.4 10.2z"/><path d="M4.4 19.6l6.2-6.2"/>',
+  laurel:'<path d="M12 20.4c-4-1.6-6.2-5-6.2-9 0-3 1.2-5.6 2.6-7.4 1.4 2.2 2 4.6 2 7"/><path d="M12 20.4c4-1.6 6.2-5 6.2-9 0-3-1.2-5.6-2.6-7.4-1.4 2.2-2 4.6-2 7"/><path d="M12 13.6v6.8"/>',
+  anvil:'<path d="M3.6 8.6h9.8v1.2c0 1.5 1.4 2.3 3.3 2.3h3.7c-.8 2.6-3.2 4.3-6.2 4.3H9.2c-3.1 0-5.6-1.9-5.6-4.6z"/><path d="M9.6 16.4v1.6H6.2v2.2h11.6v-2.2h-3.4v-1.6"/>',
+  spark:'<path d="M12 3.2l2.2 6.6 6.6 2.2-6.6 2.2L12 20.8l-2.2-6.6L3.2 12l6.6-2.2z"/>',
+  shield:'<path d="M12 3.6l7 2.6v5.4c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6.2z"/>',
+  pin:'<path d="M12 21c4-4.4 6.2-7.6 6.2-10.6A6.2 6.2 0 0 0 5.8 10.4C5.8 13.4 8 16.6 12 21z"/><circle cx="12" cy="10.4" r="2.4"/>',
+  clock:'<circle cx="12" cy="12" r="8.2"/><path d="M12 7.2V12l3.2 2"/>',
+  heart2:'<path d="M12 19.6C6.6 16 4 13.2 4 10.2A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 8 2.2c0 3-2.6 5.8-8 9.4z"/>',
+  bookmark:'<path d="M6.4 3.8h11.2v16.4L12 16.4l-5.6 3.8z"/>',
+  gauge:'<path d="M3.8 17.4a8.2 8.2 0 1 1 16.4 0"/><path d="M12 17.4l4.4-5.6"/><circle cx="12" cy="17.4" r="1.3"/>'
+};
+
+var _bArtId = 0;
+/* One SVG, generated from the tier and how far along the badge is. An unearned
+   badge keeps its shape but loses its metal, so a wall of them still reads as a
+   wall of badges rather than a wall of grey boxes. */
+function badgeArt(def, st, size){
+  const t = BADGE_TIERS[def.tier] || BADGE_TIERS.steel;
+  const earned = st && st.earned;
+  const pct = st ? st.pct : 0;
+  const id = "bg" + (++_bArtId);
+  const hex = "48,3 86.9,25.5 86.9,70.5 48,93 9.1,70.5 9.1,25.5";
+  const inner = "48,13 78.2,30.5 78.2,65.5 48,83 17.8,65.5 17.8,30.5";
+  const dims = [[48,9],[81.9,28.5],[81.9,67.5],[48,87],[14.1,67.5],[14.1,28.5]];
+  const glyph = BADGE_GLYPHS[def.glyph] || BADGE_GLYPHS.car;
+  /* The ring is the progress figure drawn as a shape, so the tile says the same
+     thing twice: once in words under it, once here. A full ring means earned. */
+  const R = 44.6, C = 2 * Math.PI * R;
+  const dash = Math.max(0, Math.min(1, earned ? 1 : pct)) * C;
+  return '<svg class="bsvg" viewBox="0 0 96 96" width="' + (size||96) + '" height="' + (size||96) + '" '
+   + 'role="img" aria-hidden="true" focusable="false">'
+   + '<defs><linearGradient id="' + id + 'f" x1="0" y1="0" x2="0.35" y2="1">'
+   + '<stop offset="0" stop-color="' + (earned ? t.a : "var(--bd-off1)") + '"/>'
+   + '<stop offset="0.52" stop-color="' + (earned ? t.b : "var(--bd-off2)") + '"/>'
+   + '<stop offset="1" stop-color="' + (earned ? t.a : "var(--bd-off1)") + '"/></linearGradient>'
+   + '<linearGradient id="' + id + 'g" x1="0" y1="0" x2="0" y2="1">'
+   + '<stop offset="0" stop-color="#ffffff" stop-opacity="' + (earned ? "0.34" : "0.06") + '"/>'
+   + '<stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/></linearGradient></defs>'
+   + '<circle cx="48" cy="48" r="' + R + '" fill="none" stroke="var(--bd-track)" stroke-width="2.4"/>'
+   + (dash > 0.5 ? '<circle cx="48" cy="48" r="' + R + '" fill="none" stroke="' + (earned ? t.e : "var(--acc)") + '" '
+       + 'stroke-width="2.4" stroke-linecap="round" stroke-dasharray="' + dash.toFixed(1) + ' ' + C.toFixed(1) + '" '
+       + 'transform="rotate(-90 48 48)" opacity="' + (earned ? "0.9" : "0.85") + '"/>' : "")
+   + '<polygon points="' + hex + '" fill="url(#' + id + 'f)" stroke="' + (earned ? t.e : "var(--bd-off3)") + '" stroke-width="1.6" stroke-linejoin="round"/>'
+   + '<polygon points="' + hex + '" fill="url(#' + id + 'g)"/>'
+   + '<polygon points="' + inner + '" fill="var(--bd-field)" stroke="' + (earned ? t.b : "var(--bd-off3)") + '" stroke-width="1.2" stroke-linejoin="round" opacity="0.95"/>'
+   + dims.map(p => '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="2.1" fill="var(--bd-field)" opacity="' + (earned ? "0.75" : "0.5") + '"/>').join("")
+   + '<g transform="translate(24 24) scale(2)" fill="none" stroke="' + (earned ? t.e : "var(--bd-off4)") + '" '
+   + 'stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" opacity="' + (earned ? "1" : "0.55") + '">'
+   + glyph + '</g></svg>';
+}
+
+/* ---------------------------------------------------------------------
+   THE CONTEXT
+   One pass over the collection, cached until something in the collection
+   moves. Every badge reads this object and nothing else, so adding a
+   badge costs nothing at render time and adding a thousand rows to the
+   catalogue costs one walk rather than one walk per badge.
+   --------------------------------------------------------------------- */
+/* A line needs a back catalogue worth the name before finishing it means anything. */
+const BADGE_MIN_LINE = 12;
+/* var, not let: the badge module sits at the foot of the script and the cache is
+   cleared during boot by reindex(), which runs long before this line is reached.
+   A let binding is in its dead zone at that moment and the whole page died on it. */
+var _bctx = null, _bstate = null;
+function clearBadgeCache(){ _bctx = null; _bstate = null; }
+
+/* Things the collection cannot tell you: how often the scanner was used, which
+   rooms have been opened. Small counters, kept beside the other preferences. */
+const BADGE_ACT_KEY = "m164-acts";
+function badgeActs(){
+  try{ const o = JSON.parse(localStorage.getItem(BADGE_ACT_KEY) || "{}");
+       return (o && typeof o === "object") ? o : {}; }catch(e){ return {}; }
+}
+function badgeAct(key, value){
+  const o = badgeActs();
+  if(Array.isArray(o[key]) || value === undefined){
+    const set = new Set(Array.isArray(o[key]) ? o[key] : []);
+    if(value !== undefined) set.add(value);
+    o[key] = [...set];
+  } else if(typeof value === "string"){
+    const set = new Set(Array.isArray(o[key]) ? o[key] : []); set.add(value); o[key] = [...set];
+  } else {
+    o[key] = (typeof o[key] === "number" ? o[key] : 0) + (value || 1);
+  }
+  try{ localStorage.setItem(BADGE_ACT_KEY, JSON.stringify(o)); }catch(e){}
+  clearBadgeCache();
+  if(typeof scheduleBadgeCheck === "function") scheduleBadgeCheck();
+}
+/* Contributions are not read off this device. A submission only counts once
+   somebody has checked it and accepted it, which is a column on the server,
+   so this is filled in from there after sign-in and is empty otherwise.
+   Sending ten made-up cars therefore earns nothing at all. */
+var BADGE_EXTRA = { subsAccepted:0, reportsAccepted:0, loaded:false };
+
+/* The catalogue half of the context: how many of each maker, series and marque EXIST.
+   It is the expensive half, because it has to look at all sixteen thousand rows, and it
+   is also the half that never changes: buying a car does not add one to the catalogue.
+   So it is worked out once and kept, and only the ownership half is redone when the
+   collection moves. Without this split, every edit walked the whole catalogue again and
+   it showed up as a hitch on a throttled phone. */
+var _bcat = null;
+function badgeCatalogue(){
+  if(_bcat && _bcat.n === DATA.length) return _bcat;
+  const brandAll = new Map(), lineAll = new Map(), marqueAll = new Map();
+  const bump = (m,k) => m.set(k, (m.get(k)||0)+1);
+  for(let i=0;i<DATA.length;i++){
+    const d = DATA[i];
+    if(d.xc || d.k) continue;
+    const bs = brandsOf(d);
+    for(let j=0;j<bs.length;j++) bump(brandAll, bs[j]);
+    if(d.br) bump(lineAll, d.br);
+    if(d.m)  bump(marqueAll, d.m);
+  }
+  return _bcat = {n:DATA.length, brandAll, lineAll, marqueAll};
+}
+
+function badgeCtx(){
+  if(_bctx) return _bctx;
+  const cat = badgeCatalogue();
+  const c = {
+    owned:0, pieces:0, ordered:0, wanted:0, dupes:0, spares:0,
+    brandOwned:new Map(), brandAll:cat.brandAll,
+    lineOwned:new Map(), lineAll:cat.lineAll,
+    marqueOwned:new Map(), marqueAll:cat.marqueAll,
+    markets:new Set(), shops:new Set(), orders:new Set(),
+    withCond:0, withNote:0, withPaid:0, ceilings:0,
+    chases:0, customs:0, collabs:0, exclusives:0, bonds:0, sets:0,
+    dates:[], datedOwned:0,
+    rooms:0, scans:0, skins:0, exports:0
+  };
+  const bump = (m,k) => m.set(k, (m.get(k)||0)+1);
+  for(let i=0;i<DATA.length;i++){
+    const d = DATA[i];
+    if(d.xc || d.k) continue;                       // cancelled rows and set boxes are not cars
+    if(d.o === 2) c.ordered++;
+    if(d.w > 0 && !d.o) c.wanted++;
+    if(d.w > 0 && d.mx != null) c.ceilings++;
+    /* Everything past here is about a car on the shelf, and most rows are not, so the
+       loop leaves early rather than doing the work and throwing it away. */
+    if(d.o !== 1) continue;
+    c.owned++;
+    const q = qtyOf(d);
+    c.pieces += q;
+    if(q > 1){ c.dupes++; c.spares += q - 1; }
+    const bs = brandsOf(d);
+    for(const b of bs) bump(c.brandOwned, b);
+    if(d.br) bump(c.lineOwned, d.br);
+    if(d.m)  bump(c.marqueOwned, d.m);
+    if(d.ex && d.ex.c && d.ex.c !== "?") c.markets.add(d.ex.c);
+    if(d.ex) c.exclusives++;
+    if(d.bond) c.bonds++;
+    if(d.src && d.src !== "RRP") c.shops.add(String(d.src).trim().toLowerCase());
+    if(d.ord && d.ord.id) c.orders.add(d.ord.id);
+    if(d.c) c.withCond++;
+    if(d.note && String(d.note).trim()) c.withNote++;
+    if(paidOf(d) > 0) c.withPaid++;
+    if(d.chase) c.chases++;
+    if(d.user) c.customs++;
+    if(d.cb || d.collab) c.collabs++;
+    const dt = d.ord && d.ord.date;
+    if(/^\d{4}-\d{2}-\d{2}$/.test(dt || "")){ c.dates.push(dt); c.datedOwned++; }
+  }
+  c.dates.sort();
+  /* A date can only be put on a milestone if EVERY car counted towards it has a
+     receipt date. One missing date and the ordering is a guess, so the badge is
+     awarded with no date rather than with an invented one. */
+  c.datesComplete = c.owned > 0 && c.datedOwned === c.owned;
+  const acts = badgeActs();
+  c.scans   = typeof acts.scans === "number" ? acts.scans : 0;
+  c.exports = typeof acts.exports === "number" ? acts.exports : 0;
+  c.rooms   = Array.isArray(acts.rooms) ? acts.rooms.length : 0;
+  c.skins   = Array.isArray(acts.skins) ? acts.skins.length : 0;
+  c.brandsOwnedCount  = c.brandOwned.size;
+  c.linesOwnedCount   = c.lineOwned.size;
+  c.marquesOwnedCount = c.marqueOwned.size;
+  /* Series completion, worked out once. A line has to have a back catalogue worth
+     the name before finishing it means anything, so anything under a dozen rows is
+     left out of the "complete a series" badges entirely. */
+  c.lineDone = 0; c.lineBest = 0; c.lineHalf = 0; c.lineThreeQ = 0;
+  c.lines = [];
+  for(const [ln, all] of c.lineAll){
+    if(all < BADGE_MIN_LINE) continue;
+    const own = c.lineOwned.get(ln) || 0;
+    const pct = own / all;
+    c.lines.push({line:ln, own, all, pct});
+    if(pct >= 1) c.lineDone++;
+    if(pct >= 0.5) c.lineHalf++;
+    if(pct >= 0.75) c.lineThreeQ++;
+    if(pct > c.lineBest) c.lineBest = pct;
+  }
+  c.lines.sort((a,b) => b.pct - a.pct || b.all - a.all);
+  c.subsAccepted    = BADGE_EXTRA.subsAccepted || 0;
+  c.reportsAccepted = BADGE_EXTRA.reportsAccepted || 0;
+  return _bctx = c;
+}
+
+/* ---------------------------------------------------------------------
+   THE DEFINITIONS
+   A definition is a rule, not a picture: an id that never changes, the
+   number it takes, and a function that reads the context. The per-brand
+   and per-marque families are generated from the catalogue itself, so a
+   maker added tomorrow brings its own badges with it and nothing here
+   has to be edited.
+   --------------------------------------------------------------------- */
+const BADGE_CATS = [
+  {id:"size",      name:"The collection", blurb:"How many different cars are standing on the shelf."},
+  {id:"garage",    name:"The garage",     blurb:"Copies, orders and the counters you buy across."},
+  {id:"range",     name:"Range",          blurb:"How widely the collection reaches."},
+  {id:"series",    name:"Series",         blurb:"Finishing what a maker numbered."},
+  {id:"catalogue", name:"Catalogues",     blurb:"Depth inside one maker's own range."},
+  {id:"marque",    name:"Marques",        blurb:"The car makers themselves, not the model makers."},
+  {id:"craft",     name:"Record keeping", blurb:"Looking after the record as well as the cars."},
+  {id:"guild",     name:"Contribution",   blurb:"Catalogue work that somebody checked and accepted."},
+  {id:"honours",   name:"Honours",        blurb:"Given by hand. The engine never awards these."}
+];
+const BADGE_CAT_NAME = {};
+BADGE_CATS.forEach(c => BADGE_CAT_NAME[c.id] = c.name);
+
+function badgeSlug(s){
+  return String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"") || "x";
+}
+function badgeTierFor(step, steps){
+  const t = ["steel","chrome","gold","platinum"];
+  return t[Math.min(t.length-1, Math.round(step / Math.max(1, steps-1) * (t.length-1)))];
+}
+
+const BADGE_STATIC = [
+  /* ---- the collection ---- */
+  {id:"size-1",    cat:"size", tier:"steel",    glyph:"car", target:1,
+   name:"First off the line", blurb:"One car marked as yours.", unit:"cars owned",
+   value:c=>c.owned, dated:true},
+  {id:"size-10",   cat:"size", tier:"steel",    glyph:"car", target:10,
+   name:"Ten on the shelf", blurb:"Ten different cars in the collection.", unit:"cars owned",
+   value:c=>c.owned, dated:true},
+  {id:"size-25",   cat:"size", tier:"chrome",   glyph:"car", target:25,
+   name:"Quarter century", blurb:"Twenty-five different cars.", unit:"cars owned",
+   value:c=>c.owned, dated:true},
+  {id:"size-50",   cat:"size", tier:"chrome",   glyph:"car", target:50,
+   name:"Half hundred", blurb:"Fifty different cars.", unit:"cars owned",
+   value:c=>c.owned, dated:true},
+  {id:"size-100",  cat:"size", tier:"gold",     glyph:"grid", target:100,
+   name:"Century shelf", blurb:"A hundred different cars.", unit:"cars owned",
+   value:c=>c.owned, dated:true},
+  {id:"size-250",  cat:"size", tier:"gold",     glyph:"grid", target:250,
+   name:"Deep stock", blurb:"Two hundred and fifty different cars.", unit:"cars owned",
+   value:c=>c.owned, dated:true},
+  {id:"size-500",  cat:"size", tier:"platinum", glyph:"stack", target:500,
+   name:"Five hundred strong", blurb:"Five hundred different cars.", unit:"cars owned",
+   value:c=>c.owned, dated:true},
+  {id:"size-1000", cat:"size", tier:"platinum", glyph:"stack", target:1000,
+   name:"Four figures", blurb:"A thousand different cars.", unit:"cars owned",
+   value:c=>c.owned, dated:true},
+
+  /* ---- the garage ---- */
+  {id:"garage-pieces-100", cat:"garage", tier:"chrome", glyph:"crate", target:100,
+   name:"Hundred pieces", blurb:"A hundred models counted copy by copy, not row by row.",
+   unit:"pieces", value:c=>c.pieces},
+  {id:"garage-pieces-500", cat:"garage", tier:"platinum", glyph:"crate", target:500,
+   name:"Five hundred pieces", blurb:"Every copy of every car, five hundred of them.",
+   unit:"pieces", value:c=>c.pieces},
+  {id:"garage-dupe-1",  cat:"garage", tier:"steel", glyph:"stack", target:1,
+   name:"Spare copy", blurb:"A second copy of a car you already had.",
+   unit:"cars held more than once", value:c=>c.dupes},
+  {id:"garage-dupe-10", cat:"garage", tier:"gold", glyph:"stack", target:10,
+   name:"Ten spares", blurb:"Ten cars held more than once.",
+   unit:"cars held more than once", value:c=>c.dupes},
+  {id:"garage-order-1",  cat:"garage", tier:"steel", glyph:"truck", target:1,
+   name:"First order logged", blurb:"One purchase recorded against an order.",
+   unit:"orders on file", value:c=>c.orders.size},
+  {id:"garage-order-10", cat:"garage", tier:"chrome", glyph:"truck", target:10,
+   name:"Ten orders logged", blurb:"Ten separate orders on file.",
+   unit:"orders on file", value:c=>c.orders.size},
+  {id:"garage-order-50", cat:"garage", tier:"platinum", glyph:"truck", target:50,
+   name:"Fifty orders logged", blurb:"Fifty separate orders on file.",
+   unit:"orders on file", value:c=>c.orders.size},
+  {id:"garage-shop-3",  cat:"garage", tier:"steel", glyph:"shop", target:3,
+   name:"Three counters", blurb:"Cars bought from three different shops.",
+   unit:"shops on file", value:c=>c.shops.size},
+  {id:"garage-shop-8",  cat:"garage", tier:"gold", glyph:"shop", target:8,
+   name:"Eight counters", blurb:"Cars bought from eight different shops.",
+   unit:"shops on file", value:c=>c.shops.size},
+  {id:"garage-incoming-5", cat:"garage", tier:"chrome", glyph:"route", target:5,
+   name:"Five in transit", blurb:"Five cars on the way at the same time.",
+   unit:"cars on order", value:c=>c.ordered},
+
+  /* ---- range ---- */
+  {id:"range-cat-3",  cat:"range", tier:"steel", glyph:"grid", target:3,
+   name:"Three catalogues", blurb:"Cars from three different model makers.",
+   unit:"catalogues", value:c=>c.brandsOwnedCount},
+  {id:"range-cat-6",  cat:"range", tier:"chrome", glyph:"grid", target:6,
+   name:"Six catalogues", blurb:"Cars from six different model makers.",
+   unit:"catalogues", value:c=>c.brandsOwnedCount},
+  {id:"range-cat-10", cat:"range", tier:"platinum", glyph:"grid", target:10,
+   name:"Ten catalogues", blurb:"Cars from ten different model makers.",
+   unit:"catalogues", value:c=>c.brandsOwnedCount},
+  {id:"range-line-5",  cat:"range", tier:"steel", glyph:"ladder", target:5,
+   name:"Five series", blurb:"Cars from five different series.",
+   unit:"series", value:c=>c.linesOwnedCount},
+  {id:"range-line-15", cat:"range", tier:"gold", glyph:"ladder", target:15,
+   name:"Fifteen series", blurb:"Cars from fifteen different series.",
+   unit:"series", value:c=>c.linesOwnedCount},
+  {id:"range-marque-10", cat:"range", tier:"steel", glyph:"nut", target:10,
+   name:"Ten marques", blurb:"Ten different car makers represented.",
+   unit:"marques", value:c=>c.marquesOwnedCount},
+  {id:"range-marque-25", cat:"range", tier:"chrome", glyph:"nut", target:25,
+   name:"Twenty-five marques", blurb:"Twenty-five different car makers.",
+   unit:"marques", value:c=>c.marquesOwnedCount},
+  {id:"range-marque-50", cat:"range", tier:"platinum", glyph:"nut", target:50,
+   name:"Fifty marques", blurb:"Fifty different car makers.",
+   unit:"marques", value:c=>c.marquesOwnedCount},
+  {id:"range-market-3", cat:"range", tier:"chrome", glyph:"globe", target:3,
+   name:"Three markets", blurb:"Exclusives from three different markets.",
+   unit:"markets", value:c=>c.markets.size},
+  {id:"range-market-6", cat:"range", tier:"platinum", glyph:"globe", target:6,
+   name:"Six markets", blurb:"Exclusives from six different markets.",
+   unit:"markets", value:c=>c.markets.size},
+  {id:"range-exc-10", cat:"range", tier:"chrome", glyph:"pin", target:10,
+   name:"Ten exclusives", blurb:"Ten cars that were limited to one market or event.",
+   unit:"exclusives", value:c=>c.exclusives},
+  {id:"range-chase-1", cat:"range", tier:"gold", glyph:"spark", target:1,
+   name:"Found a chase", blurb:"A chase car in the collection.",
+   unit:"chase cars", value:c=>c.chases},
+  {id:"range-collab-5", cat:"range", tier:"chrome", glyph:"nut", target:5,
+   name:"Five collaborations", blurb:"Five releases made with another maker, a shop or an event.",
+   unit:"collaborations", value:c=>c.collabs},
+
+  /* ---- series ---- */
+  {id:"series-half-1", cat:"series", tier:"steel", glyph:"ring", target:50,
+   name:"Halfway through a series", blurb:"Half of one series on the shelf.",
+   unit:"% of your best series", value:c=>Math.floor(c.lineBest*100)},
+  {id:"series-3q-1", cat:"series", tier:"chrome", glyph:"ring", target:75,
+   name:"Three quarters", blurb:"Three quarters of one series on the shelf.",
+   unit:"% of your best series", value:c=>Math.floor(c.lineBest*100)},
+  {id:"series-done-1", cat:"series", tier:"gold", glyph:"seal", target:1,
+   name:"Series complete", blurb:"One series finished, every car on file.",
+   unit:"series finished", value:c=>c.lineDone},
+  {id:"series-done-3", cat:"series", tier:"platinum", glyph:"seal", target:3,
+   name:"Three series complete", blurb:"Three series finished.",
+   unit:"series finished", value:c=>c.lineDone},
+
+  /* ---- record keeping ---- */
+  {id:"craft-cond-10", cat:"craft", tier:"steel", glyph:"note", target:10,
+   name:"Condition noted", blurb:"Condition recorded on ten cars.",
+   unit:"cars with a condition", value:c=>c.withCond},
+  {id:"craft-cond-100", cat:"craft", tier:"gold", glyph:"note", target:100,
+   name:"Condition throughout", blurb:"Condition recorded on a hundred cars.",
+   unit:"cars with a condition", value:c=>c.withCond},
+  {id:"craft-paid-25", cat:"craft", tier:"steel", glyph:"bookmark", target:25,
+   name:"Receipts kept", blurb:"A purchase price on file for twenty-five cars.",
+   unit:"cars with a price on file", value:c=>c.withPaid},
+  {id:"craft-paid-150", cat:"craft", tier:"gold", glyph:"bookmark", target:150,
+   name:"Books in order", blurb:"A purchase price on file for a hundred and fifty cars.",
+   unit:"cars with a price on file", value:c=>c.withPaid},
+  {id:"craft-note-5", cat:"craft", tier:"steel", glyph:"quill", target:5,
+   name:"Margin notes", blurb:"A note of your own on five cars.",
+   unit:"cars with a note", value:c=>c.withNote},
+  {id:"craft-want-10", cat:"craft", tier:"steel", glyph:"heart2", target:10,
+   name:"A want list", blurb:"Ten cars on the want list.",
+   unit:"cars wanted", value:c=>c.wanted},
+  {id:"craft-ceiling-5", cat:"craft", tier:"chrome", glyph:"gauge", target:5,
+   name:"Ceilings set", blurb:"The most you will pay, set on five wanted cars.",
+   unit:"ceilings set", value:c=>c.ceilings},
+  {id:"craft-scan-1", cat:"craft", tier:"steel", glyph:"barcode", target:1,
+   name:"First scan", blurb:"A car found by the barcode on its blister.",
+   unit:"scans", value:c=>c.scans},
+  {id:"craft-scan-25", cat:"craft", tier:"chrome", glyph:"barcode", target:25,
+   name:"Scanner hand", blurb:"Twenty-five barcodes read.",
+   unit:"scans", value:c=>c.scans},
+  {id:"craft-rooms-8", cat:"craft", tier:"steel", glyph:"compass", target:8,
+   name:"Full tour", blurb:"Every room in the application opened at least once.",
+   unit:"rooms visited", value:c=>c.rooms},
+  {id:"craft-custom-1", cat:"craft", tier:"chrome", glyph:"spanner", target:1,
+   name:"Off catalogue", blurb:"A car added by hand that the catalogue did not have.",
+   unit:"cars you added", value:c=>c.customs},
+
+  /* ---- contribution: only what somebody checked and accepted ---- */
+  {id:"guild-sub-1", cat:"guild", tier:"steel", glyph:"quill", target:1,
+   name:"First find accepted", blurb:"A missing car you reported was checked and added.",
+   unit:"accepted submissions", value:c=>c.subsAccepted, needsAccount:true},
+  {id:"guild-sub-5", cat:"guild", tier:"chrome", glyph:"quill", target:5,
+   name:"Five finds accepted", blurb:"Five missing cars you reported were added.",
+   unit:"accepted submissions", value:c=>c.subsAccepted, needsAccount:true},
+  {id:"guild-sub-20", cat:"guild", tier:"platinum", glyph:"quill", target:20,
+   name:"Twenty finds accepted", blurb:"Twenty missing cars you reported were added.",
+   unit:"accepted submissions", value:c=>c.subsAccepted, needsAccount:true},
+  {id:"guild-fix-1", cat:"guild", tier:"steel", glyph:"seal", target:1,
+   name:"First correction accepted", blurb:"A mistake you reported was checked and fixed.",
+   unit:"accepted corrections", value:c=>c.reportsAccepted, needsAccount:true},
+  {id:"guild-fix-5", cat:"guild", tier:"gold", glyph:"seal", target:5,
+   name:"Five corrections accepted", blurb:"Five mistakes you reported were fixed.",
+   unit:"accepted corrections", value:c=>c.reportsAccepted, needsAccount:true},
+
+  /* ---- honours: manual only. value() is always 0, so the engine can never
+          award one of these however the collection grows. ---- */
+  {id:"honours-founder", cat:"honours", tier:"signature", glyph:"anvil", target:1,
+   name:"Founder", blurb:"Here before the application had a front door.",
+   unit:"", value:()=>0, manual:true},
+  {id:"honours-early", cat:"honours", tier:"signature", glyph:"laurel", target:1,
+   name:"Early collector", blurb:"One of the first accounts on MINI164.",
+   unit:"", value:()=>0, manual:true},
+  {id:"honours-tester", cat:"honours", tier:"signature", glyph:"shield", target:1,
+   name:"First tester", blurb:"Broke it early so nobody else had to.",
+   unit:"", value:()=>0, manual:true},
+  {id:"honours-curator", cat:"honours", tier:"signature", glyph:"key", target:1,
+   name:"Curator", blurb:"Sustained work on the shared catalogue.",
+   unit:"", value:()=>0, manual:true}
+];
+
+/* The two families that are generated rather than written out. Nothing below
+   names a maker: the catalogue is asked what it holds, so Bburago or Spark
+   arriving next month brings its own badges with it. */
+const BADGE_BRAND_STEPS  = [{n:5,t:"steel"},{n:25,t:"chrome"},{n:100,t:"gold"},{n:300,t:"platinum"}];
+const BADGE_MARQUE_STEPS = [{n:3,t:"steel"},{n:10,t:"chrome"},{n:25,t:"gold"},{n:60,t:"platinum"}];
+const BADGE_MARQUE_SHOWN = 10;   // unearned marque families kept on screen, biggest first
+
+function badgeDynamic(c){
+  const out = [];
+  for(const [b, all] of c.brandAll){
+    if(all < BADGE_BRAND_STEPS[0].n) continue;
+    for(const s of BADGE_BRAND_STEPS){
+      if(all < s.n) continue;
+      out.push({
+        id:"cat-" + badgeSlug(b) + "-" + s.n, cat:"catalogue", tier:s.t, glyph:"grid",
+        target:s.n, name:b + " · " + s.n,
+        blurb:s.n + " cars from the " + b + " catalogue, which has " + all.toLocaleString() + " on file.",
+        unit:b + " cars owned", group:b,
+        value:x => x.brandOwned.get(b) || 0
+      });
+    }
+  }
+  /* Marques are in the hundreds. Every marque you own something from gets its
+     family; the rest are represented by the largest few, so there is always
+     something to aim at without listing a wall of makers you have never bought. */
+  const owned = [], spare = [];
+  for(const [m, all] of c.marqueAll){
+    if(!m || m === "Other" || all < BADGE_MARQUE_STEPS[0].n) continue;
+    ((c.marqueOwned.get(m) || 0) > 0 ? owned : spare).push([m, all]);
+  }
+  spare.sort((a,b) => b[1] - a[1]);
+  const marques = owned.concat(spare.slice(0, BADGE_MARQUE_SHOWN));
+  for(const [m, all] of marques){
+    for(const s of BADGE_MARQUE_STEPS){
+      if(all < s.n) continue;
+      out.push({
+        id:"mq-" + badgeSlug(m) + "-" + s.n, cat:"marque", tier:s.t, glyph:"nut",
+        target:s.n, name:m + " · " + s.n,
+        blurb:s.n + " " + m + " models, out of " + all.toLocaleString() + " in the catalogue.",
+        unit:m + " owned", group:m,
+        value:x => x.marqueOwned.get(m) || 0
+      });
+    }
+  }
+  /* One completion badge per series you have actually started. A series you own
+     nothing from is not a goal yet, and listing forty of them would bury the ones
+     that are within reach. */
+  for(const L of c.lines){
+    if(!L.own) continue;
+    const t = L.all >= 200 ? "platinum" : L.all >= 75 ? "gold" : L.all >= 25 ? "chrome" : "steel";
+    out.push({
+      id:"ser-" + badgeSlug(L.line), cat:"series", tier:t, glyph:"seal",
+      target:L.all, name:L.line + " complete",
+      blurb:"Every one of the " + L.all.toLocaleString() + " " + L.line + " releases on file.",
+      unit:L.line + " cars owned", group:L.line,
+      value:x => x.lineOwned.get(L.line) || 0
+    });
+  }
+  return out;
+}
+
+/* ---------------------------------------------------------------------
+   THE STATE
+   Definitions in, progress out. Cached beside the context, so opening the
+   badges room twice costs one calculation and a redraw costs none.
+   --------------------------------------------------------------------- */
+function badgeState(){
+  if(_bstate) return _bstate;
+  const c = badgeCtx();
+  const defs = BADGE_STATIC.concat(badgeDynamic(c));
+  const by = {}, list = [];
+  for(const d of defs){
+    let v = 0;
+    try{ v = Math.max(0, Number(d.value(c)) || 0); }catch(e){ v = 0; }
+    const held = BADGES[d.id];
+    /* Manual honours are held or not held; there is no progress towards one. */
+    const earned = d.manual ? !!held : (v >= d.target);
+    const st = {def:d, value:v, target:d.target, earned:earned,
+                pct: d.target ? Math.min(1, v / d.target) : 0,
+                held: held || null};
+    by[d.id] = st; list.push(st);
+  }
+  return _bstate = {defs, by, list, ctx:c};
+}
+
+/* ---------------------------------------------------------------------
+   THE LEDGER
+   What is recorded is not "you have this badge" but "this was first
+   reached on this day". Two consequences, both deliberate: selling a car
+   does not take a badge away, and the date on a badge is a fact rather
+   than a re-derivation that would move every time the shelf changes.
+   --------------------------------------------------------------------- */
+const BADGE_KEY = "m164-badges";
+var BADGES = {};
+var BADGE_REMOTE = false;          // true once the server is the ledger, not this browser
+
+function loadBadgesLocal(){
+  try{
+    const o = JSON.parse(localStorage.getItem(BADGE_KEY) || "{}");
+    BADGES = (o && typeof o === "object") ? o : {};
+  }catch(e){ BADGES = {}; }
+  _bstate = null;
+}
+function saveBadgesLocal(){
+  if(BADGE_REMOTE) return;         // signed in, the server holds it
+  try{ localStorage.setItem(BADGE_KEY, JSON.stringify(BADGES)); }catch(e){}
+}
+/* The historic date, or nothing at all.
+   A milestone can only be dated when every car that counts towards it carries a
+   purchase date. One gap and the ordering is guesswork, so the badge is awarded
+   with no date and the page says the date is not on file. */
+function badgeDate(def, c){
+  if(!def.dated) return null;
+  if(c.dates.length < def.target) return null;
+  const d = c.dates[def.target - 1] || null;
+  if(!d) return null;
+  /* Exact only when every car on the shelf carries a purchase date. Otherwise the
+     honest statement is an upper bound and nothing more: on the day the Nth DATED
+     car was bought, at least N cars were owned, so the milestone had been passed by
+     then. It may have been passed earlier, and the page says "by" rather than
+     pretending to a day it cannot know. */
+  return c.datesComplete ? d : {by:d};
+}
+/* Called from the drawer's counts, which run during boot before the ledger has been
+   read, so it has to answer honestly rather than throw. */
+function badgeCount(){ return BADGES ? Object.keys(BADGES).length : 0; }
+
+var _badgeTimer = null;
+/* Nothing about badges is urgent, and the first pass is the only expensive one, so it
+   waits for the browser to have nothing better to do. It is also brought forward the
+   moment somebody could actually see a badge: opening the drawer, the room or the
+   account panel wakes it at once rather than showing a stale zero. */
+var BADGE_WOKEN = false;
+/* The first pass has two halves and they are done in two slices. The catalogue tally
+   is the long one, and doing both back to back put a single block of work in front of
+   the browser at a moment it might have been drawing. Splitting it halves the longest
+   thing the engine can ever do in one go. */
+function wakeBadges(now){
+  if(BADGE_WOKEN) return;
+  BADGE_WOKEN = true;
+  const finish = () => { try{ evaluateBadges({backfill: badgeCount() === 0}); }catch(e){} };
+  try{ badgeCatalogue(); }catch(e){}
+  if(now === true || typeof requestIdleCallback !== "function") finish();
+  else requestIdleCallback(finish, {timeout:1500});
+}
+function scheduleBadgeCheck(){
+  if(!BADGE_WOKEN) return;          // nothing to keep up to date until the first pass
+  clearTimeout(_badgeTimer);
+  _badgeTimer = setTimeout(() => {
+    const run = () => { try{ evaluateBadges(); }catch(e){} };
+    if(typeof requestIdleCallback === "function") requestIdleCallback(run, {timeout:2000});
+    else run();
+  }, 400);
+}
+
+/* Awarding is additive and one-way. It never removes, never re-dates and never
+   touches a badge that is already in the ledger. */
+function evaluateBadges(opts){
+  opts = opts || {};
+  /* The catch-up is a named event, not "the ledger happens to be empty". A brand new
+     account earning its very first badge is a live award and must be told so, not
+     filed as history it never had. */
+  const first = !!opts.backfill;
+  const s = badgeState();
+  const fresh = [];
+  for(const st of s.list){
+    if(st.def.manual) continue;               // honours are never engine-awarded
+    if(!st.earned) continue;
+    if(BADGES[st.def.id]) continue;
+    /* The catch-up run is marked as such. Everything it awards was already true
+       before the engine existed, so its timestamp says when the engine noticed and
+       not when the milestone was passed. Calling that an earned date would be the
+       one thing the brief forbids: inventing history. */
+    BADGES[st.def.id] = {t:st.def.tier, on:badgeDate(st.def, s.ctx),
+                         at:new Date().toISOString(), by:first ? "backfill" : "engine"};
+    fresh.push(st);
+  }
+  if(!fresh.length) return fresh;
+  _bstate = null;
+  saveBadgesLocal();
+  if(BADGE_REMOTE) fresh.forEach(st => pushBadgeRemote(st.def.id, BADGES[st.def.id]));
+  paintBadgeCount();
+  /* The very first run on an existing collection is the catch-up, and it is silent.
+     Announcing ninety badges at once would be noise, and worse, a toast fired during
+     boot lands on top of whatever the application was saying at the time: it covered
+     the arrivals message the moment a collection was restored. The drawer's own count
+     is how the catch-up announces itself. */
+  if(!opts.silent && !first) announceBadges(fresh);
+  if(view === "badge" && typeof drawBadges === "function") drawBadges();
+  return fresh;
+}
+/* A badge gets its own announcement rather than the status toast. The toast has one
+   slot and the last writer wins, so borrowing it meant a badge could rub out "your
+   collection was restored" at the moment somebody needed to read it. This sits in its
+   own corner, says nothing over anything, and goes away on its own. */
+function announceBadges(fresh){
+  let host = document.getElementById("bcheer");
+  if(!host){
+    host = document.createElement("div");
+    host.id = "bcheer"; host.className = "bcheer";
+    host.setAttribute("role", "status");
+    host.setAttribute("aria-live", "polite");
+    document.body.appendChild(host);
+  }
+  const st = fresh[0];
+  const more = fresh.length > 1 ? " and " + (fresh.length - 1) + " more" : "";
+  host.innerHTML = '<div class="bcheer-art">' + badgeArt(st.def, st, 54) + '</div>'
+    + '<div class="bcheer-tx"><i>Badge earned</i><b>' + esc(st.def.name) + esc(more) + '</b></div>'
+    + '<button type="button" class="bcheer-go" data-go="1">See it</button>'
+    + '<button type="button" class="bcheer-x" aria-label="Dismiss">\u00d7</button>';
+  host.classList.add("on");
+  clearTimeout(host._t);
+  host._t = setTimeout(() => host.classList.remove("on"), 7000);
+  host.onclick = e => {
+    if(e.target.closest("[data-go]")){ host.classList.remove("on"); if(typeof setView==="function") setView("badge"); }
+    else if(e.target.closest(".bcheer-x")) host.classList.remove("on");
+  };
+}
+
+
+/* ---------- the server ledger, when there is one ---------- */
+async function pushBadgeRemote(id, rec){
+  if(!BADGE_REMOTE || typeof AUTH !== "object" || !AUTH || !AUTH.me) return;
+  try{
+    await AUTH.rest("/user_badges?on_conflict=user_id,badge_id", {
+      method:"POST",
+      headers:{ "Prefer":"resolution=ignore-duplicates,return=minimal" },
+      body: JSON.stringify({ user_id: AUTH.me.id, badge_id: id, tier: rec.t || "",
+                             earned_on: (rec.on && typeof rec.on === "object") ? null : (rec.on || null),
+                             earned_by_on: (rec.on && typeof rec.on === "object") ? rec.on.by : null,
+                             awarded_by: (rec.by === "backfill" ? "backfill" : "engine") })
+    });
+  }catch(e){}
+}
+/* Sign-in swaps the ledger over. Whatever this browser had belonged to whoever
+   was using it before, exactly as the collection does, so it is not adopted. */
+async function badgeSignIn(){
+  if(typeof AUTH !== "object" || !AUTH || !AUTH.me) return;
+  BADGE_REMOTE = true;
+  BADGES = {};
+  try{
+    const rows = await AUTH.restJSON(
+      "/user_badges?select=badge_id,tier,earned_on,earned_by_on,awarded_by,created_at");
+    for(const r of (rows || [])){
+      BADGES[r.badge_id] = {t:r.tier || "",
+                            on: r.earned_on || (r.earned_by_on ? {by:r.earned_by_on} : null),
+                            at:r.created_at || "", by:r.awarded_by || "engine"};
+    }
+  }catch(e){}
+  await badgeLoadContributions();
+  const empty = badgeCount() === 0;
+  _bstate = null; _bctx = null;
+  paintBadgeCount();
+  /* Their first sign-in on an existing collection is a catch-up too: everything already
+     true is filed at once, dated where the receipts allow it and marked as history where
+     they do not. */
+  try{ evaluateBadges({backfill: empty}); }catch(e){}
+}
+function badgeSignOut(){
+  BADGE_REMOTE = false;
+  BADGES = {};
+  BADGE_EXTRA = { subsAccepted:0, reportsAccepted:0, loaded:false };
+  _bstate = null; _bctx = null;
+  paintBadgeCount();
+}
+/* A contribution counts when somebody has checked it, and that check lives in a
+   column on the server. Nothing here can be reached by sending more submissions. */
+async function badgeLoadContributions(){
+  if(typeof AUTH !== "object" || !AUTH || !AUTH.me) return;
+  const count = async (table) => {
+    try{
+      const r = await AUTH.rest("/" + table + "?select=id&status=eq.accepted", {
+        headers:{ "Prefer":"count=exact", "Range-Unit":"items", "Range":"0-0" } });
+      const cr = r.headers.get("content-range") || "";
+      const m = cr.match(/\/(\d+)$/);
+      if(m) return parseInt(m[1], 10) || 0;
+      const rows = await r.json();
+      return Array.isArray(rows) ? rows.length : 0;
+    }catch(e){ return 0; }
+  };
+  BADGE_EXTRA.subsAccepted    = await count("catalogue_submissions");
+  BADGE_EXTRA.reportsAccepted = await count("catalogue_reports");
+  BADGE_EXTRA.loaded = true;
+  _bctx = null; _bstate = null;
+}
+/* Honours are given by an admin against another account, so the write is an
+   ordinary insert made by somebody whose profile says admin. The engine has no
+   path to this function at all. */
+async function awardHonour(userId, badgeId, note){
+  if(typeof AUTH !== "object" || !AUTH || !AUTH.isAdmin) throw new Error("not an admin");
+  const def = BADGE_STATIC.find(d => d.id === badgeId && d.manual);
+  if(!def) throw new Error("that is not an honour");
+  const r = await AUTH.rest("/user_badges", {
+    method:"POST", headers:{ "Prefer":"return=minimal" },
+    body: JSON.stringify({ user_id:userId, badge_id:badgeId, tier:def.tier,
+                           earned_on:null, awarded_by:"admin",
+                           meta: note ? {note:String(note).slice(0,200)} : {} }) });
+  if(!r.ok) throw new Error(await r.text());
+}
+
+/* ---------------------------------------------------------------------
+   THE ROOM
+   --------------------------------------------------------------------- */
+var badgeFilter = "all";
+const BADGE_FILTERS = [["all","Everything"],["earned","Earned"],["close","In progress"],["locked","Not started"]];
+
+function badgeBucket(st){
+  if(st.earned) return "earned";
+  if(st.pct > 0) return "close";
+  return "locked";
+}
+function badgeWhen(st){
+  const h = st.held;
+  if(!h) return "";
+  if(h.by === "admin") return "Given by hand";
+  if(h.on && typeof h.on === "object" && h.on.by) return "Reached by " + fmtDate(h.on.by);
+  if(h.on) return "Reached " + fmtDate(h.on);
+  /* Awarded in the catch-up: it was already true, and nothing on file says when. */
+  if(h.by === "backfill") return "Already earned when badges arrived";
+  if(h.at){
+    const d = new Date(h.at);
+    if(!isNaN(d)) return "Earned " + fmtDate(d.toISOString().slice(0,10));
+  }
+  return "Date not on file";
+}
+function badgeNum(st){
+  if(st.def.manual) return st.earned ? "Awarded" : "Not awarded";
+  const v = Math.min(st.value, st.target);
+  return v.toLocaleString() + " of " + st.target.toLocaleString() + (st.def.unit ? " " + st.def.unit : "");
+}
+function badgeTile(st){
+  const d = st.def, b = badgeBucket(st);
+  const pc = Math.round(st.pct * 100);
+  const when = badgeWhen(st);
+  return '<article class="btile b-' + b + ' bt-' + d.tier + '" aria-label="' +
+    esc(d.name + ". " + (st.earned ? "Earned." : pc + " per cent of the way there.") + " " + badgeNum(st)) + '">'
+   + '<div class="bart">' + badgeArt(d, st, 82) + '</div>'
+   + '<div class="bmeta"><b>' + esc(d.name) + '</b>'
+   + '<i>' + esc(d.blurb) + '</i>'
+   + (d.manual
+      ? '<p class="bnum">' + esc(badgeNum(st)) + '</p>'
+      : '<div class="bbar" role="presentation"><span style="width:' + pc + '%"></span></div>'
+        + '<p class="bnum">' + esc(badgeNum(st)) + (st.earned ? '' : ' · ' + pc + '%') + '</p>')
+   + (when ? '<p class="bwhen">' + esc(when) + '</p>' : '')
+   + '<p class="btier">' + esc((BADGE_TIERS[d.tier]||{}).name || d.tier) + '</p>'
+   + '</div></article>';
+}
+
+function drawBadges(){
+  const host = document.getElementById("badges"); if(!host) return;
+  wakeBadges(true);          // somebody is looking at it, so finish the pass now
+  const s = badgeState();
+  const earned = s.list.filter(x => x.earned);
+  const byTier = {};
+  BADGE_TIER_ORDER.forEach(t => byTier[t] = 0);
+  earned.forEach(x => { byTier[x.def.tier] = (byTier[x.def.tier]||0) + 1; });
+  const pct = s.list.length ? Math.round(earned.length / s.list.length * 100) : 0;
+
+  /* Closest to done. The three you could realistically finish next, which is the
+     one question a wall of badges is bad at answering. */
+  const close = s.list.filter(x => !x.earned && !x.def.manual && x.pct > 0)
+                      .sort((a,b) => b.pct - a.pct).slice(0,3);
+
+  /* No title and no counters here. The hero directly above already carries both,
+     and printing them twice cost a phone a whole screen of scrolling before the
+     first badge came into view. */
+  let html = '<div class="bhead">'
+   + '<p class="sub">Every badge is a rule with a number behind it. Nothing is awarded by hand '
+   + 'except the honours at the foot of the page, and a badge you have earned stays earned '
+   + 'even if the car leaves the shelf.</p>'
+   + '<div class="btiers">' + BADGE_TIER_ORDER.map(t =>
+      '<span class="btchip bt-' + t + '"><i></i>' + esc(BADGE_TIERS[t].name) + ' <b>' + (byTier[t]||0) + '</b></span>'
+     ).join("") + '</div>'
+   + '<div class="bprog" role="img" aria-label="' + pct + ' per cent of the badges earned">'
+   + '<span style="width:' + pct + '%"></span></div>'
+   + '</div>';
+
+  if(close.length){
+    html += '<section class="bsec bnext"><h3>Closest to done</h3><div class="bgrid">'
+          + close.map(badgeTile).join("") + '</div></section>';
+  }
+
+  html += '<div class="bfilters" role="group" aria-label="Which badges to show">'
+        + BADGE_FILTERS.map(([k,l]) => {
+            const n = k === "all" ? s.list.length : s.list.filter(x => badgeBucket(x) === k).length;
+            return '<button type="button" class="chip' + (badgeFilter===k?" on":"") + '" data-bf="' + k + '" '
+                 + 'aria-pressed="' + (badgeFilter===k) + '">' + esc(l) + ' <b>' + n + '</b></button>';
+          }).join("") + '</div>';
+
+  let shown = 0;
+  for(const cat of BADGE_CATS){
+    let rows = s.list.filter(x => x.def.cat === cat.id);
+    if(badgeFilter !== "all") rows = rows.filter(x => badgeBucket(x) === badgeFilter);
+    if(!rows.length) continue;
+    /* Within a category: earned first, then whatever is nearest, so the top of each
+       block is always the part worth reading. */
+    rows.sort((a,b) => (b.earned - a.earned)
+      || (b.pct - a.pct)
+      || ((BADGE_TIERS[a.def.tier]||{}).rank - (BADGE_TIERS[b.def.tier]||{}).rank)
+      || a.def.target - b.def.target);
+    const got = rows.filter(x => x.earned).length;
+    shown += rows.length;
+    html += '<section class="bsec"><h3>' + esc(cat.name)
+          + ' <span class="bcount">' + got + ' of ' + rows.length + '</span></h3>'
+          + '<p class="sub">' + esc(cat.blurb) + '</p>'
+          + '<div class="bgrid">' + rows.map(badgeTile).join("") + '</div></section>';
+  }
+  if(!shown){
+    html += '<p class="bempty">Nothing in that group yet. Try Everything.</p>';
+  }
+
+  html += '<p class="bfoot">Badge progress is worked out from your own collection on this device and, '
+        + 'when you are signed in, from your own account. One person’s badges never touch another’s. '
+        + 'Contribution badges only count submissions that were checked and accepted, so sending in '
+        + 'more of them earns nothing on its own. Dates come from the purchase dates on your receipts; '
+        + 'where a date cannot be worked out from what is on file, the badge says so rather than '
+        + 'inventing one. No figure here is a price, and nothing on this page says what anything cost.</p>';
+
+  host.innerHTML = html;
+  const fb = host.querySelector(".bfilters");
+  if(fb) fb.onclick = e => {
+    const b = e.target.closest("[data-bf]"); if(!b) return;
+    badgeFilter = b.dataset.bf; drawBadges();
+  };
+}
+
+/* The earned count where it is useful: the drawer's list of rooms, and the
+   account sheet. Reading the ledger, not recalculating anything. */
+function paintBadgeCount(){
+  const n = badgeCount();
+  const el = document.getElementById("drbadgen");
+  if(el) el.textContent = n ? n.toLocaleString() : "";
+  if(typeof NAV_STALE !== "undefined") NAV_STALE = true;
+  if(typeof paintNav === "function" && typeof drawerVisible === "function" && drawerVisible()) paintNav(true);
+  paintBadgeProfile();
+}
+/* On the account sheet: how many, and the last few. No money, no car values, no
+   purchase prices - a profile is a thing you might one day show somebody. */
+function paintBadgeProfile(){
+  const host = document.getElementById("acctbadges"); if(!host) return;
+  wakeBadges(true);
+  const s = badgeState();
+  const earned = s.list.filter(x => x.earned);
+  if(!earned.length){
+    host.innerHTML = '<p class="hint" style="margin:0">No badges yet. They arrive on their own as '
+      + 'the collection grows.</p>';
+    return;
+  }
+  const recent = earned.slice().sort((a,b) => {
+    const A = (a.held && (a.held.on || a.held.at)) || "", B = (b.held && (b.held.on || b.held.at)) || "";
+    return B.localeCompare(A);
+  }).slice(0,6);
+  host.innerHTML = '<p class="hint" style="margin:0 0 10px">' + earned.length.toLocaleString()
+    + ' of ' + s.list.length.toLocaleString() + ' badges earned.</p>'
+    + '<div class="bprofrow">' + recent.map(st =>
+        '<span class="bprof" title="' + esc(st.def.name + " · " + badgeWhen(st)) + '">'
+        + badgeArt(st.def, st, 46) + '<i>' + esc(st.def.name) + '</i></span>').join("") + '</div>'
+    + '<button type="button" class="iconbtn" id="acctbadgego" style="margin-top:10px">Open badges</button>';
+  const go = document.getElementById("acctbadgego");
+  if(go) go.onclick = () => {
+    const m = document.getElementById("acctmask"); if(m) m.hidden = true;
+    if(typeof setView === "function") setView("badge");
+  };
+}
+
+/* ---------------------------------------------------------------------
+   WIRING
+   Everything below is additive: it listens to what the application already
+   does rather than changing it, so no existing behaviour depends on it and
+   turning the room off would leave the rest untouched.
+   --------------------------------------------------------------------- */
+(function badgeBoot(){
+  loadBadgesLocal();
+
+  /* Which rooms have been opened, for the tour badge. The existing handler runs
+     first and its result is passed straight back, so the tab strip behaves
+     exactly as it did. */
+  const tabs = document.getElementById("tabs");
+  if(tabs){
+    const orig = tabs.onclick;
+    tabs.onclick = function(e){
+      const out = orig ? orig.call(this, e) : undefined;
+      const b = e.target && e.target.closest ? e.target.closest("button") : null;
+      if(b && b.dataset && b.dataset.v) badgeAct("rooms", b.dataset.v);
+      return out;
+    };
+  }
+  const csv = document.getElementById("exportcsv");
+  if(csv) csv.addEventListener("click", () => badgeAct("exports", 1), {passive:true});
+
+  /* The first pass, when the browser is genuinely idle. No timeout is set on purpose:
+     a timeout forces the work into the middle of a slow first load, which is exactly
+     where it was costing a throttled phone a second and a half of the page appearing. */
+  if(typeof requestIdleCallback === "function") requestIdleCallback(() => wakeBadges());
+  else setTimeout(wakeBadges, 3000);
+
+  /* The three places a badge becomes visible. Each wakes the engine itself, so the
+     count is never stale by the time anybody reads it. */
+  const navbtn = document.getElementById("navbtn");
+  if(navbtn) navbtn.addEventListener("click", wakeBadges, {passive:true});
+  const acct = document.getElementById("acctbtn");
+  if(acct) acct.addEventListener("click", wakeBadges, {passive:true});
+  const tabsEl = document.getElementById("tabs");
+  if(tabsEl) tabsEl.addEventListener("click", e => {
+    const b = e.target && e.target.closest ? e.target.closest("button") : null;
+    if(b && b.dataset && b.dataset.v === "badge") wakeBadges();
+  }, true);
+})();
+
+/* ---------------------------------------------------------------------
+   GIVING AN HONOUR
+   The four honours are the only badges a person cannot earn. They are given,
+   and this is the giving. It appears for an admin and for nobody else, the
+   server refuses the write from anybody else regardless, and the engine has
+   no path to it: the honour definitions return zero forever.
+   --------------------------------------------------------------------- */
+async function paintBadgeAdmin(){
+  const host = document.getElementById("acctadmin"); if(!host) return;
+  if(typeof AUTH !== "object" || !AUTH || !AUTH.isAdmin){ host.innerHTML = ""; host.hidden = true; return; }
+  host.hidden = false;
+  const honours = BADGE_STATIC.filter(d => d.manual);
+  let people = [];
+  try{ people = await AUTH.restJSON("/profiles?select=id,display_name&order=created_at"); }catch(e){}
+  host.innerHTML =
+    '<p class="fl">Give an honour</p>'
+  + '<p class="hint" style="margin:0 0 8px">These four are the only badges that are not '
+  + 'earned. Everything else arrives on its own.</p>'
+  + '<div class="fld"><label for="hn-who">Account</label><select id="hn-who">'
+  + people.map(p => '<option value="' + esc(p.id) + '">'
+      + esc((p.display_name || "no name") + "  ·  " + String(p.id).slice(0,8)) + '</option>').join("")
+  + '</select></div>'
+  + '<div class="fld"><label for="hn-what">Honour</label><select id="hn-what">'
+  + honours.map(d => '<option value="' + esc(d.id) + '">' + esc(d.name) + '</option>').join("")
+  + '</select></div>'
+  + '<div class="fld"><label for="hn-note">Why, in a line (optional)</label>'
+  + '<input id="hn-note" type="text" maxlength="200"></div>'
+  + '<button type="button" class="gobtn" id="hn-go">Give it</button>'
+  + '<div class="gatemsg" id="hn-msg" role="status" aria-live="polite"></div>';
+  const msg = document.getElementById("hn-msg");
+  document.getElementById("hn-go").onclick = async () => {
+    const who = document.getElementById("hn-who").value;
+    const what = document.getElementById("hn-what").value;
+    const note = document.getElementById("hn-note").value;
+    msg.textContent = "Giving…"; msg.className = "gatemsg";
+    try{
+      await awardHonour(who, what, note);
+      msg.textContent = "Given. It appears the next time they open the application.";
+      msg.className = "gatemsg good";
+      if(AUTH.me && who === AUTH.me.id) await badgeSignIn();
+    }catch(e){
+      msg.textContent = /duplicate|unique/i.test(String(e.message)) 
+        ? "They already have that one."
+        : "Could not give it. " + String(e.message || "").slice(0,140);
+      msg.className = "gatemsg bad";
+    }
+  };
+}
+
 </script>
 <style>
 /* ---- accounts ----------------------------------------------------------
@@ -5210,6 +6466,10 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
   function signedOut(){
     saveSession(null); me = null; prof = null;
     try{ localStorage.removeItem(STORE_KEY); }catch(e){}
+    /* Badges belong to the account, not the browser. Dropping them here as well as
+       the collection keeps one person's milestones off the next person's screen even
+       in the moment before the reload lands. */
+    if(typeof badgeSignOut === "function") try{ badgeSignOut(); }catch(e){}
     location.reload();
   }
   async function sendReset(email){
@@ -5403,6 +6663,9 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     setSync("synced");
     markDirty(); recount(); render();
     paintAccount();
+    /* The badge ledger is per account and lives on the server, so it is swapped over
+       here rather than carried across from whoever used this browser last. */
+    if(typeof badgeSignIn === "function") badgeSignIn().catch(()=>{});
     if(typeof drawStats === "function" && view === "stats") drawStats();
   }
 
@@ -5556,6 +6819,8 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     }
     const dot = g("acctwho");
     if(dot) dot.textContent = (prof && prof.display_name) || (me && me.email) || "";
+    if(typeof paintBadgeProfile === "function") try{ paintBadgeProfile(); }catch(e){}
+    if(typeof paintBadgeAdmin === "function") try{ paintBadgeAdmin(); }catch(e){}
   }
 
   async function rename(name){
@@ -5600,6 +6865,9 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     <div class="fld"><label for="a-name">Shown only to you for now</label>
       <input id="a-name" type="text" maxlength="60" autocomplete="nickname"></div>
     <button type="button" class="gobtn" id="a-save">Save name</button>
+    <p class="fl">Your badges</p>
+    <div id="acctbadges"></div>
+    <div id="acctadmin" hidden></div>
     <p class="fl">Change your password</p>
     <div class="fld"><label for="a-pass">New password</label>
       <input id="a-pass" type="password" autocomplete="new-password" maxlength="200">
