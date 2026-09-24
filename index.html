@@ -811,7 +811,11 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
   border-radius:10px;padding:9px 10px;font:600 13px/1 inherit;cursor:pointer}
 .seg button.on{background:var(--own);border-color:var(--own);color:#08130d}
 .seg button.on[data-o="2"]{background:var(--order);border-color:var(--order);color:#1a1205}
-.seg button.on[data-o="0"]{background:var(--bg2);border-color:var(--bd);color:var(--tx3)}
+/* "Not mine" is a neutral state, so it does not get the green or the orange. It was
+   given a dimmer face than the two it sits beside, which made the CHOSEN option the
+   faintest thing in the row and read as disabled rather than as picked. It stays
+   neutral in colour and is now unmistakably the one that is on. */
+.seg button.on[data-o="0"]{background:var(--line);border-color:var(--tx3);color:var(--tx);font-weight:700}
 .tagrow{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 12px}
 /* one row per physical copy: its condition, what marks it out, what it cost */
 .copies{display:flex;flex-direction:column;gap:9px;margin:2px 0 12px}
@@ -2707,6 +2711,20 @@ function render(){
       : "none";
   } else {
     $("#count").textContent = current.length.toLocaleString()+" shown";
+    /* The Catalogue tile counts cars. This counts cards, and a set box is a card that
+       is not a car: it stays on the shelf and counts as nothing on its own, so the two
+       figures differ by however many boxes are in view. Side by side with no
+       explanation that reads as the page contradicting itself, so the count says why
+       when, and only when, they disagree. */
+    (function(){
+      const boxes = current.filter(d=>d.k).length;
+      const el = $("#count");
+      if(boxes) el.title = current.length.toLocaleString() + " cards on screen, "
+        + boxes + " of which " + (boxes===1?"is a set box that counts":"are set boxes that count")
+        + " as nothing on " + (boxes===1?"its":"their") + " own. The cars inside "
+        + (boxes===1?"it":"them") + " each count as one.";
+      else el.removeAttribute("title");
+    })();
   }
   $("#empty").style.display=current.length?"none":"block";
   if(!current.length) $("#empty").innerHTML=emptyState();
@@ -3242,10 +3260,18 @@ function wirePanel(d){
 
   let w=d.w||0;
   const paint=()=>{
-    [...g("segstatus").children].forEach(b=>b.classList.toggle("on", +b.dataset.o===o));
+    [...g("segstatus").children].forEach(b=>{
+      const on = +b.dataset.o===o;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");   // chosen out loud, not only in colour
+    });
     g("detail").style.display = o===1 ? "" : "none";
     const wb=g("wantbox"); if(wb) wb.style.display = o ? "none" : "";
-    const sw=g("segwant"); if(sw) [...sw.children].forEach(b=>b.classList.toggle("on", +b.dataset.w===w));
+    const sw=g("segwant"); if(sw) [...sw.children].forEach(b=>{
+      const on = +b.dataset.w===w;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
     g("copies").innerHTML = cps.map(copyRow).join("");
     const t={n:cps.length};
     g("p_sum").textContent = o===1
