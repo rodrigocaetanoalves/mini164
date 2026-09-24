@@ -1357,7 +1357,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 
 /* The profile block on the account sheet: who this collector is, in figures a
    collector cares about, then the badges they chose to show. */
-.pfigs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 12px}
+.pfigs{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:8px;margin:0 0 12px}
 .pfig{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}
 .pfig b{display:block;font:700 18px/1 'JetBrains Mono',ui-monospace,monospace;
   font-variant-numeric:tabular-nums;letter-spacing:-.03em;color:var(--tx)}
@@ -1531,6 +1531,107 @@ h2,h3{font-family:var(--display)}
    against yellow rather than amber. */
 :root:not([data-skin]) .seg button.on[data-o="2"]{color:#241c00}
 :root:not([data-skin]) .c.ord .tick{color:#241c00}
+
+/* =====================================================================
+   THE PROFILE
+   ===================================================================== */
+.av{display:inline-block;border-radius:50%;object-fit:cover;background:var(--card2);
+  box-shadow:0 0 0 1px var(--line2)}
+.av-txt{display:inline-flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:800;letter-spacing:-.02em;color:var(--onacc,#fff);
+  background:linear-gradient(150deg,var(--acc),color-mix(in srgb,var(--acc) 55%,#000))}
+
+/* the way in: the name at the top of the drawer is a button now, not a caption */
+.dr-me{display:flex;align-items:center;gap:11px;width:100%;text-align:left;cursor:pointer;
+  background:transparent;border:1px solid transparent;border-radius:14px;padding:8px 10px;
+  margin:0 0 12px;color:inherit;font:inherit}
+.dr-me:hover{background:var(--card);border-color:var(--line)}
+.dr-me .dr-av{flex:0 0 auto;line-height:0}
+.dr-me .dr-who{min-width:0;flex:1}
+.dr-me .dr-who b{display:block;font-size:14px;color:var(--tx);overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.dr-me .dr-who i{display:block;margin-top:3px;font-style:normal;
+  font:600 9.5px/1.3 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--tx3)}
+.dr-me-go{flex:0 0 auto;font-size:19px;line-height:1;color:var(--tx3)}
+
+.pfhead{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:20px;
+  border:1px solid var(--line);border-radius:var(--r-card,16px);
+  background:linear-gradient(160deg,var(--card2),var(--card) 62%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);margin-bottom:16px}
+.pfav{line-height:0;flex:0 0 auto}
+.pfid{min-width:0;flex:1 1 200px}
+.pfid b{display:block;font-size:15px;font-weight:650;line-height:1.3;color:var(--tx)}
+.pfid i{display:block;margin-top:6px;font-style:normal;font-size:12.5px;color:var(--tx3)}
+.pfhead .iconbtn{margin-left:auto;flex:0 0 auto}
+
+.pfsec{margin:30px 0 0}
+.pfsec h3{margin:0 0 14px;font-family:var(--display);font-size:19px;font-weight:700;
+  letter-spacing:-.02em;display:flex;align-items:baseline;gap:10px}
+.pfcount{font:600 11px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;
+  color:var(--tx3);font-variant-numeric:tabular-nums}
+.pfnote{margin:12px 0 0;font-size:12px;color:var(--tx3)}
+.pfsec .iconbtn{margin-top:14px}
+
+.pfbadges{display:flex;gap:18px;flex-wrap:wrap}
+.pfbadge{display:flex;flex-direction:column;align-items:center;gap:8px;width:106px;
+  background:none;border:0;cursor:pointer;color:inherit;font:inherit;padding:0;text-align:center}
+.pfbadge b{font-size:11.5px;line-height:1.3;font-weight:650;color:var(--tx2)}
+.pfbadge:hover b{color:var(--tx)}
+
+.pfbars{display:flex;flex-direction:column;gap:8px}
+.pfbar{display:flex;align-items:center;gap:12px;width:100%;padding:10px 14px;cursor:pointer;
+  border:1px solid var(--line);border-radius:12px;background:var(--card);color:inherit;
+  font:inherit;text-align:left}
+.pfbar:hover{border-color:var(--line2)}
+.pfbar-l{flex:0 0 116px;font-size:13px;font-weight:600;color:var(--tx);overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.pfbar-t{flex:1 1 auto;height:6px;border-radius:999px;background:var(--bd-track);overflow:hidden}
+.pfbar-t i{display:block;height:100%;border-radius:999px;background:var(--own)}
+.pfbar-n{flex:0 0 auto;font:600 11.5px/1 'JetBrains Mono',ui-monospace,monospace;
+  color:var(--tx);font-variant-numeric:tabular-nums}
+.pfbar-n em{font-style:normal;color:var(--tx3)}
+
+.pfchips{display:flex;flex-wrap:wrap;gap:8px}
+.pfchips .chip b{margin-left:6px;color:var(--tx3);font-variant-numeric:tabular-nums}
+
+.pflatest{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}
+.pflat{display:flex;flex-direction:column;gap:0;padding:0;overflow:hidden;cursor:pointer;
+  border:1px solid var(--line);border-radius:12px;background:var(--card);color:inherit;
+  font:inherit;text-align:left}
+.pflat:hover{border-color:var(--line2)}
+.pflat img,.pflat-no{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#fff}
+.pflat-no{background:var(--card2)}
+.pflat b{font-size:11.5px;line-height:1.35;font-weight:600;color:var(--tx);padding:9px 10px 0;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pflat i{font-style:normal;font-size:10.5px;color:var(--tx3);padding:4px 10px 10px}
+
+.pffoot{margin:32px 0 0;padding:16px 18px;border:1px solid var(--line);
+  border-radius:var(--r-card,16px);background:var(--bg2);color:var(--tx3);
+  font-size:12px;line-height:1.65;max-width:86ch}
+
+/* the editor, in the settings menu */
+.pf-edit{display:flex;align-items:center;gap:11px;padding:2px 9px 0}
+.pf-avwrap{line-height:0;flex:0 0 auto}
+.pf-fields{min-width:0;flex:1}
+.pf-lab{display:block;font:600 9.5px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--tx3);margin:0 0 5px}
+#pf-name{width:100%;min-height:36px;padding:7px 11px;border-radius:10px;border:1px solid var(--line);
+  background:var(--card);color:var(--tx);font:500 13px/1.2 Inter,system-ui,sans-serif}
+.pf-acts{display:flex;flex-wrap:wrap;gap:6px;padding:10px 9px 2px}
+.pf-acts .iconbtn{padding:6px 10px;font-size:12px;min-height:34px}
+.pf-msg{margin:6px 9px 0;font-size:11.5px;color:var(--tx3);min-height:1em}
+.pf-msg.bad{color:var(--danger)}
+
+@media(max-width:767px){
+  .pfhead{padding:16px;gap:14px}
+  .pfhead .iconbtn{margin-left:0;width:100%;min-height:44px}
+  .pfbadges{gap:10px;justify-content:space-between}
+  .pfbadge{width:30%}
+  .pfbar-l{flex:0 0 90px;font-size:12px}
+  .pflatest{grid-template-columns:repeat(2,1fr)}
+  .pf-acts .iconbtn{min-height:42px}
+}
 </style>
 
 <a class="skipnav" href="#grid">Skip to the cars</a>
@@ -1559,6 +1660,22 @@ h2,h3{font-family:var(--display)}
         <span class="dot" id="skindot"></span><span id="skinname">Garage</span><span class="caret">&#9662;</span>
       </button>
       <div class="skinmenu" id="skinmenu" role="menu">
+        <p class="skinhead">You</p>
+        <div class="pf-edit">
+          <span class="pf-avwrap" id="pf-av"></span>
+          <div class="pf-fields">
+            <label class="pf-lab" for="pf-name">Your name</label>
+            <input id="pf-name" type="text" maxlength="40" autocomplete="nickname"
+                   placeholder="What to call you">
+          </div>
+        </div>
+        <div class="pf-acts">
+          <button type="button" class="iconbtn" id="pf-save">Save name</button>
+          <button type="button" class="iconbtn" id="pf-pick">Picture&hellip;</button>
+          <button type="button" class="iconbtn" id="pf-clear" hidden>Remove picture</button>
+        </div>
+        <input type="file" id="pf-file" accept="image/*" style="display:none">
+        <p class="pf-msg" id="pf-msg" role="status" aria-live="polite"></p>
         <p class="skinhead">Prices in</p>
         <select id="curpick" class="curpick"></select>
         <p class="curnote" id="curnote"></p>
@@ -1575,10 +1692,11 @@ h2,h3{font-family:var(--display)}
 <div class="scrim" id="scrim" hidden></div>
 <nav class="drawer" id="drawer" aria-label="Sections">
   <div class="dr-scroll">
-    <div class="dr-me">
-      <div class="dr-av" aria-hidden="true">M164</div>
-      <div class="dr-who"><b>@maccimalist</b><i id="drsince">1:64 collector</i></div>
-    </div>
+    <button class="dr-me" id="drme" type="button" aria-label="Your profile">
+      <span class="dr-av" id="drav" aria-hidden="true">M164</span>
+      <span class="dr-who"><b id="drwho">@maccimalist</b><i id="drsince">1:64 collector</i></span>
+      <span class="dr-me-go" aria-hidden="true">&rsaquo;</span>
+    </button>
     <button class="dr-card" id="drport" type="button">
       <span class="dr-card-k">Portfolio &middot; <b id="drcur">GBP</b></span>
       <span class="dr-card-v" id="drpaid">&mdash;</span>
@@ -1615,6 +1733,7 @@ h2,h3{font-family:var(--display)}
     <button data-v="value">Value</button>
     <button data-v="stats">Progress</button>
     <button data-v="badge">Badges</button>
+    <button data-v="me">Profile</button>
   </div>
 </nav>
 
@@ -1736,6 +1855,7 @@ h2,h3{font-family:var(--display)}
   <div class="stats" id="stats" style="display:none"></div>
   <div id="value" style="display:none;padding:18px 0 60px"></div>
   <section id="badges" style="display:none;padding:18px 0 60px" aria-label="Badges"></section>
+  <section id="profile" style="display:none;padding:18px 0 60px" aria-label="Your profile"></section>
   <div class="empty" id="empty" style="display:none">Nothing matches that.</div>
 </main>
 
@@ -2350,7 +2470,9 @@ const DEST=[
   {v:"exc",  t:"Exclusives", s:"Where a car was sold", c:"var(--b-para64)",
    i:'<path d="M12 3l2.5 5.5L20 9.5l-4 4 1 6-5-2.8L7 19.5l1-6-4-4 5.5-1z"/>'},
   {v:"badge",t:"Badges", s:"Milestones the collection has passed", c:"var(--gold)",
-   i:'<path d="M12 3.2l6.9 4v7.9l-6.9 4-6.9-4V7.2z"/><circle cx="12" cy="11.1" r="2.8"/>'}
+   i:'<path d="M12 3.2l6.9 4v7.9l-6.9 4-6.9-4V7.2z"/><circle cx="12" cy="11.1" r="2.8"/>'},
+  {v:"me",   t:"Profile", s:"Who this collector is", c:"var(--b-schuco)",
+   i:'<circle cx="12" cy="8.4" r="3.8"/><path d="M4.6 20c0-3.6 3.3-5.8 7.4-5.8s7.4 2.2 7.4 5.8"/>'}
 ];
 /* `view` is the truth; the tab strip is a mirror of it. Reading the DOM instead
    meant a view set in code and rendered correctly still drew the wrong empty
@@ -2626,13 +2748,20 @@ function paintHero(){
   const eb=document.getElementById("heroEyebrow"), ti=document.getElementById("heroTitle");
   const hero=document.getElementById("hero");
   if(hero) hero.style.setProperty("--bc", brand==="__all"?"var(--acc)":brandColourName(brand));
-  if(hero) hero.classList.toggle("hero-account", v==="badge");
+  if(hero) hero.classList.toggle("hero-account", v==="badge"||v==="me");
   /* The badges room is about the account rather than the catalogue on the rail,
      so the eyebrow says so instead of naming a maker that has nothing to do with it. */
   if(eb) eb.textContent = v==="badge" ? "Your milestones"
+                        : v==="me" ? "Your profile"
                         : brand==="__all" ? "All catalogues" : brand;
   if(ti) ti.textContent = d.t;
   document.title = (v==="all"?"MINI164":d.t+" · MINI164");
+  /* On the profile the title is the person, not the room, so it is set last. */
+  if(v==="me" && typeof displayName==="function"){
+    const n = displayName();
+    if(ti) ti.textContent = n;
+    document.title = n + " · MINI164";
+  }
 }
 
 /* ------------------------------------------------------------
@@ -3292,13 +3421,14 @@ function render(){
   $("#value").style.display = view==="value"?"block":"none";
   /* Additive: the badges room is its own surface, like stats and value. */
   { const bx=document.getElementById("badges"); if(bx) bx.style.display = view==="badge"?"block":"none"; }
+  { const px=document.getElementById("profile"); if(px) px.style.display = view==="me"?"block":"none"; }
   /* Leave the display to CSS: the list mode is a flex column and an inline
      "grid" here quietly beat it, so the toggle changed nothing you could see. */
-  $("#grid").style.display  = (view==="stats"||view==="value"||view==="badge")?"none":"";
+  $("#grid").style.display  = (view==="stats"||view==="value"||view==="badge"||view==="me")?"none":"";
   $("#excbar").style.display = view==="exc"?"block":"none";
   /* Filter, sort and the grid/list toggle have nothing to act on in front of a
      chart, so they step out of the way there rather than sit greyed out. */
-  const chartish = view==="stats"||view==="value"||view==="badge";
+  const chartish = view==="stats"||view==="value"||view==="badge"||view==="me";
   const ctl=document.querySelector(".tb-ctl"); if(ctl) ctl.hidden=chartish;
   const af=document.getElementById("activef"); if(af) af.hidden=chartish;
   if(view!=="exc" && excGroup) excGroup="";     // a group must not follow you to another tab
@@ -3309,6 +3439,11 @@ function render(){
   current=subset();
   if(view==="stats"){ $("#empty").style.display="none"; $("#count").textContent=""; return drawStats(); }
   if(view==="value"){ $("#empty").style.display="none"; $("#count").textContent=""; return drawValue(); }
+  if(view==="me"){ $("#empty").style.display="none"; $("#count").textContent="";
+    if(typeof drawProfile==="function") drawProfile();
+    if(typeof paintHero==="function") paintHero();
+    if(typeof destKpis==="function"){ const h=destKpis(); $("#kpis").innerHTML = h || ""; }
+    return; }
   if(view==="badge"){ $("#empty").style.display="none"; $("#count").textContent="";
     if(typeof drawBadges==="function") drawBadges();
     if(typeof paintHero==="function") paintHero();
@@ -6689,6 +6824,348 @@ async function paintBadgeAdmin(){
   }, true);
 })();
 
+/* =====================================================================
+   THE PROFILE
+   ---------------------------------------------------------------------
+   Who this collector is, in their own terms. It is reached by pressing
+   the name at the top of the drawer, which until now was a static line
+   of text reading @maccimalist - correct on the copy Rodrigo keeps, and
+   wrong for every friend who signs in to the shared one.
+
+   No money on this page. The portfolio is one press away and that is
+   where what a shelf cost belongs; a profile is a thing you might one
+   day show somebody.
+   ===================================================================== */
+const NAME_KEY = "m164-name";
+const AVATAR_KEY = "m164-avatar";
+/* The single-owner copy is Rodrigo's, so it opens with his handle. The shared build
+   ships to nobody in particular and opens with a word rather than a stranger's name. */
+const DEFAULT_NAME = (typeof SUPA === "object" && SUPA) ? "Collector" : "maccimalist";
+
+function storedName(){
+  try{ const n = localStorage.getItem(NAME_KEY); if(n && n.trim()) return n.trim(); }catch(e){}
+  return "";
+}
+/* The account's own name wins when there is an account: it is what the server holds
+   and what an admin sees. Otherwise whatever this browser was told, and failing that
+   the build's default. */
+function displayName(){
+  const A = (typeof AUTH === "object" && AUTH) ? AUTH : null;
+  if(A && A.profile && A.profile.display_name && String(A.profile.display_name).trim())
+    return String(A.profile.display_name).trim();
+  const local = storedName();
+  if(local) return local;
+  if(A && A.me && A.me.email) return String(A.me.email).split("@")[0];
+  return DEFAULT_NAME;
+}
+function avatarSrc(){
+  try{ const a = localStorage.getItem(AVATAR_KEY); if(a && a.slice(0,11) === "data:image/") return a; }catch(e){}
+  return "";
+}
+function initialsOf(n){
+  const parts = String(n || "").trim().split(/[\s._-]+/).filter(Boolean);
+  if(!parts.length) return "M164";
+  if(parts.length === 1) return parts[0].slice(0,2).toUpperCase();
+  return (parts[0][0] + parts[parts.length-1][0]).toUpperCase();
+}
+function avatarHTML(size, cls){
+  const src = avatarSrc(), n = displayName();
+  return src
+    ? '<img class="av ' + (cls||"") + '" src="' + esc(src) + '" alt="" width="' + size + '" height="' + size + '">'
+    : '<span class="av av-txt ' + (cls||"") + '" style="width:' + size + 'px;height:' + size + 'px;'
+      + 'font-size:' + Math.round(size/2.9) + 'px" aria-hidden="true">' + esc(initialsOf(n)) + '</span>';
+}
+
+/* A picture is resized here rather than stored as it arrived. A phone photograph is
+   three or four megabytes and it rides the preferences row to the server; 192 square
+   at a sensible quality is twenty kilobytes and is more than a 96 pixel avatar can
+   show. Anything that will not decode is refused rather than stored as rubbish. */
+const AVATAR_PX = 192, AVATAR_CAP = 140000;
+function readAvatar(file){
+  return new Promise((resolve, reject) => {
+    if(!file || !/^image\//.test(file.type||"")) return reject(new Error("That is not a picture."));
+    if(file.size > 25e6) return reject(new Error("That picture is too large. Try one under 25 MB."));
+    const fr = new FileReader();
+    fr.onerror = () => reject(new Error("That picture could not be read."));
+    fr.onload = () => {
+      const im = new Image();
+      im.onerror = () => reject(new Error("That picture could not be read."));
+      im.onload = () => {
+        try{
+          const s = Math.min(im.width, im.height);
+          const c = document.createElement("canvas");
+          c.width = c.height = AVATAR_PX;
+          const x = c.getContext("2d");
+          x.imageSmoothingQuality = "high";
+          x.drawImage(im, (im.width-s)/2, (im.height-s)/2, s, s, 0, 0, AVATAR_PX, AVATAR_PX);
+          let out = c.toDataURL("image/jpeg", 0.82);
+          if(out.length > AVATAR_CAP) out = c.toDataURL("image/jpeg", 0.6);
+          if(out.length > AVATAR_CAP) return reject(new Error("That picture would not compress small enough."));
+          resolve(out);
+        }catch(e){ reject(new Error("That picture could not be processed.")); }
+      };
+      im.src = fr.result;
+    };
+    fr.readAsDataURL(file);
+  });
+}
+function setAvatar(dataUrl){
+  try{
+    if(dataUrl) localStorage.setItem(AVATAR_KEY, dataUrl);
+    else localStorage.removeItem(AVATAR_KEY);
+  }catch(e){ if(typeof toast === "function") toast("This browser would not store that picture."); return false; }
+  paintIdentity();
+  return true;
+}
+/* The name is written in both places when there are two: here for the page to paint
+   from at once, and on the account so another device and the admin list agree. */
+function setDisplayName(n){
+  const v = String(n || "").trim().slice(0, 40);
+  try{ if(v) localStorage.setItem(NAME_KEY, v); else localStorage.removeItem(NAME_KEY); }catch(e){}
+  const A = (typeof AUTH === "object" && AUTH) ? AUTH : null;
+  if(A && A.me && typeof A.rename === "function") A.rename(v).catch(()=>{});
+  paintIdentity();
+}
+
+/* Everywhere the person's own name and face appear. */
+function paintIdentity(){
+  const n = displayName();
+  const who = document.getElementById("drwho");
+  if(who) who.textContent = (typeof SUPA === "object" && SUPA) ? n : "@" + n;
+  const av = document.getElementById("drav");
+  if(av) av.innerHTML = avatarHTML(38);
+  const since = document.getElementById("drsince");
+  if(since) since.textContent = collectingSince() || "1:64 collector";
+  if(view === "me" && typeof drawProfile === "function") drawProfile();
+  if(typeof paintHero === "function" && view === "me") paintHero();
+}
+/* Derived from the receipts, never guessed: the month of the earliest purchase on
+   file. With no dated purchase there is nothing honest to say, so it says nothing. */
+function collectingSince(){
+  const c = badgeCtx();
+  if(!c.dates.length) return "";
+  const m = c.dates[0].match(/^(\d{4})-(\d{2})/);
+  if(!m) return "";
+  const MON = ["January","February","March","April","May","June","July",
+               "August","September","October","November","December"];
+  return "Collecting since " + MON[+m[2]-1] + " " + m[1];
+}
+
+/* ---------------------------------------------------------------------
+   THE ROOM
+   Everything here is read off the badge engine's context object, which is
+   already built and cached, so opening the profile costs no walk of its
+   own over sixteen thousand rows.
+   --------------------------------------------------------------------- */
+function profileFigures(c){
+  const fig = (v, l, t) => '<div class="pfig"' + (t ? ' title="' + esc(t) + '"' : '') + '>'
+    + '<b>' + v + '</b><i>' + esc(l) + '</i></div>';
+  return '<div class="pfigs">'
+    + fig(c.owned.toLocaleString(), "models", "different catalogue numbers on the shelf")
+    + fig(c.pieces.toLocaleString(), "pieces", "every copy counted")
+    + fig(c.ordered.toLocaleString(), "on the way")
+    + fig(c.wanted.toLocaleString(), "want list")
+    + fig(c.brandsOwnedCount.toLocaleString(), "catalogues")
+    + fig(c.marquesOwnedCount.toLocaleString(), "marques")
+    + '</div>';
+}
+
+function drawProfile(){
+  const host = document.getElementById("profile"); if(!host) return;
+  const c = badgeCtx();
+  const s = badgeState();
+  const earned = s.list.filter(x => x.earned);
+  const picked = showcaseIds().map(id => s.by[id]).filter(x => x && x.earned);
+  const shown = (picked.length ? picked : earned.slice().sort((a,b) => {
+      const A = (a.held && (a.held.on && a.held.on.by || a.held.on || a.held.at)) || "";
+      const B = (b.held && (b.held.on && b.held.on.by || b.held.on || b.held.at)) || "";
+      return String(B).localeCompare(String(A));
+    })).slice(0, 3);
+
+  /* The name is not repeated here: the room title directly above is the name, at the
+     size the page can carry, and printing it twice in a hand's width reads as a fault
+     rather than as emphasis. */
+  let html = '<div class="pfhead">'
+    + '<div class="pfav">' + avatarHTML(96) + '</div>'
+    + '<div class="pfid"><b>' + esc(collectingSince() || "1:64 collector") + '</b>'
+    + '<i>' + esc(c.owned.toLocaleString() + " models across "
+        + c.brandsOwnedCount + (c.brandsOwnedCount === 1 ? " catalogue" : " catalogues")) + '</i></div>'
+    + '<button type="button" class="iconbtn" id="pfedit">Edit profile</button>'
+    + '</div>';
+
+  html += profileFigures(c);
+
+  /* The badges they chose, not the ones the engine happened to award last. */
+  html += '<section class="pfsec"><h3>Badges <span class="pfcount">' + earned.length.toLocaleString()
+        + ' of ' + s.list.length.toLocaleString() + '</span></h3>';
+  html += shown.length
+    ? '<div class="pfbadges">' + shown.map(st =>
+        '<button type="button" class="pfbadge" data-badge="' + esc(st.def.id) + '">'
+        + badgeArt(st.def, st, 84)
+        + '<b>' + esc(st.def.name) + '</b></button>').join("")
+      + '</div><p class="pfnote">'
+      + (picked.length ? 'Your chosen three. Change them in the badges room.'
+                       : 'Your three most recent. Pick your own in the badges room.')
+      + '</p>'
+    : '<p class="pfnote">No badges yet. They arrive on their own as the collection grows.</p>';
+  html += '<button type="button" class="iconbtn" id="pfbadgego">Open the badges room</button></section>';
+
+  /* Which makers, and how far into each. The figure on the right is what is owned out
+     of what the catalogue holds, which is the same arithmetic the rail uses. */
+  const cats = [...c.brandOwned.entries()]
+    .map(([b, n]) => ({b, n, all: c.brandAll.get(b) || 0}))
+    .sort((x, y) => y.n - x.n);
+  if(cats.length){
+    html += '<section class="pfsec"><h3>Catalogues <span class="pfcount">' + cats.length + '</span></h3>'
+      + '<div class="pfbars">' + cats.map(x => {
+        const pc = x.all ? Math.min(100, Math.round(x.n / x.all * 100)) : 0;
+        return '<button type="button" class="pfbar" data-brand="' + esc(x.b) + '">'
+          + '<span class="pfbar-l">' + esc(x.b) + '</span>'
+          + '<span class="pfbar-t"><i style="width:' + pc + '%"></i></span>'
+          + '<span class="pfbar-n">' + x.n.toLocaleString() + '<em> / ' + x.all.toLocaleString() + '</em></span>'
+          + '</button>';
+      }).join("") + '</div></section>';
+  }
+
+  /* The car makers themselves, biggest first. A chip is a filter: pressing one puts
+     you in the directory with that marque already chosen. */
+  const marques = [...c.marqueOwned.entries()]
+    .filter(([m]) => m && m !== "Other")
+    .sort((a, b) => b[1] - a[1]).slice(0, 18);
+  if(marques.length){
+    html += '<section class="pfsec"><h3>Marques <span class="pfcount">'
+      + c.marquesOwnedCount.toLocaleString() + '</span></h3><div class="pfchips">'
+      + marques.map(([m, n]) => '<button type="button" class="chip" data-marque="' + esc(m) + '">'
+          + esc(m) + ' <b>' + n + '</b></button>').join("")
+      + '</div></section>';
+  }
+
+  /* The last things to arrive, by the date on the receipt rather than by when the row
+     was edited, because the receipt is the fact. */
+  const recent = DATA.filter(d => d.o === 1 && !d.k && !d.xc && d.ord
+                                  && /^\d{4}-\d{2}-\d{2}$/.test(d.ord.date || ""))
+    .sort((a, b) => String(b.ord.date).localeCompare(String(a.ord.date)))
+    .slice(0, 8);
+  if(recent.length){
+    html += '<section class="pfsec"><h3>Latest on the shelf</h3><div class="pflatest">'
+      + recent.map(d => {
+        const src = (typeof imgSrc === "function") ? imgSrc(d) : "";
+        return '<button type="button" class="pflat" data-num="' + esc(d.n) + '">'
+          + (src ? '<img loading="lazy" src="' + esc(src) + '" alt="">'
+                 : '<span class="pflat-no" aria-hidden="true"></span>')
+          + '<b>' + esc(d.t || d.n) + '</b>'
+          + '<i>' + esc(fmtDate(d.ord.date)) + '</i></button>';
+      }).join("") + '</div></section>';
+  }
+
+  html += '<p class="pffoot">Your profile is yours alone: nothing here is shared with anybody '
+        + 'else, and no price, total or valuation appears on it. What the collection cost lives '
+        + 'in the portfolio.</p>';
+
+  host.innerHTML = html;
+
+  const ed = document.getElementById("pfedit");
+  if(ed) ed.onclick = () => openProfileEditor();
+  const go = document.getElementById("pfbadgego");
+  if(go) go.onclick = () => setView("badge");
+  if(!host._wired){
+    host._wired = true;
+    host.addEventListener("click", e => {
+      const bg = e.target.closest("[data-badge]");
+      if(bg && typeof openBadge === "function"){ openBadge(bg.dataset.badge); return; }
+      const br = e.target.closest("[data-brand]");
+      if(br){ brand = br.dataset.brand; line = "__all";
+        if(typeof refreshBrands === "function") refreshBrands();
+        setView("own");
+        if(typeof fillLines === "function") fillLines();
+        if(typeof paintBrands === "function") paintBrands();
+        recount(); render(); return; }
+      const mq = e.target.closest("[data-marque]");
+      if(mq){ marque = mq.dataset.marque;
+        const sel = document.getElementById("marque"); if(sel) sel.value = marque;
+        brand = "__all"; line = "__all"; setView("own");
+        if(typeof paintBrands === "function") paintBrands();
+        recount(); render(); return; }
+      /* openCard takes a position in the list on screen, so the car is put on screen
+         first: its own number in the search box, every catalogue in view, then the
+         first result. Nothing here reaches past the page's own front door. */
+      const cd = e.target.closest("[data-num]");
+      if(cd && typeof byNum !== "undefined"){
+        const d = byNum.get(cd.dataset.num); if(!d) return;
+        q = d.n; const qi = document.getElementById("q"); if(qi) qi.value = d.n;
+        brand = "__all"; line = "__all"; marque = "";
+        setView("all"); recount(); render();
+        setTimeout(() => { if(typeof current !== "undefined" && current.length) openCard(0); }, 80);
+      }
+    });
+  }
+}
+
+/* ---------------------------------------------------------------------
+   THE EDITOR
+   It lives in Settings, where somebody looking to change their name would
+   go first, rather than behind the profile page it changes.
+   --------------------------------------------------------------------- */
+function openProfileEditor(){
+  /* The settings menu closes itself on any click outside its own wrapper, and the
+     press that got us here is still on its way up to that listener. Opening on the
+     next tick lets it land first, otherwise the menu opens and shuts in one gesture. */
+  setTimeout(() => {
+    const menu = document.getElementById("skinmenu");
+    const btn = document.getElementById("skinbtn");
+    if(menu && !menu.classList.contains("on") && btn) btn.click();
+    paintProfileEditor();
+    setTimeout(() => { const f = document.getElementById("pf-name"); if(f){ f.focus(); f.select(); } }, 60);
+  }, 0);
+}
+function paintProfileEditor(){
+  const av = document.getElementById("pf-av");
+  if(av) av.innerHTML = avatarHTML(46);
+  const f = document.getElementById("pf-name");
+  if(f && document.activeElement !== f) f.value = storedName() || displayName();
+  const rm = document.getElementById("pf-clear");
+  if(rm) rm.hidden = !avatarSrc();
+}
+(function wireProfileEditor(){
+  const f = document.getElementById("pf-name");
+  const save = document.getElementById("pf-save");
+  const file = document.getElementById("pf-file");
+  const pick = document.getElementById("pf-pick");
+  const clear = document.getElementById("pf-clear");
+  const msg = document.getElementById("pf-msg");
+  const say = (t, bad) => { if(msg){ msg.textContent = t || ""; msg.className = "pf-msg" + (bad ? " bad" : ""); } };
+  if(save && f) save.onclick = () => {
+    const v = f.value.trim();
+    if(v.length > 40){ say("That name is too long. Forty characters at most.", true); return; }
+    setDisplayName(v);
+    say(v ? "Saved." : "Cleared.");
+  };
+  if(f) f.onkeydown = e => { if(e.key === "Enter"){ e.preventDefault(); save && save.click(); } };
+  if(pick && file) pick.onclick = () => file.click();
+  if(file) file.onchange = async e => {
+    const x = e.target.files && e.target.files[0]; e.target.value = "";
+    if(!x) return;
+    say("Reading that picture…");
+    try{
+      const url = await readAvatar(x);
+      if(setAvatar(url)){ paintProfileEditor(); say("Saved."); }
+    }catch(err){ say(String(err.message || err), true); }
+  };
+  if(clear) clear.onclick = () => { setAvatar(""); paintProfileEditor(); say("Picture removed."); };
+  const btn = document.getElementById("skinbtn");
+  if(btn) btn.addEventListener("click", () => setTimeout(paintProfileEditor, 20), {passive:true});
+})();
+
+/* ---------------------------------------------------------------------
+   WIRING
+   --------------------------------------------------------------------- */
+(function profileBoot(){
+  const me = document.getElementById("drme");
+  if(me) me.onclick = () => { setView("me"); if(typeof closeDrawer === "function") closeDrawer(); };
+  paintIdentity();
+  paintProfileEditor();
+})();
+
 </script>
 <style>
 /* ---- accounts ----------------------------------------------------------
@@ -6807,7 +7284,12 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
   const SKEY = "m164-session";
   /* The showcase is a choice about the account, not about this browser, so it
      rides the same channel the colourway and the currency already use. */
-  const PREF_KEYS = ["mgt-cur","mgt-skin","mgt-theme","m164-viewmode","m164-showcase"];
+  const PREF_KEYS = ["mgt-cur","mgt-skin","mgt-theme","m164-viewmode","m164-showcase",
+                     "m164-name","m164-avatar"];
+  /* Everything on that list is a short string except the profile picture, which is a
+     data URL of a couple of dozen kilobytes. It rides the same row rather than earning
+     a table of its own, so the guard below knows it is allowed to be long. */
+  const PREF_LONG = { "m164-avatar": 200000 };
   let sess = null, me = null, prof = null, refreshTimer = null, prefsTimer = null;
 
   const g  = id => document.getElementById(id);
@@ -6920,8 +7402,9 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     try{ localStorage.removeItem(STORE_KEY); }catch(e){}
     /* Badges belong to the account, not the browser. Dropping them here as well as
        the collection keeps one person's milestones off the next person's screen even
-       in the moment before the reload lands. */
+       in the moment before the reload lands. The name and the picture go the same way. */
     if(typeof badgeSignOut === "function") try{ badgeSignOut(); }catch(e){}
+    try{ localStorage.removeItem("m164-name"); localStorage.removeItem("m164-avatar"); }catch(e){}
     location.reload();
   }
   async function sendReset(email){
@@ -7033,7 +7516,8 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     const p = (rows && rows[0] && rows[0].prefs) || {};
     let changed = false;
     for(const k of PREF_KEYS){
-      if(typeof p[k] === "string" && p[k].length < 200){
+      const cap = PREF_LONG[k] || 200;
+      if(typeof p[k] === "string" && p[k].length < cap){
         try{ localStorage.setItem(k, p[k]); changed = true; }catch(e){}
       }
     }
@@ -7088,6 +7572,8 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
         }
         const vm = localStorage.getItem("m164-viewmode");
         if(vm === "list" || vm === "grid"){ viewMode = vm; if(typeof paintViewMode === "function") paintViewMode(); }
+        if(typeof paintIdentity === "function") try{ paintIdentity(); }catch(e){}
+        if(typeof paintProfileEditor === "function") try{ paintProfileEditor(); }catch(e){}
         if(typeof paintBadgeProfile === "function") try{ paintBadgeProfile(); }catch(e){}
       }
     }catch(e){}
@@ -7274,6 +7760,7 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     if(dot) dot.textContent = (prof && prof.display_name) || (me && me.email) || "";
     if(typeof paintBadgeProfile === "function") try{ paintBadgeProfile(); }catch(e){}
     if(typeof paintBadgeAdmin === "function") try{ paintBadgeAdmin(); }catch(e){}
+    if(typeof paintIdentity === "function") try{ paintIdentity(); }catch(e){}
   }
 
   async function rename(name){
