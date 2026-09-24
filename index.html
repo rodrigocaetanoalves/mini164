@@ -1491,6 +1491,46 @@ h2,h3{font-family:var(--display)}
 .dr-item.on .ic{border-color:color-mix(in srgb,var(--acc) 55%,transparent);
   background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc)!important}
 .dr-item.on .ic svg{stroke:var(--acc)}
+/* On the black and red colourway, and only there, the destination marks are one
+   colour. Ten hues down one column was the last thing on the page arguing with the
+   accent, and where you are standing is the only distinction that column needs. The
+   mark's colour is set inline from the destination list, so this has to say so
+   plainly; the other colourways keep their coding untouched.
+   :root with no data-skin is the default skin: applySkin removes the attribute
+   rather than setting it to an empty string. */
+:root:not([data-skin]) .dr-item .ic{color:var(--tx2)!important}
+:root:not([data-skin]) .dr-item:hover .ic{color:var(--tx)!important}
+:root:not([data-skin]) .dr-item.on .ic{color:var(--acc)!important}
+
+/* ---------------------------------------------------------------------
+   NO ORANGE ON THE BLACK AND RED COLOURWAY
+   Scoped to the default skin only: :root carries no data-skin there,
+   because applySkin removes the attribute rather than setting it empty.
+   Every other colourway keeps exactly the hues it had.
+
+   Two orange things had to move. "On the way" was amber, which beside a
+   red accent reads as a second, weaker red rather than as its own state;
+   it becomes a clean yellow, which is as far from both red and green as
+   a warm colour gets. And two of the nine catalogue hues were orange:
+   Mini GT takes the house red, which it has earned as the heart of the
+   collection, Hot Wheels drops to a deeper brick so the two reds are
+   still told apart at a glance, and BBR goes to silver.
+
+   The state meanings do not change. Green is still on your shelf, this
+   yellow is still on the way, blue is still on a shop shelf today.
+   --------------------------------------------------------------------- */
+:root:not([data-skin]){
+  --order:#ffd60a; --gold:#ffd60a;
+  --b-minigt:#ff3b30; --b-hotwheels:#c9302c; --b-bbr:#b8c0cf;
+}
+:root:not([data-skin])[data-theme="light"]{
+  --order:#8a6a00; --gold:#8a6a00;
+  --b-minigt:#c8102e; --b-hotwheels:#8f1d1d; --b-bbr:#5b6472;
+}
+/* The two chips that print dark ink on the state colour need it re-checked
+   against yellow rather than amber. */
+:root:not([data-skin]) .seg button.on[data-o="2"]{color:#241c00}
+:root:not([data-skin]) .c.ord .tick{color:#241c00}
 </style>
 
 <a class="skipnav" href="#grid">Skip to the cars</a>
@@ -4069,7 +4109,7 @@ $("#noboxes").onclick=e=>{ noBoxes=!noBoxes; e.currentTarget.classList.toggle("o
    <html>. The swatches below are the accent, the owned colour and the page
    background, so the menu previews what you are choosing. */
 const SKINS=[
-  {id:"",         name:"Garage",   sw:["#ff3b30","#1fd98a","#08080a"], note:"black and red, the house colours"},
+  {id:"",         name:"Garage",   sw:["#ff3b30","#1fd98a","#08080a"], note:"black and red, no orange in it"},
   {id:"amethyst", name:"Amethyst", sw:["#b14dff","#9bf03a","#08060f"], note:"purple and acid green"},
   {id:"nocturne", name:"Nocturne", sw:["#ffc61a","#2fd98a","#060708"], note:"charcoal and gold"},
   {id:"cobalt",   name:"Cobalt",   sw:["#1f7dff","#ffc800","#03081a"], note:"deep blue, gold and coral"},
@@ -5442,7 +5482,7 @@ const BADGE_TIERS = {
 };
 const BADGE_ENAMEL = {
   size:      {c:"#ff3b30", ink:"#ffffff"},
-  garage:    {c:"#ffb31f", ink:"#1a1204"},
+  garage:    {c:"#ffd60a", ink:"#241c00"},
   range:     {c:"#4d9bff", ink:"#041226"},
   series:    {c:"#16e08a", ink:"#04291a"},
   catalogue: {c:"#ff5f8f", ink:"#2b0713"},
