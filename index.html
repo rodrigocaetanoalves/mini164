@@ -8485,6 +8485,44 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     for(const k of keep) if(body[k] !== undefined) out[k] = body[k];
     return out;
   }
+  /* THE OTHER HALF OF CAT_ALIAS, WHICH WAS MISSING.
+     ---------------------------------------------------------------------------------
+     When the catalogue moves a car from one number to another, CAT_ALIAS is how a row
+     already stored under the old number still finds its car. That worked on the way IN
+     and not on the way OUT, and the result was a car that could not be got rid of.
+
+     Take his Ferrari SF-25. The database holds it under 59867. The page reads it,
+     follows the alias, and shows it owned against the catalogue's number. He unticks
+     it, and the page deletes the catalogue's number - which nothing is stored under.
+     The row under 59867 is untouched, the next read follows the alias again, and the
+     car is back. Editing it was worse: the write went to the new number and made a
+     SECOND row, so the account then held the same car twice and the stale one won.
+
+     So the alias is followed in both directions. This is the reverse map: for a number
+     the catalogue uses now, every number it used to use. A write puts the row on the
+     current number and then clears the old ones; a delete clears all of them. Either
+     way the account ends up with exactly one row per car, under the number the
+     catalogue uses today, and it heals itself the first time anybody touches the car. */
+  const ALIAS_FROM = (function(){
+    const m = {};
+    if(typeof CAT_ALIAS === "object" && CAT_ALIAS)
+      for(const from in CAT_ALIAS){
+        const to = CAT_ALIAS[from];
+        (m[to] || (m[to] = [])).push(from);
+      }
+    return m;
+  })();
+
+  async function dropOne(n){
+    /* Named by owner as well as by number. Row level security would scope it anyway;
+       the rule in this page is that a query for your own data says whose it is, and a
+       rule with exceptions is a rule nobody checks. */
+    const r = await rest("/user_cars?user_id=eq." + encodeURIComponent(me.id)
+                         + "&car_number=eq." + encodeURIComponent(n),
+                         { method:"DELETE", headers:{ "Prefer":"return=minimal" } });
+    if(!r.ok) throw new Error(await errText(r));
+  }
+
   async function pushCar(n, body){
     body = bodyForUser(body || {});
     const r = await rest("/user_cars?on_conflict=user_id,car_number", {
@@ -8492,11 +8530,18 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
       headers:{ "Prefer":"resolution=merge-duplicates,return=minimal" },
       body: JSON.stringify({ user_id: me.id, car_number: n, data: body }) });
     if(!r.ok) throw new Error(await errText(r));
+    /* Only once the new row is safely written. A failure here leaves a duplicate,
+       which the next sign-in tidies; a failure the other way round would lose the car. */
+    for(const old of (ALIAS_FROM[n] || [])){
+      try{ await dropOne(old); }catch(e){}
+    }
   }
+
   async function dropCar(n){
-    const r = await rest("/user_cars?car_number=eq." + encodeURIComponent(n),
-                         { method:"DELETE", headers:{ "Prefer":"return=minimal" } });
-    if(!r.ok) throw new Error(await errText(r));
+    for(const old of (ALIAS_FROM[n] || [])){
+      try{ await dropOne(old); }catch(e){}
+    }
+    await dropOne(n);
   }
 
   /* The adapter the rest of the page already knows how to talk to. Keeping this shape
@@ -8685,11 +8730,15 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     baseRows().forEach(d => DATA.push(JSON.parse(JSON.stringify(d))));
     DATA.forEach(d => { if(d.q == null) d.q = d.o ? 1 : 0; });
     reindex();
+    /* Moved onto today's numbers before anything is read from them, so that the rest
+       of this function, and every write after it, is dealing with one row per car. */
+    rows = await healAliases(rows);
     for(const row of rows){
       const body = row.data || {};
-      /* A number the catalogue has moved on from still comes back from the database
-         under the old one until it is corrected there, and dropping it would take a car
-         off the shelf. CAT_ALIAS says where each old number went. */
+      /* The move above should have dealt with every stale number, but if one of those
+         writes failed the row is still here under the old one, and following the alias
+         is what keeps the car on the shelf rather than inventing a second entry for a
+         number the catalogue has retired. */
       const _n = (typeof CAT_ALIAS === "object" && CAT_ALIAS && CAT_ALIAS[row.car_number])
                  || row.car_number;
       const d = ensureRow(_n, body);
@@ -8706,6 +8755,53 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
        here rather than carried across from whoever used this browser last. */
     if(typeof badgeSignIn === "function") badgeSignIn().catch(()=>{});
     if(typeof drawStats === "function" && view === "stats") drawStats();
+  }
+
+  /* ROWS STORED UNDER A NUMBER THE CATALOGUE NO LONGER USES, MOVED ONCE AND FOR ALL.
+
+     Following the alias on every read works, and it works forever, which is the
+     problem: the row never actually moves, so it is re-aliased on every sign-in and
+     anything that writes has to remember to alias too. One of them forgot, and a car
+     became impossible to delete.
+
+     So the row moves. The current number is written first and the old one is dropped
+     only after that write has come back, because the order that loses data is the other
+     one. Where both numbers already hold a row, the one on the current number wins:
+     it is the more recent of the two, because every write since the catalogue moved
+     has gone there.
+
+     A failure here is not fatal. The read below still works off whatever came back, and
+     the write path follows the alias itself, so the worst case is that it is tried
+     again next time. */
+  async function healAliases(rows){
+    if(typeof CAT_ALIAS !== "object" || !CAT_ALIAS) return rows;
+    const stale = rows.filter(r => CAT_ALIAS[r.car_number]);
+    if(!stale.length) return rows;
+    const at = new Map(rows.map(r => [r.car_number, r]));
+    let moved = 0, kept = 0;
+    for(const r of stale){
+      const to = CAT_ALIAS[r.car_number];
+      const current = at.get(to);
+      try{
+        if(current){
+          /* Already on the new number. The old row is a leftover, not a second car. */
+          await dropOne(r.car_number);
+          kept++;
+        } else {
+          await pushCar(to, r.data || {});      // pushCar clears the old numbers itself
+          at.set(to, {car_number: to, data: r.data});
+          moved++;
+        }
+        at.delete(r.car_number);
+      }catch(e){
+        /* leave it where it is and carry on: the car is still shown, via the alias */
+        at.set(r.car_number, r);
+      }
+    }
+    if(moved || kept)
+      toast("Tidied " + (moved + kept) + " car" + (moved + kept === 1 ? "" : "s")
+            + " onto the catalogue's current numbers");
+    return [...at.values()];
   }
 
   /* An order is a purchase, and a purchase belongs to whoever made it. The single
