@@ -1674,6 +1674,19 @@ h2,h3{font-family:var(--display)}
 .brandpick i{font-style:normal;font:600 11px/1 'JetBrains Mono',monospace;color:var(--tx3);flex:none}
 /* A catalogue and its pin are one row of two controls: picking it and keeping it on the
    rail are different acts and each needs its own target big enough to hit. */
+/* The collections row sits under the series row and reads as a quieter thing than it:
+   picking a series is where you are, picking a collection is a question you are asking
+   of it. Same chip shape so the two rows do not fight, a lighter resting state, and the
+   chosen ones take the accent because more than one can be on at once. */
+.collects{margin-top:6px}
+.collects button{font-size:12px;opacity:.86}
+.collects button:hover{opacity:1}
+.collects button[aria-pressed="true"]{opacity:1;border-color:var(--acc);
+  background:color-mix(in srgb,var(--acc) 16%,var(--card));color:var(--tx)}
+.collects .cx{font-style:normal;margin-left:6px;opacity:.7}
+/* The group heading inside the filter sheet's collection block. It sits on its own line
+   in a wrapping row of chips, so it is a full-width break rather than a chip. */
+.chiprow .cgrp{flex:0 0 100%;margin:8px 0 2px}
 .brandrow{display:flex;align-items:stretch;gap:6px}
 .brandrow .brandpick{flex:1;min-width:0}
 .pinbtn{flex:none;width:44px;min-height:44px;display:flex;align-items:center;
@@ -1808,6 +1821,11 @@ h2,h3{font-family:var(--display)}
 <div class="railwrap"><div class="wrap">
   <div class="brands" id="brands" role="group" aria-label="Which catalogue to look through"></div>
   <div class="lines" id="lines" role="group" aria-label="Which series inside this catalogue" hidden></div>
+  <!-- A range is one thing a release IS. A collection is one thing about it, and a car
+       can be several at once: a Kaidohouse chase issued in a Mijo blister and sold only
+       in Japan is all four. So this row is separate from the series row and it
+       multi-selects, which is also why its buttons are checkboxes rather than tabs. -->
+  <div class="lines collects" id="collects" role="group" aria-label="Collections inside this catalogue" hidden></div>
 </div></div>
 
 <div class="wrap">
@@ -1888,6 +1906,12 @@ h2,h3{font-family:var(--display)}
          screen actually holds rather than from a fixed set of ratios. -->
     <p class="fl">Scale</p>
     <select id="scale"></select>
+    <!-- The same collections as the row under the catalogue rail. They are here as well
+         because the row shows what a catalogue has most of and this shows all of it,
+         grouped by what each one is: a licence, an exclusive market, an issue the maker
+         printed, a tuner's kit. -->
+    <p class="fl">Collections</p>
+    <div class="chiprow" id="collectall"></div>
     <p class="fl">Only show</p>
     <div class="chiprow">
       <button type="button" class="chip" id="relonly" aria-pressed="false">Released only</button>
@@ -2222,7 +2246,12 @@ function recount(){
       /* The numbering runs past the number of cars: some numbers were allocated and
          never issued. Saying so stops the gaps reading as cars missing from here. */
       ? head + ` in the manufacturer's catalogue`
-        + ((typeof gapsFor==="function" && gapsFor(scope))
+        /* The gap count is a fact about the whole numbered range. With a collection
+           picked the figure beside it is 25 Bond cars, not 1,563 Mini GTs, and saying
+           "85 numbers were never issued" next to it would be answering a question
+           nobody asked about a list nobody is looking at. */
+        + ((typeof gapsFor==="function" && gapsFor(scope)
+            && !(typeof collects === "object" && collects && collects.size))
            ? `. ${gapsFor(scope)} numbers in the sequence were never issued, so they are gaps in the numbering, not cars you are missing.` : "")
       /* Tarmac Works publishes no single numbered back catalogue, so this list was
          put together from the maker's own store, the collector wiki and two
@@ -2234,8 +2263,8 @@ function recount(){
       /* The co-branded heading is not a range and has no back catalogue of its own:
          it is whatever two makers happened to sign together, and saying it "publishes
          no full back catalogue" would be describing a thing that does not exist. */
-      : scope===CROSS_LINE
-      ? head + ` releases ${brand} put its name on with another maker. They carry that maker's number and sit in that maker's range; ${brand} is on the box too, so they are here as well. One release, counted once overall.`
+      : isCross(scope)
+      ? head + ` releases ${brand} put its name on with ${crossMaker(scope)}. They carry ${crossMaker(scope)}'s number and sit in its range; ${brand} is on the box too, so they are here as well. One release, counted once overall.`
       : (line==="__all" && COMPILED["#"+scope])
       ? head + ` ${scope} ` + COMPILED["#"+scope]
       : COMPILED[scope]
@@ -2246,11 +2275,12 @@ function recount(){
     $("#ppct").textContent="no completion target";
     $("#ptext").textContent = scope===""
       ? `${owned} owned + ${onord} on the way across every catalogue, worth about ${gbp(totVal)}. Each car is counted once here however many catalogues it belongs to. Pick a catalogue above for a completion figure.`
-      : scope===CROSS_LINE
-      ? `${owned} of the releases ${brand} put its name on with another maker, worth about ${gbp(totVal)}.`
+      : isCross(scope)
+      ? `${owned} of the releases ${brand} put its name on with ${crossMaker(scope)}, worth about ${gbp(totVal)}.`
       : `${owned} models, worth about ${gbp(totVal)}. These lines have no published catalogue, so there is no honest percentage to show.`;
   }
   if(typeof fillLines==="function") fillLines();
+  if(typeof fillCollections==="function") fillCollections();
   if(typeof paintBrands==="function") paintBrands();
   if(typeof fillMarques==="function") fillMarques();
   if(typeof paintNav==="function"){ paintNav(); paintDrawerCard(); paintHero();
@@ -2524,42 +2554,332 @@ function inBrand(d){ return brand==="__all" || brandsOf(d).indexOf(brand)>-1; }
 
    So when the range on a row belongs to a maker other than the one being browsed, it is
    gathered under one heading that says what those releases actually are. */
-const CROSS_LINE = "__cross";
+/* ONE HEADING PER PARTNER, NOT ONE FOR ALL OF THEM.
+
+   These used to be gathered under a single chip, which said "With Tarmac Works" when
+   there happened to be one partner and "With other makers" when there was more than
+   one. Pop Race has two - five releases with Mini GT and thirty-seven with XCarToys -
+   and lumping them read as one undifferentiated pile of forty-two, which is exactly the
+   thing this app is supposed not to do to a catalogue.
+
+   So the key carries the partner's name. Nothing is listed per maker anywhere: a
+   partnership appears the moment a release names two catalogues, and disappears the
+   moment it stops. */
+const CROSS_PREFIX = "__cross:";
+const CROSS_LINE = CROSS_PREFIX;              // kept: older saved pages use the bare key
+function isCross(l){ return typeof l === "string" && l.indexOf(CROSS_PREFIX) === 0; }
+function crossMaker(l){ return isCross(l) ? l.slice(CROSS_PREFIX.length) : ""; }
 function rangeIsForeign(d){
   if(brand === "__all") return false;
   const owner = (typeof RANGE_OWNER === "object" && RANGE_OWNER) ? RANGE_OWNER[d.br] : null;
   return !!owner && owner !== brand;
 }
-function lineKeyOf(d){ return rangeIsForeign(d) ? CROSS_LINE : d.br; }
-function crossLabel(){
-  /* Name the other maker where there is only one, because "with Tarmac Works" says more
-     than "with other makers" and on these catalogues there is almost always just one. */
-  const makers = [...new Set(DATA.filter(d => inBrand(d) && rangeIsForeign(d))
-                                 .map(d => RANGE_OWNER[d.br]))];
-  return makers.length === 1 ? "With " + makers[0] : "With other makers";
+function lineKeyOf(d){
+  return rangeIsForeign(d) ? CROSS_PREFIX + RANGE_OWNER[d.br] : d.br;
 }
+/* =====================================================================
+   COLLECTIONS
+   ---------------------------------------------------------------------
+   A RANGE IS WHAT A RELEASE IS. A COLLECTION IS SOMETHING ABOUT IT.
+
+   Ranges are exclusive: a Mini GT is in Kaidohouse or it is not. The things
+   collectors actually ask for are not: a car can be a Kaidohouse release AND a chase
+   AND issued in a Mijo blister AND sold only in Japan, all at once. Making those into
+   ranges would have meant either lying about the catalogue or picking one of the four
+   to be true.
+
+   So they are their own axis, they multi-select, and they AND together: 007 and Chase
+   means the cars that are both. They scope the whole page the way the series row does,
+   because they go through inLine like everything else.
+
+   NOTHING HERE IS LISTED PER MAKER. A collection is a question asked of the fields on
+   the rows - is there a bond flag, is there an ex, does the maker's own numbering give
+   this one an issue code - and a catalogue shows the ones it can answer. Bburago got
+   its packaging collections the day it gained a pack field, without this code being
+   touched, and the next maker will too.
+   ===================================================================== */
+let collects = new Set();
+
+/* What an issue code means, in the maker's own words where there is one. A code with
+   nothing said about it still becomes a collection, labelled with the code, because a
+   collector who knows what MJ means is better served by a chip than by nothing. */
+/* The third entry, where there is one, means "worth having, not worth leading with".
+   Which drive a release was issued in is a real fact and a big number, and it is not
+   what anybody opens Mini GT to look for; it would otherwise push 007 and the Mijo
+   issues off the row on size alone. */
+const ISS_SAYS = {
+  L:   ["Left-hand drive",   "the left-hand drive issue of this release", 1],
+  R:   ["Right-hand drive",  "the right-hand drive issue of this release", 1],
+  MJ:  ["Mijo issue",        "also issued in a Mijo blister for the American market"],
+  TRU: ["Toys\u2019R\u2019Us issue", "also issued for Toys\u2019R\u2019Us"],
+  LB:  ["LBWK black card",   "also issued on the LBWK black card"],
+  BL:  ["Blister issue",     "also issued on a blister card rather than in a box"],
+  CH:  ["Chase issue",       "the chase version of this release"],
+  AEON:["AEON issue",        "also issued for AEON"],
+  SP:  ["Special issue",     "a special issue of this release"],
+  D1:  ["D1 issue",          "issued for D1"],
+  LM:  ["Le Mans issue",     "issued for Le Mans"]
+};
+
+/* The flags. Each is one field, asked plainly. */
+const COLLECT_FLAGS = [
+  {k:"bond",  lab:"007",                test:d=>!!d.bond,
+   why:"released under the James Bond licence"},
+  {k:"chase", lab:"Chase",              test:d=>!!d.chase,
+   why:"a chase version of this casting was made"},
+  {k:"ex",    lab:"Exclusives",         test:d=>!!d.ex,
+   why:"sold only in one market, or at one event, or through one shop"},
+  {k:"prem",  lab:"Premium",            test:d=>!!d.hwprem,
+   why:"the maker's premium line rather than its mainline"},
+  {k:"tuner", lab:"Tuner or livery",    test:d=>!!d.tn,
+   why:"wears a tuner's kit or a named livery"},
+  {k:"ms",    lab:"Motorsport",         test:d=>!!d.ms,
+   why:"a model of a particular car that raced"},
+  {k:"cb",    lab:"Co-branded",         test:d=>brandsOf(d).length>1,
+   why:"two makers' names on one box"},
+  {k:"nocode",lab:"Number unconfirmed", test:d=>!!d.nocode, minor:1,
+   why:"no maker prints a number for this one, so none is claimed"}
+];
+
+/* Collections built from the VALUES a field holds, rather than from whether it holds
+   one. They only appear where the number of distinct values is small enough to be a row
+   of chips rather than a directory: Hot Wheels has 887 themed sets and they belong in
+   the search box, not here. */
+const COLLECT_VALUE = [
+  {p:"reg",  lab:v=>v,            group:"Sold only in",
+   of:d=>(d.ex && d.ex.c && d.ex.c !== "?") ? d.ex.c : null, cap:40,
+   why:v=>"sold only in " + v},
+  {p:"tn",   lab:v=>v,            group:"Tuner or livery",
+   of:d=>d.tn || null, cap:24, least:4,
+   why:v=>"wears " + v},
+  {p:"pack", lab:v=>v,            group:"Packaging",
+   of:d=>d.pack || null, cap:8,
+   why:v=>"comes in a " + String(v).toLowerCase()},
+  {p:"fam",  lab:v=>v,            group:"Family",
+   of:d=>d.fam || null, cap:20,
+   why:v=>"part of " + v}
+];
+
+/* Every collection this catalogue can answer, with what each one is worth inside the
+   series currently picked. Counted in one walk: the rows are the expensive part and
+   there is no reason to walk them once per chip. */
+/* ONE WALK, AND ONLY WHEN SOMETHING HAS MOVED.
+
+   render() runs on every keystroke in the search box, and this used to be rebuilt each
+   time: a walk of the rows for the counts, then another two walks PER COLLECTION to
+   decide whether it was only the series row again. On "every catalogue at once" that is
+   twenty-two thousand rows times thirty-nine collections times two, and it showed up as
+   most of a second in the one place the app is supposed to feel instant.
+
+   Everything is now counted in the single walk that was there anyway - including the
+   ranges each collection touches, which is what the series-row test actually needs -
+   and the answer is kept until the catalogue, the series or the row count changes. The
+   search box changes none of those. */
+let _colCache = {sig:"", out:null};
+function collectionsHere(){
+  const sig = brand + "|" + line + "|" + DATA.length;
+  if(_colCache.sig === sig && _colCache.out) return _colCache.out;
+  const out = [], n = {}, brOf = {};
+  const note = (k, d) => {
+    n[k] = (n[k] || 0) + 1;
+    const seen = brOf[k] || (brOf[k] = {});
+    seen[d.br] = 1;
+  };
+  let total = 0;
+  const ranges = {};
+  for(const d of DATA){
+    if(!inBrand(d) || !inLineOnly(d)) continue;
+    total++;
+    ranges[d.br] = (ranges[d.br] || 0) + 1;
+    for(const f of COLLECT_FLAGS) if(f.test(d)) note(f.k, d);
+    for(const i of (d.iss || [])) if(i && i.s) note("iss:" + i.s, d);
+    for(const v of COLLECT_VALUE){
+      const got = v.of(d);
+      if(got != null && got !== "") note(v.p + ":" + got, d);
+    }
+  }
+  if(!total){ _colCache = {sig, out:[]}; return _colCache.out; }
+  for(const f of COLLECT_FLAGS)
+    if(n[f.k]) out.push({k:f.k, lab:f.lab, n:n[f.k], why:f.why, group:"", minor:f.minor||0});
+  for(const k of Object.keys(n)){
+    if(k.indexOf("iss:") !== 0) continue;
+    const code = k.slice(4);
+    const say = ISS_SAYS[code] || [code + " issue", "issue code " + code + ", as the maker prints it"];
+    out.push({k, lab:say[0], n:n[k], why:say[1], group:"Issued as", minor:say[2] || 0});
+  }
+  for(const v of COLLECT_VALUE){
+    const mine = Object.keys(n).filter(k => k.indexOf(v.p + ":") === 0);
+    if(!mine.length || mine.length > v.cap) continue;
+    for(const k of mine){
+      if(v.least && n[k] < v.least) continue;
+      const val = k.slice(v.p.length + 1);
+      out.push({k, lab:v.lab(val), n:n[k], why:v.why(val), group:v.group, minor:0});
+    }
+  }
+  /* A collection every release is in says nothing about any of them. Nor does one that
+     is the series row again wearing a different hat: Bburago's families are its two
+     ranges exactly, and offering RACE beside "Bburago 1/64 Race" is two names for one
+     list. Both fall out of the counts already taken. */
+  const sameAsRange = c => {
+    const seen = Object.keys(brOf[c.k] || {});
+    return seen.length === 1 && ranges[seen[0]] === c.n;
+  };
+  _colCache = {sig, out: out.filter(c => c.n < total && !sameAsRange(c))};
+  return _colCache.out;
+}
+function forgetCollections(){ _colCache = {sig:"", out:null}; }
+
+/* Does a row belong to everything currently picked. AND, not OR: picking 007 and Chase
+   asks for the cars that are both, which is what somebody standing in front of their
+   shelf means by it. */
+function matchesCollection(d, k){
+  if(k.indexOf("iss:") === 0){
+    const code = k.slice(4);
+    return (d.iss || []).some(i => i && i.s === code);
+  }
+  const at = k.indexOf(":");
+  if(at > 0){
+    const p = k.slice(0, at), val = k.slice(at + 1);
+    const def = COLLECT_VALUE.find(v => v.p === p);
+    return !!def && String(def.of(d)) === val;
+  }
+  const f = COLLECT_FLAGS.find(x => x.k === k);
+  return !!f && f.test(d);
+}
+function inCollections(d){
+  if(!collects.size) return true;
+  for(const k of collects) if(!matchesCollection(d, k)) return false;
+  return true;
+}
+function clearCollections(){
+  if(!collects.size) return false;
+  collects = new Set();
+  return true;
+}
+
+/* The same list, in the filter sheet, grouped and complete. The row outside shows what
+   a catalogue has most of; this shows everything it has, including the ones with two
+   releases in them. */
+function fillCollectionSheet(){
+  const host = document.getElementById("collectall");
+  if(!host) return;
+  const list = collectionsHere();
+  const keys = new Set(list.map(c => c.k));
+  for(const k of collects) if(!keys.has(k)) list.push({k, lab:collectionLabel(k), n:0, why:"", group:""});
+  if(!list.length){ host.innerHTML = '<span class="hint">Nothing in this catalogue to group by yet.</span>'; return; }
+  const groups = [];
+  for(const c of list){
+    let g = groups.find(x => x.name === (c.group || ""));
+    if(!g) groups.push(g = {name:c.group || "", items:[]});
+    g.items.push(c);
+  }
+  groups.sort((a, b) => (a.name ? 1 : 0) - (b.name ? 1 : 0) || a.name.localeCompare(b.name));
+  host.innerHTML = groups.map(g =>
+    (g.name ? `<span class="fl cgrp">${esc(g.name)}</span>` : "")
+    + g.items.sort((a,b) => (a.minor||0) - (b.minor||0) || (b.n - a.n) || a.lab.localeCompare(b.lab)).map(c =>
+        `<button type="button" class="chip" aria-pressed="${collects.has(c.k)}"`
+        + ` data-col="${esc(c.k)}" title="${esc(c.why || c.lab)}">`
+        + `${esc(c.lab)} <i>${c.n}</i></button>`).join("")
+  ).join("");
+}
+
+let _collectSig = "";
+function fillCollections(){
+  const box = document.getElementById("collects");
+  if(!box) return;
+  const list = collectionsHere();
+  /* Chosen collections stay on the row even when the catalogue changes under them, so
+     that a choice is never silently dropped without the chip that would undo it. */
+  const keys = new Set(list.map(c => c.k));
+  for(const k of collects) if(!keys.has(k)) list.push({k, lab:collectionLabel(k), n:0, why:"", group:""});
+  if(!list.length){
+    if(!box.hidden){ box.hidden = true; box.innerHTML = ""; syncStickyTops(); }
+    _collectSig = ""; return;
+  }
+  list.sort((a, b) => (a.minor||0) - (b.minor||0) || (b.n - a.n) || a.lab.localeCompare(b.lab));
+  /* THE ROW IS A SHORTCUT, NOT THE LIST. Mini GT can answer thirty-eight of these and a
+     row of thirty-eight chips is a wall, not a way in. The biggest few are here and all
+     of them are in the filter sheet, which is the same bargain the catalogue rail
+     struck with its More button. Anything already chosen stays on the row whatever its
+     size, because a choice has to be visible to be undone. */
+  const ROW_MAX = innerWidth <= 760 ? 6 : 10;
+  const shown = list.filter(c => collects.has(c.k));
+  for(const c of list){
+    if(shown.length >= ROW_MAX) break;
+    if(!collects.has(c.k)) shown.push(c);
+  }
+  const hidden = list.length - shown.length;
+  /* The owned figures move when a car is ticked and the catalogue figures do not, so
+     the row's signature has to carry both or the shelf count goes stale on the chips. */
+  const sig = [brand, line, [...collects].sort().join(","),
+               shown.map(c => c.k + c.n).join("|"), hidden,
+               bcnt(brand)].join("~");
+  if(sig === _collectSig && !box.hidden) return;
+  _collectSig = sig;
+  const was = box.hidden;
+  box.hidden = false;
+  /* What is on the shelf in each of the chips actually shown. Only the chips on the
+     row, and only when the row is being redrawn, which the signature above already
+     decides. */
+  const owned = {};
+  for(const d of DATA){
+    if(!d.o || d.k || d.xc) continue;
+    if(!inBrand(d) || !inLineOnly(d)) continue;
+    for(const c of shown) if(matchesCollection(d, c.k)) owned[c.k] = (owned[c.k] || 0) + 1;
+  }
+  box.innerHTML = shown.map(c => {
+    const on = collects.has(c.k);
+    return `<button type="button" aria-pressed="${on}" data-col="${esc(c.k)}"`
+      + ` class="${on ? "on" : ""}" title="${esc(c.lab + (c.why ? " \u2014 " + c.why : ""))}">`
+      + `${esc(c.lab)} <i>${owned[c.k] || 0}/${c.n}</i>${on ? `<i class="cx">\u00d7</i>` : ""}</button>`;
+  }).join("")
+  + (hidden > 0
+     ? `<button type="button" class="brandmore" id="collectmore"`
+       + ` title="Every way this catalogue can be grouped, in the filter sheet">`
+       + `More <i>+${hidden}</i></button>`
+     : "");
+  railChrome(box);
+  if(was) syncStickyTops();
+}
+function collectionLabel(k){
+  if(k.indexOf("iss:") === 0){
+    const say = ISS_SAYS[k.slice(4)];
+    return say ? say[0] : k.slice(4) + " issue";
+  }
+  const at = k.indexOf(":");
+  if(at > 0){
+    const def = COLLECT_VALUE.find(v => v.p === k.slice(0, at));
+    return def ? def.lab(k.slice(at + 1)) : k.slice(at + 1);
+  }
+  const f = COLLECT_FLAGS.find(x => x.k === k);
+  return f ? f.lab : k;
+}
+
 function linesOfBrand(){
   const seen=[];
   DATA.forEach(d=>{ if(inBrand(d)){ const k=lineKeyOf(d); if(seen.indexOf(k)<0) seen.push(k); } });
   const order=[...LINES,...TW_LINES,...PR_LINES,...SP_LINES,...HW_LINES,...B6_LINES,...TOMICA_LINES,...IXO_LINES];
   return seen.sort((a,b)=>{
     /* the co-branded heading sorts last: it is a footnote to a catalogue, not a range */
-    if(a===CROSS_LINE) return 1;
-    if(b===CROSS_LINE) return -1;
+    if(isCross(a) && isCross(b)) return crossMaker(a).localeCompare(crossMaker(b));
+    if(isCross(a)) return 1;
+    if(isCross(b)) return -1;
     const ia=order.indexOf(a), ib=order.indexOf(b);
     return (ia<0?99:ia)-(ib<0?99:ib) || a.localeCompare(b);
   });
 }
-function lineName(l){ return l===CROSS_LINE ? crossLabel() : l; }
+/* The multiplication sign is the one the co-brand field already uses ("XCarToys x Pop
+   Race"), so a heading and a card say the same thing the same way. */
+function lineName(l){ return isCross(l) ? "\u00d7 " + crossMaker(l) : l; }
 function inLineOnly(d){
   return line==="__all" ? true
        : line==="__other" ? !LINES.includes(d.br)
-       : line===CROSS_LINE ? rangeIsForeign(d)
+       : isCross(line) ? (rangeIsForeign(d) && RANGE_OWNER[d.br] === crossMaker(line))
        : (d.br===line && !rangeIsForeign(d));
 }
 /* Every count, list, tile, chart and export runs through inLine, so scoping the
    catalogue here scopes the whole page at once instead of in forty places. */
-function inLine(d){ return inBrand(d) && inLineOnly(d); }
+function inLine(d){ return inBrand(d) && inLineOnly(d) && inCollections(d); }
 /* NOTISSUED used to be one number, for Mini GT alone. BBR has gaps of its own, so it is
    a map now; the fallback keeps an older saved page working. */
 function gapsFor(l){
@@ -2586,7 +2906,7 @@ function fillLines(){
      entry offered "233/1253" and then handed back six cars: the six joint releases
      that are actually in Tarmac's catalogue. The rail counts the same six. */
   const n=b=>(have[b]||0), t=b=>(all[b]!==undefined ? all[b] : (boxes[b]||0));
-  const known=b=>b===CROSS_LINE||LINES.includes(b)||TW_LINES.includes(b)||PR_LINES.includes(b);
+  const known=b=>isCross(b)||LINES.includes(b)||TW_LINES.includes(b)||PR_LINES.includes(b);
   const tracked=mine.filter(known);
   const loose=mine.filter(b=>!known(b));
   const label = brand==="__all" ? "Everything — " : "All of "+brand+" — ";
@@ -2656,7 +2976,7 @@ function seriesCounts(){
    and Schuco appeared to have a range it has never had. Ownership is now stated rather
    than inferred - RANGE_OWNER says which maker each range belongs to - and a release
    whose range belongs to somebody else is gathered under one heading naming that maker.
-   See lineKeyOf and crossLabel. */
+   See lineKeyOf and lineName. */
 function seriesLabel(b, solo){
   return lineName(b);
 }
@@ -2710,16 +3030,31 @@ function paintLines(){
                   b+" \u2014 "+bx+" boxes of cars. A box counts as nothing on its own; "
                   + "the cars inside it each count as one.");
     return chip(b, seriesLabel(b,solo), have[b]||0, cars,
-        b!==CROSS_LINE
+        !isCross(b)
           ? b+" \u2014 "+(have[b]||0)+" of "+cars+" owned or on the way"
-          : "Releases "+brand+" put its name on with another maker. They belong to that "
-            +"maker's range rather than to any range of "+brand+" \u2014 "+(have[b]||0)+" of "+cars
-            +" owned or on the way");
+          : "Releases "+brand+" put its name on with "+crossMaker(b)+". They carry "
+            +crossMaker(b)+"'s number and sit in its range, and "+brand+" is on the box "
+            +"too \u2014 "+(have[b]||0)+" of "+cars+" owned or on the way");
   }).join("");
   box.innerHTML=out;
   railChrome(box);
   if(was) syncStickyTops();
 }
+function toggleCollection(k){
+  if(collects.has(k)) collects.delete(k); else collects.add(k);
+  recount(); render(); paintFilters();
+  fillCollections(); fillCollectionSheet();
+  if(typeof drawStats==="function" && view==="stats") drawStats();
+}
+document.getElementById("collects").onclick=e=>{
+  if(e.target.closest("#collectmore")){ fillCollectionSheet(); openSheet("filter"); return; }
+  const b=e.target.closest("button[data-col]"); if(!b) return;
+  toggleCollection(b.dataset.col);
+};
+document.getElementById("collectall").onclick=e=>{
+  const b=e.target.closest("button[data-col]"); if(!b) return;
+  toggleCollection(b.dataset.col);
+};
 document.getElementById("lines").onclick=e=>{
   const b=e.target.closest("button[data-l]"); if(!b) return;
   line=b.dataset.l;
@@ -3145,6 +3480,11 @@ function activeFilters(){
   } else if(line==="__other"){
     out.push({k:"line",lab:"Series",v:"All other brands",clear:()=>{line="__all";document.getElementById("line").value="__all";}});
   }
+  /* Each chosen collection is its own chip in the summary, so one can be dropped
+     without dropping the rest, and Clear filters takes them all. */
+  for(const k of collects)
+    out.push({k:"col:"+k, lab:"Collection", v:collectionLabel(k),
+              clear:()=>{ collects.delete(k); }});
   if(marque) out.push({k:"marque",lab:"Marque",v:marque,clear:()=>{marque="";document.getElementById("marque").value="";}});
   if(scaleWant) out.push({k:"scale",lab:"Scale",
       v: scaleWant==="__none" ? "not stated" : scaleWant.replace("/",":"),
@@ -3276,7 +3616,7 @@ function pickBrand(b){
   /* A marque that exists in the catalogue you left and not in the one you arrived at
      would filter the new shelf down to nothing with no visible cause. */
   if(marque && !DATA.some(d => inBrand(d) && d.m === marque)) marque = "";
-  fillLines(); paintBrands(); fillMarques(); recount(); render(); paintFilters();
+  fillLines(); fillCollections(); paintBrands(); fillMarques(); recount(); render(); paintFilters();
   if(typeof drawStats === "function") drawStats();
   return true;
 }
@@ -3286,12 +3626,14 @@ document.getElementById("brandlist").onclick=e=>{
   const b=e.target.closest(".brandpick"); if(!b) return;
   pickBrand(b.dataset.b);
 };
-document.getElementById("filterbtn").onclick=()=>openSheet("filter");
+document.getElementById("filterbtn").onclick=()=>{ fillCollectionSheet(); openSheet("filter"); };
 document.getElementById("filterx").onclick=()=>closeSheet("filter");
 document.getElementById("filtermask").onclick=e=>{ if(e.target.id==="filtermask") closeSheet("filter"); };
 document.getElementById("filterclear").onclick=()=>{
   activeFilters().filter(f=>f.k!=="q").forEach(f=>f.clear());
-  recount(); render(); paintFilters(); toast("Filters cleared");
+  recount(); render(); paintFilters();
+  fillCollections(); fillCollectionSheet();
+  toast("Filters cleared");
 };
 document.getElementById("sortbtn").onclick=()=>{
   const sel=document.getElementById("sort");
@@ -3485,6 +3827,13 @@ $("#brands").onclick=e=>{
   pickBrand(b.dataset.b);
 };
 fillLines(); paintBrands(); paintLines(); syncStickyTops();
+/* THE COLLECTIONS ROW CAN WAIT A MOMENT.
+   Working out what a catalogue can be grouped by is a walk of every row in it, and at
+   first paint the one thing that matters is a car on screen. Nobody reaches for "007"
+   in the first frame, and the row appears before anybody could. */
+if(typeof requestIdleCallback === "function")
+  requestIdleCallback(() => fillCollections(), {timeout:1200});
+else setTimeout(() => fillCollections(), 150);
 const marques=[...new Set(DATA.map(d=>d.m))].sort((a,b)=>a.localeCompare(b));
 function fillMarques(){
   /* Counted in one walk. This used to filter the whole scope twice for every marque in
@@ -3925,7 +4274,7 @@ function elsewhereNote(){
     + `<b>${esc(lineName(scope))}</b>. <button class="chip" id="seeall">Search every catalogue</button>`;
   document.getElementById("seeall").onclick=()=>{
     brand="__all"; line="__all";
-    fillLines(); paintBrands(); fillMarques(); recount(); render();
+    fillLines(); fillCollections(); paintBrands(); fillMarques(); recount(); render();
   };
 }
 /* ---------- regional exclusives and the 007 line ---------- */
@@ -4736,6 +5085,7 @@ function openCard(i){
     brand = "__all"; line = "__all"; view = "all";
     q = n; const box = document.getElementById("q"); if(box) box.value = n;
     if(typeof fillLines === "function") fillLines();
+    if(typeof fillCollections === "function") fillCollections();
     if(typeof paintBrands === "function") paintBrands();
     [...document.querySelectorAll("#tabs button")].forEach(x => x.classList.toggle("on", x.dataset.v === "all"));
     recount(); render();
@@ -5192,7 +5542,12 @@ let DB = null, syncState = "local";      // local | connecting | synced | error
 const writeQ = new Map();                // one write at a time per document
 
 const byNum = new Map();
-function reindex(){ byNum.clear(); DATA.forEach(d=>byNum.set(d.n,d)); clearSearchCache(); }
+function reindex(){
+  byNum.clear(); DATA.forEach(d=>byNum.set(d.n,d)); clearSearchCache();
+  /* The collections are counted off the catalogue, so anything that rebuilds the
+     catalogue - a restore, a sign-in, an import - has to make them count again. */
+  if(typeof forgetCollections === "function") forgetCollections();
+}
 reindex();
 /* THE CATALOGUE AS IT WAS SHIPPED, BUILT WHEN SOMEBODY ASKS FOR IT.
 
@@ -6356,7 +6711,9 @@ const SCAN = (()=>{
        there was one catalogue; with more than one, a Tarmac code scanned while Mini
        GT was selected closed the sheet onto an empty grid. */
     q=""; $("#q").value=n; brand="__all"; line="__all";
+    if(typeof clearCollections==="function") clearCollections();
     if(typeof fillLines==="function") fillLines();
+    if(typeof fillCollections==="function") fillCollections();
     if(typeof paintBrands==="function") paintBrands();
     $("#line").value="__all";
     view="all"; [...$("#tabs").children].forEach(x=>x.classList.toggle("on",x.dataset.v==="all"));
