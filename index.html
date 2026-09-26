@@ -3,12 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>MINI164</title>
-<meta name="description" content="A 1:64 diecast collection tracker: Mini GT, Tarmac Works, PARA64, Pop Race, XCarToys, Schuco and BBR.">
-<meta name="theme-color" content="#08080a">
+<title>MYMINI164</title>
+<meta name="description" content="MYMINI164: a 1:64 diecast collection. Fourteen makers catalogued, with rarity, provenance and what you own.">
 <meta name="color-scheme" content="dark light">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MYMINI164">
+<meta property="og:title" content="MYMINI164">
+<meta property="og:description" content="A 1:64 diecast collection: fourteen makers catalogued, with rarity and provenance.">
+<meta property="og:image" content="p/mini164-icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="p/mini164-favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="p/mini164-favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="p/mini164-icon-180.png">
+<meta name="apple-mobile-web-app-title" content="MYMINI164">
+<meta name="theme-color" content="#08080a">
+<link rel="manifest" href="p/mini164.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- The webfont is a nicety, not a requirement: every rule falls back to a system
@@ -1293,7 +1304,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 
 /* =====================================================================
    SURFACE PASS
-   A flat card and a raised one read differently at a glance, and MINI164
+   A flat card and a raised one read differently at a glance, and MYMINI164
    was drawing everything on the same plane: the same fill, the same
    hairline, nothing to say which surface is the object and which is the
    table it sits on. What follows adds material and nothing else. No rule
@@ -1407,7 +1418,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 /* =====================================================================
    THE TYPE AND THE SHAPES
    ---------------------------------------------------------------------
-   MINI164 was set almost entirely at one size in one weight. Everything
+   MYMINI164 was set almost entirely at one size in one weight. Everything
    on screen was the same loudness, so the eye had nothing to land on
    first and the page read as dense rather than as organised. What
    follows is a scale, not a redecoration: a display face at a weight
@@ -1730,9 +1741,60 @@ h2,h3{font-family:var(--display)}
 .scale.noscale{font-size:9px;letter-spacing:0;opacity:.72;font-weight:600}
 .jpname{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,
   "Noto Sans JP",system-ui,sans-serif;line-height:1.55;font-size:14px}
+/* Present to a screen reader and to a search engine, absent to the eye. Used for the
+   page's heading, which the logo says in pictures and cannot say in words. */
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+
+/* ---------- THE MINI164 MARK ---------------------------------------------------
+   One rule decides which approved wordmark is showing, and it is keyed on the light
+   or dark mode rather than on any colourway's name. Six colourways times two modes is
+   twelve surfaces; every dark one sits between #03081a and #08090b and every light one
+   between #f0f5ff and #f6f6f8, so luminance is what actually matters and data-theme is
+   what carries it. Adding a seventh colourway needs nothing here.
+
+   Both variants are in the document and one is hidden, so changing theme is a repaint
+   rather than a fetch, a re-render or a flash of the wrong one. */
+.m164logo{display:inline-flex;align-items:center;line-height:0}
+.m164logo svg{display:block;height:100%;width:auto}
+.m164logo .m164-ink{display:none}
+.m164logo .m164-white{display:block}
+:root[data-theme="light"] .m164logo .m164-ink{display:block}
+:root[data-theme="light"] .m164logo .m164-white{display:none}
+/* The car on its own already carries its red field, so it is the same picture on
+   every surface and needs no variant. */
+.m164logo.m164-markonly svg{border-radius:22%}
+
+/* In the bar. Sized to the cap height of what used to be here, so the shell keeps its
+   proportions and the bar does not grow to make room for a picture. */
+.wordmark .m164logo{height:26px}
+@media(max-width:430px){ .wordmark .m164logo{height:23px} }
+@media(max-width:340px){ .wordmark .m164logo{height:21px} }
+
+/* Standing alone, above a sign-in form or an empty shelf, where it is the thing
+   introducing the application rather than a label on a bar. */
+.m164logo.m164-hero{height:46px}
+@media(max-width:430px){ .m164logo.m164-hero{height:38px} }
+
 </style>
 
 <a class="skipnav" href="#grid">Skip to the cars</a>
+<svg class="m164-sprite" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><symbol id="m164-word-ink" viewBox="0 0 1163.7 281.1"><g transform="translate(0,11.14)">
+    <g fill="#2D2D2D" fill-rule="evenodd">
+      <path d="M 498.33,85.27 Q 490.35,84.48 490.35,74.10 L 490.35,69.31 Q 491.14,58.93 506.31,55.74 L 581.35,43.77 C 602.10,37.38 616.47,21.41 646.80,15.03 Q 670.75,10.24 691.50,13.43 C 723.43,15.03 760.15,29.40 785.70,38.98 L 796.87,35.78 L 799.27,45.36 L 800.07,75.69 Q 800.07,85.27 788.89,85.27 L 768.93,85.27 A 31.13,31.13 0 0 0 706.67,85.27 L 586.93,85.27 A 31.13,31.13 0 0 0 524.67,85.27 L 498.33,85.27 Z M 616.47,42.17 C 629.24,32.59 638.82,23.81 657.98,21.41 L 676.34,20.62 L 674.74,42.17 Z M 685.92,42.17 L 687.51,20.62 L 693.10,20.62 C 715.45,22.21 737.80,31.79 755.36,42.17 Z"/>
+      <path d="M 529.46,85.27 A 26.34,26.34 0 1 0 582.14,85.27 A 26.34,26.34 0 1 0 529.46,85.27 Z M 542.23,85.27 A 13.57,13.57 0 1 0 569.37,85.27 A 13.57,13.57 0 1 0 542.23,85.27 Z M 551.01,85.27 A 4.79,4.79 0 1 0 560.59,85.27 A 4.79,4.79 0 1 0 551.01,85.27 Z M 711.46,85.27 A 26.34,26.34 0 1 0 764.14,85.27 A 26.34,26.34 0 1 0 711.46,85.27 Z M 724.23,85.27 A 13.57,13.57 0 1 0 751.37,85.27 A 13.57,13.57 0 1 0 724.23,85.27 Z M 733.01,85.27 A 4.79,4.79 0 1 0 742.59,85.27 A 4.79,4.79 0 1 0 733.01,85.27 Z"/>
+    </g>
+    <path fill="#2D2D2D" d="M127.152 235.176V174.476Q127.152 145.976 110.75200000000001 145.976Q102.25200000000001 145.976 96.90200000000002 154.676Q91.552 163.37599999999998 91.552 177.176V235.176H63.452V151.176Q63.452 142.476 63.202 136.926Q62.952 131.37599999999998 62.652 126.97599999999998H89.452Q89.75200000000001 128.87599999999998 90.25200000000001 137.12599999999998Q90.75200000000001 145.37599999999998 90.75200000000001 148.476H91.152Q96.352 136.07599999999996 104.102 130.47599999999997Q111.852 124.87599999999998 122.652 124.87599999999998Q147.452 124.87599999999998 152.752 148.476H153.352Q158.852 135.87599999999998 166.55200000000002 130.37599999999998Q174.252 124.87599999999998 186.152 124.87599999999998Q201.952 124.87599999999998 210.252 135.62599999999998Q218.55200000000002 146.37599999999998 218.55200000000002 166.476V235.176H190.652V174.476Q190.652 145.976 174.252 145.976Q166.05200000000002 145.976 160.80200000000002 153.926Q155.55200000000002 161.87599999999998 155.05200000000002 175.87599999999998V235.176ZM259.552 277.676Q249.452 277.676 241.852 276.376V256.376Q247.15200000000002 257.176 251.55200000000002 257.176Q257.552 257.176 261.502 255.27599999999998Q265.452 253.37599999999998 268.602 248.976Q271.752 244.576 275.65200000000004 234.076L232.852 126.97599999999998H262.552L279.552 177.676Q283.552 188.576 289.65200000000004 211.076L292.15200000000004 201.576L298.65200000000004 178.076L314.65200000000004 126.97599999999998H344.052L301.252 240.87599999999998Q292.65200000000004 261.676 283.40200000000004 269.676Q274.15200000000004 277.676 259.552 277.676ZM423.152 235.176V174.476Q423.152 145.976 406.752 145.976Q398.252 145.976 392.90200000000004 154.676Q387.552 163.37599999999998 387.552 177.176V235.176H359.452V151.176Q359.452 142.476 359.202 136.926Q358.952 131.37599999999998 358.652 126.97599999999998H385.452Q385.752 128.87599999999998 386.252 137.12599999999998Q386.752 145.37599999999998 386.752 148.476H387.152Q392.352 136.07599999999996 400.102 130.47599999999997Q407.852 124.87599999999998 418.652 124.87599999999998Q443.452 124.87599999999998 448.752 148.476H449.352Q454.852 135.87599999999998 462.552 130.37599999999998Q470.252 124.87599999999998 482.152 124.87599999999998Q497.952 124.87599999999998 506.252 135.62599999999998Q514.552 146.37599999999998 514.552 166.476V235.176H486.652V174.476Q486.652 145.976 470.252 145.976Q462.052 145.976 456.802 153.926Q451.552 161.87599999999998 451.052 175.87599999999998V235.176ZM541.7520000000001 235.176V126.97599999999998H569.8520000000001V235.176ZM668.552 235.176V174.476Q668.552 145.976 649.2520000000001 145.976Q639.052 145.976 632.802 154.726Q626.552 163.476 626.552 177.176V235.176H598.452V151.176Q598.452 142.476 598.202 136.926Q597.952 131.37599999999998 597.652 126.97599999999998H624.452Q624.7520000000001 128.87599999999998 625.2520000000001 137.12599999999998Q625.7520000000001 145.37599999999998 625.7520000000001 148.476H626.152Q631.8520000000001 136.07599999999996 640.452 130.47599999999997Q649.052 124.87599999999998 660.952 124.87599999999998Q678.152 124.87599999999998 687.3520000000001 135.47599999999997Q696.552 146.07599999999996 696.552 166.476V235.176ZM723.7520000000001 235.176V126.97599999999998H751.8520000000001V235.176Z"/>
+    <path fill="#D42A2A" d="M810.305157894737 235.176V214.27599999999998H845.205157894737V118.17599999999999L811.405157894737 139.27599999999998V117.17599999999999L846.705157894737 94.27599999999998H873.305157894737V214.27599999999998H905.6051578947371V235.176ZM1017.805157894737 189.076Q1017.805157894737 211.576 1005.205157894737 224.37599999999998Q992.605157894737 237.176 970.405157894737 237.176Q945.5051578947371 237.176 932.155157894737 219.726Q918.805157894737 202.27599999999998 918.805157894737 167.976Q918.805157894737 130.27599999999998 932.355157894737 111.22599999999998Q945.905157894737 92.17599999999999 971.105157894737 92.17599999999999Q989.0051578947371 92.17599999999999 999.355157894737 100.076Q1009.705157894737 107.97599999999998 1014.0051578947371 124.57599999999998L987.5051578947371 128.27599999999998Q983.705157894737 114.37599999999998 970.5051578947371 114.37599999999998Q959.205157894737 114.37599999999998 952.7551578947371 125.67599999999999Q946.305157894737 136.976 946.305157894737 159.976Q950.805157894737 152.476 958.805157894737 148.476Q966.805157894737 144.476 976.905157894737 144.476Q995.805157894737 144.476 1006.805157894737 156.476Q1017.805157894737 168.476 1017.805157894737 189.076ZM989.605157894737 189.87599999999998Q989.605157894737 177.87599999999998 984.055157894737 171.52599999999998Q978.5051578947371 165.176 968.805157894737 165.176Q959.5051578947371 165.176 953.905157894737 171.12599999999998Q948.305157894737 177.076 948.305157894737 186.87599999999998Q948.305157894737 199.176 954.155157894737 207.226Q960.0051578947371 215.27599999999998 969.5051578947371 215.27599999999998Q979.0051578947371 215.27599999999998 984.305157894737 208.52599999999998Q989.605157894737 201.77599999999998 989.605157894737 189.87599999999998ZM1119.205157894737 206.476V235.176H1092.4051578947372V206.476H1028.305157894737V185.37599999999998L1087.805157894737 94.27599999999998H1119.205157894737V185.576H1138.005157894737V206.476ZM1092.4051578947372 139.476Q1092.4051578947372 134.07599999999996 1092.7551578947373 127.77599999999998Q1093.1051578947372 121.47599999999998 1093.305157894737 119.67599999999999Q1090.705157894737 125.27599999999998 1083.9051578947372 135.87599999999998L1051.205157894737 185.576H1092.4051578947372Z"/>
+  </g></symbol><symbol id="m164-word-white" viewBox="0 0 1163.7 281.1"><g transform="translate(0,11.14)">
+    <g fill="#FFFFFF" fill-rule="evenodd">
+      <path d="M 498.33,85.27 Q 490.35,84.48 490.35,74.10 L 490.35,69.31 Q 491.14,58.93 506.31,55.74 L 581.35,43.77 C 602.10,37.38 616.47,21.41 646.80,15.03 Q 670.75,10.24 691.50,13.43 C 723.43,15.03 760.15,29.40 785.70,38.98 L 796.87,35.78 L 799.27,45.36 L 800.07,75.69 Q 800.07,85.27 788.89,85.27 L 768.93,85.27 A 31.13,31.13 0 0 0 706.67,85.27 L 586.93,85.27 A 31.13,31.13 0 0 0 524.67,85.27 L 498.33,85.27 Z M 616.47,42.17 C 629.24,32.59 638.82,23.81 657.98,21.41 L 676.34,20.62 L 674.74,42.17 Z M 685.92,42.17 L 687.51,20.62 L 693.10,20.62 C 715.45,22.21 737.80,31.79 755.36,42.17 Z"/>
+      <path d="M 529.46,85.27 A 26.34,26.34 0 1 0 582.14,85.27 A 26.34,26.34 0 1 0 529.46,85.27 Z M 542.23,85.27 A 13.57,13.57 0 1 0 569.37,85.27 A 13.57,13.57 0 1 0 542.23,85.27 Z M 551.01,85.27 A 4.79,4.79 0 1 0 560.59,85.27 A 4.79,4.79 0 1 0 551.01,85.27 Z M 711.46,85.27 A 26.34,26.34 0 1 0 764.14,85.27 A 26.34,26.34 0 1 0 711.46,85.27 Z M 724.23,85.27 A 13.57,13.57 0 1 0 751.37,85.27 A 13.57,13.57 0 1 0 724.23,85.27 Z M 733.01,85.27 A 4.79,4.79 0 1 0 742.59,85.27 A 4.79,4.79 0 1 0 733.01,85.27 Z"/>
+    </g>
+    <path fill="#FFFFFF" d="M127.152 235.176V174.476Q127.152 145.976 110.75200000000001 145.976Q102.25200000000001 145.976 96.90200000000002 154.676Q91.552 163.37599999999998 91.552 177.176V235.176H63.452V151.176Q63.452 142.476 63.202 136.926Q62.952 131.37599999999998 62.652 126.97599999999998H89.452Q89.75200000000001 128.87599999999998 90.25200000000001 137.12599999999998Q90.75200000000001 145.37599999999998 90.75200000000001 148.476H91.152Q96.352 136.07599999999996 104.102 130.47599999999997Q111.852 124.87599999999998 122.652 124.87599999999998Q147.452 124.87599999999998 152.752 148.476H153.352Q158.852 135.87599999999998 166.55200000000002 130.37599999999998Q174.252 124.87599999999998 186.152 124.87599999999998Q201.952 124.87599999999998 210.252 135.62599999999998Q218.55200000000002 146.37599999999998 218.55200000000002 166.476V235.176H190.652V174.476Q190.652 145.976 174.252 145.976Q166.05200000000002 145.976 160.80200000000002 153.926Q155.55200000000002 161.87599999999998 155.05200000000002 175.87599999999998V235.176ZM259.552 277.676Q249.452 277.676 241.852 276.376V256.376Q247.15200000000002 257.176 251.55200000000002 257.176Q257.552 257.176 261.502 255.27599999999998Q265.452 253.37599999999998 268.602 248.976Q271.752 244.576 275.65200000000004 234.076L232.852 126.97599999999998H262.552L279.552 177.676Q283.552 188.576 289.65200000000004 211.076L292.15200000000004 201.576L298.65200000000004 178.076L314.65200000000004 126.97599999999998H344.052L301.252 240.87599999999998Q292.65200000000004 261.676 283.40200000000004 269.676Q274.15200000000004 277.676 259.552 277.676ZM423.152 235.176V174.476Q423.152 145.976 406.752 145.976Q398.252 145.976 392.90200000000004 154.676Q387.552 163.37599999999998 387.552 177.176V235.176H359.452V151.176Q359.452 142.476 359.202 136.926Q358.952 131.37599999999998 358.652 126.97599999999998H385.452Q385.752 128.87599999999998 386.252 137.12599999999998Q386.752 145.37599999999998 386.752 148.476H387.152Q392.352 136.07599999999996 400.102 130.47599999999997Q407.852 124.87599999999998 418.652 124.87599999999998Q443.452 124.87599999999998 448.752 148.476H449.352Q454.852 135.87599999999998 462.552 130.37599999999998Q470.252 124.87599999999998 482.152 124.87599999999998Q497.952 124.87599999999998 506.252 135.62599999999998Q514.552 146.37599999999998 514.552 166.476V235.176H486.652V174.476Q486.652 145.976 470.252 145.976Q462.052 145.976 456.802 153.926Q451.552 161.87599999999998 451.052 175.87599999999998V235.176ZM541.7520000000001 235.176V126.97599999999998H569.8520000000001V235.176ZM668.552 235.176V174.476Q668.552 145.976 649.2520000000001 145.976Q639.052 145.976 632.802 154.726Q626.552 163.476 626.552 177.176V235.176H598.452V151.176Q598.452 142.476 598.202 136.926Q597.952 131.37599999999998 597.652 126.97599999999998H624.452Q624.7520000000001 128.87599999999998 625.2520000000001 137.12599999999998Q625.7520000000001 145.37599999999998 625.7520000000001 148.476H626.152Q631.8520000000001 136.07599999999996 640.452 130.47599999999997Q649.052 124.87599999999998 660.952 124.87599999999998Q678.152 124.87599999999998 687.3520000000001 135.47599999999997Q696.552 146.07599999999996 696.552 166.476V235.176ZM723.7520000000001 235.176V126.97599999999998H751.8520000000001V235.176Z"/>
+    <path fill="#D42A2A" d="M810.305157894737 235.176V214.27599999999998H845.205157894737V118.17599999999999L811.405157894737 139.27599999999998V117.17599999999999L846.705157894737 94.27599999999998H873.305157894737V214.27599999999998H905.6051578947371V235.176ZM1017.805157894737 189.076Q1017.805157894737 211.576 1005.205157894737 224.37599999999998Q992.605157894737 237.176 970.405157894737 237.176Q945.5051578947371 237.176 932.155157894737 219.726Q918.805157894737 202.27599999999998 918.805157894737 167.976Q918.805157894737 130.27599999999998 932.355157894737 111.22599999999998Q945.905157894737 92.17599999999999 971.105157894737 92.17599999999999Q989.0051578947371 92.17599999999999 999.355157894737 100.076Q1009.705157894737 107.97599999999998 1014.0051578947371 124.57599999999998L987.5051578947371 128.27599999999998Q983.705157894737 114.37599999999998 970.5051578947371 114.37599999999998Q959.205157894737 114.37599999999998 952.7551578947371 125.67599999999999Q946.305157894737 136.976 946.305157894737 159.976Q950.805157894737 152.476 958.805157894737 148.476Q966.805157894737 144.476 976.905157894737 144.476Q995.805157894737 144.476 1006.805157894737 156.476Q1017.805157894737 168.476 1017.805157894737 189.076ZM989.605157894737 189.87599999999998Q989.605157894737 177.87599999999998 984.055157894737 171.52599999999998Q978.5051578947371 165.176 968.805157894737 165.176Q959.5051578947371 165.176 953.905157894737 171.12599999999998Q948.305157894737 177.076 948.305157894737 186.87599999999998Q948.305157894737 199.176 954.155157894737 207.226Q960.0051578947371 215.27599999999998 969.5051578947371 215.27599999999998Q979.0051578947371 215.27599999999998 984.305157894737 208.52599999999998Q989.605157894737 201.77599999999998 989.605157894737 189.87599999999998ZM1119.205157894737 206.476V235.176H1092.4051578947372V206.476H1028.305157894737V185.37599999999998L1087.805157894737 94.27599999999998H1119.205157894737V185.576H1138.005157894737V206.476ZM1092.4051578947372 139.476Q1092.4051578947372 134.07599999999996 1092.7551578947373 127.77599999999998Q1093.1051578947372 121.47599999999998 1093.305157894737 119.67599999999999Q1090.705157894737 125.27599999999998 1083.9051578947372 135.87599999999998L1051.205157894737 185.576H1092.4051578947372Z"/>
+  </g></symbol><symbol id="m164-mark" viewBox="0 0 512 512"><rect width="512" height="512" rx="112.64" fill="#D42A2A"/>
+  <g fill="#FFFFFF" fill-rule="evenodd"><path d="M 52.04,287.59 Q 40.96,286.48 40.96,272.07 L 40.96,265.42 Q 42.07,251.01 63.13,246.58 L 167.32,229.95 C 196.14,221.08 216.10,198.91 258.22,190.05 Q 291.47,183.40 320.29,187.83 C 364.63,190.05 415.62,210.00 451.09,223.30 L 466.61,218.87 L 469.93,232.17 L 471.04,274.29 Q 471.04,287.59 455.52,287.59 L 427.81,287.59 A 43.23,43.23 0 0 0 341.35,287.59 L 175.08,287.59 A 43.23,43.23 0 0 0 88.62,287.59 L 52.04,287.59 Z M 216.10,227.73 C 233.83,214.43 247.13,202.24 273.74,198.91 L 299.23,197.81 L 297.01,227.73 Z M 312.53,227.73 L 314.75,197.81 L 322.51,197.81 C 353.54,200.02 384.58,213.32 408.97,227.73 Z"/><path d="M 95.27,287.59 A 36.58,36.58 0 1 0 168.43,287.59 A 36.58,36.58 0 1 0 95.27,287.59 Z M 113.01,287.59 A 18.84,18.84 0 1 0 150.70,287.59 A 18.84,18.84 0 1 0 113.01,287.59 Z M 125.20,287.59 A 6.65,6.65 0 1 0 138.50,287.59 A 6.65,6.65 0 1 0 125.20,287.59 Z M 348.00,287.59 A 36.58,36.58 0 1 0 421.16,287.59 A 36.58,36.58 0 1 0 348.00,287.59 Z M 365.74,287.59 A 18.84,18.84 0 1 0 403.42,287.59 A 18.84,18.84 0 1 0 365.74,287.59 Z M 377.93,287.59 A 6.65,6.65 0 1 0 391.23,287.59 A 6.65,6.65 0 1 0 377.93,287.59 Z"/></g></symbol></svg>
 
 <!-- ============================================================
      THE SHELL
@@ -1747,9 +1809,17 @@ h2,h3{font-family:var(--display)}
     <span></span><span></span><span></span>
   </button>
   <div class="wordmark">
-    <!-- The page carries more than one maker now, and the name should not read as
-         a Mini GT product. Mini GT is still the heart of it, hence 164. -->
-    <h1>MINI<span>164</span></h1><small>1:64 collection</small>
+    <!-- The approved mark, not the name set in the page's own typeface. It was text
+         because there was no logo; there is one now, and it is a picture of a car
+         above the word, which is a thing a heading cannot be.
+
+         The h1 stays, visually hidden. A page needs a heading, a search engine needs
+         a name, and a screen reader should hear MYMINI164 rather than "image" - so the
+         picture is marked decorative and the heading underneath it does the talking,
+         which is one announcement rather than two. -->
+    <h1 class="vh">MYMINI164</h1>
+    <span class="m164logo " aria-hidden="true"><svg class="m164-ink"   viewBox="0 0 1163.7 281.1"><use href="#m164-word-ink"/></svg><svg class="m164-white" viewBox="0 0 1163.7 281.1"><use href="#m164-word-white"/></svg></span>
+    <small>1:64 collection</small>
   </div>
   <div class="appbar-r">
     <!-- The word was doing no work the icon cannot. The label lives on the button
@@ -3633,12 +3703,12 @@ function paintHero(){
                         : v==="me" ? "Your profile"
                         : brand==="__all" ? "All catalogues" : brand;
   if(ti) ti.textContent = d.t;
-  document.title = (v==="all"?"MINI164":d.t+" · MINI164");
+  document.title = (v==="all"?"MYMINI164":d.t+" · MYMINI164");
   /* On the profile the title is the person, not the room, so it is set last. */
   if(v==="me" && typeof displayName==="function"){
     const n = displayName();
     if(ti) ti.textContent = n;
-    document.title = n + " · MINI164";
+    document.title = n + " · MYMINI164";
   }
 }
 
@@ -3930,7 +4000,7 @@ async function openWhy(n){
     `<p class="whyhead"><b>${r.s} / 100 &middot; ${esc(r.b)}</b>, confidence ${esc(r.c.toLowerCase())}.<br>
      This is how scarce the release itself appears to be: how few were made, and how
      narrowly they were sold. It is <b>not</b> what one is worth, <b>not</b> how many
-     MINI164 members own one, and <b>not</b> how badly people want one. Those are three
+     MYMINI164 members own one, and <b>not</b> how badly people want one. Those are three
      separate figures and they sit in their own rows on the card.</p>
      ${ev || "<p class='whyhead'>No evidence recorded.</p>"}
      ${conflict}${capped}
@@ -4485,12 +4555,12 @@ function hl(text){
    FOUR THINGS, AND THEY ARE NOT EACH OTHER.
 
    RARITY            how few of these were made, and how narrowly they were sold.
-   COLLECTOR SCARCITY how few MINI164 members own one. About here, not about the world.
+   COLLECTOR SCARCITY how few MYMINI164 members own one. About here, not about the world.
    MARKET DEMAND     how hard people are currently trying to get one.
    MARKET VALUE      what one actually changes hands for.
 
    Collectors and sellers use these four words as if they were one word, and the whole
-   value of this feature is that MINI164 does not. A car can be dear and common. It can
+   value of this feature is that MYMINI164 does not. A car can be dear and common. It can
    be officially limited to five hundred and cheap because nobody wants it. It can be
    owned by one of three members here and sitting on a peg in Osaka by the hundred.
    Each of the four is computed from its own evidence, displayed in its own block, and
@@ -5579,11 +5649,11 @@ function openCard(i){
     const pct = _sc.pct >= 10 ? _sc.pct.toFixed(0) : _sc.pct.toFixed(2);
     rows.push(["Collector scarcity here",
       (_sc.owners === 0
-        ? `<b>No MINI164 collector owns one</b>`
+        ? `<b>No MYMINI164 collector owns one</b>`
         : `<b>${_sc.score} / 100</b> <span class='est'>owned by ${
              _sc.disclose ? _sc.owners : "fewer than " + SCAR.cfg.min_owners
            } of ${_sc.relevant.toLocaleString()} ${esc(_sc.brand)} collectors here, ${pct}%</span>`)
-      + `<br><span class='est'>measured among MINI164 members, not a figure about world production. Sample: ${esc(_sc.quality.toLowerCase())}</span>`]);
+      + `<br><span class='est'>measured among MYMINI164 members, not a figure about world production. Sample: ${esc(_sc.quality.toLowerCase())}</span>`]);
   }else if(_sc && _sc.state === "insufficient"){
     rows.push(["Collector scarcity here",
       `<span class='est'>not enough ${esc(_sc.brand||"")} collectors here yet to say anything honest about how uncommon this is (${_sc.relevant} so far)</span>`]);
@@ -6302,7 +6372,7 @@ function fsPayload(){
   const owned = DATA.filter(d => d.o === 1).length;
   return JSON.stringify({
     savedAt: new Date().toISOString(),
-    note: "Written automatically by the MINI164 page. Keep it next to the HTML.",
+    note: "Written automatically by the MYMINI164 page. Keep it next to the HTML.",
     owned, edits: EDITS
   }, null, 1);
 }
@@ -6334,8 +6404,8 @@ async function fsPick(){
   if(!fsSupported()){ alert("This browser cannot write files directly. Use Backup instead."); return; }
   try{
     const h = await window.showSaveFilePicker({
-      suggestedName: "MINI164_collection.json",
-      types: [{description: "MINI164 collection data", accept: {"application/json": [".json"]}}]
+      suggestedName: "MYMINI164_collection.json",
+      types: [{description: "MYMINI164 collection data", accept: {"application/json": [".json"]}}]
     });
     FSH = h; await idbPut(h);
     await fsFlush();
@@ -7570,7 +7640,7 @@ var BADGE_TOM_LV = ["Tomica Limited Vintage", "Tomica Limited Vintage NEO"];
 /* The metal in the rim says how hard it was. The enamel in the middle says what kind
    of thing it was. Two readings, one emblem, and a wall of them has colour in it
    without every badge shouting the same note.
-   The enamels are MINI164's own catalogue colours, pinned here rather than taken from
+   The enamels are MYMINI164's own catalogue colours, pinned here rather than taken from
    the live theme: a badge is a made object and it should not change colour because
    somebody switched to the purple colourway. */
 const BADGE_TIERS = {
@@ -8099,7 +8169,7 @@ const BADGE_STATIC = [
    name:"Founder", blurb:"Here before the application had a front door.",
    unit:"", value:()=>0, manual:true},
   {id:"honours-early", cat:"honours", tier:"signature", glyph:"laurel", target:1,
-   name:"Early collector", blurb:"One of the first accounts on MINI164.",
+   name:"Early collector", blurb:"One of the first accounts on MYMINI164.",
    unit:"", value:()=>0, manual:true},
   {id:"honours-tester", cat:"honours", tier:"signature", glyph:"shield", target:1,
    name:"First tester", blurb:"Broke it early so nobody else had to.",
@@ -9241,6 +9311,7 @@ function paintProfileEditor(){
 .gatebox{width:100%;max-width:400px;margin:auto}
 .gatemark{font:800 26px/1 Inter,system-ui,sans-serif;letter-spacing:-.03em;margin:0 0 4px}
 .gatemark em{font-style:normal;color:var(--acc)}
+.gatebox .m164logo{margin:0 0 8px}   /* the box is left-aligned; auto would only pretend to centre it */
 .gatesub{margin:0 0 22px;font:700 9.5px/1.5 'JetBrains Mono',monospace;letter-spacing:.17em;
   text-transform:uppercase;color:var(--tx3)}
 .gatecard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
@@ -9289,7 +9360,15 @@ function paintProfileEditor(){
 
 <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gatemark">
   <div class="gatebox">
-    <h1 class="gatemark" id="gatemark">MINI<em>164</em></h1>
+    <!-- The one place in the application where the logo is the subject rather than a
+         label on a bar, so it stands alone and a little larger. It is the same symbol
+         the header uses, from the same sprite, and it follows the theme for the same
+         reason and by the same rule.
+
+         The heading stays and is hidden: the dialog is labelled by it, so removing it
+         would leave a sign-in box that announces itself as nothing. -->
+    <h1 class="gatemark vh" id="gatemark">MYMINI164</h1>
+    <span class="m164logo m164-hero" aria-hidden="true"><svg class="m164-ink"   viewBox="0 0 1163.7 281.1"><use href="#m164-word-ink"/></svg><svg class="m164-white" viewBox="0 0 1163.7 281.1"><use href="#m164-word-white"/></svg></span>
     <p class="gatesub" id="gatesub">1:64 collection</p>
     <div class="gatecard">
       <div class="gatetabs" id="gatetabs" role="group" aria-label="Sign in or create an account">
