@@ -42,42 +42,77 @@ footer a{color:var(--tx2)}
 <p class="sub">MYMINI164 · last updated 28 September 2026</p>
 
 <p>MYMINI164 is a personal project for cataloguing 1:64 scale diecast model cars. This
-notice describes what it stores, where, and what you can do about it. It describes the
-application as it is actually built, not as a template.</p>
+notice describes what it stores, where, who can see it and what you can do about it. It
+describes the application as it is actually built, not as a template.</p>
 
 <div class="box">
 <p><b>The short version.</b> To use MYMINI164 you need an account, which means an email
 address and a password. Everything else it holds is what you choose to record about your
-own collection. Nobody else can see your collection. There is no advertising, no
-analytics, no tracking and nothing is sold or shared with anyone.</p>
+own collection. <b>A new collection is private and shows nobody anything.</b> There is a
+community here, so other collectors can find your profile and follow you, and you decide
+whether any of them can see what is on your shelf. <b>What you paid is never shown to
+anybody, whatever else you open up.</b> There is no advertising, no analytics, no tracking
+and nothing is sold or shared with anyone.</p>
 </div>
 
 <h2>Who is responsible</h2>
-<p>MYMINI164 is run by an individual, not a company. For anything in this notice, write
-to <a href="mailto:help@mybatsurvey.co.uk">help@mybatsurvey.co.uk</a>.</p>
+<p>MYMINI164 is run by an individual, not a company, and is the data controller for
+everything described here. For anything in this notice, write to
+<a href="mailto:help@mybatsurvey.co.uk">help@mybatsurvey.co.uk</a>.</p>
 
 <h2>What is stored, and why</h2>
 <table>
-<tr><th>What</th><th>Why</th></tr>
+<tr><th>What</th><th>Why</th><th>Lawful basis</th></tr>
 <tr><td>Your email address and a hash of your password</td>
     <td>So you can sign in and so a password can be reset. The password itself is never
-        stored and cannot be read by anyone, including the person running the site.</td></tr>
-<tr><td>A display name, if you set one, and a picture, if you upload one</td>
-    <td>Shown to you on your own profile. Not shown to other members.</td></tr>
+        stored and cannot be read by anyone, including the person running the site.</td>
+    <td>Contract: without an account there is no application.</td></tr>
+<tr><td>A display name, if you set one</td>
+    <td>What the application calls you, and what another collector sees when they find
+        you in the community.</td>
+    <td>Contract.</td></tr>
+<tr><td>A profile picture, if you set one</td>
+    <td>Shown to you. It is kept on the device you set it on and in your own settings row,
+        and it is <b>not</b> sent to other collectors: they see your initials.</td>
+    <td>Consent: you set it, and removing it removes it.</td></tr>
 <tr><td>Your collection: which releases you own, want or have on order, how many copies,
         their condition, what you paid, where you bought them, the order reference and any
         notes you write</td>
-    <td>This is the application. It is what you came to record.</td></tr>
+    <td>This is the application. It is what you came to record.</td>
+    <td>Contract.</td></tr>
 <tr><td>Your settings: currency, colourway, light or dark, how the grid is laid out,
         which catalogues you pin, which badges you show, and whether financial values
         are hidden</td>
-    <td>So the application looks the same on your next device as on this one.</td></tr>
+    <td>So the application looks the same on your next device as on this one.</td>
+    <td>Contract.</td></tr>
+<tr><td>Your privacy settings: whether your collection, wishlist and activity are private,
+        friends-only or open to the community, whether you appear on the community
+        rankings, and whether you have opted in to the collection-value ranking</td>
+    <td>So the application can enforce what you decided.</td>
+    <td>Legal obligation and contract: these are the record of your choices.</td></tr>
+<tr><td>Your community relationships: who you follow, who follows you, friendships,
+        pending friend requests and anyone you have blocked</td>
+    <td>So following, friendship and blocking work.</td>
+    <td>Contract, once you use those features.</td></tr>
+<tr><td>Notifications addressed to you, and activity entries recording things you did
+        (added a car, earned a badge, completed a range)</td>
+    <td>So a friend request reaches you, and so an activity feed has something in it.
+        Activity follows your own activity setting, which starts private.</td>
+    <td>Contract.</td></tr>
 <tr><td>Badges you have earned, and the date each was first reached</td>
     <td>So a milestone keeps its date instead of being recalculated every time your
-        shelf changes.</td></tr>
+        shelf changes.</td>
+    <td>Contract.</td></tr>
+<tr><td>Ranking totals worked out from your collection: how many releases, how many
+        pieces, how many catalogues, how many badges, an average rarity and a score</td>
+    <td>So the community rankings can be worked out once on the server instead of by
+        downloading everybody's collection into everybody's browser.</td>
+    <td>Legitimate interests: a leaderboard is a core part of a collectors' community,
+        the figures are totals rather than contents, and you can leave the rankings at
+        any time in Privacy settings.</td></tr>
 <tr><td>Anything you send in through "a missing car" or "report a problem"</td>
-    <td>So it can be checked and the catalogue corrected. These are linked to your
-        account so you can see what you sent.</td></tr>
+    <td>So it can be checked and the catalogue corrected.</td>
+    <td>Legitimate interests: keeping a shared catalogue correct.</td></tr>
 </table>
 
 <h3>What is NOT stored</h3>
@@ -88,25 +123,96 @@ to <a href="mailto:help@mybatsurvey.co.uk">help@mybatsurvey.co.uk</a>.</p>
 <li>No record of which pages you looked at or how long you spent there.</li>
 </ul>
 
-<h2>Where it is stored</h2>
-<p>The database and the sign-in system are hosted by Supabase, in the eu-west-2 (London)
-region. The website itself is served as static files by GitHub Pages. Both companies
-necessarily process the technical request data any web server sees, including your IP
-address, under their own terms.</p>
+<h2>Where it is stored, and who else is involved</h2>
+<p>Two companies are needed to run this, and both are American with British and European
+operations. Naming the region a database sits in is not the whole answer, so here is the
+whole answer.</p>
+<table>
+<tr><th>Who</th><th>What they do</th><th>Where</th></tr>
+<tr><td>Supabase</td>
+    <td>The database and the sign-in system. Your account and everything in the table
+        above is here.</td>
+    <td>The database is in the eu-west-2 (London) region. Supabase Inc. is
+        incorporated in the United States, and support and administration may be carried
+        out from outside the United Kingdom.</td></tr>
+<tr><td>GitHub (Microsoft)</td>
+    <td>Serves the website itself as static files. It never sees your collection: the
+        page is the same file for everybody, and your data is fetched from Supabase by
+        your own browser.</td>
+    <td>GitHub Pages is served from a global network; GitHub, Inc. is in the United
+        States.</td></tr>
+<tr><td>Google</td>
+    <td>Serves the typeface, if your browser does not already have it cached.</td>
+    <td>United States.</td></tr>
+<tr><td>The shops and makers whose photographs the catalogue links to</td>
+    <td>Serve a picture of a model car. They are told nothing about you beyond what any
+        request for an image tells a web server.</td>
+    <td>Various, worldwide.</td></tr>
+</table>
+<p>So personal data is transferred outside the United Kingdom, at least in the sense that
+these providers are American companies whose staff and systems may reach it. Each has its
+own published terms and transfer arrangements; MYMINI164 relies on those and has not
+negotiated anything additional, which is stated here rather than dressed up. If that is
+not acceptable to you, please do not create an account.</p>
 
-<h2>Who can see your collection</h2>
-<p>You, and nobody else. This is enforced in the database itself, by row level security
-policies that attach to your account rather than by anything the page chooses to show:
-a request for somebody else's collection is refused by the database whoever makes it.</p>
+<h2>Who can see what</h2>
+<p>All of this is enforced in the database itself, by row level security policies and by
+functions that check who is asking, rather than by what the page chooses to show. A
+request for something you are not entitled to is refused by the database whoever makes
+it, including from outside the application.</p>
+
+<h3>Your collection</h3>
+<p>Your collection has one setting, which starts at <b>Private</b>.</p>
+<table>
+<tr><th>Setting</th><th>Who can see what is on your shelf</th></tr>
+<tr><td>Private (the default)</td><td>You, and nobody else at all.</td></tr>
+<tr><td>Friends only</td><td>You, and collectors whose friend request you accepted or who
+    accepted yours. Following somebody does not make them a friend and does not open
+    this.</td></tr>
+<tr><td>Public</td><td>You, and any signed-in member of the community. Never anyone who
+    is not signed in, and never a search engine.</td></tr>
+</table>
+<p>Your wishlist and your activity feed have their own settings, which work the same way
+and also start private.</p>
+
+<h3>What you paid</h3>
+<p>What you paid, where you bought it, the order reference and your notes are never sent
+to another collector under any setting. They are not part of what a friend sees when they
+look at your shelf, and no ranking or aggregate is built from them.</p>
+
+<h3>Your profile</h3>
+<p>Every active collector can be found by other signed-in collectors: your display name,
+your username if you set one, anything you write in your bio and the catalogues you list
+as favourites. This is how anybody follows anybody, and it does not depend on your
+collection setting. A private collection stays private while its owner is perfectly
+findable. Anyone can follow you without your permission; you can block them, which stops
+them seeing or reaching you in either direction.</p>
+
+<h3>Community rankings</h3>
+<p>The ordinary rankings - most releases, most catalogues, most badges, rarest shelf and
+so on - include every active collector by default, and you can leave them at any time in
+Privacy settings. They publish a <b>total</b> and never a contents: a collector with a
+private collection can stand in the table with a number beside their name, and nothing in
+their collection can be read by anyone. Because a ranking already publishes those totals,
+a collector taking part will also show the same totals on their profile card; leaving the
+rankings stops both.</p>
+<p><b>Most Valuable Collections is different.</b> It is off unless you deliberately turn
+it on, it uses the catalogue's market valuation rather than anything you paid, and it
+never shows a purchase price or a profit.</p>
+
+<h3>The administrator</h3>
 <p>An administrator can see the list of accounts and display names, which is needed to
-run the site, and can award the four honorary badges. An administrator cannot read your
-collection, your settings or your prices.</p>
+run the site, and can award the four honorary badges. An administrator <b>cannot</b> read
+your collection, your prices, your settings or your private messages of any kind. That is
+not a policy, it is what the database does: the check was tested from an administrator's
+own account and refused.</p>
 
 <h3>Aggregate figures</h3>
-<p>MYMINI164 shows how uncommon a release is among its members. That figure is built from
-counts of distinct accounts and never carries anybody's identity. Where a count is small
-enough that it could point at a person, the count is not sent to the browser at all: the
-suppression happens in the database, not on the screen.</p>
+<p>MYMINI164 shows how uncommon a release is among its members, and how many collectors
+follow a given catalogue. Those figures are counts of distinct accounts and never carry
+anybody's identity. Where a count is small enough that it could point at a person, the
+count is not sent to the browser at all: the suppression happens in the database, not on
+the screen.</p>
 
 <h2>What your browser fetches from elsewhere</h2>
 <p>These requests reveal your IP address to the companies concerned, as any web request
@@ -121,20 +227,30 @@ does. None of them receives anything about you or your collection.</p>
 <h2>What is kept in your browser</h2>
 <p>MYMINI164 uses your browser's local storage rather than cookies. It holds your
 sign-in token, your settings, a marker naming which account those settings belong to,
-and any barcodes you have taught it. Signing out clears all of it. Nothing there is
-sent anywhere except your own settings, to your own account.</p>
+your profile picture if you set one, and any barcodes you have taught it. Signing out
+clears all of it. Nothing there is sent anywhere except your own settings, to your own
+account.</p>
 
 <h2>How long it is kept</h2>
 <p>For as long as you have an account. Delete your account and your profile, collection,
-settings and badges are deleted with it, immediately and for good. There is no archive
-copy and no undo.</p>
+settings, badges, privacy settings, follows, friendships, blocks, notifications, activity
+and ranking totals are deleted with it, immediately and for good. There is no archive copy
+and no undo.</p>
+<p>Two things deliberately survive, with your name taken off them: a correction or a
+missing car you sent in stays in the catalogue queue with no account attached to it, since
+the point of it was to fix a shared catalogue; and a notification somebody else already
+received that mentions you keeps the notification, without you as its sender. Neither
+carries anything about your collection.</p>
 
 <h2>Your rights</h2>
-<p>Under UK GDPR you can ask for a copy of your data, ask for it to be corrected, or ask
-for it to be deleted. The application does the first and the third itself: "Download my
-data" in Your Account exports everything you have recorded, and "Delete my account"
-removes it. Anything you cannot do from inside the application, ask for at the address
-above. You may also complain to the Information Commissioner's Office at ico.org.uk.</p>
+<p>Under UK GDPR you can ask for a copy of your data, ask for it to be corrected, ask for
+it to be deleted, object to processing carried out under legitimate interests, or ask for
+your data in a portable form. The application does several of these itself: "Download my
+data" in Your Account exports everything you have recorded in a machine-readable file,
+"Delete my account" removes it, and the rankings - the one thing here that rests on
+legitimate interests - can be left with a single switch in Privacy settings. Anything you
+cannot do from inside the application, ask for at the address above. You may also complain
+to the Information Commissioner's Office at ico.org.uk.</p>
 
 <h2>Children</h2>
 <p>MYMINI164 is not aimed at children and asks for no age. It should not be used by

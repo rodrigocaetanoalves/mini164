@@ -14,8 +14,15 @@
 <meta property="og:site_name" content="MYMINI164">
 <meta property="og:title" content="MYMINI164">
 <meta property="og:description" content="A 1:64 diecast collection: twenty-one catalogues, 23,000+ releases, with rarity and provenance.">
-<meta property="og:image" content="p/mini164-icon-512.png">
+<meta property="og:url" content="https://mymini164.com/">
+<meta property="og:image" content="https://mymini164.com/p/mini164-icon-512.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="The MYMINI164 mark">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mymini164.com/p/mini164-icon-512.png">
+<link rel="canonical" href="https://mymini164.com/">
 <link rel="icon" type="image/svg+xml" href="p/mini164-favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="p/mini164-favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="p/mini164-icon-180.png">
@@ -24,42 +31,15 @@
 <link rel="manifest" href="p/mini164.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- The webfont is a nicety, not a requirement: every rule falls back to a system
-     stack. Loading it as print and promoting it on load keeps it off the critical
-     path, so the offline copy paints immediately instead of waiting for a font
-     request that cannot succeed. -->
-<!-- Three faces, three jobs. Outfit is the display face: a geometric grotesque that
-     holds up at the weights a room title wants, where Inter at 800 goes narrow and
-     starts to look like a label. Inter stays on body text, where it is better than
-     Outfit at small sizes. JetBrains Mono keeps every figure in line. -->
+
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
       rel="stylesheet" media="print" onload="this.media='all';this.onload=null">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"></noscript>
 <style>
-/* ============================================================
-   COLORWAYS
-   Every colour in the page comes from these variables, so a skin
-   is just a new set of them. data-skin on <html> picks one,
-   data-theme picks light or dark. Both are remembered.
-   ============================================================ */
-/* Garage - black and red.
-   The greys are neutral rather than blue: a blue-grey surface under a red accent
-   reads cold and slightly cheap, and it was what made the old page look like a
-   dashboard rather than a display case. The blacks go deeper so a photographed car
-   sits on nothing at all, and one hot red does the work that an orange and an orange
-   highlight were sharing.
-   The semantic colours stay: green still means it is on your shelf, amber still means
-   it is coming, blue still means a shop has it today. Those are meanings, not
-   decoration, and recolouring them to match a mood would cost the page more than it
-   gained. */
-/* MUTED TEXT, AT A SIZE PEOPLE CAN READ.
-   --tx3 is the quiet tier: statistic labels, explanatory notes, the "est" beside an
-   estimate, the key line on the portfolio card. It failed WCAG AA on its own background
-   in all twelve palettes - 3.3:1 at the bottom, against a bar of 4.5:1 - and because it
-   is one token the failure was everywhere at once rather than in any one component.
-   Every value below now clears 4.5:1 against that palette's page, card and inset-card
-   backgrounds, keeping its hue so the hierarchy between --tx, --tx2 and --tx3 still
-   reads as three steps. qa/contrast.js measures the rendered page and holds it here. */
+
+
+
 :root{
   --bg:#08080a; --bg2:#0f0f13; --card:#141418; --card2:#1c1c22;
   --line:#26262e; --line2:#35353f;
@@ -76,7 +56,7 @@
   --gold:#8f6d00; --danger:#c31c1c;
 }
 
-/* --- Amethyst: purple and acid green --- */
+
 :root[data-skin="amethyst"]{
   --bg:#08060f; --bg2:#0f0b1c; --card:#150f26; --card2:#1e1634;
   --line:#2e2149; --line2:#453363;
@@ -92,7 +72,7 @@
   --gold:#8a6a00; --danger:#b3123c; --onacc:#fff;
 }
 
-/* --- Nocturne: charcoal and gold --- */
+
 :root[data-skin="nocturne"]{
   --bg:#060708; --bg2:#0d0f13; --card:#12151a; --card2:#191d24;
   --line:#252b35; --line2:#37404d;
@@ -108,7 +88,7 @@
   --gold:#7a5c00; --danger:#b31313; --onacc:#fff;
 }
 
-/* --- Cobalt: deep blue, gold and coral --- */
+
 :root[data-skin="cobalt"]{
   --bg:#03081a; --bg2:#06102b; --card:#0a1739; --card2:#10224c;
   --line:#1b2f60; --line2:#28448a;
@@ -124,7 +104,7 @@
   --gold:#9a6b00; --danger:#b3123c;
 }
 
-/* --- Graphite: no colour drama --- */
+
 :root[data-skin="graphite"]{
   --bg:#08090b; --bg2:#101214; --card:#15171a; --card2:#1c1f23;
   --line:#272a2f; --line2:#383d44;
@@ -140,13 +120,7 @@
   --gold:#7a5c00; --danger:#b31313; --onacc:#fff;
 }
 
-/* --- Signal: built for colour blindness ---
-   Red and green are the pair most people cannot separate, and this page uses
-   colour to mean owned, on order and buyable. So Signal drops that pair for the
-   Okabe-Ito set, which is designed to stay distinct under deuteranopia,
-   protanopia and tritanopia, and separates the two blues by lightness as well as
-   hue so they survive greyscale printing too. Every colour here also carries a
-   word on the page, so nothing depends on seeing the colour at all. */
+
 :root[data-skin="signal"]{
   --bg:#06080c; --bg2:#0e1319; --card:#121820; --card2:#1a2029;
   --line:#28313d; --line2:#3a4756;
@@ -167,13 +141,11 @@
 .skinbtn:hover{border-color:var(--acc);color:var(--tx)}
 .skinbtn svg{width:18px;height:18px;display:block;flex:0 0 auto}
 .skinbtn .caret{font-size:10px;line-height:1;opacity:.75}
-/* Read out, not drawn. Not display:none, which would take it out of the accessible
-   name as well as out of the picture. */
+
 .vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
   clip-path:inset(50%);white-space:nowrap;border:0}
-/* An icon-only control still needs a thumb-sized face and an icon centred in it. */
-/* Square, so a pill radius makes it a circle rather than a lozenge, and the same
-   height as the selector beside it so the pair sit level. */
+
+
 .chip.iconcap{padding:0;width:34px;min-width:34px;height:34px;display:inline-flex;
   align-items:center;justify-content:center;gap:0}
 .chip.iconcap svg{width:18px;height:18px;display:block}
@@ -190,22 +162,10 @@
 .skinopt .sw{display:flex;gap:3px;flex:0 0 auto}
 .skinopt .sw i{width:11px;height:19px;border-radius:3px;display:block}
 .skinopt .tick{margin-left:auto;color:var(--acc);font-weight:800}
-/* --bd was used by the edit styles before it existed; alias it so those borders
-   follow the skin instead of falling back to the text colour. */
+
 :root{ --bd:var(--line); }
 
-/* ---- SAFE AREAS -----------------------------------------------------------
-   Added to the home screen and opened as an app, there is no browser chrome to hide
-   behind: the page owns the whole display. The document declares viewport-fit=cover and
-   a translucent status bar, which is what lets the dark page run right to the edges and
-   under the Dynamic Island instead of sitting in a letterbox. The bargain is that the
-   page must then leave room itself, and it was not, so the appbar sat underneath the
-   island and the wordmark was clipped away.
 
-   Held in variables rather than written as env() at each use, because env() cannot be
-   forced in a test: a headless browser always reports zero, so an inset bug is invisible
-   to every check you could write. With a variable, qa/safearea.js sets them to an
-   iPhone's real numbers and measures what actually happens. */
 :root{
   --sat: env(safe-area-inset-top, 0px);
   --sab: env(safe-area-inset-bottom, 0px);
@@ -224,27 +184,13 @@ html,body{margin:0;padding:0}
 body{background:var(--bg);color:var(--tx);font:400 15px/1.5 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
 .mono{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace}
 a{color:inherit}
-/* A BUTTON IS NOT A SYSTEM CONTROL HERE.
-   Left alone, a <button> takes the browser's own text colour, which is black whatever
-   the page is doing. Most controls in this app set a colour of their own and never
-   noticed; the Total Paid card did not, so the one figure the drawer exists to show
-   was black text on a near-black card - 1.13:1, which is not low contrast, it is an
-   invisible number. Fixed for the class rather than for the card: a control inherits
-   the page's colour unless it asks for another. */
+
 button{color:inherit}
-/* Turned sideways the notch takes a bite out of one edge, so the gutter on that side has
-   to be at least as wide as the bite. max() rather than addition: on a screen with no
-   notch it stays exactly 16px. */
+
 .wrap{max-width:1560px;margin:0 auto;
   padding-left:max(16px, var(--sal));padding-right:max(16px, var(--sar))}
 
-/* ------------------------------------------------------------
-   CATALOGUE COLOURS
-   Colour carries one meaning in this page: which maker's catalogue a record
-   belongs to. Seven named hues, one fallback, and a light-theme set with enough
-   contrast to read as text. Nothing else in the interface is coloured for
-   decoration - state uses the green/amber/blue already defined above.
-   ------------------------------------------------------------ */
+
 :root{
   --b-minigt:#ff7a3d; --b-tarmac:#5aa9ff; --b-poprace:#ff5f8f; --b-xcartoys:#ffce3a;
   --b-hotwheels:#e8443a;
@@ -256,32 +202,18 @@ button{color:inherit}
   --b-schuco:#047857; --b-para64:#6d28d9; --b-bbr:#9a4a11; --b-other:#4b5563;
 }
 
-/* ============================================================
-   SHELL: app bar, drawer, catalogue rail, hero, toolbar
-   The page used to open with a block of chrome five rows deep before the first
-   car. It now opens with a bar, a rail and the cars; everything else is one tap
-   away in a drawer or a sheet.
-   ============================================================ */
-/* Hidden by clipping rather than by being parked 9,999px off the left: an element
-   out there is still part of the page's width on some engines. */
+
+
 .skipnav{position:absolute;left:0;top:0;z-index:100;background:var(--acc);color:var(--onacc,#fff);
   padding:10px 16px;border-radius:0 0 10px 0;font:700 13px Inter,sans-serif;
   width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .skipnav:focus{width:auto;height:auto;clip-path:none}
 
-/* The appbar spans the full width so its background and bottom border do, but its
-   CONTENTS have to line up with the content column below, and that column is a .wrap:
-   max-width 1560, centred, 16px gutters. The rail and the toolbar get this for free
-   because each holds a .wrap of its own. The appbar does not, so it reproduces the same
-   geometry here. The max() is the centring: while the column is narrower than 1560 the
-   gutter is a flat 16px, and once it is wider the extra space splits either side, the
-   way margin:0 auto would. Without this the wordmark sat 2px out at every width, and
-   flush against the drawer edge once the drawer pinned open, which is where it showed. */
+
 .appbar{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:12px;
   padding-left:max(calc(16px + var(--sal)), calc((100% - 1560px) / 2 + 16px));
   padding-right:max(calc(16px + var(--sar)), calc((100% - 1560px) / 2 + 16px));
-  /* The bar grows by the inset and the content sits below it. syncStickyTops measures
-     this height, so the rail and the toolbar follow down on their own. */
+  
   padding-top:var(--sat);
   height:calc(56px + var(--sat));background:color-mix(in srgb,var(--bg) 86%,transparent);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
@@ -303,10 +235,7 @@ button{color:inherit}
   font-weight:700;color:var(--tx3,var(--tx2));opacity:.75}
 .dr-nav .dr-sec:first-child{margin-top:2px}
 .appbar-r{margin-left:auto;display:flex;align-items:center;gap:8px}
-/* THE PERSON, IN THE CORNER. Small, quiet, and unmistakably a control: it lifts on
-   hover, it takes a focus ring from the keyboard, and its hit area is the full height of
-   the bar rather than the size of the picture. The name is hidden on a narrow screen
-   because a face is enough there and a row of chrome is not. */
+
 .mebtn{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid transparent;
   color:var(--tx);font:inherit;font-size:13px;font-weight:600;border-radius:999px;
   padding:3px 10px 3px 3px;min-height:38px;cursor:pointer;max-width:170px}
@@ -320,13 +249,11 @@ button{color:inherit}
 @media (max-width:719px){ .me-nm{display:none} .mebtn{padding:3px;max-width:none} }
 @media(max-width:430px){ .wordmark small{display:none} }
 
-/* ---- drawer ---- */
+
 .scrim{position:fixed;inset:0;z-index:70;background:rgba(3,4,6,.66);backdrop-filter:blur(3px);
   -webkit-backdrop-filter:blur(3px);animation:fade .16s ease}
 @keyframes fade{from{opacity:0}to{opacity:1}}
-/* A closed drawer is not just off to the left: it is hidden. Left visible it kept
-   ten buttons in the tab order, so a keyboard user walked through an invisible
-   menu before reaching the first car. */
+
 .drawer{position:fixed;z-index:71;top:0;left:0;bottom:0;width:min(86vw,320px);
   padding-top:var(--sat);padding-bottom:var(--sab);padding-left:var(--sal);
   background:var(--bg2);border-right:1px solid var(--line);display:flex;flex-direction:column;
@@ -342,8 +269,7 @@ button{color:inherit}
 .dr-who b{display:block;font-size:15px;font-weight:700;letter-spacing:-.01em}
 .dr-who i{display:block;font-style:normal;font:600 10px/1.4 'JetBrains Mono',monospace;
   letter-spacing:.1em;text-transform:uppercase;color:var(--tx3);margin-top:3px}
-/* A card with one corner marked. The diamond is the page's one decorative habit and
-   it always means "this is the summary of the thing below it". */
+
 .dr-card{position:relative;display:block;width:100%;text-align:left;cursor:pointer;
   background:var(--card);border:1px solid var(--line2);border-radius:13px;padding:13px 15px 14px;
   margin-bottom:18px;box-shadow:4px 4px 0 -1px color-mix(in srgb,var(--own) 55%,transparent)}
@@ -357,23 +283,15 @@ button{color:inherit}
   text-transform:uppercase;color:var(--own);margin-top:5px}
 .dr-diamond{position:absolute;top:-5px;right:14px;width:10px;height:10px;rotate:45deg;
   background:var(--own);border-radius:2px}
-/* FINANCIAL PRIVACY, on the card it protects.
-   The card's own margin moves to the wrapper so the card is unchanged and the eye has
-   something to be positioned against. Nothing about the card's type, borders, colour,
-   padding or diamond is touched: this control is an addition, not a redesign. */
+
 .dr-cardwrap{position:relative;margin-bottom:18px}
 .dr-cardwrap .dr-card{margin-bottom:0}
-/* Placed in the open space at the right of the card, level with the figure, and NOT
-   tucked up against it: the amount is the thing you read and the eye is the thing you
-   reach for, and they are not the same errand. The inset is a proportion of the card
-   so the relationship survives the drawer changing width, with a floor and a ceiling
-   so it never rides the border on a narrow phone or drifts into the middle on a wide
-   screen. */
+
 .dr-eye{position:absolute;top:50%;right:clamp(18px,17%,86px);transform:translateY(-50%);
   width:44px;height:44px;display:grid;place-items:center;cursor:pointer;
   background:transparent;border:1px solid transparent;border-radius:11px;
   color:var(--tx3);padding:0;-webkit-tap-highlight-color:transparent}
-/* The icon is small and quiet; the thing you can hit is not. */
+
 .dr-eye svg{width:19px;height:19px;display:block}
 .dr-eye .eye-off{display:none}
 .dr-eye[aria-pressed="true"] .eye-on{display:none}
@@ -383,8 +301,7 @@ button{color:inherit}
 .dr-eye:focus-visible{outline:none;border-color:var(--own);
   box-shadow:0 0 0 3px color-mix(in srgb,var(--own) 30%,transparent)}
 .dr-eye[aria-pressed="true"]{color:var(--own)}
-/* A masked figure keeps the width of a figure, so nothing under it moves when the
-   switch is thrown. */
+
 .dr-card-v{min-height:1.1em}
 .privsw{display:inline-flex;align-items:center;width:30px}
 .privsw .privdot{width:26px;height:15px;border-radius:9px;background:color-mix(in srgb,var(--tx3) 45%,transparent);
@@ -420,28 +337,22 @@ button{color:inherit}
 .dr-note{font-size:11.5px;line-height:1.5;color:var(--tx3);margin:16px 4px 0}
 @media(prefers-reduced-motion:reduce){ .drawer{transition:none} .scrim{animation:none} }
 
-/* On a wide screen the drawer stops being a drawer: there is room for it to stand
-   open beside the page, so navigating never costs a tap. */
+
 @media(min-width:1280px){
   body{padding-left:272px}
   .drawer{width:272px;transform:none;visibility:visible;box-shadow:none;background:var(--bg)}
   .scrim{display:none}
   .navbtn{display:none}
-  /* The rail and the toolbar each wrap their contents in a .wrap, which supplies the
-     gutter, so their own padding would double it. The appbar is not in this list: its
-     padding IS its gutter, and zeroing it is what pushed the wordmark against the
-     drawer. */
+  
   .railwrap,.toolbar{padding-left:0}
   .dr-scroll{padding-top:14px}
 }
 
-/* ---- catalogue rail ---- */
+
 .railwrap{position:sticky;top:var(--rail-top,56px);z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .railwrap .wrap{padding-top:9px;padding-bottom:9px}
-/* One line that scrolls sideways at every width. Seven catalogues wrapped to three
-   rows on a phone and pushed the cars off the screen; more makers will be added and
-   a wrapping row only gets worse. */
+
 .brands{display:flex;gap:7px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
   -webkit-overflow-scrolling:touch;scroll-padding-inline:14px;min-width:0}
 .brands::-webkit-scrollbar{display:none}
@@ -459,20 +370,14 @@ button{color:inherit}
 .brands button:hover:not(.on){color:var(--tx);border-color:var(--line2)}
 .brands button i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:10.5px;
   font-weight:700;opacity:.7;letter-spacing:.01em}
-/* Colour carries meaning here: each catalogue keeps one hue, used on its rail button,
-   its cards and its rows, so a mixed list is readable at a glance. */
+
 .brands button.on{color:var(--tx);background:color-mix(in srgb,var(--bc,var(--acc)) 16%,var(--card));
   border-color:var(--bc,var(--acc));box-shadow:0 0 0 1px var(--bc,var(--acc)) inset,
   0 4px 16px -8px var(--bc,var(--acc))}
 .brands button.on i{opacity:.95;color:var(--bc,var(--acc))}
 
-/* ---- series rail ---- */
-/* The second row: which RANGE inside the catalogue above it. It is deliberately the
-   quieter of the two - smaller, pill-shaped, no solid fill - because the two rows are
-   a hierarchy, not a pair. Catalogue first, series second; if both were styled the
-   same the eye would have to work out which one it was looking at.
-   A catalogue that runs a single line (Schuco, PARA64, BBR) gets no row at all rather
-   than a strip of screen holding one button that cannot be unpicked. */
+
+
 .lines{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
   -webkit-overflow-scrolling:touch;scroll-padding-inline:14px;min-width:0;
   margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
@@ -485,32 +390,27 @@ button{color:inherit}
 .lines button:hover:not(.on){color:var(--tx);background:var(--card)}
 .lines button i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:10px;
   font-weight:700;opacity:.6;letter-spacing:.01em}
-/* The catalogue's own hue again, at a lower strength than the row above so the two
-   selections read as parent and child rather than as two equal choices. */
+
 .lines button.on{color:var(--tx);background:color-mix(in srgb,var(--bc,var(--acc)) 15%,transparent);
   border-color:color-mix(in srgb,var(--bc,var(--acc)) 55%,transparent)}
 .lines button.on i{opacity:.95;color:var(--bc,var(--acc))}
 @media(max-width:760px){
-  /* A finger needs more than 24px of button, so the row grows on a phone even though
-     it is the subordinate one. */
+  
   .lines{margin-top:7px;padding-top:7px}
   .lines button{padding:8px 12px;font-size:12px}
 }
 
-/* ---- hero ---- */
+
 .hero{padding:18px 0 14px}
 .hero-top{display:flex;flex-wrap:wrap;gap:16px 22px;align-items:flex-end;justify-content:space-between;min-width:0}
 .hero-id{min-width:0;flex:1 1 220px}
 .hero-eyebrow{margin:0 0 5px;font:700 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.17em;
   text-transform:uppercase;color:var(--bc,var(--acc))}
 .hero-title{margin:0;font-size:clamp(21px,5.2vw,30px);font-weight:800;letter-spacing:-.03em;line-height:1.1}
-/* min-width:0 because a flex item defaults to its min-content width, and a
-   no-wrap scrolling strip's min-content is the whole strip: without it the row of
-   tiles stretched the page instead of scrolling inside it. */
+
 .kpis{display:flex;gap:8px;flex-wrap:wrap;min-width:0;max-width:100%}
 .hero .prog{margin:16px 0 8px}
-/* On the badges room and the profile the hero is a title and nothing else: the figures
-   and the progress bar are about the catalogue, which those screens are not. */
+
 .hero.bare .prog,.hero.bare .plabel,.hero.bare .heromore,.hero.bare .brandnote{display:none}
 .hero .plabel{margin-bottom:0}
 .brandnote{display:block;font-size:11.5px;color:var(--tx3);line-height:1.45;margin:8px 0 0}
@@ -521,21 +421,9 @@ button{color:inherit}
 .hero.open .heromore::after{content:"\25b4"}
 @media(max-width:760px){
   .hero{padding:14px 0 10px}
-  /* One scrolling line of tiles rather than a block three deep. The cars are what
-     the screen is for; the numbers are a strip above them. */
-  /* It scrolls inside the page's own gutter rather than bleeding to the edges: a
-     child that starts left of its parent's content box is counted by the browser as
-     overflow, and the whole page picked up a sideways scrollbar because of it. */
-  /* These five are the headline numbers: what you own, what is coming, what it is
-     worth. They used to be one nowrap row that scrolled sideways behind a fade. At
-     320px that shrank each tile to 53px, so "£3,596.76" had nowhere to go and the
-     value of the collection was the thing you could not read without discovering a
-     sideways scroll you had no reason to look for. A number you have to go hunting for
-     is not a headline.
-
-     Two columns on a phone, three on a large phone or small tablet. Five is odd, so the
-     last tile takes the full width rather than leaving a hole. Nothing scrolls, nothing
-     is clipped, and every figure is legible at arm's length. */
+  
+  
+  
   .kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;
     flex-wrap:initial;overflow:visible;-webkit-mask-image:none;mask-image:none}
   .kpis .kpi:last-child{grid-column:1 / -1}
@@ -543,44 +431,23 @@ button{color:inherit}
   .kpi b{font-size:18px}
   .kpi i{margin-top:4px}
 
-  /* A PHONE SHOWED A WHOLE SCREEN OF CHROME AND NO CARS.
-     Measured at 375 by 812: three rows of pills, a title, five figures, a progress bar,
-     a paragraph explaining it and two toolbar rows put the first car at 833 pixels -
-     one pixel-row below the fold, so the answer to "what is in this catalogue" was a
-     scroll away from every single visit.
-
-     Nothing is removed. The things that belong to a screen you are READING - the
-     sentence under the progress bar, the row of collections that is also in the filter
-     sheet - wait behind the control that already exists for exactly this, and the
-     figures tighten up. A car is on screen when the page opens; everything else is one
-     tap away and one tap is honest. */
+  
   .plabel #ptext{display:none}
   .hero.open .plabel #ptext{display:block}
   .brandnote{display:none}
   .hero.open .brandnote{display:block}
-  /* MORE is how everything above is reached, so it is the one thing that must never
-     be behind anything. */
+  
   .heromore{display:inline-flex}
 }
 
-/* A PHONE STILL HAS TO SHOW A CAR.
-   The five figures stacked two-wide are 201 pixels, which with two rails, a title, a
-   progress bar and two toolbar rows put the first card at 833 on a 375 screen and 833
-   on a 320 one: below the fold on arrival, every visit, which is the audit's actual
-   complaint. There is no arrangement of all of it that fits AND leaves room for a car.
 
-   So on a phone the two figures the screen is about - how big this catalogue is, and
-   how much of it you have - stay, and the other three wait behind MORE, the control
-   that is already there for exactly this. Nothing is removed and nothing is hidden
-   from a desktop, where all five fit in one row with room to spare. */
 @media(max-width:760px){
   .kpis .kpi:nth-child(n+3){display:none}
   .hero.open .kpis .kpi:nth-child(n+3){display:block}
   .kpis .kpi:last-child{grid-column:auto}
   .hero.open .kpis .kpi:last-child{grid-column:1 / -1}
 }
-/* The smallest screens give up the progress bar too. On a 690 pixel viewport the
-   difference between a car on screen and no car on screen is about forty pixels. */
+
 @media(max-width:360px){
   .hero .prog,.hero .plabel{display:none}
   .hero.open .prog{display:block}
@@ -588,7 +455,7 @@ button{color:inherit}
 }
 
 
-/* ---- toolbar ---- */
+
 .toolbar{position:sticky;top:var(--toolbar-top,110px);z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
   padding:9px 0 8px}
@@ -617,18 +484,12 @@ button{color:inherit}
   cursor:pointer;display:grid;place-items:center}
 .viewtog button svg{width:17px;height:17px}
 .viewtog button[aria-pressed="true"]{background:var(--acc);color:var(--onacc,#fff)}
-/* WHITE-SPACE:NOWRAP ON A LINE THAT CAN GROW IS A SIDEWAYS SCROLLBAR WAITING.
-   This held "1,587 shown" and nothing longer, so nowrap was free. The moment it also
-   had to say WHY that differs from the catalogue's own figure - and it has to, because
-   a phone cannot reach the tooltip that used to carry it - 448 pixels of text in a 320
-   pixel viewport dragged the whole page sideways. It wraps, and it takes the width it
-   is given rather than the width it wants. */
+
 .count{margin-left:auto;color:var(--tx3);font:600 11px/1.4 'JetBrains Mono',monospace;
   letter-spacing:.09em;text-transform:uppercase;min-width:0;max-width:100%;
   text-align:right;overflow-wrap:anywhere}
 @media(max-width:760px){
-  /* On a phone it is a line of its own under the controls rather than something
-     squeezed to the right of them. */
+  
   .count{margin-left:0;width:100%;text-align:left;letter-spacing:.06em}
 }
 .activef{display:flex;flex-wrap:wrap;gap:6px}
@@ -647,7 +508,7 @@ button{color:inherit}
 }
 @media(min-width:761px){ .scanbtn{height:44px;padding:0 14px;gap:7px;display:inline-flex;align-items:center} }
 
-/* ---- sheets ---- */
+
 [hidden]{display:none !important}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
   clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
@@ -685,7 +546,7 @@ button{color:inherit}
   .sheethead::before{display:none}
 }
 
-/* ---- toast ---- */
+
 .toast{position:fixed;left:50%;bottom:calc(18px + var(--sab));transform:translate(-50%,16px);
   z-index:95;background:var(--card);border:1px solid var(--line2);border-radius:12px;
   padding:11px 16px;font:600 13px Inter,sans-serif;color:var(--tx);opacity:0;pointer-events:none;
@@ -716,8 +577,7 @@ button{color:inherit}
 .plabel #ppct{white-space:nowrap;font-weight:600;color:var(--tx)}
 @media(max-width:760px){
   .plabel{display:block}
-  /* Stacked, the percentage line is a whole row and has the width to wrap in; kept
-     on one line it ran 40px past the edge and took the page with it. */
+  
   .plabel #ppct{display:block;margin-top:5px;white-space:normal}
 }
 
@@ -732,18 +592,13 @@ button{color:inherit}
 .tabs{display:none}
 input[type=search],select{background:var(--card);border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:10px 12px;font:500 14px Inter,sans-serif;outline:none}
 input[type=search]:focus,select:focus{border-color:var(--acc)}
-/* The search box and the selects set outline:none as part of their look, and a bare
-   :focus-visible is a weaker selector than input[type=search], so a keyboard user
-   landing in the search box saw nothing at all. Same selector strength, stated after,
-   so the ring comes back for exactly those two. */
+
 input[type=search]:focus-visible,select:focus-visible,textarea:focus-visible,
 input[type=text]:focus-visible,input[type=number]:focus-visible,input[type=email]:focus-visible,
 input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font:600 12.5px Inter,sans-serif;color:var(--tx2);cursor:pointer;user-select:none;
-  /* These are real buttons now, so that a keyboard can reach them and a screen reader
-     is told they are pressed. A button brings its own font, alignment and line box, all
-     of which have to be put back to what the span looked like. */
+  
   line-height:1.35;text-align:center;-webkit-appearance:none;appearance:none;margin:0}
 .chip:hover{color:var(--tx);border-color:var(--line2)}
 .chip.on{border-color:var(--acc);color:var(--tx);box-shadow:inset 0 0 0 1px var(--acc);
@@ -753,36 +608,19 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
   transition:border-color .15s,color .15s}
 .iconbtn:hover{border-color:var(--acc);color:var(--tx)}
 
-/* ============================================================
-   THE CARDS
-   A card answers, at a glance: what car, whose catalogue, which number, do I
-   own it. Everything else is one tap away in the panel. Two modes, each with a
-   reason to exist - the grid is for recognising a car by its photo, the list is
-   for working down a catalogue by number.
-   ============================================================ */
+
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:13px;padding:18px 0 90px}
 @media(min-width:900px){ .grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:15px} }
 @media(min-width:1700px){ .grid{grid-template-columns:repeat(auto-fill,minmax(232px,1fr))} }
 
-/* Six hundred cards in the document is six hundred cards the browser lays out, paints
-   and composites on every scroll, and on a throttled phone that showed as a worst frame
-   of 86ms against a 34ms budget: visible stutter while flicking a catalogue of this
-   size, which is the single most common thing anybody does here.
 
-   content-visibility lets the browser skip all of that for a card that is nowhere near
-   the screen, and contain-intrinsic-size tells it how much room to leave so the
-   scrollbar does not jump about as cards come and go. The card still exists, is still
-   found by search, and is still reachable by keyboard; it is only the rendering that
-   waits until it is nearly needed. Anything off screen costs nothing. */
 .c{position:relative;background:var(--card);border:1px solid var(--line2);border-radius:14px;
   cursor:pointer;display:flex;flex-direction:column;
   content-visibility:auto;contain-intrinsic-size:auto 330px;
   transition:transform .13s ease,border-color .13s ease,box-shadow .13s ease}
-/* In list view a row is much shorter than a card, and a wrong guess here is what makes
-   a scrollbar lurch. */
+
 .grid.list .c{contain-intrinsic-size:auto 108px}
-/* The offset shadow is the catalogue's colour. It is what makes a mixed list
-   readable without a badge on every card. */
+
 .c::after{content:"";position:absolute;inset:0;border-radius:14px;pointer-events:none;
   box-shadow:3px 3px 0 -1px color-mix(in srgb,var(--bc,var(--acc)) 62%,transparent);
   transition:box-shadow .13s ease}
@@ -790,28 +628,14 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .c:hover::after{box-shadow:5px 5px 0 -1px var(--bc,var(--acc))}
 .c:active{transform:translateY(0) scale(.988)}
 .c:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
-/* the diamond: a catalogue mark, not decoration for its own sake. Drawn by the
-   card itself rather than by an element of its own - six hundred cards is six
-   hundred extra nodes for a 9px square. */
+
 .c::before{content:"";position:absolute;top:-5px;right:13px;width:9px;height:9px;rotate:45deg;
   border-radius:2px;background:var(--bc,var(--acc));z-index:4}
 .c .ph{position:relative;overflow:hidden;background:#fff;aspect-ratio:4/3;border-radius:13px 13px 0 0;
   margin:4px 4px 0;border-radius:11px}
 .c .ph img{width:100%;height:100%;object-fit:cover;display:block}
-/* "A chase exists" and "I own the chase" are two different facts and must never look
-   alike. The word CHASE is reserved for a copy you actually hold, and comes from your
-   own copy records. The fact that the manufacturer made one at all is this: a small
-   diamond in the corner of the photo, the same discreet mark it was before, which says
-   there is one out there to find. */
-/* Three marks, three corners. The ownership tick owns the top right of the card, so the
-   diamond cannot also live there: on any car that is both owned and had a chase made, and
-   there are plenty, the diamond sat on the tick. It was only ever visible on those cards,
-   which is why it survived so long.
 
-   Bottom right of the photograph instead. It keeps the diamond on the picture, where it
-   belongs, and away from the tick in both views. qa/badges.js measures the rectangles at
-   six widths rather than trusting these co-ordinates, because anything positioned into a
-   corner by hand collides with something eventually. */
+
 .c .ph .chasedot{position:absolute;bottom:6px;right:7px;z-index:3;font-size:11px;line-height:1;
   color:var(--gold,#d9a441);text-shadow:0 1px 3px rgba(0,0,0,.65);pointer-events:auto}
 .c.miss .ph img{filter:grayscale(1) contrast(.9) opacity(.5)}
@@ -819,7 +643,7 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .c .noimg{width:100%;height:100%;display:grid;place-items:center;background:var(--card2);
   color:var(--tx3);font:600 10.5px/1.4 'JetBrains Mono',monospace;text-align:center;padding:8px;
   letter-spacing:.05em;text-transform:uppercase}
-/* the scale badge hangs off the photo, the way it does on a blister */
+
 .c .scale{position:absolute;top:8px;left:8px;z-index:3;background:var(--bg);color:var(--tx);
   border:1px solid var(--line2);border-radius:6px;padding:3px 6px;
   font:700 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.06em}
@@ -836,13 +660,13 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .c .num mark{background:color-mix(in srgb,var(--acc) 32%,transparent);color:var(--tx);border-radius:3px}
 .c .foot{display:flex;align-items:center;gap:5px;margin-top:8px;flex-wrap:wrap}
 .c .foot:empty{display:none}
-/* the two one-tap actions, always in the same place */
+
 .act{margin-left:auto;display:flex;gap:4px;flex:0 0 auto}
 .act button{position:relative;width:30px;height:30px;border-radius:9px;border:1px solid var(--line);background:var(--bg2);
   color:var(--tx3);cursor:pointer;display:grid;place-items:center;padding:0;
   transition:color .13s,border-color .13s,background .13s,transform .1s}
 .act button svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.1}
-/* 30px is what the card can spare; the tap area is the 44px a thumb needs. */
+
 .act button::before{content:"";position:absolute;left:50%;top:50%;width:44px;height:44px;
   transform:translate(-50%,-50%)}
 .act button:hover{color:var(--tx);border-color:var(--line2)}
@@ -854,20 +678,13 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .act button.pulse{animation:pop .3s ease}
 @media(prefers-reduced-motion:reduce){ .act button.pulse{animation:none} }
 
-/* ---- list mode: same records, built for working down a catalogue ---- */
+
 .grid.list{display:flex;flex-direction:column;gap:7px}
 .grid.list .c{flex-direction:row;align-items:stretch;border-radius:12px;padding:0}
 .grid.list .c::after{border-radius:12px;box-shadow:3px 3px 0 -1px color-mix(in srgb,var(--bc,var(--acc)) 55%,transparent)}
 .grid.list .c::before{top:-4px;right:11px;width:8px;height:8px}
 .grid.list .c .ph{flex:0 0 74px;width:74px;aspect-ratio:1/1;margin:5px 0 5px 5px;border-radius:9px}
-/* In list view the photograph is a 74px thumbnail carrying three marks: the ownership
-   tick, the chase diamond and the scale. The tick moves to the left here so it stays over
-   the picture rather than floating off across the text, which put it exactly on top of
-   the scale pill: "1:64" with a green tick sitting on it.
 
-   The scale moves to the opposite corner rather than being dropped. It is the least
-   surprising of the three, since everything here is 1:64, but taking a fact off the card
-   to solve a collision is the wrong trade, and there is a free corner. */
 .grid.list .c .scale{top:auto;bottom:4px;left:4px;padding:2px 4px;font-size:9px}
 .grid.list .c .meta{padding:9px 12px;justify-content:center}
 .grid.list .c .t{margin-top:3px;min-height:0;-webkit-line-clamp:2;font-size:13.5px}
@@ -877,28 +694,20 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 @media(min-width:900px){
   .grid.list .c .ph{flex:0 0 92px;width:92px}
   .grid.list .c .t{-webkit-line-clamp:1}
-  /* The right-hand column is a fixed width, not "as wide as this card's pills happen
-     to be". Every card is its own grid, so an auto column made every row a different
-     shape: the pills started at a different place on each line and the two action
-     buttons, which sit at the end of the first column, wandered 187px up and down the
-     list. A list you read down has to line up. */
+  
   .grid.list .c .meta{display:grid;grid-template-columns:minmax(0,1fr) 216px;
     align-items:center;gap:4px 18px;padding:10px 14px}
   .grid.list .c .marque{grid-column:1;grid-row:1}
   .grid.list .c .t{grid-column:1;grid-row:2;margin:0}
   .grid.list .c .numrow{grid-column:1;grid-row:3;margin-top:4px}
-  /* The pills and the money were both put in column two spanning every row, which
-     means the browser laid one straight on top of the other: on a car you own, the
-     price printed over the pills and hid what was underneath it, the set count
-     included. They get a row each. */
+  
   .grid.list .c .foot{grid-column:2;grid-row:1/3;margin:0;justify-content:flex-end;
     align-items:flex-start;align-content:flex-start}
   .grid.list .c .money{grid-column:2;grid-row:3/4;margin:0;justify-self:end;text-align:right}
-  /* The buttons end the first column, so with that column now a constant width they
-     land on the same vertical line on every row. */
+  
   .grid.list .c .numrow .act{margin-left:auto}
 }
-/* More room, so the pills get a little more of it and wrap less often. */
+
 @media(min-width:1280px){
   .grid.list .c .meta{grid-template-columns:minmax(0,1fr) 250px}
 }
@@ -911,10 +720,10 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .p-buy{background:color-mix(in srgb,var(--buy) 18%,transparent);color:var(--buy)}
 .p-set{background:color-mix(in srgb,var(--acc) 18%,transparent);color:var(--acc)}
 .chip.chase-chip.on{background:var(--gold);color:#2b2200;border-color:var(--gold);font-weight:700}
-/* ---- edit mode ---- */
+
 .chip#editmode.on{background:var(--acc);border-color:var(--acc);color:var(--onacc,#fff);font-weight:700}
 .iconbtn.ed{padding:6px 12px;font-size:13px;white-space:nowrap}
-/* the exclusives group bar */
+
 #excbar{padding:14px 0 4px}
 .exchead{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3);
   margin:0 0 8px;font-weight:700}
@@ -930,9 +739,7 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .excg.on i{color:var(--tx2)}
 .excg.bond{border-style:dashed}
 #savechanges b{font-weight:700;color:var(--gold)}
-/* Facts about the MODEL ride on the photo, down the top-left, where the product
-   shots are empty. Facts about YOUR copy stay under it in the footer. Keeping the
-   two apart stops a card reading like a wall of badges. */
+
 .ovl{position:absolute;top:7px;left:7px;z-index:3;display:flex;flex-direction:column;
      align-items:flex-start;gap:4px;max-width:58%;pointer-events:none}
 .ovl span{background:rgba(12,12,16,.55);color:#fff;border-radius:5px;padding:3px 6px;
@@ -974,13 +781,10 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
   border-radius:10px;padding:9px 10px;font:600 13px/1 inherit;cursor:pointer}
 .seg button.on{background:var(--own);border-color:var(--own);color:#08130d}
 .seg button.on[data-o="2"]{background:var(--order);border-color:var(--order);color:#1a1205}
-/* "Not mine" is a neutral state, so it does not get the green or the orange. It was
-   given a dimmer face than the two it sits beside, which made the CHOSEN option the
-   faintest thing in the row and read as disabled rather than as picked. It stays
-   neutral in colour and is now unmistakably the one that is on. */
+
 .seg button.on[data-o="0"]{background:var(--line);border-color:var(--tx3);color:var(--tx);font-weight:700}
 .tagrow{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 12px}
-/* one row per physical copy: its condition, what marks it out, what it cost */
+
 .copies{display:flex;flex-direction:column;gap:9px;margin:2px 0 12px}
 .copy{border:1px solid var(--bd);border-radius:11px;padding:10px 11px;background:var(--card)}
 .copy .top{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
@@ -1015,9 +819,7 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .userrow{background:transparent;color:var(--tx3);font-weight:600;letter-spacing:.02em;
   text-transform:none;border:1px dashed color-mix(in srgb,var(--tx3) 45%,transparent)}
 .p-chase{background:var(--gold);color:#2b2200;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-/* Ownership reads on the frame itself: a green rail down the left edge for a car
-   that is here, amber for one on the way. It survives being next to a photo of any
-   colour, which a badge over the picture did not. */
+
 .edge{position:absolute;inset:0;border-radius:14px;pointer-events:none;border:1px solid transparent}
 .grid.list .edge{border-radius:12px}
 .c.own .edge{border-color:color-mix(in srgb,var(--own) 34%,transparent);
@@ -1029,9 +831,8 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .c.ord .tick{background:var(--order);color:#2a1d00}
 .grid.list .tick{top:6px;left:6px;right:auto;width:17px;height:17px;font-size:9.5px}
 
-/* stats */
-/* min() so a 360px minimum never becomes 360px on a 320px phone, which pushed
-   every panel past the edge and gave the page a sideways scrollbar. */
+
+
 .stats{padding:18px 0 90px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr))}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
 .panel h3{margin:0 0 4px;font-size:15px;font-weight:700}
@@ -1042,16 +843,16 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .track i{display:block;height:100%;background:var(--own);border-radius:99px}
 .row .val{text-align:right;color:var(--tx3);font-family:'JetBrains Mono',monospace;font-size:11px}
 
-/* modal */
+
 .mask{position:fixed;inset:0;background:rgba(3,4,6,.72);backdrop-filter:blur(6px);display:none;place-items:center;z-index:80;padding:20px}
 .mask.on{display:grid}
 .modal{background:var(--card);border:1px solid var(--line2);border-radius:18px;max-width:760px;width:100%;max-height:88vh;overflow:auto}
 .modal .big{background:#fff;aspect-ratio:3/2}
-/* ...unless there is nothing to put on it: then it is a panel, not a lightbox. */
+
 .modal .big.noshot{background:var(--bg2);aspect-ratio:auto;display:flex;align-items:center;justify-content:center;padding:34px 18px;text-align:center}
 .modal .big img{width:100%;height:100%;object-fit:contain;display:block}
 
-/* ---------- photo strip ---------- */
+
 .modal .strip{display:flex;gap:7px;padding:9px 10px;overflow-x:auto;background:var(--bg2);
   border-bottom:1px solid var(--line);scrollbar-width:thin}
 .modal .thumb{flex:0 0 auto;width:62px;height:46px;padding:0;border:1.5px solid var(--line);
@@ -1076,16 +877,14 @@ input[type=password]:focus-visible{outline:2px solid var(--acc);outline-offset:2
 .es-acts .btn{padding:9px 15px;font-size:13px}
 footer{border-top:1px solid var(--line);color:var(--tx3);font-size:12px;padding:16px 0 30px}
 
-/* value + tables */
+
 .vcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:18px}
 .vc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
 .vc b{display:block;font-size:27px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
 .vc i{display:block;font-style:normal;font-size:11.5px;color:var(--tx2);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
 .vc small{display:block;color:var(--tx3);font-size:11.5px;margin-top:7px;line-height:1.35}
 .vc.up b{color:var(--own)} .vc.dn b{color:#f87171}
-/* A panel is a fixed width and a table is not. Letting the table set the width
-   pushed the last column past the panel's edge; letting the panel scroll keeps
-   every column readable at every screen size. */
+
 .panel{overflow-x:auto}
 table.t{width:100%;border-collapse:collapse;font-size:13px;min-width:0}
 table.t td:not(.r){max-width:22ch}
@@ -1110,7 +909,7 @@ table.t tbody tr:hover{background:var(--card2)}
 .c .money .v{color:var(--buy);font-weight:700}
 .c .money .p{color:var(--tx3)}
 .panelwide{grid-column:1/-1}
-/* ---- the detail panel ---- */
+
 .mhead{margin-bottom:16px}
 .mtag{display:inline-flex;align-items:center;gap:6px;font:700 9.5px/1 'JetBrains Mono',monospace;
   letter-spacing:.14em;text-transform:uppercase;color:var(--bc,var(--acc));
@@ -1129,61 +928,41 @@ table.t tbody tr:hover{background:var(--card2)}
   font:700 11px/1 'JetBrains Mono',monospace;margin-left:7px;vertical-align:middle}
 tr.upr{cursor:pointer}
 tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
-/* Mobile is not the desktop layout squeezed. The bar is two rows - search, then
-   filter/sort/view - and everything else moved into the drawer or a sheet. */
+
 @media(max-width:640px){
   .grid{grid-template-columns:repeat(auto-fill,minmax(152px,1fr));gap:10px}
   .kpi{min-width:0;padding:10px 12px} .kpi b{font-size:18px}
   .c .t{font-size:12px}
-  /* Stacked, the title must not grow: flex:1 in a column means grow DOWNWARDS, and
-     it opened a 200px hole between the heading and the numbers. */
+  
   .hero-top{flex-direction:column;align-items:stretch;gap:12px}
   .hero-id{flex:0 0 auto}
   .kpis{gap:6px}
 }
-/* Three across once there is room for them, which keeps the block short without
-   making any single figure cramped. */
+
 @media(min-width:481px) and (max-width:760px){
   .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
   .kpis .kpi:last-child{grid-column:auto}
 }
-/* ---- THE DETAIL PANEL AS A SHEET ON A PHONE ------------------------------
-   On a desktop this is a dialog floating in the middle of the screen, which is right
-   there. On a phone the same thing became a 350px box with 2,163px of content inside it
-   and the Close button sitting in that content, so the moment you scrolled to read the
-   spec the way out went with it. You were left with the back gesture or a guess.
 
-   A phone gets a sheet instead: anchored to the bottom edge, full width, rounded only at
-   the top, rising to 92% of the visible height. That is the shape a phone user already
-   knows from every other application, and it puts the panel where the thumb is rather
-   than in the middle of the screen where it is not.
-
-   dvh rather than vh because Safari's address bar changes the viewport as you scroll,
-   and vh is measured against the tallest state, which is how a sheet ends up taller
-   than the screen it is on. The bottom padding clears the home indicator. */
 @media(max-width:760px){
   .mask{place-items:end center;padding:0}
   .modal{max-height:92dvh;border-radius:20px 20px 0 0;border-bottom:0;
     padding-bottom:var(--sab)}
-  /* A grab handle, so it reads as a sheet before you touch it. */
+  
   .modal .body{padding:18px 16px calc(22px + var(--sab))}
-  /* The way out stays put. .modal is the scrolling box, so a sticky child pins itself to
-     its top edge and rides the content down instead of disappearing up it. */
+  
   .modal .close{position:sticky;top:6px;z-index:5;
     background:color-mix(in srgb,var(--card) 92%,transparent);
     backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
     min-height:44px;padding-left:16px;padding-right:16px}
 }
 @media(max-width:360px){
-  /* minmax(0,...) rather than 1fr: a card's widest unbreakable pill was setting the
-     track's minimum, so two 195px columns sat in a 288px grid and the whole page
-     gained a sideways scrollbar. */
+  
   .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
   .tbtn{padding:9px 10px;letter-spacing:.06em}
 }
 
-/* Somebody who has asked their system for less motion gets none of the movement
-   and all of the information: the states are still colour, border and label. */
+
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
     transition-duration:.001ms !important;scroll-behavior:auto !important}
@@ -1191,7 +970,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   .c:active{transform:none}
 }
 
-/* ---------- barcode scanner ---------- */
+
 .scanbtn{gap:7px;padding:0 13px}
 .scanbtn svg{width:17px;height:17px}
 @media(max-width:760px){ .scanlbl{display:none} }
@@ -1230,18 +1009,11 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 .pill.p-exc{background:color-mix(in srgb,var(--tx2) 14%,transparent);color:var(--tx2);
   border:1px solid color-mix(in srgb,var(--tx2) 28%,transparent)}
 .pill.p-bond{background:var(--tx);color:var(--bg);font-weight:800;letter-spacing:.1em}
-/* What the shop said about the state of the thing, and whether it is a car at all.
-   Deliberately quiet: these are caveats on a listing, not achievements. */
+
 .pill.p-used{background:color-mix(in srgb,var(--tx3) 20%,transparent);color:var(--tx2);
   border:1px dashed color-mix(in srgb,var(--tx3) 55%,transparent)}
 .pill.p-box{background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--gold)}
-/* WHAT A RELEASE IS, rather than where it sits. A Super Treasure Hunt is not a series
-   and not a place in the catalogue: it is a classification of this particular car, and
-   it used to be reachable only as a substring of a series name. These mark it.
 
-   Built from theme tokens, never from a fixed colour, because the same mark has to hold
-   up on every theme in the app. The Super is the loud one because it is the rarest of
-   them; the ordinary hunt is the same shape, quieter. */
 .pill.p-tax{background:color-mix(in srgb,var(--tx3) 16%,transparent);color:var(--tx2);
   border:1px solid color-mix(in srgb,var(--tx3) 45%,transparent)}
 .pill.p-tax.tx-sth{background:color-mix(in srgb,var(--gold) 26%,transparent);color:var(--gold);
@@ -1252,8 +1024,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   border-color:color-mix(in srgb,var(--acc) 45%,transparent)}
 .pill.p-tax.tx-rlc{background:color-mix(in srgb,var(--buy) 16%,transparent);color:var(--buy);
   border-color:color-mix(in srgb,var(--buy) 42%,transparent)}
-/* An unreleased car that a shop has put a date on. Amber so it reads as a promise
-   rather than a fact, and it never appears on a car that is already out. */
+
 .pill.p-eta.p-late{background:color-mix(in srgb,var(--danger) 20%,transparent);color:var(--danger);
   border-color:color-mix(in srgb,var(--danger) 45%,transparent)}
 .pill.p-eta{background:color-mix(in srgb,var(--gold) 20%,transparent);color:var(--gold);
@@ -1265,61 +1036,36 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   border-radius:9px;color:var(--tx);padding:8px 9px;font:500 13px/1 Inter,sans-serif}
 .curnote{margin:7px 11px 9px;font:400 10.5px/1.45 Inter,sans-serif;color:var(--tx3)}
 
-/* ---- TOUCH TARGETS ON A PHONE -------------------------------------------
-   Measured at 320, 375, 390 and 430 with qa/responsive.js: every control in the
-   chrome came out between 30 and 35px tall, against the 44px a thumb actually needs.
-   The card's own own/want buttons were already right, carrying a transparent 44px
-   ::before behind a 30px face, so they are left alone; this is the rest of the app
-   catching up with them.
 
-   Height only. Widths were already fine and stretching them would cost the rail its
-   density, which is the thing that makes browsing a thousand cars on a phone bearable. */
 @media(max-width:767px){
   .brands button, .lines button{min-height:44px;padding-top:0;padding-bottom:0;
     display:inline-flex;align-items:center}
   .tbtn, .skinbtn, .scanbtn, .iconbtn{min-height:44px}
   .navbtn{min-width:44px;min-height:44px}
   .heromore{min-height:44px;padding-left:12px;padding-right:12px}
-  /* Grid or list is the most-pressed pair of buttons on a phone after the tick, and both
-     were 34x30 inside a padded shell. The shell keeps its shape; the buttons inside it
-     grow to something a thumb can actually land on. The painted face stays 40px so the
-     toolbar row does not grow; a transparent strip behind it carries the last 4px, the
-     same trick the card's own and want buttons already use. The shell is 2px of padding
-     either side of a 40px face, so 44px of hit area lands exactly inside it and cannot
-     reach a neighbouring control. */
+  
   .viewtog button{width:44px;height:40px;position:relative}
   .viewtog button::before{content:"";position:absolute;left:0;width:44px;height:44px;
     top:50%;transform:translateY(-50%)}
   .viewtog{padding:2px}
-  /* Every chip is a button a thumb has to land on: "Show the remaining 677" at the foot
-     of the grid, Edit in the top bar, and the eight filters in the sheet. They were
-     spans when this rule was written, so only the one with an id was covered; now they
-     are all real buttons and they all need the height. */
+  
   .chip{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
-  /* An icon has no width of its own to make a target out of, so it is given one. */
+  
   .chip.iconcap{width:44px;min-width:44px}
   .skinbtn{height:44px;padding:0 11px}
   .skinbtn svg{width:20px;height:20px}
-  /* Searching while standing in a shop is the main mobile use, so the box it is typed
-     into should not be a pixel short of comfortable. */
+  
   #q{min-height:46px}
-  /* The skip link is for a screen reader and a keyboard, and it was being cut off in
-     its own box while invisible. It only needs to be legible when focused. */
+  
   .skipnav:focus{min-height:44px;display:inline-flex;align-items:center;width:auto;
     white-space:nowrap;padding:0 14px}
 }
 
-/* =====================================================================
-   BADGES
-   The badge plate is metal on a recessed field, so the tier colours are
-   declared once here rather than inside the drawing code: the same SVG
-   then reads correctly on a light background, in the purple skin and in
-   high contrast, because it is asking the page what its own surfaces are.
-   ===================================================================== */
+
 :root{
-  --bd-field:#101218;      /* the recess behind a glyph */
+  --bd-field:#101218;      
   --bd-track:rgba(255,255,255,.07);
-  --bd-off1:#2b3040;       /* an unearned plate: still a plate, just not metal */
+  --bd-off1:#2b3040;       
   --bd-off2:#1c2029;
   --bd-off3:#3a4152;
   --bd-off4:#7d879a;
@@ -1327,17 +1073,13 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 :root[data-theme="light"]{
   --bd-field:#eef1f6;
   --bd-track:rgba(0,0,0,.08);
-  /* On white, a pale unearned plate and a chrome earned one were within a shade of
-     each other. The unearned one is pulled down and desaturated so the difference is
-     the material and not just the colour of the progress bar under it. */
+  
   --bd-off1:#bfc7d3; --bd-off2:#d8dee7; --bd-off3:#a4aebd; --bd-off4:#6d7787;
 }
 :root[data-theme="light"] .btile.b-earned{border-color:var(--line2);
   box-shadow:inset 0 1px 0 #fff, 0 2px 6px rgba(15,17,21,.07)}
 #badges{max-width:100%}
-/* The hero's progress bar measures the catalogue selected on the rail. In the badges
-   room that is the wrong subject: the room is about the account, not about how much of
-   Mini GT is on the shelf. The bar is hidden here and nowhere else. */
+
 .hero.hero-account .prog,.hero.hero-account .plabel,
 .hero.hero-account .brandnote,.hero.hero-account #heromore{display:none}
 .bhead{padding:18px 20px;border:1px solid var(--line);border-radius:var(--r);
@@ -1373,10 +1115,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   color:var(--tx3);font-variant-numeric:tabular-nums}
 .bsec .sub{margin:0 0 14px;color:var(--tx3);font-size:12.5px}
 .bnext{padding:18px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2)}
-/* Three across on a phone, the way a shelf of medallions wants to be read. No card
-   around a badge: the emblem is the object and a box round it only competes with the
-   rim. Name, then one line that says either when it was reached or how far along it
-   is. Everything else is a tap away in the sheet. */
+
 .bgrid{display:grid;gap:22px 12px;grid-template-columns:repeat(auto-fill,minmax(118px,1fr))}
 .btile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;
   padding:4px 2px 10px;background:none;border:0;cursor:pointer;color:inherit;font:inherit;
@@ -1387,7 +1126,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))}
 .btile.b-locked .bart,.btile.b-close .bart{filter:drop-shadow(0 4px 10px rgba(0,0,0,.3))}
 .bart .bsvg{display:block;max-width:100%;height:auto}
-/* the star marks a badge the collector has put on their profile */
+
 .bstar{position:absolute;right:2px;bottom:6px;width:22px;height:22px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--gold);
   box-shadow:0 0 0 1px var(--line2)}
@@ -1401,7 +1140,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   background:var(--bd-track);overflow:hidden}
 .bbar>span{display:block;height:100%;border-radius:999px;background:var(--acc)}
 .bnext .bbar>span{background:var(--acc)}
-/* the sheet behind a tile */
+
 .bdtop{display:flex;justify-content:center;padding:6px 0 14px}
 .bdkind{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
 .bdcat,.bdtier{display:inline-block;padding:5px 11px;border-radius:999px;
@@ -1432,7 +1171,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 .dr-badge b{margin-left:auto;color:var(--tx);font-variant-numeric:tabular-nums}
 @media (max-width:767px){
   .bhead{padding:18px 16px}
-  /* Three across on a phone, like a tray of medals, not one long column. */
+  
   .bgrid{grid-template-columns:repeat(3,1fr);gap:20px 8px}
   .bname{font-size:11.5px}
   .bline{font-size:10.5px}
@@ -1444,20 +1183,9 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   .btile{transition:border-color .16s ease, background .16s ease}
 }
 
-/* =====================================================================
-   SURFACE PASS
-   A flat card and a raised one read differently at a glance, and MYMINI164
-   was drawing everything on the same plane: the same fill, the same
-   hairline, nothing to say which surface is the object and which is the
-   table it sits on. What follows adds material and nothing else. No rule
-   here moves anything, changes a size or takes a feature away; each one
-   is a fill, a hairline highlight or a press state layered over what was
-   already there, and every one of them degrades to the old flat surface
-   if the browser does not understand it.
-   ===================================================================== */
 
-/* A single top hairline is what makes a dark surface read as lit from above.
-   It is drawn with an inset shadow rather than a border so it costs no layout. */
+
+
 .kpi,.panel,.dr-card,.bnext,.bfoot{
   background-image:linear-gradient(168deg,color-mix(in srgb,var(--tx) 4%,transparent),transparent 58%);
   box-shadow:inset 0 1px 0 color-mix(in srgb,var(--tx) 7%,transparent);
@@ -1469,15 +1197,12 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   box-shadow:inset 0 1px 0 #fff, 0 1px 2px rgba(15,17,21,.05);
 }
 
-/* Figures are the thing people came for, so they get the room to be read as
-   figures: tabular so columns line up, tighter so a five digit number does not
-   sprawl, and a size that survives a glance from arm's length. */
+
 .kpi b{font-variant-numeric:tabular-nums;letter-spacing:-.03em}
 @media(min-width:900px){ .kpi b{font-size:21px} }
 .row .n,.panel b.cnt,.count{font-variant-numeric:tabular-nums}
 
-/* Press feedback. A card that does not move under the thumb feels broken on a
-   phone, and every one of these is already an interactive element. */
+
 @media (prefers-reduced-motion:no-preference){
   .c:active{transform:translateY(1px) scale(.995)}
   .chip:active,.iconbtn:active,.tbtn:active,.dr-item:active,.brands button:active,
@@ -1485,8 +1210,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 }
 .dr-item,.chip,.iconbtn,.tbtn{transition:transform .1s ease,border-color .15s ease,background .15s ease}
 
-/* The rails scroll sideways and had the browser's default bar sitting under the
-   buttons. Thin, dim and out of the way, but still there and still grabbable. */
+
 .brands,.lines,.excrow{scrollbar-width:thin;scrollbar-color:var(--line2) transparent}
 .brands::-webkit-scrollbar,.lines::-webkit-scrollbar,.excrow::-webkit-scrollbar{height:6px}
 .brands::-webkit-scrollbar-thumb,.lines::-webkit-scrollbar-thumb,
@@ -1494,11 +1218,10 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 .brands::-webkit-scrollbar-track,.lines::-webkit-scrollbar-track,
 .excrow::-webkit-scrollbar-track{background:transparent}
 
-/* Selected text was the browser's blue on a near black page. */
+
 ::selection{background:color-mix(in srgb,var(--acc) 38%,transparent);color:var(--tx)}
 
-/* The badge announcement. Its own corner, its own slot, so it never rubs out the
-   status toast the way a shared one did. */
+
 .bcheer{position:fixed;right:18px;bottom:18px;z-index:70;display:flex;align-items:center;gap:12px;
   padding:12px 14px;border-radius:16px;border:1px solid var(--line2);
   background:linear-gradient(155deg,var(--card2),var(--card) 70%);
@@ -1524,8 +1247,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 }
 @media (prefers-reduced-motion:reduce){ .bcheer{transition:none} }
 
-/* The profile block on the account sheet: who this collector is, in figures a
-   collector cares about, then the badges they chose to show. */
+
 .pfigs{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:8px;margin:0 0 12px}
 .pfig{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}
 .pfig b{display:block;font:700 18px/1 'JetBrains Mono',ui-monospace,monospace;
@@ -1544,7 +1266,7 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
 .bproftx i{display:block;margin-top:3px;font-style:normal;font-size:11.5px;color:var(--tx3);
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bprofgo{flex:0 0 auto;font-size:20px;line-height:1;color:var(--tx3)}
-/* Picking a badge for the profile. Only ever on an earned tile. */
+
 .bpick{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:6px 10px;min-height:32px;
   border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--tx3);
   font:600 11px/1 inherit;cursor:pointer}
@@ -1557,65 +1279,38 @@ tr.upr:hover td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
   .bpick{min-height:40px;padding:0 12px}
 }
 
-/* =====================================================================
-   THE TYPE AND THE SHAPES
-   ---------------------------------------------------------------------
-   MYMINI164 was set almost entirely at one size in one weight. Everything
-   on screen was the same loudness, so the eye had nothing to land on
-   first and the page read as dense rather than as organised. What
-   follows is a scale, not a redecoration: a display face at a weight
-   and size that says "you are here", body text left alone, and figures
-   still in the mono face because they are figures.
 
-   The shapes follow the same idea. The page had three different corner
-   radii doing the same job. Anything that behaves like a pill is now a
-   pill, anything that behaves like a card has one radius, and a chosen
-   thing is filled rather than outlined.
-
-   Nothing here removes a control, a figure or a feature. It is type,
-   radius, spacing and one selected state.
-   ===================================================================== */
 :root{
   --display:Outfit,Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   --r-pill:999px;
   --r-card:16px;
 }
 
-/* ---- the room title ----------------------------------------------------
-   The single biggest thing on any screen should be the answer to "where am
-   I". It was 21px on a phone, the same size as a card title. */
+
 .hero{padding:26px 0 18px}
 .hero-title{font-family:var(--display);
   font-size:clamp(34px,10vw,54px);
-  /* Caps need air between the letters, not less of it. The tight tracking that
-     suits a lowercase heading ran MY GARAGE together into one word. */
+  
   font-weight:800;letter-spacing:-.005em;line-height:1;
   text-transform:uppercase}
 .hero-eyebrow{margin:0 0 9px;font-size:10px;letter-spacing:.2em}
 @media(min-width:900px){ .hero{padding:32px 0 20px} }
 
-/* The wordmark and every section heading share the display face, so the page
-   has one voice rather than one per component. */
+
 .wordmark h1{font-family:var(--display);font-size:22px;font-weight:800;letter-spacing:-.035em}
 .panel h3,.bsec h3,.sheethead b,.exchead{font-family:var(--display);letter-spacing:-.02em}
 .bsec h3{font-size:19px;font-weight:700}
 .panel h3{font-size:16px;font-weight:700}
 h2,h3{font-family:var(--display)}
 
-/* ---- pills -------------------------------------------------------------
-   The catalogue rail, the filter chips and the search box all behave like
-   pills and were drawn with three different radii. */
+
 .brands button,.chip,.tbtn,.iconbtn,.excg,.btchip{border-radius:var(--r-pill)}
 .brands button{padding:10px 16px}
 .searchwrap,#q{border-radius:var(--r-pill)}
 .searchwrap{overflow:hidden}
 .navbtn{border-radius:14px}
 
-/* A chosen catalogue is filled, not outlined. Outlining it left the chosen
-   and the unchosen the same weight on the page, which is the one thing a
-   selected state must not be. The fill is the catalogue's own hue taken
-   down over the page background so white text sits on it comfortably
-   whichever hue it is, from the pale yellow to the deep blue. */
+
 .brands button.on{
   background:color-mix(in srgb,var(--bc,var(--acc)) 58%,var(--bg));
   border-color:color-mix(in srgb,var(--bc,var(--acc)) 85%,transparent);
@@ -1625,23 +1320,19 @@ h2,h3{font-family:var(--display)}
   background:color-mix(in srgb,var(--bc,var(--acc)) 82%,#000);
   color:#fff}
 
-/* ---- cards -------------------------------------------------------------
-   One radius for anything that is a surface. */
+
 .c,.panel,.kpi,.bhead,.bnext,.bfoot,.dr-card,.sheet{border-radius:var(--r-card)}
 .c::after{border-radius:var(--r-card)}
 .kpi{border-radius:14px}
 
-/* ---- air ---------------------------------------------------------------
-   The reference's cleanliness is mostly empty space. These are the four
-   gaps that were doing the most crowding. */
+
 .railwrap{padding-top:4px}
 .brands{gap:8px}
 .tb-row{gap:10px}
 .bsec{margin-top:36px}
 .bsec .sub{margin-bottom:18px}
 
-/* Secondary text was the same grey as tertiary in several places, which is
-   what flattens a hierarchy. Body copy under a heading sits one step up. */
+
 .panel p.sub,.bsec .sub,.bhead .sub{font-size:13px;line-height:1.6}
 
 @media(max-width:767px){
@@ -1650,44 +1341,18 @@ h2,h3{font-family:var(--display)}
   .brands button{padding:10px 15px}
 }
 
-/* The drawer was ten outlined tiles in ten colours, one per destination, which on a
-   black page is ten competing accents in a column. The colour coding is useful and it
-   stays, but it moves to the mark inside the tile: the tile itself is now a plain
-   surface like everything else, so the eye reads a list first and a colour second.
-   Where you are standing is red, because that is the page's one accent. */
+
 .dr-item .ic{border-color:var(--line);background:var(--card)}
 .dr-item:hover .ic{border-color:var(--line2)}
 .dr-item.on .ic{border-color:color-mix(in srgb,var(--acc) 55%,transparent);
   background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc)!important}
 .dr-item.on .ic svg{stroke:var(--acc)}
-/* On the black and red colourway, and only there, the destination marks are one
-   colour. Ten hues down one column was the last thing on the page arguing with the
-   accent, and where you are standing is the only distinction that column needs. The
-   mark's colour is set inline from the destination list, so this has to say so
-   plainly; the other colourways keep their coding untouched.
-   :root with no data-skin is the default skin: applySkin removes the attribute
-   rather than setting it to an empty string. */
+
 :root:not([data-skin]) .dr-item .ic{color:var(--tx2)!important}
 :root:not([data-skin]) .dr-item:hover .ic{color:var(--tx)!important}
 :root:not([data-skin]) .dr-item.on .ic{color:var(--acc)!important}
 
-/* ---------------------------------------------------------------------
-   NO ORANGE ON THE BLACK AND RED COLOURWAY
-   Scoped to the default skin only: :root carries no data-skin there,
-   because applySkin removes the attribute rather than setting it empty.
-   Every other colourway keeps exactly the hues it had.
 
-   Two orange things had to move. "On the way" was amber, which beside a
-   red accent reads as a second, weaker red rather than as its own state;
-   it becomes a clean yellow, which is as far from both red and green as
-   a warm colour gets. And two of the nine catalogue hues were orange:
-   Mini GT takes the house red, which it has earned as the heart of the
-   collection, Hot Wheels drops to a deeper brick so the two reds are
-   still told apart at a glance, and BBR goes to silver.
-
-   The state meanings do not change. Green is still on your shelf, this
-   yellow is still on the way, blue is still on a shop shelf today.
-   --------------------------------------------------------------------- */
 :root:not([data-skin]){
   --order:#ffd60a; --gold:#ffd60a;
   --b-minigt:#ff3b30; --b-hotwheels:#c9302c; --b-bbr:#b8c0cf;
@@ -1696,21 +1361,18 @@ h2,h3{font-family:var(--display)}
   --order:#8a6a00; --gold:#8a6a00;
   --b-minigt:#c8102e; --b-hotwheels:#8f1d1d; --b-bbr:#5b6472;
 }
-/* The two chips that print dark ink on the state colour need it re-checked
-   against yellow rather than amber. */
+
 :root:not([data-skin]) .seg button.on[data-o="2"]{color:#241c00}
 :root:not([data-skin]) .c.ord .tick{color:#241c00}
 
-/* =====================================================================
-   THE PROFILE
-   ===================================================================== */
+
 .av{display:inline-block;border-radius:50%;object-fit:cover;background:var(--card2);
   box-shadow:0 0 0 1px var(--line2)}
 .av-txt{display:inline-flex;align-items:center;justify-content:center;
   font-family:var(--display);font-weight:800;letter-spacing:-.02em;color:var(--onacc,#fff);
   background:linear-gradient(150deg,var(--acc),color-mix(in srgb,var(--acc) 55%,#000))}
 
-/* the way in: the name at the top of the drawer is a button now, not a caption */
+
 .dr-me{display:flex;align-items:center;gap:11px;width:100%;text-align:left;cursor:pointer;
   background:transparent;border:1px solid transparent;border-radius:14px;padding:8px 10px;
   margin:0 0 12px;color:inherit;font:inherit}
@@ -1779,7 +1441,7 @@ h2,h3{font-family:var(--display)}
   border-radius:var(--r-card,16px);background:var(--bg2);color:var(--tx3);
   font-size:12px;line-height:1.65;max-width:86ch}
 
-/* the editor, in the settings menu */
+
 .pf-edit{display:flex;align-items:center;gap:11px;padding:2px 9px 0}
 .pf-avwrap{line-height:0;flex:0 0 auto}
 .pf-fields{min-width:0;flex:1}
@@ -1801,14 +1463,11 @@ h2,h3{font-family:var(--display)}
   .pflatest{grid-template-columns:repeat(2,1fr)}
   .pf-acts .iconbtn{min-height:42px}
 }
-/* THE DOOR TO THE REST OF THE CATALOGUES. It sits at the end of the rail and is not a
-   catalogue, so it does not look like one: no count of its own, a quieter face, and the
-   number of catalogues waiting behind it rather than a fraction. */
+
 .brands .brandmore{border-style:dashed;color:var(--tx2);font-weight:600}
 .brands .brandmore i{opacity:.8}
 .brands .brandmore:hover{color:var(--tx);border-color:var(--line2)}
-/* One catalogue per row on a phone, two on anything wider. The count sits hard right so
-   the eye can run down it, which is how somebody picks what to open. */
+
 .brandgrid{display:grid;grid-template-columns:1fr;gap:6px;margin:0 0 14px}
 @media (min-width:560px){.brandgrid{grid-template-columns:1fr 1fr}}
 .brandpick{display:flex;align-items:center;justify-content:space-between;gap:10px;
@@ -1818,21 +1477,15 @@ h2,h3{font-family:var(--display)}
 .brandpick:hover{border-color:var(--line2);background:var(--card2)}
 .brandpick.on{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 14%,var(--card))}
 .brandpick b{font-weight:650;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-/* The group a brand belongs to, set small and quiet after its name: it is context, not
-   a second name, and only one maker in the catalogue has one so far. */
+
 .brandpick .bgroup{display:inline-block;margin-left:7px;padding:1px 6px;border-radius:999px;
   border:1px solid var(--line2);font:600 9px/1.5 'JetBrains Mono',monospace;
   letter-spacing:.06em;color:var(--tx3);text-transform:uppercase;vertical-align:middle}
 .brandpick i{font-style:normal;font:600 11px/1 'JetBrains Mono',monospace;color:var(--tx3);flex:none}
-/* A catalogue and its pin are one row of two controls: picking it and keeping it on the
-   rail are different acts and each needs its own target big enough to hit. */
-/* The group heading inside the filter sheet's collection block. It sits on its own line
-   in a wrapping row of chips, so it is a full-width break rather than a chip. */
+
+
 .chiprow .cgrp{flex:0 0 100%;margin:8px 0 2px}
-/* THE MARK ON THE CARD.
-   Small, in the corner with the scale and the chase diamond, and only ever present on
-   Rare and above. It carries the number rather than the word because the word is long
-   and the number is the thing that differs between two cars that are both "Rare". */
+
 .rarchip{position:absolute;top:6px;right:6px;z-index:2;min-width:20px;height:20px;
   display:flex;align-items:center;justify-content:center;padding:0 5px;
   font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.02em;
@@ -1844,8 +1497,7 @@ h2,h3{font-family:var(--display)}
 .whybtn{margin-left:8px;padding:2px 8px;font:600 11.5px/1.5 inherit;cursor:pointer;
   color:var(--tx2);background:var(--card);border:1px solid var(--line);border-radius:7px}
 .whybtn:hover{color:var(--tx);border-color:var(--tx3)}
-/* The evidence list. One claim per line, with who said it underneath, because the
-   source is half of what makes a claim worth anything. */
+
 .evrow{padding:11px 0;border-bottom:1px solid var(--line)}
 .evrow:last-child{border-bottom:0}
 .evrow b{display:block;font-size:14px;font-weight:600;color:var(--tx)}
@@ -1865,65 +1517,62 @@ h2,h3{font-family:var(--display)}
   background:color-mix(in srgb,var(--acc) 12%,var(--card))}
 .brandpick.on i{color:var(--tx2)}
 
-/* The Japanese name off Tomytec's own box. Hiragana, katakana and kanji need a font
-   that has them and a touch more line height than Latin text; the system Japanese font
-   is the right one to ask for because it is the one the reader already reads. */
-/* "scale not stated" is longer than "1:64" and it is a smaller claim, so it is set
-   quieter and allowed to be narrow rather than stretching the corner of the photo. */
+
+
 .scale.noscale{font-size:9px;letter-spacing:0;opacity:.72;font-weight:600}
 .jpname{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,
   "Noto Sans JP",system-ui,sans-serif;line-height:1.55;font-size:14px}
-/* Present to a screen reader and to a search engine, absent to the eye. Used for the
-   page's heading, which the logo says in pictures and cannot say in words. */
+
 .vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
   clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 
-/* ---------- THE MINI164 MARK ---------------------------------------------------
-   One rule decides which approved wordmark is showing, and it is keyed on the light
-   or dark mode rather than on any colourway's name. Six colourways times two modes is
-   twelve surfaces; every dark one sits between #03081a and #08090b and every light one
-   between #f0f5ff and #f6f6f8, so luminance is what actually matters and data-theme is
-   what carries it. Adding a seventh colourway needs nothing here.
 
-   Both variants are in the document and one is hidden, so changing theme is a repaint
-   rather than a fetch, a re-render or a flash of the wrong one. */
 .m164logo{display:inline-flex;align-items:center;line-height:0}
 .m164logo svg{display:block;height:100%;width:auto}
 .m164logo .m164-ink{display:none}
 .m164logo .m164-white{display:block}
 :root[data-theme="light"] .m164logo .m164-ink{display:block}
 :root[data-theme="light"] .m164logo .m164-white{display:none}
-/* The car on its own already carries its red field, so it is the same picture on
-   every surface and needs no variant. */
+
 .m164logo.m164-markonly svg{border-radius:22%}
 
-/* In the bar. Sized to the cap height of what used to be here, so the shell keeps its
-   proportions and the bar does not grow to make room for a picture. */
+
 .wordmark .m164logo{height:26px}
 @media(max-width:430px){ .wordmark .m164logo{height:23px} }
 @media(max-width:340px){ .wordmark .m164logo{height:21px} }
 
-/* Standing alone, above a sign-in form or an empty shelf, where it is the thing
-   introducing the application rather than a label on a bar. */
+
 .m164logo.m164-hero{height:46px}
 @media(max-width:430px){ .m164logo.m164-hero{height:38px} }
 
 </style>
+<svg class="m164-sprite" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><symbol id="m164-word-ink" viewBox="0 0 1163.7 281.1"><g transform="translate(0,11.14)">
+    <g fill="#2D2D2D" fill-rule="evenodd">
+      <path d="M 498.33,85.27 Q 490.35,84.48 490.35,74.10 L 490.35,69.31 Q 491.14,58.93 506.31,55.74 L 581.35,43.77 C 602.10,37.38 616.47,21.41 646.80,15.03 Q 670.75,10.24 691.50,13.43 C 723.43,15.03 760.15,29.40 785.70,38.98 L 796.87,35.78 L 799.27,45.36 L 800.07,75.69 Q 800.07,85.27 788.89,85.27 L 768.93,85.27 A 31.13,31.13 0 0 0 706.67,85.27 L 586.93,85.27 A 31.13,31.13 0 0 0 524.67,85.27 L 498.33,85.27 Z M 616.47,42.17 C 629.24,32.59 638.82,23.81 657.98,21.41 L 676.34,20.62 L 674.74,42.17 Z M 685.92,42.17 L 687.51,20.62 L 693.10,20.62 C 715.45,22.21 737.80,31.79 755.36,42.17 Z"/>
+      <path d="M 529.46,85.27 A 26.34,26.34 0 1 0 582.14,85.27 A 26.34,26.34 0 1 0 529.46,85.27 Z M 542.23,85.27 A 13.57,13.57 0 1 0 569.37,85.27 A 13.57,13.57 0 1 0 542.23,85.27 Z M 551.01,85.27 A 4.79,4.79 0 1 0 560.59,85.27 A 4.79,4.79 0 1 0 551.01,85.27 Z M 711.46,85.27 A 26.34,26.34 0 1 0 764.14,85.27 A 26.34,26.34 0 1 0 711.46,85.27 Z M 724.23,85.27 A 13.57,13.57 0 1 0 751.37,85.27 A 13.57,13.57 0 1 0 724.23,85.27 Z M 733.01,85.27 A 4.79,4.79 0 1 0 742.59,85.27 A 4.79,4.79 0 1 0 733.01,85.27 Z"/>
+    </g>
+    <path fill="#2D2D2D" d="M127.152 235.176V174.476Q127.152 145.976 110.75200000000001 145.976Q102.25200000000001 145.976 96.90200000000002 154.676Q91.552 163.37599999999998 91.552 177.176V235.176H63.452V151.176Q63.452 142.476 63.202 136.926Q62.952 131.37599999999998 62.652 126.97599999999998H89.452Q89.75200000000001 128.87599999999998 90.25200000000001 137.12599999999998Q90.75200000000001 145.37599999999998 90.75200000000001 148.476H91.152Q96.352 136.07599999999996 104.102 130.47599999999997Q111.852 124.87599999999998 122.652 124.87599999999998Q147.452 124.87599999999998 152.752 148.476H153.352Q158.852 135.87599999999998 166.55200000000002 130.37599999999998Q174.252 124.87599999999998 186.152 124.87599999999998Q201.952 124.87599999999998 210.252 135.62599999999998Q218.55200000000002 146.37599999999998 218.55200000000002 166.476V235.176H190.652V174.476Q190.652 145.976 174.252 145.976Q166.05200000000002 145.976 160.80200000000002 153.926Q155.55200000000002 161.87599999999998 155.05200000000002 175.87599999999998V235.176ZM259.552 277.676Q249.452 277.676 241.852 276.376V256.376Q247.15200000000002 257.176 251.55200000000002 257.176Q257.552 257.176 261.502 255.27599999999998Q265.452 253.37599999999998 268.602 248.976Q271.752 244.576 275.65200000000004 234.076L232.852 126.97599999999998H262.552L279.552 177.676Q283.552 188.576 289.65200000000004 211.076L292.15200000000004 201.576L298.65200000000004 178.076L314.65200000000004 126.97599999999998H344.052L301.252 240.87599999999998Q292.65200000000004 261.676 283.40200000000004 269.676Q274.15200000000004 277.676 259.552 277.676ZM423.152 235.176V174.476Q423.152 145.976 406.752 145.976Q398.252 145.976 392.90200000000004 154.676Q387.552 163.37599999999998 387.552 177.176V235.176H359.452V151.176Q359.452 142.476 359.202 136.926Q358.952 131.37599999999998 358.652 126.97599999999998H385.452Q385.752 128.87599999999998 386.252 137.12599999999998Q386.752 145.37599999999998 386.752 148.476H387.152Q392.352 136.07599999999996 400.102 130.47599999999997Q407.852 124.87599999999998 418.652 124.87599999999998Q443.452 124.87599999999998 448.752 148.476H449.352Q454.852 135.87599999999998 462.552 130.37599999999998Q470.252 124.87599999999998 482.152 124.87599999999998Q497.952 124.87599999999998 506.252 135.62599999999998Q514.552 146.37599999999998 514.552 166.476V235.176H486.652V174.476Q486.652 145.976 470.252 145.976Q462.052 145.976 456.802 153.926Q451.552 161.87599999999998 451.052 175.87599999999998V235.176ZM541.7520000000001 235.176V126.97599999999998H569.8520000000001V235.176ZM668.552 235.176V174.476Q668.552 145.976 649.2520000000001 145.976Q639.052 145.976 632.802 154.726Q626.552 163.476 626.552 177.176V235.176H598.452V151.176Q598.452 142.476 598.202 136.926Q597.952 131.37599999999998 597.652 126.97599999999998H624.452Q624.7520000000001 128.87599999999998 625.2520000000001 137.12599999999998Q625.7520000000001 145.37599999999998 625.7520000000001 148.476H626.152Q631.8520000000001 136.07599999999996 640.452 130.47599999999997Q649.052 124.87599999999998 660.952 124.87599999999998Q678.152 124.87599999999998 687.3520000000001 135.47599999999997Q696.552 146.07599999999996 696.552 166.476V235.176ZM723.7520000000001 235.176V126.97599999999998H751.8520000000001V235.176Z"/>
+    <path fill="#D42A2A" d="M810.305157894737 235.176V214.27599999999998H845.205157894737V118.17599999999999L811.405157894737 139.27599999999998V117.17599999999999L846.705157894737 94.27599999999998H873.305157894737V214.27599999999998H905.6051578947371V235.176ZM1017.805157894737 189.076Q1017.805157894737 211.576 1005.205157894737 224.37599999999998Q992.605157894737 237.176 970.405157894737 237.176Q945.5051578947371 237.176 932.155157894737 219.726Q918.805157894737 202.27599999999998 918.805157894737 167.976Q918.805157894737 130.27599999999998 932.355157894737 111.22599999999998Q945.905157894737 92.17599999999999 971.105157894737 92.17599999999999Q989.0051578947371 92.17599999999999 999.355157894737 100.076Q1009.705157894737 107.97599999999998 1014.0051578947371 124.57599999999998L987.5051578947371 128.27599999999998Q983.705157894737 114.37599999999998 970.5051578947371 114.37599999999998Q959.205157894737 114.37599999999998 952.7551578947371 125.67599999999999Q946.305157894737 136.976 946.305157894737 159.976Q950.805157894737 152.476 958.805157894737 148.476Q966.805157894737 144.476 976.905157894737 144.476Q995.805157894737 144.476 1006.805157894737 156.476Q1017.805157894737 168.476 1017.805157894737 189.076ZM989.605157894737 189.87599999999998Q989.605157894737 177.87599999999998 984.055157894737 171.52599999999998Q978.5051578947371 165.176 968.805157894737 165.176Q959.5051578947371 165.176 953.905157894737 171.12599999999998Q948.305157894737 177.076 948.305157894737 186.87599999999998Q948.305157894737 199.176 954.155157894737 207.226Q960.0051578947371 215.27599999999998 969.5051578947371 215.27599999999998Q979.0051578947371 215.27599999999998 984.305157894737 208.52599999999998Q989.605157894737 201.77599999999998 989.605157894737 189.87599999999998ZM1119.205157894737 206.476V235.176H1092.4051578947372V206.476H1028.305157894737V185.37599999999998L1087.805157894737 94.27599999999998H1119.205157894737V185.576H1138.005157894737V206.476ZM1092.4051578947372 139.476Q1092.4051578947372 134.07599999999996 1092.7551578947373 127.77599999999998Q1093.1051578947372 121.47599999999998 1093.305157894737 119.67599999999999Q1090.705157894737 125.27599999999998 1083.9051578947372 135.87599999999998L1051.205157894737 185.576H1092.4051578947372Z"/>
+  </g></symbol><symbol id="m164-word-white" viewBox="0 0 1163.7 281.1"><g transform="translate(0,11.14)">
+    <g fill="#FFFFFF" fill-rule="evenodd">
+      <path d="M 498.33,85.27 Q 490.35,84.48 490.35,74.10 L 490.35,69.31 Q 491.14,58.93 506.31,55.74 L 581.35,43.77 C 602.10,37.38 616.47,21.41 646.80,15.03 Q 670.75,10.24 691.50,13.43 C 723.43,15.03 760.15,29.40 785.70,38.98 L 796.87,35.78 L 799.27,45.36 L 800.07,75.69 Q 800.07,85.27 788.89,85.27 L 768.93,85.27 A 31.13,31.13 0 0 0 706.67,85.27 L 586.93,85.27 A 31.13,31.13 0 0 0 524.67,85.27 L 498.33,85.27 Z M 616.47,42.17 C 629.24,32.59 638.82,23.81 657.98,21.41 L 676.34,20.62 L 674.74,42.17 Z M 685.92,42.17 L 687.51,20.62 L 693.10,20.62 C 715.45,22.21 737.80,31.79 755.36,42.17 Z"/>
+      <path d="M 529.46,85.27 A 26.34,26.34 0 1 0 582.14,85.27 A 26.34,26.34 0 1 0 529.46,85.27 Z M 542.23,85.27 A 13.57,13.57 0 1 0 569.37,85.27 A 13.57,13.57 0 1 0 542.23,85.27 Z M 551.01,85.27 A 4.79,4.79 0 1 0 560.59,85.27 A 4.79,4.79 0 1 0 551.01,85.27 Z M 711.46,85.27 A 26.34,26.34 0 1 0 764.14,85.27 A 26.34,26.34 0 1 0 711.46,85.27 Z M 724.23,85.27 A 13.57,13.57 0 1 0 751.37,85.27 A 13.57,13.57 0 1 0 724.23,85.27 Z M 733.01,85.27 A 4.79,4.79 0 1 0 742.59,85.27 A 4.79,4.79 0 1 0 733.01,85.27 Z"/>
+    </g>
+    <path fill="#FFFFFF" d="M127.152 235.176V174.476Q127.152 145.976 110.75200000000001 145.976Q102.25200000000001 145.976 96.90200000000002 154.676Q91.552 163.37599999999998 91.552 177.176V235.176H63.452V151.176Q63.452 142.476 63.202 136.926Q62.952 131.37599999999998 62.652 126.97599999999998H89.452Q89.75200000000001 128.87599999999998 90.25200000000001 137.12599999999998Q90.75200000000001 145.37599999999998 90.75200000000001 148.476H91.152Q96.352 136.07599999999996 104.102 130.47599999999997Q111.852 124.87599999999998 122.652 124.87599999999998Q147.452 124.87599999999998 152.752 148.476H153.352Q158.852 135.87599999999998 166.55200000000002 130.37599999999998Q174.252 124.87599999999998 186.152 124.87599999999998Q201.952 124.87599999999998 210.252 135.62599999999998Q218.55200000000002 146.37599999999998 218.55200000000002 166.476V235.176H190.652V174.476Q190.652 145.976 174.252 145.976Q166.05200000000002 145.976 160.80200000000002 153.926Q155.55200000000002 161.87599999999998 155.05200000000002 175.87599999999998V235.176ZM259.552 277.676Q249.452 277.676 241.852 276.376V256.376Q247.15200000000002 257.176 251.55200000000002 257.176Q257.552 257.176 261.502 255.27599999999998Q265.452 253.37599999999998 268.602 248.976Q271.752 244.576 275.65200000000004 234.076L232.852 126.97599999999998H262.552L279.552 177.676Q283.552 188.576 289.65200000000004 211.076L292.15200000000004 201.576L298.65200000000004 178.076L314.65200000000004 126.97599999999998H344.052L301.252 240.87599999999998Q292.65200000000004 261.676 283.40200000000004 269.676Q274.15200000000004 277.676 259.552 277.676ZM423.152 235.176V174.476Q423.152 145.976 406.752 145.976Q398.252 145.976 392.90200000000004 154.676Q387.552 163.37599999999998 387.552 177.176V235.176H359.452V151.176Q359.452 142.476 359.202 136.926Q358.952 131.37599999999998 358.652 126.97599999999998H385.452Q385.752 128.87599999999998 386.252 137.12599999999998Q386.752 145.37599999999998 386.752 148.476H387.152Q392.352 136.07599999999996 400.102 130.47599999999997Q407.852 124.87599999999998 418.652 124.87599999999998Q443.452 124.87599999999998 448.752 148.476H449.352Q454.852 135.87599999999998 462.552 130.37599999999998Q470.252 124.87599999999998 482.152 124.87599999999998Q497.952 124.87599999999998 506.252 135.62599999999998Q514.552 146.37599999999998 514.552 166.476V235.176H486.652V174.476Q486.652 145.976 470.252 145.976Q462.052 145.976 456.802 153.926Q451.552 161.87599999999998 451.052 175.87599999999998V235.176ZM541.7520000000001 235.176V126.97599999999998H569.8520000000001V235.176ZM668.552 235.176V174.476Q668.552 145.976 649.2520000000001 145.976Q639.052 145.976 632.802 154.726Q626.552 163.476 626.552 177.176V235.176H598.452V151.176Q598.452 142.476 598.202 136.926Q597.952 131.37599999999998 597.652 126.97599999999998H624.452Q624.7520000000001 128.87599999999998 625.2520000000001 137.12599999999998Q625.7520000000001 145.37599999999998 625.7520000000001 148.476H626.152Q631.8520000000001 136.07599999999996 640.452 130.47599999999997Q649.052 124.87599999999998 660.952 124.87599999999998Q678.152 124.87599999999998 687.3520000000001 135.47599999999997Q696.552 146.07599999999996 696.552 166.476V235.176ZM723.7520000000001 235.176V126.97599999999998H751.8520000000001V235.176Z"/>
+    <path fill="#D42A2A" d="M810.305157894737 235.176V214.27599999999998H845.205157894737V118.17599999999999L811.405157894737 139.27599999999998V117.17599999999999L846.705157894737 94.27599999999998H873.305157894737V214.27599999999998H905.6051578947371V235.176ZM1017.805157894737 189.076Q1017.805157894737 211.576 1005.205157894737 224.37599999999998Q992.605157894737 237.176 970.405157894737 237.176Q945.5051578947371 237.176 932.155157894737 219.726Q918.805157894737 202.27599999999998 918.805157894737 167.976Q918.805157894737 130.27599999999998 932.355157894737 111.22599999999998Q945.905157894737 92.17599999999999 971.105157894737 92.17599999999999Q989.0051578947371 92.17599999999999 999.355157894737 100.076Q1009.705157894737 107.97599999999998 1014.0051578947371 124.57599999999998L987.5051578947371 128.27599999999998Q983.705157894737 114.37599999999998 970.5051578947371 114.37599999999998Q959.205157894737 114.37599999999998 952.7551578947371 125.67599999999999Q946.305157894737 136.976 946.305157894737 159.976Q950.805157894737 152.476 958.805157894737 148.476Q966.805157894737 144.476 976.905157894737 144.476Q995.805157894737 144.476 1006.805157894737 156.476Q1017.805157894737 168.476 1017.805157894737 189.076ZM989.605157894737 189.87599999999998Q989.605157894737 177.87599999999998 984.055157894737 171.52599999999998Q978.5051578947371 165.176 968.805157894737 165.176Q959.5051578947371 165.176 953.905157894737 171.12599999999998Q948.305157894737 177.076 948.305157894737 186.87599999999998Q948.305157894737 199.176 954.155157894737 207.226Q960.0051578947371 215.27599999999998 969.5051578947371 215.27599999999998Q979.0051578947371 215.27599999999998 984.305157894737 208.52599999999998Q989.605157894737 201.77599999999998 989.605157894737 189.87599999999998ZM1119.205157894737 206.476V235.176H1092.4051578947372V206.476H1028.305157894737V185.37599999999998L1087.805157894737 94.27599999999998H1119.205157894737V185.576H1138.005157894737V206.476ZM1092.4051578947372 139.476Q1092.4051578947372 134.07599999999996 1092.7551578947373 127.77599999999998Q1093.1051578947372 121.47599999999998 1093.305157894737 119.67599999999999Q1090.705157894737 125.27599999999998 1083.9051578947372 135.87599999999998L1051.205157894737 185.576H1092.4051578947372Z"/>
+  </g></symbol></svg>
 <div id="approot"></div>
 <script>var SUPA={"url": "https://zxemttgikhcusnxlfhjs.supabase.co", "key": "sb_publishable_Aplnkv3VBtm0l-87udlvOQ_Pn9oGJPQ"};</script>
-<script>var APP_URL="p/app-23adaa3ebd5e.js";</script>
+<script>var APP_URL="p/app-955fd104adc2.js";</script>
 <style>
-/* ---- accounts ----------------------------------------------------------
-   Deliberately the same material as the rest of the page: the same card, the same
-   rail button, the same monospace eyebrow. Signing in is a doorway to the collection,
-   not a different product, so it is not styled like one. */
+
 .gate{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
   padding:24px 16px;background:var(--bg);overflow-y:auto}
 .gate.on{display:flex}
 .gatebox{width:100%;max-width:400px;margin:auto}
 .gatemark{font:800 26px/1 Inter,system-ui,sans-serif;letter-spacing:-.03em;margin:0 0 4px}
 .gatemark em{font-style:normal;color:var(--acc)}
-.gatebox .m164logo{margin:0 0 8px}   /* the box is left-aligned; auto would only pretend to centre it */
+.gatebox .m164logo{margin:0 0 8px}   
 .gatesub{margin:0 0 22px;font:700 9.5px/1.5 'JetBrains Mono',monospace;letter-spacing:.17em;
   text-transform:uppercase;color:var(--tx3)}
 .gatecard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
@@ -1934,9 +1583,7 @@ h2,h3{font-family:var(--display)}
 .gatetabs button.on{color:var(--tx);background:color-mix(in srgb,var(--acc) 14%,transparent);
   border-color:color-mix(in srgb,var(--acc) 55%,transparent)}
 .fld{margin-bottom:13px}
-/* A FIELD LABEL IS NOT DECORATION. Nine and a half pixels of uppercase monospace at
-   3.8:1 was the label on the boxes somebody types their email and password into. Same
-   look, a step up in size and in weight of colour. */
+
 .fld label{display:block;font:700 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.14em;
   text-transform:uppercase;color:var(--tx2);margin-bottom:6px}
 .fld input{width:100%;box-sizing:border-box;background:var(--bg);color:var(--tx);
@@ -1948,11 +1595,7 @@ h2,h3{font-family:var(--display)}
   background:var(--acc);color:#0b0b0d;font:800 13px/1 Inter,system-ui,sans-serif;
   letter-spacing:.01em;margin-top:4px}
 .gobtn[disabled]{opacity:.55;cursor:default}
-/* CONTRAST ON THE ONE SCREEN EVERYBODY SEES.
-   "Create account" and "Forgot your password?" were the quiet tier at twelve pixels,
-   which measured 3.8:1 - under the bar, on the only screen a visitor cannot avoid. The
-   quiet tier is now readable everywhere (see --tx3 in the stylesheet), and these two
-   are lifted a step further because they are the way out of a dead end. */
+
 .linkbtn{appearance:none;background:none;border:0;cursor:pointer;color:var(--tx2);padding:9px 2px;
   font:600 12.5px/1 Inter,system-ui,sans-serif;text-decoration:underline;text-underline-offset:3px}
 .linkbtn:hover{color:var(--tx)}
@@ -1984,13 +1627,7 @@ h2,h3{font-family:var(--display)}
 
 <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gatemark">
   <div class="gatebox">
-    <!-- The one place in the application where the logo is the subject rather than a
-         label on a bar, so it stands alone and a little larger. It is the same symbol
-         the header uses, from the same sprite, and it follows the theme for the same
-         reason and by the same rule.
-
-         The heading stays and is hidden: the dialog is labelled by it, so removing it
-         would leave a sign-in box that announces itself as nothing. -->
+    
     <h1 class="gatemark vh" id="gatemark">MYMINI164</h1>
     <span class="m164logo m164-hero" aria-hidden="true"><svg class="m164-ink"   viewBox="0 0 1163.7 281.1"><use href="#m164-word-ink"/></svg><svg class="m164-white" viewBox="0 0 1163.7 281.1"><use href="#m164-word-white"/></svg></span>
     <p class="gatesub" id="gatesub">1:64 collection</p>
@@ -2002,9 +1639,7 @@ h2,h3{font-family:var(--display)}
       <form id="gateform" autocomplete="on" novalidate>
         <div class="fld" id="fld-name" hidden>
           <label for="g-name">What should we call you</label>
-          <!-- The placeholder used to be a real person's name, left in from the day
-               this was built for one collector. A stranger signing up should not be
-               greeted by somebody else's first name. -->
+          
           <input id="g-name" name="name" type="text" autocomplete="nickname" maxlength="60" placeholder="What to call you">
         </div>
         <div class="fld">
@@ -2021,26 +1656,23 @@ h2,h3{font-family:var(--display)}
       <div class="gatefoot">
         <button type="button" class="linkbtn" id="gateforgot">Forgot your password?</button>
         <button type="button" class="linkbtn" id="gateresend" hidden>Send the confirmation email again</button>
-        <!-- The application is a separate file fetched after the session checks out.
-             When that fetch fails three times over, this is how it is asked for again
-             without the person having to work out that reloading is what they are
-             meant to do. -->
+        
         <button type="button" class="linkbtn" id="gateretry" hidden>Try loading it again</button>
         <button type="button" class="linkbtn" id="gateback" hidden>Back to sign in</button>
       </div>
       <div class="gatemsg" id="gatemsg" role="status" aria-live="polite"></div>
     </div>
-    <!-- WHAT THIS IS, FOR SOMEBODY WHO HAS NEVER SEEN IT. A sign-in form and a
-         wordmark told a new visitor nothing at all about what they were signing into.
-         Two lines, before the ask, not after it. -->
-    <p class="gatenote" id="gateabout">Catalogue your 1:64 diecast collection. Fourteen makers and
-      twenty-two thousand releases on file, with photographs, product codes, what a release is worth
-      and how scarce it is \u2014 and a private record of what you own, what you paid and what you
-      are still looking for.</p>
-    <p class="gatenote" id="gatenote">Your collection is private. Nobody else can see what you own,
-      what you paid or your notes. No advertising, no analytics, nothing sold to anyone.</p>
-    <!-- Three pages a visitor is entitled to read BEFORE handing over an email address,
-         which means they cannot live behind the sign-in. -->
+    
+    <p class="gatenote" id="gateabout">Catalogue your 1:64 diecast collection. 23,000+ releases across twenty-one catalogues on
+      file, with photographs, product codes, what a release is worth and how scarce it is, and a
+      private record of what you own, what you paid and what you are still looking for.</p>
+    
+    <p class="gatenote" id="gatenote">Your collection starts private, and stays private until you
+      choose otherwise: what you own, what you paid and your notes are yours alone. Other collectors
+      can find your profile and follow you; what they can see of your collection is your setting to
+      make. What you paid is never shown to anybody. No advertising, no analytics, nothing sold to
+      anyone.</p>
+    
     <p class="gatelegal"><a href="./privacy.html">Privacy notice</a> &middot;
       <a href="./terms.html">Terms of use</a> &middot;
       <a href="./contact.html">Contact</a></p>
@@ -2516,7 +2148,20 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
       /* Not async: the application is one script that has to run in its own order,
          and nothing else is waiting on the parser by the time this is added. */
       s.async = false;
-      s.onload = () => done();
+      /* ARRIVED IS NOT THE SAME AS RAN TO THE END.
+         onload fires when the browser has finished EXECUTING the script, including when
+         execution stopped part-way on an uncaught error. A bundle that threw at its
+         thousandth line is a bundle whose last five thousand lines never ran: half its
+         state is uninitialised, and the first symptom is an unrelated error about one of
+         those variables, somewhere else entirely. That is how one missing button turned
+         into "Cannot access 'photosQueued' before initialization".
+         The bundle's last statement sets this flag. No flag, no application - and the
+         person is told the application did not load, which is true and is a state this
+         gate already knows how to offer a retry for, rather than being dropped into a
+         page that looks built and is not. */
+      s.onload = () => (window.__M164_APP_COMPLETE
+        ? done()
+        : fail(new Error("the application stopped part-way through loading")));
       s.onerror = () => { s.remove(); fail(new Error("could not load the application")); };
       document.head.appendChild(s);
     });
@@ -2824,9 +2469,20 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     txt(g("gatesub"), rs ? "Choose a new password" : fg ? "Reset your password" : "1:64 collection");
     for(const b of g("gatetabs").querySelectorAll("button"))
       b.classList.toggle("on", b.dataset.tab === mode);
+    /* THE SAME PROMISE THE MARKUP MAKES, because this line overwrites it on every mode
+       change and a sentence corrected in one place and not the other is not corrected.
+       What it says has to be what the database does: a new collection is private and
+       shows nobody anything, and that stays true; "nobody else can ever see it" stopped
+       being true when the community arrived. See the privacy notice. */
     txt(g("gatenote"), up
-      ? "Your collection is private from the moment you make it. Nobody else can see what you own, what you paid or your notes."
-      : "Your collection is private. Nobody else can see what you own, what you paid or your notes.");
+      ? "Your collection is private from the moment you make it, and stays private until "
+        + "you choose otherwise. Other collectors can find your profile and follow you; "
+        + "what they can see of your collection is your setting to make. What you paid is "
+        + "never shown to anybody."
+      : "Your collection starts private, and stays private until you choose otherwise: "
+        + "what you own, what you paid and your notes are yours alone. Other collectors "
+        + "can find your profile and follow you; what they can see of your collection is "
+        + "your setting to make. What you paid is never shown to anybody.");
     say("");
     /* PUT THE CURSOR SOMEWHERE USEFUL, BUT NOT ON TOP OF SOMEBODY ALREADY TYPING.
        Switching between Sign in and Create account swaps the fields over, and the
@@ -3008,24 +2664,13 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
   <div class="sheethead"><b>Your account</b><button class="iconbtn" id="acctx">Close</button></div>
   <div class="sheetbody">
     <div id="acctbody"></div>
-    <!-- ONE PLACE TO CHANGE YOUR NAME.
-         It could be changed here, in the Settings menu and from the profile page, and
-         the three did not write to the same places: a change made here never reached
-         the name this browser had stored, so the two could sit disagreeing about what
-         to call somebody. The Settings editor is the one that handles the name AND the
-         picture together, and it is where the profile page already sends you, so it is
-         the one that stays. This shows the value and points at it. -->
+    
     <p class="fl">Your name</p>
     <div class="acctrow"><span class="k">Shown to you</span><span class="v" id="a-nameval">not set</span></div>
     <button type="button" class="iconbtn" id="a-namego" style="width:100%;min-height:42px">Change your name and picture</button>
     <p class="fl">Your collection</p>
     <div id="acctbadges"></div>
-    <!-- ADMINISTRATION IS NOT PART OF YOUR ACCOUNT. A list of every member sat inside
-         the panel a person opens to change their own name, so an ordinary personal
-         screen was also a console for acting on other people. It has a door of its own
-         now, which only appears for an administrator, and the tool itself lives behind
-         it. The server refused the write from anybody else either way; this is about
-         what the interface is FOR. -->
+    
     <div id="acctadminlink" hidden>
       <p class="fl">Administration</p>
       <p class="hint" style="margin:0 0 8px">Tools that act on other people's accounts.
@@ -3033,11 +2678,7 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
       <button type="button" class="iconbtn" id="adminopen" style="width:100%;min-height:42px">Open admin tools</button>
     </div>
     <p class="fl">Change your password</p>
-    <!-- REAUTHENTICATION. A password change used to need only the new password, so
-         anybody who reached an unlocked screen could lock the owner out of their own
-         account. The current one is checked against the authentication server itself -
-         the same call that signs you in - rather than by any scheme of this page's
-         invention. -->
+    
     <div class="fld"><label for="a-oldpass">Your current password</label>
       <input id="a-oldpass" type="password" autocomplete="current-password" maxlength="200">
       <p class="hint">Asked for so that somebody who finds your screen unlocked cannot take the account.</p></div>
@@ -3049,10 +2690,7 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     <p class="hint" style="margin:0 0 8px">Signing out leaves your collection safely on the server.
       Deleting your account removes it, your collection and everything in it, for good. There is no undo.</p>
     <button type="button" class="iconbtn" id="a-out" style="width:100%;min-height:42px">Sign out</button>
-    <!-- TAKE YOUR COLLECTION WITH YOU. Deleting is permanent and it was offered with
-         nothing in front of it; the years of records a person built are theirs, and the
-         moment they are about to be destroyed is the moment to say so. Optional, and it
-         does not stand between anybody and the door. -->
+    
     <button type="button" class="iconbtn" id="a-export" style="width:100%;min-height:42px">Download my data first</button>
     <button type="button" class="danger" id="a-del">Delete my account</button>
     <div class="gatemsg" id="acctmsg" role="status" aria-live="polite"></div>

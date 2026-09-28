@@ -1,10 +1,25 @@
 # MYMINI164. The application itself is behind a sign-in; there is
-# nothing to crawl inside it. These rules save a crawler the trouble.
+# nothing to crawl inside it. These rules save a crawler the trouble,
+# and they are NOT a security measure: everything they name is
+# reachable by anybody who types the address, and everything private
+# is private because the database refuses it, not because of this file.
 User-agent: *
 Allow: /$
 Allow: /privacy.html
 Allow: /terms.html
 Allow: /contact.html
+# THE ICONS AND THE PREVIEW IMAGE LIVE IN /p/ TOO.
+# "Disallow: /p/" was meant for the application bundle and the 3,725
+# photographs, and it also covered the og:image every share card and
+# every messaging app has to fetch, and the icons a browser reads for
+# the home screen. Those four files are named first, because in
+# robots.txt the longest matching rule wins whichever order it is in.
+Allow: /p/mini164-icon-512.png
+Allow: /p/mini164-icon-192.png
+Allow: /p/mini164-icon-180.png
+Allow: /p/mini164-favicon.svg
+Allow: /p/mini164-favicon-32.png
+Allow: /p/mini164.webmanifest
 Disallow: /p/
 
 Sitemap: https://mymini164.com/sitemap.xml
