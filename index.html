@@ -299,7 +299,25 @@ button{color:inherit}
 .wordmark h1 span{color:var(--acc)}
 .wordmark small{font:600 10px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.14em;
   text-transform:uppercase;color:var(--tx3);white-space:nowrap}
+.dr-sec{margin:16px 6px 6px;font-size:11px;letter-spacing:.07em;text-transform:uppercase;
+  font-weight:700;color:var(--tx3,var(--tx2));opacity:.75}
+.dr-nav .dr-sec:first-child{margin-top:2px}
 .appbar-r{margin-left:auto;display:flex;align-items:center;gap:8px}
+/* THE PERSON, IN THE CORNER. Small, quiet, and unmistakably a control: it lifts on
+   hover, it takes a focus ring from the keyboard, and its hit area is the full height of
+   the bar rather than the size of the picture. The name is hidden on a narrow screen
+   because a face is enough there and a row of chrome is not. */
+.mebtn{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid transparent;
+  color:var(--tx);font:inherit;font-size:13px;font-weight:600;border-radius:999px;
+  padding:3px 10px 3px 3px;min-height:38px;cursor:pointer;max-width:170px}
+.mebtn:hover{background:var(--card);border-color:var(--line)}
+.mebtn:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.me-av{width:30px;height:30px;border-radius:50%;flex:none;display:flex;align-items:center;
+  justify-content:center;overflow:hidden;background:color-mix(in srgb,var(--acc) 20%,var(--card));
+  font-size:12px;font-weight:700;color:var(--tx)}
+.me-av img{width:100%;height:100%;object-fit:cover;display:block}
+.me-nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:719px){ .me-nm{display:none} .mebtn{padding:3px;max-width:none} }
 @media(max-width:430px){ .wordmark small{display:none} }
 
 /* ---- drawer ---- */
@@ -1893,7 +1911,7 @@ h2,h3{font-family:var(--display)}
 </style>
 <div id="approot"></div>
 <script>var SUPA={"url": "https://zxemttgikhcusnxlfhjs.supabase.co", "key": "sb_publishable_Aplnkv3VBtm0l-87udlvOQ_Pn9oGJPQ"};</script>
-<script>var APP_URL="p/app-2f4bacb9a264.js";</script>
+<script>var APP_URL="p/app-23adaa3ebd5e.js";</script>
 <style>
 /* ---- accounts ----------------------------------------------------------
    Deliberately the same material as the rest of the page: the same card, the same
