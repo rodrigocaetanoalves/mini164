@@ -1,0 +1,10 @@
+# MYMINI164. The application itself is behind a sign-in; there is
+# nothing to crawl inside it. These rules save a crawler the trouble.
+User-agent: *
+Allow: /$
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /contact.html
+Disallow: /p/
+
+Sitemap: https://mymini164.com/sitemap.xml

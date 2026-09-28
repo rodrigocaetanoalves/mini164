@@ -1,9 +1,20 @@
-# The photo files never change without changing their names, so they can be cached
-# hard. This is what keeps a second visit almost free, and what keeps the bandwidth
-# bill at nothing once a few friends are using it.
+# Read by Cloudflare Pages and Netlify. GITHUB PAGES IGNORES THIS FILE, so
+# until this site sits behind something that reads it, the three headers
+# below are not being sent and the page declares what it can for itself in
+# a meta Content-Security-Policy instead. See README.
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(self), geolocation=(), microphone=(), payment=()
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; worker-src 'self' blob:; manifest-src 'self'; connect-src 'self' https://zxemttgikhcusnxlfhjs.supabase.co; upgrade-insecure-requests; frame-ancestors 'none'
+
+# The application bundle and the photographs carry their build stamp or their
+# release number in the name, so they never change without changing their
+# address. A year, and no revalidation.
 /p/*
   Cache-Control: public, max-age=31536000, immutable
 
-# The page itself changes every time the catalogue is rebuilt, so it is always checked.
+# The shell changes on every deploy and is small, so it is always checked.
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
