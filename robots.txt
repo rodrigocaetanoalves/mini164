@@ -21,5 +21,10 @@ Allow: /p/mini164-favicon.svg
 Allow: /p/mini164-favicon-32.png
 Allow: /p/mini164.webmanifest
 Disallow: /p/
+# The catalogue as the DATABASE needs it: one line per release, sent
+# to Supabase by the publish workflow. It is the same catalogue the
+# application already carries, in a shape meant for a machine, and it
+# is nothing for a search engine to index.
+Disallow: /catalogue_publish.txt
 
 Sitemap: https://mymini164.com/sitemap.xml
