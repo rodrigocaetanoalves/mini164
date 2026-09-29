@@ -1,0 +1,100 @@
+# SEND THE CATALOGUE TO THE DATABASE WHEN THE SITE CHANGES.
+#
+# WHAT THIS FIXES. `public.catalogue_releases` is the table the rankings, the brand
+# completion figures, the collector totals and Collector Scarcity all divide by, and it
+# has been EMPTY since it was created. Every one of those features has had nothing to
+# work with, and every index on that table reads as unused for the same reason. The
+# build has always known the answer; nothing carried it across.
+#
+# HOW IT WORKS. `hosted.py` writes `catalogue_publish.txt` on every build - one line per
+# release, pipe separated, in the order `public.publish_catalogue_chunk` parses - and
+# that file is committed beside the site. When it changes, this sends it in chunks.
+#
+# WHY IT IS SAFE TO RUN ON EVERY PUSH. The database function is an UPSERT on car_number
+# and deletes nothing, and no foreign key anywhere points at that table, so a publish
+# cannot reach a collector's shelf. Running it twice with the same file changes nothing.
+# A number that disappears from a build is NOT deleted, because a number vanishing is far
+# more often a build that failed than a release that stopped existing, and somebody's
+# ownership row may still point at it. Removing one is a deliberate act.
+#
+# THE ONE THING THIS NEEDS FROM YOU: a repository secret named SUPABASE_SERVICE_KEY,
+# holding the project's service_role key (Supabase dashboard, Project Settings, API).
+# It is a secret in the proper sense - it bypasses row level security - so it belongs in
+# GitHub's encrypted secrets and nowhere else. Without it this workflow does nothing and
+# says so rather than failing noisily.
+name: Publish catalogue to Supabase
+
+on:
+  push:
+    branches: [main]
+    paths: ['catalogue_publish.txt']
+  workflow_dispatch:
+
+concurrency:
+  group: publish-catalogue
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the secret is there
+        id: gate
+        env:
+          KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "No SUPABASE_SERVICE_KEY secret is set, so there is nothing to publish with."
+            echo "Add it under Settings, Secrets and variables, Actions. Skipping."
+            echo "go=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Send the catalogue, in chunks
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          URL: https://zxemttgikhcusnxlfhjs.supabase.co
+          KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          set -euo pipefail
+          FILE=catalogue_publish.txt
+          [ -f "$FILE" ] || { echo "no $FILE in the repository"; exit 1; }
+          TOTAL=$(grep -c . "$FILE")
+          echo "$TOTAL rows to send"
+          # 2000 at a time: small enough that one failure is legible, large enough that a
+          # whole catalogue is not hundreds of round trips.
+          split -l 2000 -d -a 3 "$FILE" chunk_
+          LAST=$(ls chunk_* | tail -1)
+          SENT=0
+          for c in chunk_*; do
+            if [ "$c" = "$LAST" ]; then FINAL=true; else FINAL=false; fi
+            # jq builds the JSON, so nothing in a car's name can break out of the string.
+            jq -Rs --argjson final "$FINAL" \
+               '{blob: ., final_chunk: $final}' < "$c" > body.json
+            CODE=$(curl -sS -o resp.json -w '%{http_code}' \
+              -X POST "$URL/rest/v1/rpc/publish_catalogue" \
+              -H "apikey: $KEY" -H "Authorization: Bearer $KEY" \
+              -H 'Content-Type: application/json' \
+              --data-binary @body.json)
+            if [ "$CODE" != "200" ]; then
+              echo "chunk $c failed with HTTP $CODE"; cat resp.json; exit 1
+            fi
+            SENT=$((SENT + $(grep -c . "$c")))
+            echo "  $c sent, $SENT of $TOTAL"
+          done
+          echo "published $SENT rows"
+
+      - name: Say what arrived
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          URL: https://zxemttgikhcusnxlfhjs.supabase.co
+          KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          set -euo pipefail
+          # A successful transaction is not a successful import. Ask the table what it
+          # holds rather than trusting the 200s.
+          curl -sS "$URL/rest/v1/catalogue_publish_log?select=*&order=id.desc&limit=1" \
+            -H "apikey: $KEY" -H "Authorization: Bearer $KEY" | jq .
