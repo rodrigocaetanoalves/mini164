@@ -1582,7 +1582,7 @@ h2,h3{font-family:var(--display)}
   </g></symbol></svg>
 <div id="approot"></div>
 <script>var SUPA={"url": "https://zxemttgikhcusnxlfhjs.supabase.co", "key": "sb_publishable_Aplnkv3VBtm0l-87udlvOQ_Pn9oGJPQ"};</script>
-<script>var APP_URL="p/app-90059a90501e.js";</script>
+<script>var APP_URL="p/app-cf04d93c0f37.js";var DETAIL_DIR="p/d/",DETAIL_BLOCK=250,DETAIL_BLOCKS=154;</script>
 <style>
 
 .gate{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
@@ -2428,8 +2428,22 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
           await dropOne(r.car_number);
           kept++;
         } else {
-          await pushCar(to, r.data || {});      // pushCar clears the old numbers itself
-          at.set(to, {car_number: to, data: r.data});
+          /* A CAR YOU ADDED YOURSELF THAT THE CATALOGUE HAS NOW CAUGHT UP WITH IS NOT YOURS
+             TO MAINTAIN ANY MORE.
+             `user` marks a row somebody typed in because the catalogue had no entry for the
+             car. Once the number aliases onto one the catalogue DOES hold, that is no longer
+             true, and leaving the flag on has visible consequences: the panel says "row added
+             by hand" about a car in the catalogue, and it offers "Delete entirely", which
+             removes a catalogue car from that person's view rather than just un-ticking it.
+             Their ownership, condition, what they paid and where they bought it all carry
+             across untouched - only the claim that they invented the car is dropped, because
+             the catalogue has since disagreed with it.
+             Rodrigo's Ferrari F80 is the case this was written for: added by hand as
+             BBR-AR-F80 in September, and BBR's own BBR64001H arrived in the catalogue after. */
+          const body = Object.assign({}, r.data || {});
+          if(body.user) delete body.user;
+          await pushCar(to, body);              // pushCar clears the old numbers itself
+          at.set(to, {car_number: to, data: body});
           moved++;
         }
         at.delete(r.car_number);
