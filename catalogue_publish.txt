@@ -1774,9 +1774,6 @@ T64G-F036-LH1|GLOBAL64|Tarmac Works|Mercedes-Benz|1:64||1|0|0|||18.5
 T64G-F036-LH2|GLOBAL64|Tarmac Works|Mercedes-Benz|1:64||1|0|0|||18.5
 T64G-F037-LH1|GLOBAL64|Tarmac Works|Mercedes-Benz|1:64||1|0|0|||18.5
 HW-POP2026-MIX4-05|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2026-MIX4-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2026-MIX4-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2026-MIX4-02|Pop Culture|Hot Wheels|Audi|1:64||1|0|0|||9.99
 HW-POP2026-MIX4-01|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-CASE-5785-97KMPA|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KMQL|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
@@ -1787,7 +1784,6 @@ HW-FF2026-MIX04-04|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||9.99
 HW-FF2026-MIX04-03|Fast & Furious|Hot Wheels|Lexus|1:64||1|0|0|||9.99
 HW-FF2026-MIX04-02|Fast & Furious|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||9.99
 HW-FF2026-MIX04-01|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||24.99
-HW-CC2024-MC5-05-DAMAGED|Car Culture|Hot Wheels|Subaru|1:64||1|0|0|||7.99
 HW-CASE-5785-97KKPK|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-FF2026-MIX04-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||59.99
 HW-2026-PERFORMANCE-05|Mainline series|Hot Wheels|Ford|1:64||1|0|0|||5.29
@@ -1805,8 +1801,6 @@ HW-2026-AUDI-01|Mainline series|Hot Wheels|Audi|1:64||1|0|0|||5.99
 HW-2026-AUDI-SET|Mainline series|Hot Wheels|Audi|1:64||1|1|0|||24.99
 HW-CC2025-EUROSPEED-CHASE|Car Culture|Hot Wheels|Bugatti|1:64||1|0|0|||69.99
 HW-POP2026-MIX2-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2026-MIX2-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2026-MIX2-02|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-CASE-5785-97KLQN|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KLNK|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KKMS|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
@@ -1837,23 +1831,14 @@ HW-CASE-5785-97KHKV|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KGPM|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KGPL|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-POP2026-MIX4-SET|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||42.99
-HW-POP2026-MIX3-05|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||7.99
-HW-POP2026-MIX3-04|Pop Culture|Hot Wheels|GMC|1:64||1|0|0|||8.99
-HW-POP2026-MIX3-03|Pop Culture|Hot Wheels|Porsche|1:64||1|0|0|||9.99
-HW-POP2026-MIX3-02|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||10.99
 HW-POP2026-MIX3-01|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-3PK-LOTUSCORVBUGA|Multi-packs|Hot Wheels|Bugatti|1:64||1|1|0|||7.99
 HW-3PK-CHEVYGOLFTESLA|Multi-packs|Hot Wheels|Other|1:64||1|1|0|||7.99
-HW-RE-2013-MIX06-03-LOOSE|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||5.99
-HW-RE-2013-MIX04-05-LOOSE|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-FF2026-MIX03-05|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||7.99
 HW-FF2026-MIX03-04|Fast & Furious|Hot Wheels|BMW|1:64||1|0|0|||11.99
 HW-FF2026-MIX03-03|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||9.99
 HW-FF2026-MIX03-02|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||9.99
 HW-FF2026-MIX03-01|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||24.99
-HW-CC2026-VR1-05|Car Culture|Hot Wheels|Lancia|1:64||1|0|0|||9.99
-HW-CC2026-VR1-04|Car Culture|Hot Wheels|Ferrari|1:64||1|0|0|||12.99
-HW-CC2026-VR1-03|Car Culture|Hot Wheels|Other|1:64||1|0|0|||6.99
 HW-CC2026-VR1-02|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||12.99
 HW-CC2026-VR1-01|Car Culture|Hot Wheels|Jaguar|1:64||1|0|0|||9.99
 HW-FF2026-MIX03-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||59.99
@@ -1866,12 +1851,7 @@ HW-CC2026-VR1-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||42.99
 HW-BOULEVARD-146-150|Boulevard|Hot Wheels|Other|1:64||1|0|0|||44.99
 HW-5PK-2026-FERRARI|Multi-packs|Hot Wheels|Ferrari|1:64||1|1|0|||14.99
 HW-CC2026-MC6-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||42.99
-HW-CC2026-MC6-CHASE|Car Culture|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||79.99
-HW-CC2026-MC6-05|Car Culture|Hot Wheels|Mazda|1:64||1|0|0|||9.99
-HW-CC2026-MC6-04|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||9.99
-HW-CC2026-MC6-03|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||9.99
 HW-CC2026-MC6-02|Car Culture|Hot Wheels|Ferrari|1:64||1|0|0|||14.99
-HW-CC2026-MC6-01|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||9.99
 HW-CC-TWIN2026-MIX2-FORD|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||19.99
 HW-CC-TWIN2026-MIX2-BTTF|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||24.99
 HW-CC-TWIN2026-MIX2-VW|Car Culture|Hot Wheels|Volkswagen|1:64||1|0|0|||19.99
@@ -1884,51 +1864,14 @@ HW-FAST2026-MIX02-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||21.99
 HW-CASE-5785-97KFKQ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KEJM|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CC2026-PT2-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||42.99
-HW-CC2026-PT2-05|Car Culture|Hot Wheels|Jeep|1:64||1|0|0|||9.99
-HW-CC2026-PT2-04|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||9.99
-HW-CC2026-PT2-03|Car Culture|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||9.99
-HW-CC2026-PT2-02|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||9.99
-HW-CC2026-PT2-01|Car Culture|Hot Wheels|BMW|1:64||1|0|0|||9.99
-HW-BOULEVARD-145|Boulevard|Hot Wheels|Dodge|1:64||1|0|0|||7.99
-HW-BOULEVARD-144|Boulevard|Hot Wheels|Toyota|1:64||1|0|0|||8.99
-HW-BOULEVARD-143|Boulevard|Hot Wheels|Pontiac|1:64||1|0|0|||9.99
-HW-BOULEVARD-142|Boulevard|Hot Wheels|BMW|1:64||1|0|0|||12.99
-HW-BOULEVARD-141|Boulevard|Hot Wheels|Nissan|1:64||1|0|0|||11.99
-HW-BOULEVARD-140|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||11.99
 HW-BOULEVARD-139|Boulevard|Hot Wheels|Lamborghini|1:64||1|0|0|||11.99
-HW-BOULEVARD-138|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||9.99
 HW-BOULEVARD-137|Boulevard|Hot Wheels|Nissan|1:64||1|0|0|||11.99
 HW-BOULEVARD-136|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||9.99
-HW-FLYING2013-OLDS|Flying Customs|Hot Wheels|Oldsmobile|1:64||1|0|0|||9.99
 HW-2025-NATIONALICONS-05|Mainline series|Hot Wheels|Porsche|1:64||1|0|0|||5.99
 HW-2025-NATIONALICONS-04|Mainline series|Hot Wheels|Nissan|1:64||1|0|0|||5.99
 HW-2025-NATIONALICONS-03|Mainline series|Hot Wheels|Fiat|1:64||1|0|0|||5.99
 HW-2025-NATIONALICONS-02|Mainline series|Hot Wheels|Jaguar|1:64||1|0|0|||5.99
 HW-2025-NATIONALICONS-01|Mainline series|Hot Wheels|Ford|1:64||1|0|0|||5.99
-HW-ML-1999-1059-02|Mainline|Hot Wheels|Dodge|1:64||1|0|0|||4.99
-HW-ML-1999-1080|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
-HW-ML-1999-1069|Mainline|Hot Wheels|Ford|1:64||1|0|0|||5.99
-HW-ML-1999-1066|Mainline|Hot Wheels|Ford|1:64||1|0|0|||7.99
-HW-ML-1999-1059-01|Mainline|Hot Wheels|Dodge|1:64||1|0|0|||4.99
-HW-ML-1999-1048|Mainline|Hot Wheels|Ford|1:64||1|0|0|||4.99
-HW-ML-1999-1042|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
-HW-ML-1999-1041|Mainline|Hot Wheels|Other|1:64||1|0|0|||5.99
-HW-ML-1999-1040|Mainline|Hot Wheels|Panoz|1:64||1|0|0|||5.99
-HW-ML-1999-1038|Mainline|Hot Wheels|Dodge|1:64||1|0|0|||6.99
-HW-ML-1999-1029|Mainline|Hot Wheels|Ford|1:64||1|0|0|||5.99
-HW-ML-1999-1028|Mainline|Hot Wheels|Other|1:64||1|0|0|||6.99
-HW-ML-1999-1027|Mainline|Hot Wheels|Other|1:64||1|0|0|||5.99
-HW-ML-1999-1022|Mainline|Hot Wheels|Other|1:64||1|0|0|||6.99
-HW-ML-1999-1018|Mainline|Hot Wheels|Ford|1:64||1|0|0|||5.99
-HW-ML-1999-1011|Mainline|Hot Wheels|Other|1:64||1|0|0|||5.99
-HW-ML-1999-1009|Mainline|Hot Wheels|Peterbilt|1:64||1|0|0|||6.99
-HW-ML-1999-1006|Mainline|Hot Wheels|Dodge|1:64||1|0|0|||7.99
-HW-ML-1999-998|Mainline|Hot Wheels|Other|1:64||1|0|0|||5.99
-HW-ML-1999-980|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
-HW-ML-1999-979|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
-HW-ML-1999-978|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
-HW-ML-1999-977|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
-HW-ML-1999-680|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
 HW-TEAMTRAN-91|Team Transport|Hot Wheels|Chevrolet|1:64||1|0|0|||19.99
 HW-TEAMTRAN-90|Team Transport|Hot Wheels|Ford|1:64||1|0|0|||19.99
 HW-TEAMTRAN-89|Team Transport|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||19.99
@@ -1938,32 +1881,7 @@ HW-2026-RALLY-03|Mainline series|Hot Wheels|Ford|1:64||1|0|0|||5.99
 HW-2026-RALLY-02|Mainline series|Hot Wheels|Honda|1:64||1|0|0|||5.99
 HW-2026-RALLY-01|Mainline series|Hot Wheels|Audi|1:64||1|0|0|||5.99
 HW-2026-RALLY-SET|Mainline series|Hot Wheels|Other|1:64||1|1|0|||24.99
-HW-ML-2024-SC-191|Mainline|Hot Wheels|Nissan|1:64||1|0|0|||4.99
-HW-ML-2024-SC-189|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-185|Mainline|Hot Wheels|Bugatti|1:64||1|0|0|||4.99
-HW-ML-2024-SC-182|Mainline|Hot Wheels|Chrysler|1:64||1|0|0|||3.99
-HW-ML-2024-SC-176|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-175|Mainline|Hot Wheels|Acura|1:64||1|0|0|||3.99
-HW-ML-2024-SC-173|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-171|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-170|Mainline|Hot Wheels|Mazda|1:64||1|0|0|||3.99
-HW-ML-2024-SC-169|Mainline|Hot Wheels|Mitsubishi|1:64||1|0|0|||3.99
-HW-ML-2024-SC-168|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-166|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-164|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-162|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-146|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-114|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-113|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-111|Mainline|Hot Wheels|Pontiac|1:64||1|0|0|||3.99
-HW-ML-2024-SC-105|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
 HW-ML-2024-SC-099|Mainline|Hot Wheels|Pagani|1:64||1|0|0|||3.99
-HW-ML-2024-SC-086|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-POP2026-MIX1-05|Pop Culture|Hot Wheels|Nissan|1:64||1|0|0|||14.99
-HW-POP2026-MIX1-04|Pop Culture|Hot Wheels|Lincoln|1:64||1|0|0|||9.99
-HW-POP2026-MIX1-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||8.99
-HW-POP2026-MIX1-02|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||6.99
-HW-POP2026-MIX1-01|Pop Culture|Hot Wheels|BMW|1:64||1|0|0|||15.99
 HW-CASE-5785-97KDGP|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KDFL|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KDDM|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
@@ -1973,44 +1891,7 @@ HW-FF2026-MIX02-03|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||9.99
 HW-FF2026-MIX02-02|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-FF2026-MIX02-01|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||24.99
 HW-FF2026-MIX02-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||59.99
-HW-CC2026-TC2-05|Car Culture|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||9.99
-HW-CC2026-TC2-04|Car Culture|Hot Wheels|Lancia|1:64||1|0|0|||9.99
-HW-CC2026-TC2-03|Car Culture|Hot Wheels|Mitsubishi|1:64||1|0|0|||9.99
-HW-CC2026-TC2-02|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||9.99
-HW-CC2026-TC2-01|Car Culture|Hot Wheels|Subaru|1:64||1|0|0|||9.99
 HW-POP2025-MIX4-SET|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
-HW-ML-2024-SC-085|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
-HW-ML-2024-SC-061|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-058|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-026|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-025|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-024|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-020|Mainline|Hot Wheels|Plymouth|1:64||1|0|0|||3.49
-HW-ML-2024-SC-019|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-017|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-016|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.99
-HW-ML-2024-SC-015|Mainline|Hot Wheels|Tesla|1:64||1|0|0|||3.99
-HW-ML-2024-SC-013|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-012|Mainline|Hot Wheels|Ford|1:64||1|0|0|||4.99
-HW-ML-2024-SC-009|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-006|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2024-SC-003|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2024-SC-002|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.99
-HW-ML-2023-SC-250|Mainline|Hot Wheels|McLaren|1:64||1|0|0|||3.99
-HW-ML-2023-SC-248|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.49
-HW-ML-2023-SC-246|Mainline|Hot Wheels|Lincoln|1:64||1|0|0|||3.99
-HW-ML-2023-SC-243|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.99
-HW-ML-2023-SC-192|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2023-SC-190|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2023-SC-189|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2023-SC-188|Mainline|Hot Wheels|Koenigsegg|1:64||1|0|0|||3.99
-HW-ML-2023-SC-186|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2023-SC-185|Mainline|Hot Wheels|Alfa Romeo|1:64||1|0|0|||3.99
-HW-ML-2023-SC-182|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2023-SC-180|Mainline|Hot Wheels|Pontiac|1:64||1|0|0|||3.99
-HW-ML-2023-SC-119|Mainline|Hot Wheels|Other|1:64||1|0|0|||2.49
-HW-ML-2023-SC-087|Mainline|Hot Wheels|Honda|1:64||1|0|0|||3.99
-HW-ML-2023-SC-001|Mainline|Hot Wheels|Volvo|1:64||1|0|0|||3.99
 HW-POP2026-MIX3-SET|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||42.99
 HW-BOULEVARD-141-145|Boulevard|Hot Wheels|Other|1:64||1|0|0|||44.99
 HW-BOULEVARD-136-140|Boulevard|Hot Wheels|Other|1:64||1|0|0|||44.99
@@ -2026,7 +1907,6 @@ HW-2026-PANTONE-04|Mainline series|Hot Wheels|Other|1:64||1|0|0|||5.99
 HW-2026-PANTONE-03|Mainline series|Hot Wheels|Other|1:64||1|0|0|||3.99
 HW-2026-PANTONE-02|Mainline series|Hot Wheels|Ford|1:64||1|0|0|||5.99
 HW-2026-PANTONE-01|Mainline series|Hot Wheels|Nissan|1:64||1|0|0|||5.99
-HW-POP2026-MIX2-01|Pop Culture|Hot Wheels|Porsche|1:64||1|0|0|||19.99
 HW-FF2026-MIX01-05|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||8.99
 HW-FF2026-MIX01-04|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||7.99
 HW-FF2026-MIX01-03|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||8.99
@@ -2039,22 +1919,7 @@ HW-FF2025-MIX04-03|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||9.99
 HW-FF2025-MIX04-02|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||14.99
 HW-FF2025-MIX04-01|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||11.99
 HW-CC2026-JH5-CHASE|Car Culture|Hot Wheels|Datsun|1:64||1|0|0|||124.99
-HW-CC2026-JH5-05|Car Culture|Hot Wheels|Honda|1:64||1|0|0|||9.99
-HW-CC2026-JH5-04|Car Culture|Hot Wheels|Datsun|1:64||1|0|0|||9.99
-HW-CC2026-JH5-03|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||9.99
-HW-CC2026-JH5-02|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||9.99
-HW-CC2026-JH5-01|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||9.99
-HW-CC2025-TIMELESS-CHASE|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||199.99
-HW-CC2025-TIMELESS-05|Car Culture|Hot Wheels|Lexus|1:64||1|0|0|||9.99
-HW-CC2025-TIMELESS-04|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||14.99
-HW-CC2025-TIMELESS-03|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||9.99
-HW-CC2025-TIMELESS-02|Car Culture|Hot Wheels|Koenigsegg|1:64||1|0|0|||9.99
 HW-CC2025-TIMELESS-01|Car Culture|Hot Wheels|Ferrari|1:64||1|0|0|||18.99
-HW-CC2025-RONINRUN2-05|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||9.99
-HW-CC2025-RONINRUN2-04|Car Culture|Hot Wheels|Mitsubishi|1:64||1|0|0|||9.99
-HW-CC2025-RONINRUN2-03|Car Culture|Hot Wheels|Mazda|1:64||1|0|0|||9.99
-HW-CC2025-RONINRUN2-02|Car Culture|Hot Wheels|Honda|1:64||1|0|0|||9.99
-HW-CC2025-RONINRUN2-01|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||9.99
 HW-TEAMTRAN-86|Team Transport|Hot Wheels|Toyota|1:64||1|0|0|||16.99
 HW-POP2026-MIX2-SET|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||34.99
 HW-POP2026-MIX1-SET|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||42.99
@@ -2083,7 +1948,6 @@ HW-CASE-5785-97KBJJ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KA9C|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97KA4D|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CC2025-CIRCUIT-CHASE|Car Culture|Hot Wheels|Ferrari|1:64||1|0|0|||224.99
-HW-CC2025-RONINRUN2-CHASE|Car Culture|Hot Wheels|Honda|1:64||1|0|0|||79.99
 HW-CC2026-JH5-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
 HW-FAST2025-MIX04-05|Fast & Furious|Hot Wheels|Acura|1:64||1|0|0|||5.99
 HW-FAST2025-MIX04-04|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||5.99
@@ -2115,16 +1979,10 @@ HW-F1-2024-11|Formula 1|Hot Wheels|Other|1:64||1|0|0|||11.99
 HW-F1-2024-10|Formula 1|Hot Wheels|Alpine|1:64||1|0|0|||11.99
 HW-F1-2024-04|Formula 1|Hot Wheels|McLaren|1:64||1|0|0|||11.99
 HW-F1-2024-01|Formula 1|Hot Wheels|Other|1:64||1|0|0|||11.99
-HW-CC2025-EUROSPEED-05|Car Culture|Hot Wheels|Pininfarina|1:64||1|0|0|||7.99
-HW-CC2025-EUROSPEED-04|Car Culture|Hot Wheels|McLaren|1:64||1|0|0|||7.99
 HW-CC2025-EUROSPEED-03|Car Culture|Hot Wheels|Ferrari|1:64||1|0|0|||13.99
 HW-CC2025-EUROSPEED-02|Car Culture|Hot Wheels|Aston Martin|1:64||1|0|0|||7.99
 HW-CC2025-EUROSPEED-01|Car Culture|Hot Wheels|Bugatti|1:64||1|0|0|||7.99
-HW-CC2025-CIRCUIT-05|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||18.99
-HW-CC2025-CIRCUIT-04|Car Culture|Hot Wheels|Subaru|1:64||1|0|0|||8.99
-HW-CC2025-CIRCUIT-03|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||9.99
 HW-CC2025-CIRCUIT-02|Car Culture|Hot Wheels|Ferrari|1:64||1|0|0|||18.99
-HW-CC2025-CIRCUIT-01|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||9.99
 HW-BASICS-HYBRID-05|Mainline series|Hot Wheels|Acura|1:64||1|0|0|||4.99
 HW-BASICS-HYBRID-04|Mainline series|Hot Wheels|Porsche|1:64||1|0|0|||4.99
 HW-BASICS-HYBRID-03|Mainline series|Hot Wheels|McLaren|1:64||1|0|0|||4.99
@@ -2134,11 +1992,7 @@ HW-BASICS-HYBRID-SET|Mainline series|Hot Wheels|Other|1:64||1|1|0|||23.99
 HW-CC-TWIN2025-TOYOTA|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||19.99
 HW-CC-TWIN2025-SNAKE|Car Culture|Hot Wheels|Other|1:64||1|0|0|||19.99
 HW-CC-TWIN2025-OFFROAD|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||19.99
-HW-BOULEVARD-130|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||9.99
-HW-BOULEVARD-129|Boulevard|Hot Wheels|Toyota|1:64||1|0|0|||11.99
-HW-BOULEVARD-128|Boulevard|Hot Wheels|Toyota|1:64||1|0|0|||9.99
 HW-BOULEVARD-127|Boulevard|Hot Wheels|Maserati|1:64||1|0|0|||9.99
-HW-BOULEVARD-126|Boulevard|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||11.99
 HW-BOULEVARD-131-135|Boulevard|Hot Wheels|Other|1:64||1|0|0|||44.99
 HW-CASE-5785-97JPTQ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97JPUL|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
@@ -2157,43 +2011,10 @@ HW-CASE-5785-97JNUP|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97JNQZ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97JMUQ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97JMVC|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
-HW-CC2018-SILHO-05-PREOWNED|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||24.99
 HW-CC2018-STREET-SET-PREOWNED|Car Culture|Hot Wheels|Other|1:64||1|0|0|||119.99
-HW-ML-1998-684|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
-HW-ML-1997-533-02|Mainline|Hot Wheels|Hummer|1:64||1|0|0|||5.99
-HW-ML-1997-564|Mainline|Hot Wheels|Other|1:64||1|0|0|||7.99
-HW-ML-1994-270|Mainline|Hot Wheels|Other|1:64||1|0|0|||6.99
-HW-ML-1993-219|Mainline|Hot Wheels|Other|1:64||1|0|0|||4.99
-HW-ML-1991-102|Mainline|Hot Wheels|Other|1:64||1|0|0|||7.99
-HW-ML-1987-VETTE-02|Mainline|Hot Wheels|Other|1:64||1|0|0|||7.99
-HW-2015-REALRIDERS-04|Mainline series|Hot Wheels|Datsun|1:64||1|0|0|||39.99
-HW-CONV-2014-ECTO-02|Conventions|Hot Wheels|Other|1:64||1|0|0|||149.99
-HW-CONV-2014-ECTO-01|Conventions|Hot Wheels|Other|1:64||1|0|0|||149.99
-HW-POP2025-MIX5-05|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||8.99
-HW-POP2025-MIX5-04|Pop Culture|Hot Wheels|Lamborghini|1:64||1|0|0|||12.99
-HW-POP2025-MIX5-03|Pop Culture|Hot Wheels|Ford|1:64||1|0|0|||9.99
 HW-POP2025-MIX5-02|Pop Culture|Hot Wheels|BMW|1:64||1|0|0|||11.99
-HW-POP2025-MIX5-01|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||8.99
-HW-BOULEVARD-125|Boulevard|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-BOULEVARD-124|Boulevard|Hot Wheels|Datsun|1:64||1|0|0|||10.99
-HW-BOULEVARD-123|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||9.99
-HW-BOULEVARD-122|Boulevard|Hot Wheels|Bugatti|1:64||1|0|0|||9.99
-HW-BOULEVARD-121|Boulevard|Hot Wheels|Porsche|1:64||1|0|0|||9.99
-HW-BOULEVARD-120|Boulevard|Hot Wheels|Alfa Romeo|1:64||1|0|0|||9.99
-HW-BOULEVARD-119|Boulevard|Hot Wheels|Toyota|1:64||1|0|0|||9.99
-HW-BOULEVARD-118|Boulevard|Hot Wheels|BMW|1:64||1|0|0|||11.99
-HW-BOULEVARD-117|Boulevard|Hot Wheels|Lancia|1:64||1|0|0|||11.99
-HW-BOULEVARD-116|Boulevard|Hot Wheels|Porsche|1:64||1|0|0|||9.99
-HW-BOULEVARD-115|Boulevard|Hot Wheels|BMW|1:64||1|0|0|||9.99
-HW-BOULEVARD-114|Boulevard|Hot Wheels|Volkswagen|1:64||1|0|0|||9.99
-HW-BOULEVARD-113|Boulevard|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||9.99
-HW-BOULEVARD-112|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||9.99
-HW-BOULEVARD-111|Boulevard|Hot Wheels|Volvo|1:64||1|0|0|||9.99
-HW-POP2025-MIX3-05|Pop Culture|Hot Wheels|Nissan|1:64||1|0|0|||12.99
 HW-POP2025-MIX3-04|Pop Culture|Hot Wheels|Ford|1:64||1|0|0|||9.99
-HW-POP2025-MIX3-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-POP2025-MIX3-02|Pop Culture|Hot Wheels|Dodge|1:64||1|0|0|||9.99
-HW-POP2025-MIX3-01|Pop Culture|Hot Wheels|Dodge|1:64||1|0|0|||9.99
 HW-FAST2025-MIX03-05|Fast & Furious|Hot Wheels|Bugatti|1:64||1|0|0|||4.99
 HW-FAST2025-MIX03-04|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||4.99
 HW-FAST2025-MIX03-03|Fast & Furious|Hot Wheels|Datsun|1:64||1|0|0|||4.99
@@ -2208,7 +2029,6 @@ HW-CASE-5785-97JKLT|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97JJRJ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97JJRK|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-FF2025-MIX03-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||39.99
-HW-BOULEVARD-2012-CC-CAMARO-01|Boulevard|Hot Wheels|Other|1:64||1|0|0|||15.99
 HW-FF2025-MIX02-05|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-FF2025-MIX02-04|Fast & Furious|Hot Wheels|Alfa Romeo|1:64||1|0|0|||9.99
 HW-FF2025-MIX02-03|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||9.99
@@ -2252,21 +2072,12 @@ HW-2024-SPEEDGRAPHICS-02|Mainline series|Hot Wheels|Range Rover|1:64||1|0|0|||4.
 HW-2024-SPEEDGRAPHICS-01|Mainline series|Hot Wheels|Honda|1:64||1|0|0|||7.99
 HW-2024-SPEEDGRAPHICS-SET|Mainline series|Hot Wheels|Other|1:64||1|1|0|||24.99
 HW-POP2025-MIX3-SET|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
-HW-CC2025-FASTWAGONS2-05|Car Culture|Hot Wheels|Subaru|1:64||1|0|0|||9.99
-HW-CC2025-FASTWAGONS2-04|Car Culture|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||9.99
-HW-CC2025-FASTWAGONS2-03|Car Culture|Hot Wheels|Volvo|1:64||1|0|0|||8.99
-HW-CC2025-FASTWAGONS2-02|Car Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-CC2025-FASTWAGONS2-01|Car Culture|Hot Wheels|Audi|1:64||1|0|0|||9.99
 HW-POP2024-MIX4-05|Pop Culture|Hot Wheels|Aston Martin|1:64||1|0|0|||9.99
 HW-POP2024-MIX4-03|Pop Culture|Hot Wheels|Volkswagen|1:64||1|0|0|||9.99
 HW-POP2024-MIX4-02|Pop Culture|Hot Wheels|Lotus|1:64||1|0|0|||9.99
 HW-POP2024-MIX4-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-POP2024-MIX4-01|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-POP2024-MIX5-05|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||8.99
-HW-POP2024-MIX5-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||7.99
-HW-POP2024-MIX5-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2024-MIX5-02|Pop Culture|Hot Wheels|Audi|1:64||1|0|0|||12.99
-HW-POP2024-MIX5-01|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-POP2025-MIX1-05|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-POP2025-MIX1-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-POP2025-MIX1-03|Pop Culture|Hot Wheels|Mazda|1:64||1|0|0|||9.99
@@ -2274,23 +2085,10 @@ HW-POP2025-MIX1-02|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-POP2025-MIX1-01|Pop Culture|Hot Wheels|Aston Martin|1:64||1|0|0|||9.99
 HW-POP2024-MIX6-04|Pop Culture|Hot Wheels|Porsche|1:64||1|0|0|||14.99
 HW-POP2024-MIX6-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||8.99
-HW-POP2024-MIX6-02|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||8.99
 HW-POP2024-MIX6-01|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-BOULEVARD-111-115|Boulevard|Hot Wheels|Other|1:64||1|0|0|||42.99
-HW-HWC-BONUS-2013-GHIA-01|Red Line Club|Hot Wheels|Volkswagen|1:64||1|0|0|||89.99
-HW-HWC-BONUS-2013-2000GT-01|Red Line Club|Hot Wheels|Toyota|1:64||1|0|0|||149.99
-HW-CC2025-OFFROAD-05|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||8.99
 HW-CC2025-OFFROAD-04|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||8.99
 HW-CC2025-OFFROAD-03|Car Culture|Hot Wheels|Subaru|1:64||1|0|0|||8.99
-HW-CC2025-OFFROAD-02|Car Culture|Hot Wheels|Land Rover|1:64||1|0|0|||8.99
-HW-CC2025-OFFROAD-01|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||9.99
-HW-HWC-BONUS-2010-HANKY-01|Red Line Club|Hot Wheels|Other|1:64||1|0|0|||119.99
-HW-RE-2015-BTTF-MRFUSION|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||34.99
-HW-RE-2013-GRAFFITI-IMPALA|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||29.99
-HW-RE-2013-BTTF-TIMEMACHINE|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||49.99
-HW-RE-2015-FRIDAY-CHEVY|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||34.99
-HW-RE-2015-TAXI-CHECKER|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||29.99
-HW-RE-2014-TOMMY-PLYMOUTH|Retro Entertainment|Hot Wheels|Plymouth|1:64||1|0|0|||34.99
 HW-CC2025-FASTWAGONS2-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||36.99
 HW-CASE-5785-97DHMY|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-2021-PICKUPS-05|Mainline series|Hot Wheels|Other|1:64||1|0|0|||4.99
@@ -2304,16 +2102,7 @@ HW-TEAMTRAN-67|Team Transport|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||19.99
 HW-TEAMTRAN-78|Team Transport|Hot Wheels|Other|1:64||1|0|0|||21.99
 HW-TEAMTRAN-77|Team Transport|Hot Wheels|Audi|1:64||1|0|0|||21.99
 HW-CC2025-SILHO-02-CHASE|Car Culture|Hot Wheels|McLaren|1:64||1|0|0|||64.99
-HW-CC2025-SILHO-05|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||14.99
-HW-CC2025-SILHO-04|Car Culture|Hot Wheels|Mazda|1:64||1|0|0|||8.99
-HW-CC2025-SILHO-03|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||9.99
-HW-CC2025-SILHO-02|Car Culture|Hot Wheels|McLaren|1:64||1|0|0|||11.99
-HW-CC2025-SILHO-01|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||12.99
-HW-CC2025-HD1-05|Car Culture|Hot Wheels|Mazda|1:64||1|0|0|||9.99
-HW-CC2025-HD1-04|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||12.99
 HW-CC2025-HD1-03|Car Culture|Hot Wheels|MG|1:64||1|0|0|||9.99
-HW-CC2025-HD1-02|Car Culture|Hot Wheels|Lancia|1:64||1|0|0|||9.99
-HW-CC2025-HD1-01|Car Culture|Hot Wheels|Bugatti|1:64||1|0|0|||9.99
 HW-TEAMTRAN-79|Team Transport|Hot Wheels|Toyota|1:64||1|0|0|||19.99
 HW-CASE-5785-97JFJL|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97JFJF|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
@@ -2325,11 +2114,6 @@ HW-2025-TOONEDGULF-01|Mainline series|Hot Wheels|Volkswagen|1:64||1|0|0|||3.99
 HW-2025-TOONEDGULF-SET|Mainline series|Hot Wheels|Other|1:64||1|1|0|||19.99
 HW-CC2025-OFFROAD-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
 HW-BOULEVARD-116-120|Boulevard|Hot Wheels|Other|1:64||1|0|0|||42.99
-HW-BOULEVARD-080|Boulevard|Hot Wheels|GMC|1:64||1|0|0|||9.99
-HW-BOULEVARD-079|Boulevard|Hot Wheels|Mitsubishi|1:64||1|0|0|||12.99
-HW-BOULEVARD-078|Boulevard|Hot Wheels|Toyota|1:64||1|0|0|||12.99
-HW-BOULEVARD-077|Boulevard|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-BOULEVARD-076|Boulevard|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||10.99
 HW-CC2025-SILHO-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||59.99
 HW-CASE-5785-97JEFW|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97JEEG|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
@@ -2337,15 +2121,6 @@ HW-CC2024-RD3-01-CHASE|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||394.99
 HW-6PK-JAPAN2025-01|Multi-packs|Hot Wheels|Other|1:64||1|1|0|||24.99
 HW-BASICS-2025-MUSTANG-SET|Mainline series|Hot Wheels|Other|1:64||1|1|0|||24.99
 HW-POP2025-MIX1-SET|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
-HW-BOULEVARD-110|Boulevard|Hot Wheels|De Tomaso|1:64||1|0|0|||10.99
-HW-BOULEVARD-109|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||10.99
-HW-BOULEVARD-107|Boulevard|Hot Wheels|Acura|1:64||1|0|0|||9.99
-HW-BOULEVARD-108|Boulevard|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-BOULEVARD-106|Boulevard|Hot Wheels|Mazda|1:64||1|0|0|||10.99
-HW-BOULEVARD-105|Boulevard|Hot Wheels|Honda|1:64||1|0|0|||14.99
-HW-BOULEVARD-104|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||9.99
-HW-BOULEVARD-103|Boulevard|Hot Wheels|Porsche|1:64||1|0|0|||12.99
-HW-BOULEVARD-102|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||9.99
 HW-BOULEVARD-101|Boulevard|Hot Wheels|Plymouth|1:64||1|0|0|||11.99
 HW-BASICS-2024-PORSCHE-04|Mainline series|Hot Wheels|Porsche|1:64||1|0|0|||4.99
 HW-BASICS-2024-PORSCHE-03|Mainline series|Hot Wheels|Porsche|1:64||1|0|0|||4.99
@@ -2384,26 +2159,12 @@ HW-TEAMTRAN-76|Team Transport|Hot Wheels|Lamborghini|1:64||1|0|0|||22.99
 HW-TEAMTRAN-75|Team Transport|Hot Wheels|Toyota|1:64||1|0|0|||19.99
 HW-TEAMTRAN-74|Team Transport|Hot Wheels|Land Rover|1:64||1|0|0|||19.99
 HW-CC2025-HD1-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||36.99
-HW-CC2024-RD3-05|Car Culture|Hot Wheels|BMW|1:64||1|0|0|||8.99
-HW-CC2024-RD3-04|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||8.99
-HW-CC2024-RD3-03|Car Culture|Hot Wheels|Bentley|1:64||1|0|0|||8.99
-HW-CC2024-RD3-02|Car Culture|Hot Wheels|Other|1:64||1|0|0|||8.99
-HW-CC2024-RD3-01|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||12.99
-HW-CC2024-MC5-01-CHASE|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||199.99
-HW-CC2024-MC5-05|Car Culture|Hot Wheels|Subaru|1:64||1|0|0|||9.99
-HW-CC2024-MC5-04|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||9.99
 HW-CC2024-MC5-03|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||9.99
-HW-CC2024-MC5-02|Car Culture|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||9.99
-HW-CC2024-MC5-01|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||12.99
 HW-CASE-5785-97HQNJ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97HPTC|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CC-TWIN2024-PORSCHE|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||24.99
 HW-CC-TWIN2024-AUDI|Car Culture|Hot Wheels|Audi|1:64||1|0|0|||24.99
 HW-CC-TWIN2024-NISSANTRUCKS|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||24.99
-HW-CC2024-TT1-05|Car Culture|Hot Wheels|Mitsubishi|1:64||1|0|0|||8.99
-HW-CC2024-TT1-04|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||8.99
-HW-CC2024-TT1-03|Car Culture|Hot Wheels|Datsun|1:64||1|0|0|||9.99
-HW-CC2024-TT1-02|Car Culture|Hot Wheels|Jeep|1:64||1|0|0|||8.99
 HW-CC2024-TT1-01|Car Culture|Hot Wheels|Hummer|1:64||1|0|0|||8.99
 HW-FF2024-MIX04-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||39.99
 HW-FAST2024-MIX04-05|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||4.99
@@ -2433,17 +2194,7 @@ HW-FF2024-MIX02-03|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||9.99
 HW-FF2024-MIX02-02|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||9.99
 HW-FF2024-MIX02-01|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||9.99
 HW-TEAMTRAN-73|Team Transport|Hot Wheels|Nissan|1:64||1|0|0|||19.99
-HW-CC2024-JH4-05|Car Culture|Hot Wheels|Mazda|1:64||1|0|0|||8.99
-HW-CC2024-JH4-04|Car Culture|Hot Wheels|Honda|1:64||1|0|0|||9.99
-HW-CC2024-JH4-03|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||8.99
-HW-CC2024-JH4-02|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||9.99
-HW-CC2024-JH4-01|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||8.99
 HW-TEAMTRAN-72|Team Transport|Hot Wheels|Toyota|1:64||1|0|0|||19.99
-HW-BOULEVARD-100|Boulevard|Hot Wheels|Lamborghini|1:64||1|0|0|||11.99
-HW-BOULEVARD-99|Boulevard|Hot Wheels|Nissan|1:64||1|0|0|||12.99
-HW-BOULEVARD-98|Boulevard|Hot Wheels|Mitsubishi|1:64||1|0|0|||9.99
-HW-BOULEVARD-97|Boulevard|Hot Wheels|Fiat|1:64||1|0|0|||9.99
-HW-BOULEVARD-96|Boulevard|Hot Wheels|Toyota|1:64||1|0|0|||9.99
 HW-BOULEVARD-106-110|Boulevard|Hot Wheels|Other|1:64||1|0|0|||44.99
 HW-BOULEVARD-101-105|Boulevard|Hot Wheels|Other|1:64||1|0|0|||44.99
 HW-2024-MCCLUB-05|Mainline series|Hot Wheels|Honda|1:64||1|0|0|||4.99
@@ -2456,13 +2207,7 @@ HW-CASE-5785-97HKRQ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-TEAMTRAN-69|Team Transport|Hot Wheels|Nissan|1:64||1|0|0|||28.99
 HW-TEAMTRAN-68|Team Transport|Hot Wheels|Other|1:64||1|0|0|||19.99
 HW-CASE-5785-97HLTA|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
-HW-CC2024-WT1-01-CHASE|Car Culture|Hot Wheels|Alfa Romeo|1:64||1|0|0|||59.99
 HW-BOULEVARD-96-100|Boulevard|Hot Wheels|Other|1:64||1|0|0|||48.99
-HW-BOULEVARD-95|Boulevard|Hot Wheels|Chevrolet|1:64||1|0|0|||9.99
-HW-BOULEVARD-94|Boulevard|Hot Wheels|Nissan|1:64||1|0|0|||12.99
-HW-BOULEVARD-93|Boulevard|Hot Wheels|Porsche|1:64||1|0|0|||10.99
-HW-BOULEVARD-92|Boulevard|Hot Wheels|Other|1:64||1|0|0|||7.99
-HW-BOULEVARD-91|Boulevard|Hot Wheels|Nissan|1:64||1|0|0|||14.99
 HW-CC2024-MC5-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||42.99
 HW-CC2024-RD3-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||44.99
 HW-CC2024-TT1-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||36.99
@@ -2471,19 +2216,8 @@ HW-TEAMTRAN-70|Team Transport|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||18.99
 HW-TEAMTRAN-65|Team Transport|Hot Wheels|Honda|1:64||1|0|0|||19.99
 HW-POP2024-MIX3-05|Pop Culture|Hot Wheels|Nissan|1:64||1|0|0|||11.99
 HW-POP2024-MIX3-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||7.99
-HW-POP2024-MIX3-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||6.99
-HW-POP2024-MIX3-02|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||11.99
-HW-POP2024-MIX3-01|Pop Culture|Hot Wheels|Nissan|1:64||1|0|0|||11.99
-HW-CC2024-SS2-05|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||9.99
 HW-CC2024-SS2-04|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||9.99
-HW-CC2024-SS2-03|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||9.99
-HW-CC2024-SS2-02|Car Culture|Hot Wheels|Lamborghini|1:64||1|0|0|||9.99
-HW-CC2024-SS2-01|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||9.99
-HW-CC2024-WT1-05|Car Culture|Hot Wheels|Audi|1:64||1|0|0|||9.99
 HW-CC2024-WT1-04|Car Culture|Hot Wheels|Volkswagen|1:64||1|0|0|||9.99
-HW-CC2024-WT1-03|Car Culture|Hot Wheels|Volkswagen|1:64||1|0|0|||9.99
-HW-CC2024-WT1-02|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||9.99
-HW-CC2024-WT1-01|Car Culture|Hot Wheels|Alfa Romeo|1:64||1|0|0|||9.99
 HW-BASICS-2024-TUBULAR-05|Mainline series|Hot Wheels|Jeep|1:64||1|0|0|||3.99
 HW-BASICS-2024-TUBULAR-04|Mainline series|Hot Wheels|Toyota|1:64||1|0|0|||4.99
 HW-BASICS-2024-TUBULAR-03|Mainline series|Hot Wheels|Ford|1:64||1|0|0|||3.99
@@ -2515,11 +2249,6 @@ HW-2024-IMPORTS-01|Mainline series|Hot Wheels|Mazda|1:64||1|0|0|||7.99
 HW-2024-IMPORTS-SET|Mainline series|Hot Wheels|Other|1:64||1|1|0|||31.99
 HW-CASE-5785-97HHRE|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97HGNK|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
-HW-CC2024-EE3-05|Car Culture|Hot Wheels|McLaren|1:64||1|0|0|||8.99
-HW-CC2024-EE3-04|Car Culture|Hot Wheels|Aston Martin|1:64||1|0|0|||8.99
-HW-CC2024-EE3-03|Car Culture|Hot Wheels|BMW|1:64||1|0|0|||8.99
-HW-CC2024-EE3-02|Car Culture|Hot Wheels|Lamborghini|1:64||1|0|0|||8.99
-HW-CC2024-EE3-01|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||8.99
 HW-CC2024-EE3-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
 HW-FF2024-MIX01-05|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||9.99
 HW-FF2024-MIX01-04|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||9.99
@@ -2568,31 +2297,13 @@ HW-CASE-5785-97DEED|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-6PK-JAPAN02|Multi-packs|Hot Wheels|Other|1:64||1|1|0|||26.99
 HW-POP2024-MIX2-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-POP2024-MIX2-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2024-MIX2-02|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2024-MIX2-01|Pop Culture|Hot Wheels|Nissan|1:64||1|0|0|||9.99
 HW-POP2024-MIX2|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||32.99
 HW-TEAMTRAN-61|Team Transport|Hot Wheels|Porsche|1:64||1|0|0|||24.99
-HW-POP2024-MIX1-05|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2024-MIX1-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2024-MIX1-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||6.99
-HW-POP2024-MIX1-02|Pop Culture|Hot Wheels|Datsun|1:64||1|0|0|||11.99
-HW-POP2024-MIX1-01|Pop Culture|Hot Wheels|Ford|1:64||1|0|0|||13.99
-HW-CC2023-OR01-05|Car Culture|Hot Wheels|Range Rover|1:64||1|0|0|||9.99
-HW-CC2023-OR01-04|Car Culture|Hot Wheels|Other|1:64||1|0|0|||8.99
-HW-CC2023-OR01-03|Car Culture|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||8.99
-HW-CC2023-OR01-02|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||8.99
-HW-CC2023-OR01-01|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||8.99
-HW-CC2023-MC04-02-CHASE|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||84.99
 HW-CC-TWIN2022-PROTO/FAIRLADY|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||24.99
 HW-CC-TWIN2022-SENNA/720S|Car Culture|Hot Wheels|McLaren|1:64||1|0|0|||24.99
 HW-CC-TWIN2022-FORDGT/FORDGT|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||24.99
 HW-CASE-5785-97HDMR|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97HCCQ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
-HW-BOULEVARD-90|Boulevard|Hot Wheels|Nissan|1:64||1|0|0|||7.99
-HW-BOULEVARD-89|Boulevard|Hot Wheels|Toyota|1:64||1|0|0|||12.99
-HW-BOULEVARD-88|Boulevard|Hot Wheels|Honda|1:64||1|0|0|||12.99
-HW-BOULEVARD-87|Boulevard|Hot Wheels|Porsche|1:64||1|0|0|||12.99
-HW-BOULEVARD-86|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||12.99
 HW-FAST2024-MIX01-05|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||2.99
 HW-FAST2024-MIX01-04|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||2.99
 HW-FAST2024-MIX01-03|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||5.99
@@ -2610,14 +2321,8 @@ HW-FF2023-MIX04-02|Fast & Furious|Hot Wheels|Land Rover|1:64||1|0|0|||9.99
 HW-FF2023-MIX04-01|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||10.99
 HW-FF2024-MIX01-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||42.99
 HW-POP2024-MIX1|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||42.99
-HW-ML-2022-LC-210|Mainline|Hot Wheels|Lancia|1:64||1|0|0|||2.99
 HW-CC2023-OR01-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
 HW-CASE-5785-97HBC4|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
-HW-CC2023-MC04-05|Car Culture|Hot Wheels|Mazda|1:64||1|0|0|||9.99
-HW-CC2023-MC04-04|Car Culture|Hot Wheels|Volkswagen|1:64||1|0|0|||9.99
-HW-CC2023-MC04-03|Car Culture|Hot Wheels|Abarth|1:64||1|0|0|||8.99
-HW-CC2023-MC04-02|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||9.99
-HW-CC2023-MC04-01|Car Culture|Hot Wheels|Honda|1:64||1|0|0|||10.99
 HW-TEAMTRAN-57|Team Transport|Hot Wheels|De Tomaso|1:64||1|0|0|||19.99
 HW-TEAMTRAN-58|Team Transport|Hot Wheels|Mazda|1:64||1|0|0|||19.99
 HW-CASE-5785-97HABX|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
@@ -2626,10 +2331,6 @@ HW-CASE-5785-97HABS|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-TEAMTRAN-56|Team Transport|Hot Wheels|Nissan|1:64||1|0|0|||36.99
 HW-FF2023-MIX04-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||39.99
 HW-BOULEVARD2023-85|Boulevard|Hot Wheels|Nissan|1:64||1|0|0|||12.99
-HW-BOULEVARD2023-84|Boulevard|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||12.99
-HW-BOULEVARD2023-83|Boulevard|Hot Wheels|Dodge|1:64||1|0|0|||12.99
-HW-BOULEVARD2023-82|Boulevard|Hot Wheels|Porsche|1:64||1|0|0|||12.99
-HW-BOULEVARD2023-81|Boulevard|Hot Wheels|Audi|1:64||1|0|0|||12.99
 HW-CASE-5785-97FLLZ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97FLNY|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CC2023-MC04-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
@@ -2658,17 +2359,11 @@ HW-CASE-5785-97FNNY|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CC-TWIN2022-BMW/LANCIA|Car Culture|Hot Wheels|BMW|1:64||1|0|0|||24.99
 HW-CC-TWIN2022-LANCIA/AUDI|Car Culture|Hot Wheels|Lancia|1:64||1|0|0|||24.99
 HW-ML-2015-SC-035|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.49
-HW-CC2023-RD02-01-CHASE|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||42.99
 HW-10PK-FASTFURIOUS-2023|Multi-packs|Hot Wheels|Other|1:64||1|1|0|||36.99
 HW-CASE-5785-97FMMG|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97FLRR|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97FLQX|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
 HW-CASE-5785-97FKQB|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99
-HW-POP2023-SPEEDSHOP-05|Pop Culture|Hot Wheels|Volvo|1:64||1|0|0|||9.99
-HW-POP2023-SPEEDSHOP-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
-HW-POP2023-SPEEDSHOP-03|Pop Culture|Hot Wheels|Nissan|1:64||1|0|0|||12.99
-HW-POP2023-SPEEDSHOP-02|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||12.99
-HW-POP2023-SPEEDSHOP-01|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||12.99
 HW-POP2023-SPEEDSHOP-SET|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||42.99
 HW-RE-2023-01-05|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||6.99
 HW-RE-2023-01-04|Retro Entertainment|Hot Wheels|Aston Martin|1:64||1|0|0|||13.99
@@ -2682,11 +2377,6 @@ HW-RE-2023-03-04|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-RE-2023-03-03|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||5.99
 HW-RE-2023-03-02|Retro Entertainment|Hot Wheels|Audi|1:64||1|0|0|||13.99
 HW-RE-2023-03-01|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||19.99
-HW-CC2023-RD02-05|Car Culture|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||9.99
-HW-CC2023-RD02-04|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||11.99
-HW-CC2023-RD02-03|Car Culture|Hot Wheels|Audi|1:64||1|0|0|||8.99
-HW-CC2023-RD02-02|Car Culture|Hot Wheels|Aston Martin|1:64||1|0|0|||8.99
-HW-CC2023-RD02-01|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||9.99
 HW-FAST2023-MIX3-10|Fast & Furious|Hot Wheels|Datsun|1:64||1|0|0|||5.99
 HW-FAST2023-MIX3-09|Fast & Furious|Hot Wheels|Acura|1:64||1|0|0|||4.99
 HW-FAST2023-MIX3-08|Fast & Furious|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||4.99
@@ -2697,22 +2387,12 @@ HW-FAST2023-MIX3-04|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||3.49
 HW-FAST2023-MIX3-03|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||6.99
 HW-FAST2023-MIX3-02|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||4.99
 HW-FAST2023-MIX3-01|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||4.99
-HW-CC2023-CW01-05-CHASE|Car Culture|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||52.99
 HW-FAST2023-MIX3-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||48.99
 HW-RE-2023-03-SET|Retro Entertainment|Hot Wheels|Other|1:64||1|1|0|||42.99
 HW-CC2023-RD02-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
 HW-FF2023-MIX03-SET|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||44.99
-HW-POP2023-VINTAGE-05|Pop Culture|Hot Wheels|Datsun|1:64||1|0|0|||9.99
 HW-POP2023-VINTAGE-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99
 HW-POP2023-VINTAGE-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||5.99
-HW-POP2023-VINTAGE-02|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||14.99
-HW-POP2023-VINTAGE-01|Pop Culture|Hot Wheels|Volkswagen|1:64||1|0|0|||19.99
-HW-CC2023-CW01-05|Car Culture|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||9.99
-HW-CC2023-CW01-04|Car Culture|Hot Wheels|Volvo|1:64||1|0|0|||8.99
-HW-CC2023-CW01-03|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||8.99
-HW-CC2023-CW01-02|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||11.99
-HW-CC2023-CW01-01|Car Culture|Hot Wheels|BMW|1:64||1|0|0|||9.99
-HW-CC2023-SP01-04-CHASE|Car Culture|Hot Wheels|Lamborghini|1:64||1|0|0|||44.99
 HW-CC2023-CW01-SET|Car Culture|Hot Wheels|Other|1:64||1|1|0|||39.99
 HWR97|Elite 64|Hot Wheels|Toyota|1:64||1|0|0|||11.0
 JJH56|Mainline|Hot Wheels|Other|1:64|Ferrari|1|0|0|||11.0
