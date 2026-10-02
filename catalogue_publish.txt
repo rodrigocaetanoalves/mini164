@@ -14418,6 +14418,14 @@ X8900|Retro Entertainment|Hot Wheels|Oldsmobile|1:64||1|0|0|||
 X8932|Retro Entertainment|Hot Wheels|Kenworth|1:64||1|0|0|||
 X8899|Retro Entertainment|Hot Wheels|Other|1:64||1|0|0|||
 X8905|Retro Entertainment|Hot Wheels|MINI|1:64||1|0|0|||
+Y2127|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+Y2133|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+Y2131|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+Y2134|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+Y2126|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+Y2129|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+Y2130|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+Y2132|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
 BDR83|Pop Culture|Hot Wheels|Plymouth|1:64||1|0|0|||
 BDT06|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
 BDT10|Pop Culture|Hot Wheels|Bronco|1:64||1|0|0|||
@@ -14472,6 +14480,9 @@ BDR82|Pop Culture|Hot Wheels|GMC|1:64||1|0|0|||
 BDR99|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
 BDT07|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
 BDT11|Pop Culture|Hot Wheels|Ford|1:64||1|0|0|||
+DJX33|Red Line Club|Hot Wheels|Chevrolet|1:64||1|0|0|||
+CDR62|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+CDR61|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
 CFP70|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
 CFP71|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
 CFP72|Pop Culture|Hot Wheels|Bronco|1:64||1|0|0|||
@@ -14508,6 +14519,14 @@ CFP78|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
 CFP87|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
 CFP88|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
 CFP90|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
+CMK18|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+CMJ22|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+CMJ23|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+CJL33|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+CJL34|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+CJL36|Fast & Furious|Hot Wheels|Buick|1:64||1|0|0|||
+CJL37|Fast & Furious|Hot Wheels|Subaru|1:64||1|0|0|||
+CJL38|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
 DJF81|Car Culture|Hot Wheels|Datsun|1:64||1|0|0|||
 DJF82|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||
 DJF80|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||
@@ -14564,6 +14583,12 @@ DJH06|Pop Culture|Hot Wheels|Bronco|1:64||1|0|0|||
 DJH07|Pop Culture|Hot Wheels|Dodge|1:64||1|0|0|||
 DJG98|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
 FGK53|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||
+DVG75|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+DVG79|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+DVG76|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+DVG77|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+DVG78|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+DWJ58|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
 DWH82|Car Culture|Hot Wheels|Mercury|1:64||1|0|0|||
 DWH83|Car Culture|Hot Wheels|Dodge|1:64||1|0|0|||
 DWH85|Car Culture|Hot Wheels|Chevrolet|1:64||1|0|0|||
@@ -14626,6 +14651,14 @@ FDM73|Pop Culture|Hot Wheels|MINI|1:64||1|0|0|||
 FDM75|Pop Culture|Hot Wheels|Dodge|1:64||1|0|0|||
 FDM74|Pop Culture|Hot Wheels|Volkswagen|1:64||1|0|0|||
 FRD89|Pop Culture|Hot Wheels|Other|1:64||1|1|0|||
+DWF70|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+DWF69|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+DWF73|Fast & Furious|Hot Wheels|Plymouth|1:64||1|0|0|||
+DWF74|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||
+DWF76|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+DWF75|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+DWF71|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+DWF72|Fast & Furious|Hot Wheels|Subaru|1:64||1|0|0|||
 FLC09|Car Culture|Hot Wheels|Datsun|1:64||1|0|0|||
 FLC07|Car Culture|Hot Wheels|Mazda|1:64||1|0|0|||
 FLC08|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||
@@ -14710,6 +14743,13 @@ FNC23|Red Line Club|Hot Wheels|Other|1:64||1|0|0|||
 FPN27|Red Line Club|Hot Wheels|Chevrolet|1:64||1|0|0|||
 FPN13|Red Line Club|Hot Wheels|Other|1:64||1|0|0|||
 FPN11|Red Line Club|Hot Wheels|Ford|1:64||1|0|0|||
+FPN26|Conventions|Hot Wheels|Volkswagen|1:64||1|0|0|||
+FKF10|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+FKF07|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+FKF11|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+FKF13|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+FKF14|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+FKF09|Fast & Furious|Hot Wheels|Lamborghini|1:64||1|0|0|||
 FYN57|Car Culture|Hot Wheels|Fiat|1:64||1|0|0|||
 GFY03|Car Culture|Hot Wheels|Ford|1:64||1|0|0|||
 FYN58|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||
@@ -14787,6 +14827,41 @@ GDF85|Red Line Club|Hot Wheels|Lamborghini|1:64||1|0|0|||
 GDF90|Red Line Club|Hot Wheels|Volkswagen|1:64||1|0|0|||
 GDF82|Red Line Club|Hot Wheels|Chevrolet|1:64||1|0|0|||
 GDF91|Red Line Club|Hot Wheels|Other|1:64||1|0|0|||
+GBW78|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GBW76|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GBW80|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+GBW77|Fast & Furious|Hot Wheels|Lamborghini|1:64||1|0|0|||
+GBW79|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GBW84|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GBW81|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+GBW82|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+GBW85|Fast & Furious|Hot Wheels|Volkswagen|1:64||1|0|0|||
+GBW83|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GBW90|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+GBW86|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+GBW88|Fast & Furious|Hot Wheels|Pontiac|1:64||1|0|0|||
+GBW87|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+GBW89|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+GJC07|Fast & Furious|Hot Wheels|Subaru|1:64||1|0|0|||
+GBW96|Fast & Furious|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||
+GBW97|Fast & Furious|Hot Wheels|Land Rover|1:64||1|0|0|||
+GBW99|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+GBW98|Fast & Furious|Hot Wheels|Hummer|1:64||1|0|0|||
+GHH20|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+GHH17|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GHH16|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GHH18|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GHH19|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GRB01|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||
+GJP74|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||
+GRB02|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||
+GDF74|Conventions|Hot Wheels|Volkswagen|1:64||1|0|0|||
+FYY55|Fast & Furious|Hot Wheels|Buick|1:64||1|0|0|||
+FYY54|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+FYY56|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+FYY53|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||
+FYY52|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+FYY57|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
 GJP76|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||
 GJP78|Car Culture|Hot Wheels|Alfa Romeo|1:64||1|0|0|||
 GJP77|Car Culture|Hot Wheels|Datsun|1:64||1|0|0|||
@@ -14882,6 +14957,34 @@ GLH81|Red Line Club|Hot Wheels|Ford|1:64||1|0|0|||
 GLH82|Red Line Club|Hot Wheels|Dodge|1:64||1|0|0|||
 GLH91|Red Line Club|Hot Wheels|Other|1:64||1|0|0|||
 GLH84|Red Line Club|Hot Wheels|BMW|1:64||1|0|0|||
+GJR65|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+GJR63|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GJR64|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GJR67|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+GJR66|Fast & Furious|Hot Wheels|Subaru|1:64||1|0|0|||
+GJR68|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+GJR70|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+GJR71|Fast & Furious|Hot Wheels|Buick|1:64||1|0|0|||
+GJR72|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+GJR69|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+GJR76|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+GJR75|Fast & Furious|Hot Wheels|Acura|1:64||1|0|0|||
+GJR42|Fast & Furious|Hot Wheels|Plymouth|1:64||1|0|0|||
+GJR74|Fast & Furious|Hot Wheels|Jaguar|1:64||1|0|0|||
+GJR73|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+GJR81|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+GJR79|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GJR80|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+GJR82|Fast & Furious|Hot Wheels|Plymouth|1:64||1|0|0|||
+GJR78|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+GRM15|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||
+HHW74|Fast & Furious|Hot Wheels|Other|1:64||1|1|0|||
+GLH96|Conventions|Hot Wheels|Volkswagen|1:64||1|0|0|||
+GJV57|Fast & Furious|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||
+GJV58|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GJV59|Fast & Furious|Hot Wheels|McLaren|1:64||1|0|0|||
+GJV60|Fast & Furious|Hot Wheels|Lamborghini|1:64||1|0|0|||
+GJV61|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
 GRJ62|Car Culture|Hot Wheels|McLaren|1:64||1|0|0|||
 GRJ60|Car Culture|Hot Wheels|Jaguar|1:64||1|0|0|||
 GRJ59|Car Culture|Hot Wheels|MINI|1:64||1|0|0|||
@@ -15001,6 +15104,32 @@ HCK29|Red Line Club|Hot Wheels|Chevrolet|1:64||1|0|0|||
 GXJ18|Red Line Club|Hot Wheels|Ford|1:64||1|0|0|||
 GXJ17|Red Line Club|Hot Wheels|BMW|1:64||1|0|0|||
 HGW16|Red Line Club|Hot Wheels|Ford|1:64||1|0|0|||
+GPK55|Fast & Furious|Hot Wheels|Aston Martin|1:64||1|0|0|||
+GPK54|Fast & Furious|Hot Wheels|McLaren|1:64||1|0|0|||
+GXV65|Fast & Furious|Hot Wheels|Lamborghini|1:64||1|0|0|||
+GPK53|Fast & Furious|Hot Wheels|BMW|1:64||1|0|0|||
+GPK52|Fast & Furious|Hot Wheels|BMW|1:64||1|0|0|||
+GRL73|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+GRL72|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+GRL74|Fast & Furious|Hot Wheels|Jeep|1:64||1|0|0|||
+GRL71|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+GRL70|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||
+GRL84|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GRL81|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+GRL83|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+GRK50|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+GRL80|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+GRK60|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+GRK56|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+GRL82|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+GRK52|Fast & Furious|Hot Wheels|Jeep|1:64||1|0|0|||
+GRK58|Fast & Furious|Hot Wheels|Land Rover|1:64||1|0|0|||
+GXJ08|Conventions|Hot Wheels|Ford|1:64||1|0|0|||
+GRP54|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+GRP55|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+GRP56|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+GRP57|Fast & Furious|Hot Wheels|Plymouth|1:64||1|0|0|||
+GRP58|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
 HCK03|Car Culture|Hot Wheels|Chevrolet|1:64||1|0|0|||
 HCJ83|Car Culture|Hot Wheels|Chevrolet|1:64||1|0|0|||
 HCK05|Car Culture|Hot Wheels|Bronco|1:64||1|0|0|||
@@ -15255,6 +15384,60 @@ HMY22|Red Line Club|Hot Wheels|Honda|1:64||1|0|0|||
 HNL26|Red Line Club|Hot Wheels|Porsche|1:64||1|0|0|||
 HMY23|Red Line Club|Hot Wheels|Other|1:64||1|0|0|||
 HNL24|Red Line Club|Hot Wheels|Nissan|1:64||1|0|0|||
+HKD22|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+HNW47|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HNW48|Fast & Furious|Hot Wheels|Jeep|1:64||1|0|0|||
+HKD20|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||
+HKD21|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HKD24|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HNW53|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+HNW49|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||
+HNW55|Fast & Furious|Hot Wheels|Plymouth|1:64||1|0|0|||
+HNW50|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+HKD27|Fast & Furious|Hot Wheels|Acura|1:64||1|0|0|||
+HKD23|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HNW52|Fast & Furious|Hot Wheels|BMW|1:64||1|0|0|||
+HNW51|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+HKD29|Fast & Furious|Hot Wheels|Alfa Romeo|1:64||1|0|0|||
+HKD25|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+HKD26|Fast & Furious|Hot Wheels|Land Rover|1:64||1|0|0|||
+HNW54|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HKD28|Fast & Furious|Hot Wheels|BMW|1:64||1|0|0|||
+HMG52|Fast & Furious|Hot Wheels|Lamborghini|1:64||1|0|0|||
+HJC15|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HKF07|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HKF08|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HNR91|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+HNR92|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+HNR93|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HNR94|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+HNR95|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+HNR96|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+HNR97|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+HNR98|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+HNR99|Fast & Furious|Hot Wheels|Jeep|1:64||1|0|0|||
+HNT00|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+HNT01|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+HNT02|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HNT03|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+HNT04|Fast & Furious|Hot Wheels|Buick|1:64||1|0|0|||
+HNT05|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||
+HNT06|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+HNT07|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+HNT08|Fast & Furious|Hot Wheels|Lamborghini|1:64||1|0|0|||
+HNT09|Fast & Furious|Hot Wheels|Jaguar|1:64||1|0|0|||
+HNT10|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HNT11|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+HNT12|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+HNT13|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+HNT14|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HNT15|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HNT16|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HNT17|Fast & Furious|Hot Wheels|Bugatti|1:64||1|0|0|||
+HNT18|Fast & Furious|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||
+HNT19|Fast & Furious|Hot Wheels|Acura|1:64||1|0|0|||
+HNT20|Fast & Furious|Hot Wheels|Datsun|1:64||1|0|0|||
+HNT21|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
 HKC80|Car Culture|Hot Wheels|Porsche|1:64||1|0|0|||
 HKC76|Car Culture|Hot Wheels|Lamborghini|1:64||1|0|0|||
 HKC79|Car Culture|Hot Wheels|BMW|1:64||1|0|0|||
@@ -15394,6 +15577,58 @@ HWF21|Red Line Club|Hot Wheels|Pagani|1:64||1|0|0|||
 HWF11|Red Line Club|Hot Wheels|Lamborghini|1:64||1|0|0|||
 HWF08|Red Line Club|Hot Wheels|Audi|1:64||1|0|0|||
 JCP11|Red Line Club|Hot Wheels|BMW|1:64||1|0|0|||
+HVR61|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+HVR60|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+HYP68|Fast & Furious|Hot Wheels|Plymouth|1:64||1|0|0|||
+HYP69|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HYP67|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+HYP73|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HRT95|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+HYP72|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+HYP71|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+HYP70|Fast & Furious|Hot Wheels|BMW|1:64||1|0|0|||
+JDJ13|Fast & Furious|Hot Wheels|Acura|1:64||1|0|0|||
+HRT94|Fast & Furious|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||
+HRT97|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||
+HRT96|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+HYP74|Fast & Furious|Hot Wheels|Land Rover|1:64||1|0|0|||
+HYP75|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+HVR62|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HRT98|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HVR63|Fast & Furious|Hot Wheels|Bentley|1:64||1|0|0|||
+HRT99|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+HWF36|Conventions|Hot Wheels|McLaren|1:64||1|0|0|||
+HRW46|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+HRW47|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HRW48|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||
+HRW49|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HRW50|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+HRW41|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HRW42|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HRW43|Fast & Furious|Hot Wheels|Buick|1:64||1|0|0|||
+HRW44|Fast & Furious|Hot Wheels|Volkswagen|1:64||1|0|0|||
+HRW45|Fast & Furious|Hot Wheels|Hummer|1:64||1|0|0|||
+HRW51|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HRW52|Fast & Furious|Hot Wheels|De Tomaso|1:64||1|0|0|||
+HRW53|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HRW54|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+HRW55|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||
+HRW36|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+HRW37|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+HRW38|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||
+HRW39|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+HRW40|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HRV00|Vintage Racing Club|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||
+HRV01|Vintage Racing Club|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HRV02|Vintage Racing Club|Hot Wheels|BMW|1:64||1|0|0|||
+HRV03|Vintage Racing Club|Hot Wheels|Lamborghini|1:64||1|0|0|||
+HRV04|Vintage Racing Club|Hot Wheels|Porsche|1:64||1|0|0|||
+HRV05|Vintage Racing Club|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HRV06|Vintage Racing Club|Hot Wheels|Chevrolet|1:64||1|0|0|||
+HRV07|Vintage Racing Club|Hot Wheels|Toyota|1:64||1|0|0|||
+HRV08|Vintage Racing Club|Hot Wheels|Ford|1:64||1|0|0|||
+HRV09|Vintage Racing Club|Hot Wheels|Ford|1:64||1|0|0|||
+HRV10|Vintage Racing Club|Hot Wheels|Datsun|1:64||1|0|0|||
 HRW06|Car Culture|Hot Wheels|Bugatti|1:64||1|0|0|||
 HRV77|Car Culture|Hot Wheels|Lancia|1:64||1|0|0|||
 HRW09|Car Culture|Hot Wheels|MG|1:64||1|0|0|||
@@ -15536,6 +15771,48 @@ JCP10|Red Line Club|Hot Wheels|Ford|1:64||1|0|0|||
 JCP14|Red Line Club|Hot Wheels|Toyota|1:64||1|0|0|||
 JCP22|Red Line Club|Hot Wheels|Pagani|1:64||1|0|0|||
 JJY57|Red Line Club|Hot Wheels|Datsun|1:64||1|0|0|||
+JBL94|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+JBL85|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+JBL91|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+JBL98|Fast & Furious|Hot Wheels|Land Rover|1:64||1|0|0|||
+JBL92|Fast & Furious|Hot Wheels|McLaren|1:64||1|0|0|||
+JBL93|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+JBL97|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+JBL96|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+JBM04|Fast & Furious|Hot Wheels|Alfa Romeo|1:64||1|0|0|||
+JBL95|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+JBL99|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+JBL86|Fast & Furious|Hot Wheels|Lamborghini|1:64||1|0|0|||
+JBL88|Fast & Furious|Hot Wheels|Koenigsegg|1:64||1|0|0|||
+JBL87|Fast & Furious|Hot Wheels|Plymouth|1:64||1|0|0|||
+JBM00|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JBL90|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JBM02|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+JBM03|Fast & Furious|Hot Wheels|Porsche|1:64||1|0|0|||
+JBL89|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JBM01|Fast & Furious|Hot Wheels|Lamborghini|1:64||1|0|0|||
+JFL99|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+JCP39|Conventions|Hot Wheels|Nissan|1:64||1|0|0|||
+JBY29|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+JBY30|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JBY31|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+JBY32|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+JBY33|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JBY44|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JBY47|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+JBY46|Fast & Furious|Hot Wheels|Volkswagen|1:64||1|0|0|||
+JBY48|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+JBY45|Fast & Furious|Hot Wheels|Acura|1:64||1|0|0|||
+JBY39|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JBY40|Fast & Furious|Hot Wheels|Acura|1:64||1|0|0|||
+JBY41|Fast & Furious|Hot Wheels|Datsun|1:64||1|0|0|||
+JBY42|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+JBY43|Fast & Furious|Hot Wheels|Bugatti|1:64||1|0|0|||
+JBY34|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JBY35|Fast & Furious|Hot Wheels|Aston Martin|1:64||1|0|0|||
+JBY36|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+JBY37|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+JBY38|Fast & Furious|Hot Wheels|DeLorean|1:64||1|0|0|||
 JKF11|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||
 JKF10|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||
 JKD98|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||
@@ -15665,6 +15942,68 @@ JJY74|Red Line Club|Hot Wheels|Bronco|1:64||1|0|0|||
 JJY72|Red Line Club|Hot Wheels|Ferrari|1:64||1|0|0|||
 JJY59|Red Line Club|Hot Wheels|Shelby|1:64||1|0|0|||
 JLX18|Red Line Club|Hot Wheels|Porsche|1:64||1|0|0|||
+JJY54|Red Line Club|Hot Wheels|Nissan|1:64||1|0|0|||
+JJY71|Red Line Club|Hot Wheels|Pontiac|1:64||1|0|0|||
+JHW68|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+JHW67|Fast & Furious|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||
+JHW72|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+JHW70|Fast & Furious|Hot Wheels|Other|1:64||1|0|0|||
+JHW69|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JHW71|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+JHW61|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+JHW63|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JHW73|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+JHW77|Fast & Furious|Hot Wheels|Lamborghini|1:64||1|0|0|||
+JHW74|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+JHW64|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+JHW75|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JHW62|Fast & Furious|Hot Wheels|BMW|1:64||1|0|0|||
+JHW76|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JHW78|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JHW65|Fast & Furious|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||
+JHW66|Fast & Furious|Hot Wheels|Lexus|1:64||1|0|0|||
+JHW79|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+JHW80|Fast & Furious|Hot Wheels|McLaren|1:64||1|0|0|||
+JMN13|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+JKX10|Fast & Furious|Hot Wheels|Subaru|1:64||1|0|0|||
+JKX11|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+JNK49|Fast & Furious|Hot Wheels|Ford|1:64||1|0|0|||
+JKX13|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||
+JKX14|Fast & Furious|Hot Wheels|Nissan|1:64||1|0|0|||
+JKX15|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JKX16|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+JKX17|Fast & Furious|Hot Wheels|Volkswagen|1:64||1|0|0|||
+JKX18|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JKX19|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JKX20|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JKX21|Fast & Furious|Hot Wheels|Dodge|1:64||1|0|0|||
+JKX22|Fast & Furious|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+JKX23|Fast & Furious|Hot Wheels|Mazda|1:64||1|0|0|||
+JKX24|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JRP82|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||
+JRP71|Car Culture|Hot Wheels|Mitsubishi|1:64||1|0|0|||
+JRP81|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||
+JRP80|Car Culture|Hot Wheels|Mazda|1:64||1|0|0|||
+JRP83|Car Culture|Hot Wheels|Toyota|1:64||1|0|0|||
+JRP84|Car Culture|Hot Wheels|Nissan|1:64||1|0|0|||
+JRP56|Team Transport|Hot Wheels|Other|1:64||1|0|0|||
+JRP61|Team Transport|Hot Wheels|Chevrolet|1:64||1|0|0|||
+JRP57|Team Transport|Hot Wheels|Other|1:64||1|0|0|||
+JRP58|Team Transport|Hot Wheels|Other|1:64||1|0|0|||
+JTK32|Team Transport|Hot Wheels|Other|1:64||1|0|0|||
+JRR07|Boulevard|Hot Wheels|Cadillac|1:64||1|0|0|||
+JRR08|Boulevard|Hot Wheels|Ford|1:64||1|0|0|||
+JRR20|Boulevard|Hot Wheels|Subaru|1:64||1|0|0|||
+JRR16|Boulevard|Hot Wheels|Honda|1:64||1|0|0|||
+JRR18|Boulevard|Hot Wheels|Porsche|1:64||1|0|0|||
+JRP31|Pop Culture|Hot Wheels|Jeep|1:64||1|0|0|||
+JRP33|Pop Culture|Hot Wheels|GMC|1:64||1|0|0|||
+JRP34|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||
+JRN88|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JRN94|Fast & Furious|Hot Wheels|Buick|1:64||1|0|0|||
+JRN98|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
+JRN99|Fast & Furious|Hot Wheels|Honda|1:64||1|0|0|||
+JRP00|Fast & Furious|Hot Wheels|Toyota|1:64||1|0|0|||
 IN64-DSTANDS-LB-FD3S|Inno64|Inno64|Mazda|1:64||1|0|0|||43.0
 IN64-ST165R-91MCW|Inno64|Inno64|Toyota|1:64||1|0|0|||28.99
 IN64-E30P-WHI|Inno64|Inno64|BMW|1:64||1|0|0|||21.99
