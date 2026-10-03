@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; worker-src 'self' blob:; manifest-src 'self'; connect-src 'self' https://zxemttgikhcusnxlfhjs.supabase.co; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>MYMINI164 — diecast collection tracker, a 1:64 catalogue, every scale coming</title>
-<meta name="description" content="Catalogue and track a diecast collection: a 1:64 catalogue, every scale coming, forty-six catalogues, 27,000+ releases, with rarity, provenance, what you own and what you paid.">
+<title>MYMINI164 — diecast collection tracker, a 1:64 catalogue</title>
+<meta name="description" content="Catalogue and track a diecast collection. 27,000+ releases at 1:64 across forty-six catalogues, with rarity, provenance, what you own and what you paid.">
 <meta name="color-scheme" content="dark light">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MYMINI164">
 <meta property="og:title" content="MYMINI164">
-<meta property="og:description" content="A diecast collection at 1:64, with every other scale on its way: forty-six catalogues, 27,000+ releases, with rarity and provenance.">
+<meta property="og:description" content="A diecast collection at 1:64: forty-six catalogues, 27,000+ releases, with rarity and provenance.">
 <meta property="og:url" content="https://mymini164.com/">
 <meta property="og:image" content="https://mymini164.com/p/mini164-icon-512.png">
 <meta property="og:image:type" content="image/png">
@@ -1812,7 +1812,7 @@ html{background:var(--bg)}
   </g></symbol></svg>
 <div id="approot"></div>
 <script>var SUPA={"url": "https://zxemttgikhcusnxlfhjs.supabase.co", "key": "sb_publishable_Aplnkv3VBtm0l-87udlvOQ_Pn9oGJPQ"};</script>
-<script>var APP_URL="p/app-3449be305c2c.js";var DETAIL_DIR="p/d/",DETAIL_BLOCK=250,DETAIL_BLOCKS=298;</script>
+<script>var APP_URL="p/app-a8fee47d6d3a.js";var DETAIL_DIR="p/d/",DETAIL_BLOCK=250,DETAIL_BLOCKS=298;</script>
 <style>
 
 .gate{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
@@ -1822,6 +1822,7 @@ html{background:var(--bg)}
 .gatemark{font:800 26px/1 Inter,system-ui,sans-serif;letter-spacing:-.03em;margin:0 0 4px}
 .gatemark em{font-style:normal;color:var(--acc)}
 .gatebox .m164logo{margin:0 0 8px}   
+.gatesub:empty{display:none}   
 .gatesub{margin:0 0 22px;font:700 9.5px/1.5 'JetBrains Mono',monospace;letter-spacing:.17em;
   text-transform:uppercase;color:var(--tx3)}
 .gatecard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
@@ -1872,6 +1873,73 @@ html{background:var(--bg)}
   background:transparent;color:var(--bad,#e5484d);border-radius:10px;min-height:42px;width:100%;
   cursor:pointer;font:700 12.5px/1 Inter,system-ui,sans-serif;margin-top:8px}
 @media(max-width:400px){ .gatecard{padding:16px} }
+
+
+
+.gate{
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(120% 90% at 18% 0%,color-mix(in srgb,var(--acc) 20%,transparent) 0%,transparent 62%),
+    radial-gradient(90% 72% at 92% 6%,color-mix(in srgb,var(--buy) 14%,transparent) 0%,transparent 60%);
+  background-repeat:no-repeat,no-repeat;
+  background-size:100% min(46vh,420px),100% min(46vh,420px);
+  background-position:top left,top right;
+}
+:root[data-theme="light"] .gate{
+  background-image:
+    radial-gradient(120% 90% at 18% 0%,color-mix(in srgb,var(--acc) 9%,transparent) 0%,transparent 62%),
+    radial-gradient(90% 72% at 92% 6%,color-mix(in srgb,var(--buy) 7%,transparent) 0%,transparent 60%);
+}
+
+
+.gatecard{
+  background:var(--glass);
+  border:1px solid var(--glassline);
+  border-radius:var(--r-card);
+  box-shadow:inset 0 1px 0 var(--glasstop),var(--lift);
+  backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
+}
+
+
+.gatetabs button{
+  border-radius:var(--rp);
+  background:var(--glass);
+  border:1px solid var(--glassline);
+  box-shadow:inset 0 1px 0 var(--glasstop);
+}
+.gatetabs button.on{
+  background:color-mix(in srgb,var(--acc) 20%,var(--glass));
+  border-color:color-mix(in srgb,var(--acc) 55%,transparent);
+  box-shadow:inset 0 1px 0 var(--glasstop2),
+             inset 0 0 0 1px color-mix(in srgb,var(--acc) 35%,transparent);
+}
+
+
+.fld input{
+  border-radius:calc(var(--r-card) - 6px);
+  background:color-mix(in srgb,var(--bg) 72%,transparent);
+  border:1px solid var(--glassline);
+  box-shadow:inset 0 1px 0 var(--glasstop);
+}
+.fld input:focus{box-shadow:inset 0 1px 0 var(--glasstop2)}
+
+
+.gobtn{border-radius:var(--rp);box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
+
+
+.rolepill{border-radius:var(--rp);background:var(--glass);border:1px solid var(--glassline);
+  box-shadow:inset 0 1px 0 var(--glasstop)}
+
+
+#gateabout{
+  background:var(--glass);
+  border:1px solid var(--glassline);
+  border-radius:var(--r-card);
+  box-shadow:inset 0 1px 0 var(--glasstop);
+  padding:16px 18px;
+  backdrop-filter:var(--blur2);-webkit-backdrop-filter:var(--blur2);
+}
+
 </style>
 
 <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gatemark">
@@ -1880,7 +1948,7 @@ html{background:var(--bg)}
     <h1 class="gatemark vh" id="gatemark">MYMINI164</h1>
     <span class="m164logo m164-hero" aria-hidden="true"><svg class="m164-ink"   viewBox="0 0 1163.7 281.1"><use href="#m164-word-ink"/></svg><svg class="m164-white" viewBox="0 0 1163.7 281.1"><use href="#m164-word-white"/></svg></span>
     
-    <p class="gatesub" id="gatesub">Diecast collection, 1:64 — every scale coming</p>
+    <p class="gatesub" id="gatesub"></p>
     <div class="gatecard">
       <div class="gatetabs" id="gatetabs" role="group" aria-label="Sign in or create an account">
         <button type="button" data-tab="in" class="on">Sign in</button>
@@ -1913,8 +1981,9 @@ html{background:var(--bg)}
       <div class="gatemsg" id="gatemsg" role="status" aria-live="polite"></div>
     </div>
     
-    <p class="gatenote" id="gateabout">Catalogue your diecast collection at any scale, with 1:64
-      at the heart of it. 27,000+ releases at 1:64 across forty-six catalogues, with 46,000+ more at other scales already on file and arriving as each one is ready on
+    
+    <p class="gatenote" id="gateabout">Catalogue your diecast collection.
+      27,000+ releases at 1:64 across forty-six catalogues on
       file, with photographs, product codes, what a release is worth and how scarce it is, and a
       private record of what you own, what you paid and what you are still looking for.</p>
     
@@ -2734,7 +2803,11 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
     /* THE SAME WORDS THE MARKUP HAS, because this line overwrites it on every mode
        change: a strapline corrected in one place and not the other is corrected on the
        first paint and wrong the moment somebody clicks "Create account". */
-    txt(g("gatesub"), rs ? "Choose a new password" : fg ? "Reset your password" : "Diecast collection, 1:64 — every scale coming");
+    txt(g("gatesub"), rs ? "Choose a new password" : fg ? "Reset your password" : "");  /* THE STRAPLINE IS GONE AND THIS LINE IS NOT. `gatesub` is the one place on
+     the sign-in screen that speaks: it carried the strapline by default and still
+     carries "Reset your password" and "Choose a new password" when those flows are
+     on. Rodrigo asked for the strapline to go, not for the element - deleting it
+     would take the only line that tells somebody mid-reset what they are doing. */
     for(const b of g("gatetabs").querySelectorAll("button"))
       b.classList.toggle("on", b.dataset.tab === mode);
     /* THE SAME PROMISE THE MARKUP MAKES, because this line overwrites it on every mode
