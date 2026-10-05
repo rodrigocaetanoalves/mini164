@@ -76047,6 +76047,12 @@ ATC40013|Tiny City 1/400|Tiny|Other|1:400||1|0|0||||0
 ATC40012|Tiny City 1/400|Tiny|Other|1:400||1|0|0||||0
 ATC35029|Tiny City 1/35|Tiny|Other|1:35||1|0|0||||0
 ATC64808|Tiny City 1/64|Tiny|Isuzu|1:64||1|0|0||||0
+ATC65290|Tiny City 1/76|Tiny|Mercedes-Benz|1:76||1|0|0||||0
+ATC65367|Tiny City 1/64|Tiny|Isuzu|1:64||1|0|0||||0
+ATC64972|Tiny City 1/110|Tiny|Other|1:110||1|0|0||||0
+ATC65035|Tiny City 1/76|Tiny|Toyota|1:76||1|0|0||||0
+ATC65033|Tiny City 1/64|Tiny|Toyota|1:64||1|0|0||||0
+ATC64773|Tiny City 1/110|Tiny|Other|1:110||1|0|0||||0
 BBRDIE6404|BBR|BBR|Maserati|1:64|Maserati MC20|1|0|0||||0
 BBRFER64001|BBR|BBR|Ferrari|1:64|Ferrari 296|1|0|0|30|1||0
 BBRFER64012|BBR|BBR|Ferrari|1:64|Ferrari 812 Competizione|1|0|0||||0
