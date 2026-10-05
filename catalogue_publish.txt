@@ -40743,7 +40743,7 @@ MH031WR|MotorHelix|MotorHelix|Other|1:18||1|0|0||||0
 MH036LBM|MotorHelix|MotorHelix|Audi|1:18||1|0|0||||0
 MHO30IBP|MotorHelix|MotorHelix|Audi|1:18||1|0|0||||0
 MHO33RA|MotorHelix|MotorHelix|Alfa Romeo|1:18||1|0|0||||0
-MHOЗ0ISM|MotorHelix|MotorHelix|Audi|1:18||1|0|0||||0
+MHO30ISM|MotorHelix|MotorHelix|Audi|1:18||1|0|0||||0
 M60112|MotorHelix|MotorHelix|Mazda|1:64||1|0|0||||0
 M60113|MotorHelix|MotorHelix|Mazda|1:64||1|0|0||||0
 M60204L|MotorHelix|MotorHelix|Mazda|1:64||1|0|0||||0
