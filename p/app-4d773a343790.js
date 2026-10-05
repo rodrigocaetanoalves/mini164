@@ -215,10 +215,40 @@ let noPreowned=false, noBoxes=false;
 let excGroup="";     
 
 let total,ownedA,onordA,mine,owned,onord,buyable,sealed,totVal,totPaid,withPaid,paidVal,dupA,dupes,dupeCopies;
+
+
+var _scopeList = null, _scopeKey = "";
+
+
+var _dataStamp = 0;
+function touchedData(){ _dataStamp++; _scopeList = null; _scopeKey = ""; }
+
+
+function _setKey(x){
+  return (x && typeof x.size === "number") ? [...x].sort().join("\u0001") : "";
+}
+function _scopeKeyNow(){
+  
+
+  try{
+    return [_dataStamp, brand, line, DATA.length,
+            _setKey(collects), _setKey(rarPick),
+            _setKey(segPick), _setKey(attrPick)].join("\u0000");
+  }catch(e){
+    return "";
+  }
+}
+function scopeNow(){
+  const k = _scopeKeyNow();
+  if(k && _scopeList && _scopeKey === k) return _scopeList;
+  _scopeList = DATA.filter(d => inLine(d) && !heldBack(d));
+  _scopeKey = k;            
+  return _scopeList;
+}
 function recount(){
   
 
-  const P=DATA.filter(d=>inLine(d) && !heldBack(d));
+  const P=scopeNow();
   
   
   
@@ -2884,10 +2914,9 @@ function matchesQ(d){
       ||(d.iss||[]).some(i=>("-"+i.s).toLowerCase()===ql||(i.s||"").toLowerCase()===ql);
 }
 function subset(){
-  let a=DATA.filter(inLine);
   
 
-  a=a.filter(d=>!heldBack(d));
+  let a=scopeNow().slice();
   if(!showCanc) a=a.filter(d=>!d.xc);
   
 
@@ -3831,7 +3860,9 @@ function drawStats(){
   
   
 
-  const P = DATA.filter(d => isRelease(d) && inLine(d));
+  
+
+  const P = scopeNow().filter(d => !d.k && !d.xc);
   const myP = P.filter(isOwned);
   const comingP = P.filter(isIncoming);
   const lineLabel = line!=="__all" ? line
@@ -4943,6 +4974,7 @@ const writeQ = new Map();
 
 const byNum = new Map();
 function reindex(){
+  if(typeof touchedData === "function") touchedData();
   byNum.clear(); DATA.forEach(d=>byNum.set(d.n,d)); clearSearchCache();
   
 
@@ -5261,6 +5293,9 @@ function queueWrite(n){
 }
 
 function patch(n, changes){
+  
+
+  if(typeof touchedData === "function") touchedData();
   clearSearchCache();       
   const d = byNum.get(n); if(!d) return;
   Object.assign(d, changes);
@@ -6155,6 +6190,17 @@ function repaintPhotos(){
     const gap = el.querySelector(".ph .noimg");
     if(gap) gap.outerHTML = `<img loading="lazy" decoding="async" referrerpolicy="no-referrer"`
       + ` src="${want}" data-remote="${remoteSrc(d)}" alt="${esc(photoAlt(d))}">`;
+  }
+  
+
+  if(typeof OPEN_AT !== "undefined" && OPEN_AT > -1
+     && typeof openCard === "function" && typeof current !== "undefined"
+     && current[OPEN_AT]){
+    const d = current[OPEN_AT];
+    const want = imgSrc(d);
+    const img = document.getElementById("bigimg");
+    if(want && !img){ try{ openCard(OPEN_AT); }catch(e){} }
+    else if(want && img && img.getAttribute("src") !== want) img.setAttribute("src", want);
   }
 }
 
