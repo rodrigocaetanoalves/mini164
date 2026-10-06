@@ -51885,8 +51885,8 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 517853|Norev|Norev|Other|||1|0|0||||0
 517862|Norev|Norev|Other|||1|0|0||||0
 872010|Norev|Norev|Polestar|||1|0|0||||0
-1728|Siku Super|Siku|Other|1:100||1|0|0||||0
-1720|Siku Super|Siku|Other|1:140||1|0|0||||0
+1728|Siku Super|Siku|Other|1:1000||1|0|0||||0
+1720|Siku Super|Siku|Other|1:1400||1|0|0||||0
 2070|Siku Farmer|Siku|Other|1:32||1|0|0||||0
 2071|Siku Farmer|Siku|Other|1:32||1|0|0||||0
 2270|Siku Farmer|Siku|Other|1:32||1|0|0||||0
@@ -51962,17 +51962,17 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 2360|Siku Super|Siku|Nissan|1:50||1|0|0||||0
 2362|Siku Super|Siku|Volkswagen|1:50||1|0|0||||0
 2368|Siku|Siku|Aston Martin|1:50||1|0|0||||0
-2539|Siku|Siku|Other|1:50||1|0|0||||0
+2539|Siku|Siku|Other|||1|0|0||||0
 2568|Siku Super|Siku|Ford|1:50||1|0|0||||0
 2722|Siku Super|Siku|MAN|1:50||1|0|0||||0
 3518|Siku Super|Siku|MAN|1:50||1|0|0||||0
-3537|Siku|Siku|Other|1:50||1|0|0||||0
-3539|Siku Super|Siku|Other|1:50||1|0|0||||0
+3537|Siku|Siku|Mercedes-Benz|1:50||1|0|0||||0
+3539|Siku Super|Siku|Mercedes-Benz|1:50||1|0|0||||0
 3548|Siku|Siku|Other|1:50||1|0|0||||0
 3558|Siku Super|Siku|Other|1:50||1|0|0||||0
 3560|Siku|Siku|Other|1:50||1|0|0||||0
 3734|Siku Super|Siku|MAN|1:50||1|0|0||||0
-3736|Siku Super|Siku|Other|1:50||1|0|0||||0
+3736|Siku Super|Siku|MAN|1:50||1|0|0||||0
 3944|Siku Super|Siku|MAN|1:50||1|0|0||||0
 3731|Siku|Siku|Other|1:55||1|0|0||||0
 1135|Siku|Siku|Other|1:87||1|0|0||||0
@@ -51983,7 +51983,7 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 1759|Siku Super|Siku|MAN|1:87||1|0|0||||0
 1762|Siku|Siku|MAN|1:87||1|0|0||||0
 1763|Siku Super|Siku|MAN|1:87||1|0|0||||0
-1764|Siku Super|Siku|Steyr|1:87||1|0|0||||0
+1764|Siku Super|Siku|MAN|1:87||1|0|0||||0
 1785|Siku Super|Siku|Volvo|1:87||1|0|0||||0
 1786|Siku Super|Siku|Volvo|1:87||1|0|0||||0
 1788|Siku|Siku|Freightliner|1:87||1|0|0||||0
@@ -51997,7 +51997,7 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 1807|Siku Super|Siku|Other|1:87||1|0|0||||0
 1827|Siku Farmer|Siku|Other|1:87||1|0|0||||0
 1837|Siku Farmer|Siku|Other|1:87||1|0|0||||0
-1841|Siku Super|Siku|Other|1:87||1|0|0||||0
+1841|Siku Super|Siku|Mercedes-Benz|1:87||1|0|0||||0
 1843|Siku Farmer|Siku|Other|1:87||1|0|0||||0
 1847|Siku Super|Siku|MAN|1:87||1|0|0||||0
 1848|Siku Farmer|Siku|Other|1:87||1|0|0||||0
@@ -52017,10 +52017,6 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 1898|Siku Super|Siku|Scania|1:87||1|0|0||||0
 0115|Siku|Siku|Other|||1|0|0||||0
 0116|Siku|Siku|Other|||1|0|0||||0
-0495|Siku|Siku|Other|||1|0|0||||0
-0496|Siku|Siku|Other|||1|0|0||||0
-0497|Siku|Siku|Other|||1|0|0||||0
-0499|Siku|Siku|Other|||1|0|0||||0
 0801|Siku Super|Siku|Other|||1|0|0||||0
 0802|Siku|Siku|Other|||1|0|0||||0
 0804|Siku|Siku|Other|||1|0|0||||0
@@ -52033,11 +52029,9 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 0817|Siku|Siku|Other|||1|0|0||||0
 0828|Siku|Siku|Other|||1|0|0||||0
 0856|Siku|Siku|Other|||1|0|0||||0
-0857|Siku|Siku|Other|||1|0|0||||0
 0866|Siku|Siku|Other|||1|0|0||||0
 0867|Siku|Siku|Other|||1|0|0||||0
 0875|Siku|Siku|Other|||1|0|0||||0
-0894|Siku|Siku|Other|||1|0|0||||0
 0895|Siku|Siku|Other|||1|0|0||||0
 1011|Siku|Siku|Other|||1|0|0||||0
 1013|Siku|Siku|Other|||1|0|0||||0
@@ -52111,7 +52105,7 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 1484|Siku|Siku|Other|||1|0|0||||0
 1485|Siku|Siku|Lamborghini|||1|0|0||||0
 1488|Siku|Siku|Volkswagen|||1|0|0||||0
-1493|Siku Super|Siku|Other|||1|0|0||||0
+1493|Siku|Siku|Other|||1|0|0||||0
 1496|Siku|Siku|Ford|||1|0|0||||0
 1500|Siku|Siku|Porsche|||1|0|0||||0
 1502|Siku|Siku|Mercedes-Benz|||1|0|0||||0
@@ -52173,7 +52167,7 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 1616|Siku|Siku|Other|||1|0|0||||0
 1617|Siku|Siku|Other|||1|0|0||||0
 1623|Siku|Siku|Other|||1|0|0||||0
-1627|Siku|Siku|Other|||1|0|0||||0
+1627|Siku|Siku|Volvo|||1|0|0||||0
 1629|Siku|Siku|Volkswagen|||1|0|0||||0
 1636|Siku|Siku|Unimog|||1|0|0||||0
 1645|Siku|Siku|Other|||1|0|0||||0
@@ -52227,15 +52221,15 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 2359|Siku|Siku|Chevrolet|||1|0|0||||0
 2361|Siku|Siku|Volkswagen|||1|0|0||||0
 2363|Siku|Siku|Volkswagen|||1|0|0||||0
-2364|Siku|Siku|Volkswagen|||1|0|0||||0
+2364|Siku Super|Siku|Volkswagen|1:50||1|0|0||||0
 2456|Siku|Siku|Other|||1|0|0||||0
 2463|Siku|Siku|Other|||1|1|0||||0
 2467|Siku|Siku|Other|||1|0|0||||0
-2542|Siku|Siku|Other|||1|0|0||||0
+2542|Siku|Siku|Porsche|||1|0|0||||0
 2565|Siku|Siku|Dodge|||1|0|0||||0
-2712|Siku|Siku|Other|||1|0|0||||0
+2712|Siku|Siku|Mercedes-Benz|||1|0|0||||0
 2717|Siku|Siku|Freightliner|||1|0|0||||0
-2938|Siku|Siku|Other|||1|0|0||||0
+2938|Siku|Siku|Mercedes-Benz|||1|0|0||||0
 2940|Siku|Siku|Other|||1|0|0||||0
 3067|Siku|Siku|Other|||1|0|0||||0
 3068|Siku|Siku|Other|||1|0|0||||0
@@ -52247,9 +52241,9 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 3535|Siku|Siku|Volvo|||1|0|0||||0
 3561|Siku|Siku|Other|||1|0|0||||0
 3563|Siku|Siku|Other|||1|0|0||||0
-3564|Siku|Siku|Volvo|||1|0|0||||0
+3564|Siku|Siku|Volvo|1:50||1|0|0||||0
 3738|Siku|Siku|Mercedes-Benz|||1|0|0||||0
-3921|Siku|Siku|Other|||1|0|0||||0
+3921|Siku|Siku|Mercedes-Benz|||1|0|0||||0
 4311|Siku|Siku|Other|||1|0|0||||0
 4914|Siku|Siku|Other|||1|0|0||||0
 5401|Siku World|Siku|Other|1:50||1|0|0||||0
@@ -52272,13 +52266,46 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 6335|Siku|Siku|Other|||1|0|0||||0
 6506|Style My Siku|Siku|Fiat|||1|0|0||||0
 6507|Style My Siku|Siku|MINI|||1|0|0||||0
-6702|Siku|Siku|Other|||1|0|0||||0
 6717|Siku|Siku|Other|||1|0|0||||0
-6899|Siku|Siku|Other|||1|0|0||||0
-7098|Siku|Siku|Other|||1|0|0||||0
 8300|Siku|Siku|Other|||1|0|0||||0
 9250|Siku|Siku|Other|||1|0|0||||0
 9296|Siku|Siku|Other|||1|0|0||||0
+806|Siku|Siku|Other|||1|0|0||||0
+1070|Siku Super|Siku|Volkswagen|||1|0|0||||0
+1091|Siku|Siku|Other|||1|0|0||||0
+1111|Siku Super|Siku|Piaggio|||1|0|0||||0
+1113|Siku|Siku|Volkswagen|||1|0|0||||0
+1120|Siku Super|Siku|Land Rover|||1|0|0||||0
+1121|Siku|Siku|Porsche|||1|0|0||||0
+1122|Siku|Siku|Piaggio|||1|0|0||||0
+1532|Siku Super|Siku|BMW|||1|0|0||||0
+1547|Siku|Siku|Volkswagen|||1|0|0||||0
+1553|Siku|Siku|Volkswagen|||1|0|0||||0
+1557|Siku|Siku|Volkswagen|||1|0|0||||0
+1561|Siku|Siku|Volkswagen|||1|0|0||||0
+1562|Siku|Siku|Volkswagen|||1|0|0||||0
+1586|Siku|Siku|Volkswagen|||1|0|0||||0
+1611|Siku|Siku|MAN|||1|0|0||||0
+1688|Siku|Siku|Other|||1|0|0||||0
+1731|Siku|Siku|Other|1:1400||1|0|0||||0
+1796|Siku Super|Siku|Mercedes-Benz|1:87||1|0|0||||0
+1849|Siku Super|Siku|MAN|1:87||1|0|0||||0
+1922|Siku|Siku|Volkswagen|||1|0|0||||0
+1949|Siku Farmer|Siku|Other|1:50||1|0|0||||0
+2366|Siku Super|Siku|Mercedes-Maybach|1:50||1|0|0||||0
+2537|Siku Super|Siku|Other|1:55||1|0|0||||0
+2562|Siku Super|Siku|BMW|||1|0|0||||0
+2567|Siku Super|Siku|Volkswagen|1:50||1|0|0||||0
+2569|Siku Super|Siku|Porsche|1:55||1|0|0||||0
+2570|Siku Super|Siku|Nissan|1:50||1|0|0||||0
+3280|Siku Farmer|Siku|Other|1:32||1|0|0||||0
+3291|Siku Farmer|Siku|Other|1:32||1|0|0||||0
+3559|Siku|Siku|Other|1:50||1|0|0||||0
+6738|Siku Control|Siku|Other|1:32||1|0|0||||0
+6797|Siku Control|Siku|Other|1:32||1|0|0||||0
+6860|Siku Control|Siku|Other|1:32||1|0|0||||0
+6880|Siku Control|Siku|Other|1:32||1|0|0||||0
+6882|Siku Control|Siku|Other|1:32||1|0|0||||0
 S1811803|Solido 1/18|Solido|Porsche|1:18||1|0|0||||0
 S1811903|Solido 1/18|Solido|Porsche|1:18||1|0|0||||0
 S4800701|Solido|Solido|Other|||1|0|0||||0
@@ -75994,21 +76021,13 @@ T43-023-26BH77|HOBBY64|Tarmac Works|Mercedes-Benz|1:64||1|0|0||||0
 T18-009-26BH77|HOBBY64|Tarmac Works|Mercedes-Benz|1:64||1|0|0||||0
 T43-027-25MGP36|HOBBY64|Tarmac Works|Audi|1:64||1|0|0||||0
 1647|Siku|Siku|Other|||1|0|0||||0
-6336|Siku|Siku|Other|||1|0|0||||0
 1549|Siku|Siku|Land Rover|||1|0|0||||0
 6503|Siku|Siku|Fiat|||1|0|0||||0
 1531|Siku|Siku|Lotus|||1|0|0||||0
-6283|Siku|Siku|Other|||1|1|0||||0
 1007|Siku|Siku|BMW|||1|0|0||||0
-6286|Siku|Siku|Other|||1|1|0||||0
-1091|Siku|Siku|Other|||1|0|0||||0
-6331|Siku|Siku|Other|||1|0|0||||0
-6330|Siku|Siku|Other|||1|0|0||||0
-6332|Siku|Siku|Other|||1|0|0||||0
 6214|Siku|Siku|Mercedes-Benz|||1|0|0||||0
 6329|Siku|Siku|Other|||1|0|0||||0
 6504|Siku|Siku|MINI|||1|0|0||||0
-6304|Siku|Siku|Other|||1|1|0||||0
 1523|Siku|Siku|Porsche|||1|0|0||||0
 1316|Siku|Siku|Audi|||1|0|0||||0
 ATC66441|Tiny City 1/110|Tiny|Other|1:110||1|0|0||||0
