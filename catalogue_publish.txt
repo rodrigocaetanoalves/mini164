@@ -1165,26 +1165,26 @@ MGTS0005|Mini GT|Mini GT|Shelby|1:64||1|1|0|||154.99|0
 MGTS0006|Mini GT|Mini GT|Range Rover|1:64||1|1|0|||31.98|0
 MGTS0007|Mini GT|Mini GT|Red Bull|1:64||1|1|0|||31.98|0
 MGTS0008|Mini GT|Mini GT|Red Bull|1:64||1|1|0|||31.98|0
-MGTS0009|Mini GT|Mini GT|Other|1:64||1|1|0|||31.98|0
+MGTS0009|Mini GT|Mini GT|MINI|1:64||1|1|0|||31.98|0
 MGTS0010|Mini GT|Mini GT|Ford|1:64||1|1|0|||31.98|0
 MGTS0011|Mini GT|Mini GT|Porsche|1:64||1|1|0|||35.0|0
 MGTS0012|Mini GT|Mini GT|Nissan|1:64||1|1|0|||31.98|0
 MGTS0013|Mini GT|Mini GT|Other|1:64||1|1|0|||31.98|0
 MGTS0014|Mini GT|Mini GT|Red Bull|1:64||1|1|0|||139.99|0
-MGTS0016|Mini GT|Mini GT|Other|1:64||1|1|0|||195.0|0
+MGTS0016|Mini GT|Mini GT|Mercedes-Benz|1:64||1|1|0|||195.0|0
 MGTS0017|Mini GT|Mini GT|Other|1:64||1|1|0|||31.98|0
-MGTS0018|Mini GT|Mini GT|Other|1:64||1|1|0|||31.98|0
+MGTS0018|Mini GT|Mini GT|MINI|1:64||1|1|0|||31.98|0
 MGTS0019|Mini GT|Mini GT|Porsche|1:64||1|1|0|||38.99|0
 MGTS0021|Mini GT|Mini GT|Porsche|1:64||1|1|0|||59.95|0
-MGTS0022|Mini GT|Mini GT|Other|1:64||1|1|0|||31.98|0
-MGTS0023|Mini GT|Mini GT|Other|1:64||1|1|0|||31.98|0
-MGTS0024|Mini GT|Mini GT|Other|1:64||1|1|0|||31.98|0
+MGTS0022|Mini GT|Mini GT|Nissan|1:64||1|1|0|||31.98|0
+MGTS0023|Mini GT|Mini GT|MINI|1:64||1|1|0|||31.98|0
+MGTS0024|Mini GT|Mini GT|Porsche|1:64||1|1|0|||31.98|0
 MGTS0026|Mini GT|Mini GT|Lamborghini|1:64||1|1|0|||47.88|0
 KHMG319|Kaidohouse|Mini GT|Chevrolet|1:64||1|0|0|||24.0|0
 KHMG317|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||24.0|0
 KHMG315|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||24.0|0
 KHMG313|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||24.0|0
-KHMG309|Kaidohouse|Mini GT|Other|1:64||1|0|0|||24.0|0
+KHMG309|Kaidohouse|Mini GT|MINI|1:64||1|0|0|||24.0|0
 KHMG304|Kaidohouse|Mini GT|Chevrolet|1:64||1|0|0|||24.0|0
 KHMG303|Kaidohouse|Mini GT|Honda|1:64||1|0|0|||24.0|0
 KHMG302|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||24.0|0
@@ -1206,10 +1206,10 @@ KHMG261|Kaidohouse|Mini GT|Volkswagen|1:64||1|0|0|||24.0|0
 KHMG260|Kaidohouse|Mini GT|Honda|1:64||1|0|0|||21.99|0
 KHMG255|Kaidohouse|Mini GT|Honda|1:64||1|0|0|||24.0|0
 KHMG254|Kaidohouse|Mini GT|Toyota|1:64||1|0|0|||24.0|0
-KHMG252|Kaidohouse|Mini GT|Other|1:64||1|0|0|||24.0|0
+KHMG252|Kaidohouse|Mini GT|MINI|1:64||1|0|0|||24.0|0
 KHMG251|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||21.99|0
 KHMG249|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||24.0|0
-KHMG247|Kaidohouse|Mini GT|Other|1:64||1|0|0|||24.0|0
+KHMG247|Kaidohouse|Mini GT|MINI|1:64||1|0|0|||24.0|0
 KHMG246|Kaidohouse|Mini GT|Honda|1:64||1|0|0|||24.0|0
 KHMG243|Kaidohouse|Mini GT|Chevrolet|1:64||1|0|0|||24.0|0
 KHMG242|Kaidohouse|Mini GT|BMW|1:64||1|0|0|||24.0|0
@@ -1231,7 +1231,7 @@ KHMG214|Kaidohouse|Mini GT|Toyota|1:64||1|0|0|||24.0|0
 KHMG211|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||21.99|0
 KHMG210|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||21.99|0
 KHMG208|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||21.99|0
-KHMG199|Accessories|Mini GT|Other|1:64||1|0|0|||11.99|0
+KHMG199|Accessories|Mini GT|MINI|1:64||1|0|0|||11.99|0
 KHMG197|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||21.99|0
 KHMG196|Kaidohouse|Mini GT|Toyota|1:64||1|0|0|||23.99|0
 KHMG195|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||21.99|0
@@ -1265,7 +1265,7 @@ KHMG148|Kaidohouse|Mini GT|Honda|1:64||1|0|0|||21.99|0
 KHMG145|Kaidohouse|Mini GT|Chevrolet|1:64||1|0|0|||21.99|0
 KHMG144|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||21.99|0
 KHMG143|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||21.99|0
-KHMG142|Kaidohouse|Mini GT|Other|1:64||1|0|0|||14.99|0
+KHMG142|Kaidohouse|Mini GT|MINI|1:64||1|0|0|||14.99|0
 KHMG139|Kaidohouse|Mini GT|Honda|1:64||1|0|0|||21.99|0
 KHMG138|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||24.99|0
 KHMG137|Kaidohouse|Mini GT|Honda|1:64||1|0|0|||21.99|0
@@ -1285,7 +1285,7 @@ KHMG110|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||21.99|0
 KHMG108|Kaidohouse|Mini GT|Honda|1:64||1|0|0|||29.99|0
 KHMG103|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||39.99|0
 KHMG102|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||21.99|0
-KHMG101|Accessories|Mini GT|Other|1:64||1|0|0|||9.99|0
+KHMG101|Accessories|Mini GT|MINI|1:64||1|0|0|||9.99|0
 KHMG100|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||21.99|0
 KHMG099|Kaidohouse|Mini GT|Chevrolet|1:64||1|0|0|||24.0|0
 KHMG098|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||24.0|0
@@ -1304,7 +1304,7 @@ KHMG074|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||24.0|0
 KHMG072|Kaidohouse|Mini GT|Nissan|1:64||1|0|0|||24.0|0
 KHMG066|Kaidohouse|Mini GT|Chevrolet|1:64||1|0|0|||24.0|0
 KHMG064|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||24.0|0
-KHMG051|Kaidohouse|Mini GT|Other|1:64||1|0|0|||24.0|0
+KHMG051|Kaidohouse|Mini GT|MINI|1:64||1|0|0|||24.0|0
 KHMG044|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||24.0|0
 KHMG013|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||24.0|0
 KHMG012|Kaidohouse|Mini GT|Datsun|1:64||1|0|0|||24.0|0
@@ -4754,6 +4754,7 @@ MGT01071|Mini GT|Mini GT|Other|1:64||1|0|0||||0
 MGT01072|Mini GT|Mini GT|Other|1:64||1|0|0||||0
 MGT01073|Mini GT|Mini GT|Other|1:64||1|0|0||||0
 MGT00108-R|Mini GT|Mini GT|Land Rover|1:64||1|0|0||||0
+MGT00282-R|Mini GT|Mini GT|Honda|1:64||1|0|0||||0
 MGT01383|Mini GT|Mini GT|Hyundai|1:64||1|0|0||||0
 MGT01384|Mini GT|Mini GT|Hyundai|1:64||1|0|0||||0
 MGT01385|Mini GT|Mini GT|Hyundai|1:64||1|0|0||||0
