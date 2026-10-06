@@ -1992,7 +1992,7 @@ HW-BOULEVARD-127|Boulevard|Hot Wheels|Maserati|1:64||1|0|0|||9.99|0
 HW-BOULEVARD-131-135|Boulevard|Hot Wheels|Other|1:64||1|1|0|||44.99|0
 HW-CASE-5785-97JPTQ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-CASE-5785-97JPUL|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
-HW-TEAMTRAN-LEGENDS/2025|Team Transport|Hot Wheels|BMW|1:64||1|0|0|||26.99|0
+HW-TEAMTRAN-LEGENDS-2025|Team Transport|Hot Wheels|BMW|1:64||1|0|0|||26.99|0
 HW-2025-TOYOTA-05|Mainline series|Hot Wheels|Toyota|1:64||1|0|0|||4.99|0
 HW-2025-TOYOTA-04|Mainline series|Hot Wheels|Toyota|1:64||1|0|0|||4.99|0
 HW-2025-TOYOTA-03|Mainline series|Hot Wheels|Toyota|1:64||1|0|0|||4.99|0
@@ -2259,7 +2259,7 @@ HW-TEAMTRAN-63|Team Transport|Hot Wheels|Plymouth|1:64||1|0|0|||19.99|0
 HW-TEAMTRAN-62|Team Transport|Hot Wheels|Abarth|1:64||1|0|0|||19.99|0
 HW-CC-TWIN2024-COSWORTH|Car Culture|Hot Wheels|Ford|1:64||1|1|0|||24.99|0
 HW-CC-TWIN2024-MAZDA|Car Culture|Hot Wheels|Mazda|1:64||1|1|0|||19.99|0
-HW-CC-TWIN2024-TOYOTA/SPRINTER|Car Culture|Hot Wheels|Toyota|1:64||1|1|0|||19.99|0
+HW-CC-TWIN2024-TOYOTA-SPRINTER|Car Culture|Hot Wheels|Toyota|1:64||1|1|0|||19.99|0
 HW-CASE-5785-97HFMP|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-CASE-5785-97HEMD|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-FF2023-MIX03-05|Fast & Furious|Hot Wheels|Alfa Romeo|1:64||1|0|0|||9.99|0
@@ -2280,9 +2280,9 @@ HW-2024-VINATAGE-MIX1-02|Mainline series|Hot Wheels|Chevrolet|1:64||1|0|0|||4.99
 HW-2024-VINATAGE-MIX1-01|Mainline series|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||4.99|0
 HW-TEAMTRAN-60|Team Transport|Hot Wheels|Other|1:64||1|0|0|||19.99|0
 HW-TEAMTRAN-59|Team Transport|Hot Wheels|Mercedes-Benz|1:64||1|0|0|||24.99|0
-HW-CC-TWIN2023-SENTRA/SILVIA|Car Culture|Hot Wheels|Nissan|1:64||1|1|0|||24.99|0
-HW-CC-TWIN2023-SUBARU/SUBARU|Car Culture|Hot Wheels|Subaru|1:64||1|1|0|||32.99|0
-HW-CC-TWIN2023-VEYRON/CHIRON|Car Culture|Hot Wheels|Bugatti|1:64||1|1|0|||24.99|0
+HW-CC-TWIN2023-SENTRA-SILVIA|Car Culture|Hot Wheels|Nissan|1:64||1|1|0|||24.99|0
+HW-CC-TWIN2023-SUBARU-SUBARU|Car Culture|Hot Wheels|Subaru|1:64||1|1|0|||32.99|0
+HW-CC-TWIN2023-VEYRON-CHIRON|Car Culture|Hot Wheels|Bugatti|1:64||1|1|0|||24.99|0
 HW-CASE-5785-97DLPC|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-CASE-5785-97DKMZ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-CASE-5785-97DEGB|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
@@ -2292,9 +2292,9 @@ HW-POP2024-MIX2-04|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99|0
 HW-POP2024-MIX2-03|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||9.99|0
 HW-POP2024-MIX2|Pop Culture|Hot Wheels|Other|1:64||1|0|0|||32.99|0
 HW-TEAMTRAN-61|Team Transport|Hot Wheels|Porsche|1:64||1|0|0|||24.99|0
-HW-CC-TWIN2022-PROTO/FAIRLADY|Car Culture|Hot Wheels|Nissan|1:64||1|1|0|||24.99|0
-HW-CC-TWIN2022-SENNA/720S|Car Culture|Hot Wheels|McLaren|1:64||1|1|0|||24.99|0
-HW-CC-TWIN2022-FORDGT/FORDGT|Car Culture|Hot Wheels|Ford|1:64||1|1|0|||24.99|0
+HW-CC-TWIN2022-PROTO-FAIRLADY|Car Culture|Hot Wheels|Nissan|1:64||1|1|0|||24.99|0
+HW-CC-TWIN2022-SENNA-720S|Car Culture|Hot Wheels|McLaren|1:64||1|1|0|||24.99|0
+HW-CC-TWIN2022-FORDGT-FORDGT|Car Culture|Hot Wheels|Ford|1:64||1|1|0|||24.99|0
 HW-CASE-5785-97HDMR|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-CASE-5785-97HCCQ|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-FAST2024-MIX01-05|Fast & Furious|Hot Wheels|Chevrolet|1:64||1|0|0|||2.99|0
@@ -2349,8 +2349,8 @@ HW-CASE-5785-97FQ2B|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-CASE-5785-97FQ1A|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-CASE-5785-97FPSM|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
 HW-CASE-5785-97FNNY|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
-HW-CC-TWIN2022-BMW/LANCIA|Car Culture|Hot Wheels|BMW|1:64||1|1|0|||24.99|0
-HW-CC-TWIN2022-LANCIA/AUDI|Car Culture|Hot Wheels|Lancia|1:64||1|1|0|||24.99|0
+HW-CC-TWIN2022-BMW-LANCIA|Car Culture|Hot Wheels|BMW|1:64||1|1|0|||24.99|0
+HW-CC-TWIN2022-LANCIA-AUDI|Car Culture|Hot Wheels|Lancia|1:64||1|1|0|||24.99|0
 HW-ML-2015-SC-035|Mainline|Hot Wheels|Other|1:64||1|0|0|||3.49|0
 HW-10PK-FASTFURIOUS-2023|Multi-packs|Hot Wheels|Other|1:64||1|1|0|||36.99|0
 HW-CASE-5785-97FMMG|Assortment cases|Hot Wheels|Other|1:64||1|1|0|||154.99|0
