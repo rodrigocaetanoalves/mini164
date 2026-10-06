@@ -52315,7 +52315,7 @@ RK180173|Road Kings|KK Scale|Mack|1:18||1|0|0||||0
 6882|Siku Control|Siku|Other|1:32||1|0|0||||0
 S1811803|Solido 1/18|Solido|Porsche|1:18||1|0|0||||0
 S1811903|Solido 1/18|Solido|Porsche|1:18||1|0|0||||0
-S4800701|Solido|Solido|Other|||1|0|0||||0
+S4800701|Solido 1/48|Solido|Other|1:48||1|0|0||||0
 S1800101|Solido 1/18|Solido|Renault|1:18||1|0|0||||0
 S1800102|Solido 1/18|Solido|Renault|1:18||1|0|0||||0
 S1800103|Solido 1/18|Solido|Renault|1:18||1|0|0||||0
@@ -53419,6 +53419,43 @@ S2400103|Solido|Solido|Volvo Trucks|||1|0|0||||0
 S9900101|Solido|Solido|Other|||1|0|0||||0
 S9900102|Solido|Solido|Other|||1|0|0||||0
 S9900201|Solido|Solido|Other|||1|0|0||||0
+S4800101|Solido 1/48|Solido|AM General|1:48||1|0|0||||0
+S4800102|Solido 1/48|Solido|AM General|1:48||1|0|0||||0
+S4800103|Solido 1/48|Solido|AM General|1:48||1|0|0||||0
+S4800104|Solido 1/48|Solido|AM General|1:48||1|0|0||||0
+S4800201|Solido 1/48|Solido|Other|1:48||1|0|0||||0
+S4800202|Solido 1/48|Solido|Other|1:48||1|0|0||||0
+S4800203|Solido 1/48|Solido|Other|1:48||1|0|0||||0
+S4800301|Solido 1/58|Solido|Chrysler|1:58||1|0|0||||0
+S4800403|Solido 1/48|Solido|Other|1:48||1|0|0||||0
+S4800501|Solido 1/48|Solido|Chrysler|1:48||1|0|0||||0
+S4800502|Solido 1/48|Solido|Chrysler|1:48||1|0|0||||0
+S4800503|Solido 1/48|Solido|Chrysler|1:48||1|0|0||||0
+S4800601|Solido 1/48|Solido|Other|1:48||1|0|0||||0
+S4800602|Solido 1/48|Solido|Other|1:48||1|0|0||||0
+S4800603|Solido 1/48|Solido|Other|1:48||1|0|0||||0
+S7200001|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200002|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200003|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200004|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200005|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200006|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200008|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200010|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200201|Solido 1/72|Solido|Messerschmitt|1:72||1|0|0||||0
+S7200202|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200501|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200502|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200503|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200504|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200505|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200506|Solido 1/72|Solido|Military|1:72||1|0|0||||0
+S7200507|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200508|Solido 1/72|Solido|Rover|1:72||1|0|0||||0
+S7200509|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200510|Solido 1/72|Solido|Other|1:72||1|0|0||||0
+S7200512|Solido 1/72|Solido|Krupp|1:72||1|0|0||||0
+S7200513|Solido 1/72|Solido|Other|1:72||1|0|0||||0
 SS-5305|Sun Star 1/12|Sun Star|MINI|1:12||1|0|0||||0
 SS-1303|Sun Star 1/18|Sun Star|Ford|1:18||1|0|0||||0
 SS-1946|Sun Star 1/18|Sun Star|Chevrolet|1:18||1|0|0||||0
@@ -54964,45 +55001,46 @@ KT3003|Kinsmart|Kinsmart|Other|1:78||1|0|0||||0
 KT3003F|Kinsmart|Kinsmart|Other|1:78||1|0|0||||0
 KT3003P|Kinsmart|Kinsmart|Other|1:78||1|0|0||||0
 KT3003PR|Kinsmart|Kinsmart|Other|1:78||1|0|0||||0
-KS3506|Kinsfun|Kinsmart|Smart|1:18||1|0|0||||0
-KS5103|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KS5105|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KS5107|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KS5110|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KS5253|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KS5257|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KS5259|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KS6501|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KS7101|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2001|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2001K|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2001M|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2001MK|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2001PR|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2001PRK|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2001Y|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2001YF|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2001YFK|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2001YK|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT2002|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2002F|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2002FK|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2002K|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2002PR|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2002PRK|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2002Y|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2002YF|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2002YFK|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2002YK|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2003|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT2003Y|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT4004Y|Kinsfun|Kinsmart|Other|1:18||1|0|0||||0
-KT4026|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT4026C|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT4026F|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
-KT4026Y|Kinsfun|Kinsmart|Volkswagen|1:18||1|0|0||||0
+KS3506|Kinsfun|Kinsmart|Smart|||1|0|0||||0
+KS5103|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KS5105|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KS5107|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KS5110|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KS5253|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KS5257|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KS5259|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KS6501|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KS7101|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2001|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2001K|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2001M|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2001MK|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2001PR|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2001PRK|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2001Y|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2001YF|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2001YFK|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2001YK|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT2002|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2002F|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2002FK|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2002K|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2002PR|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2002PRK|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2002Y|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2002YF|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2002YFK|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2002YK|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2003|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT2003Y|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT4004Y|Kinsfun|Kinsmart|Other|||1|0|0||||0
+KT4026|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT4026C|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT4026F|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
+KT4026Y|Kinsfun|Kinsmart|Volkswagen|||1|0|0||||0
 KT5072|Kinsmart|Kinsmart|Other|||1|0|0||||0
 KT5370|Kinsmart|Kinsmart|Lamborghini|||1|0|0||||0
+KT5112|Kinsfun|Kinsmart|Other|1:36||1|0|0||||0
 32500-S132|M2 Machines|M2 Machines|Other|||1|0|0||||0
 32500-S140|M2 Machines|M2 Machines|Other|||1|0|0||||0
 120AT001|Oxford Diecast 1/120|Oxford Diecast|Other|1:120||1|0|0||||0
