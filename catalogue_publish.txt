@@ -44418,6 +44418,13 @@ GTS18512BL|GT Spirit|GT Spirit|Lamborghini|||1|0|0||||0
 GTS18512GR|GT Spirit|GT Spirit|Lamborghini|||1|0|0||||0
 GTS80052|GT Spirit|GT Spirit|Other|||1|0|0||||0
 GTS80054|GT Spirit|GT Spirit|Other|||1|0|0||||0
+GT284|GT Spirit|GT Spirit|Nissan|||1|0|0||||0
+GT316|GT Spirit|GT Spirit|Porsche|||1|0|0||||0
+GT321|GT Spirit|GT Spirit|Audi|||1|0|0||||0
+GT323|GT Spirit|GT Spirit|Mercedes-Benz|||1|0|0||||0
+GT385|GT Spirit|GT Spirit|Porsche|||1|0|0||||0
+GT882|GT Spirit|GT Spirit|Ford|||1|0|0||||0
+GT883|GT Spirit|GT Spirit|Ford|||1|0|0||||0
 IG0057|Ignition Model|Ignition Model|Nissan|1:12||1|0|0||||0
 IG0091|Ignition Model|Ignition Model|Nissan|1:12||1|0|0||||0
 IG0492|Ignition Model|Ignition Model|Nissan|1:12||1|0|0||||0
@@ -58650,9 +58657,9 @@ PP64-001A|Peako|Peako|Mitsubishi|1:64||1|0|0||||0
 19867WB|Welly|Welly|Ford|1:18||1|0|0||||0
 19869C|Welly|Welly|Oldsmobile|1:18||1|0|0||||0
 19869H|Welly|Welly|Oldsmobile|1:18||1|0|0||||0
-24096|Welly|Welly|BMW|1:18||1|0|0||||0
-24096FR|Welly|Welly|BMW|1:18||1|0|0||||0
-24096GP|Welly|Welly|BMW|1:18||1|0|0||||0
+24096|Welly|Welly|BMW|||1|0|0||||0
+24096FR|Welly|Welly|BMW|||1|0|0||||0
+24096GP|Welly|Welly|BMW|||1|0|0||||0
 24087|Welly|Welly|Porsche|1:24||1|0|0||||0
 24091|Welly|Welly|Mercedes-Benz|1:24||1|0|0||||0
 24092|Welly|Welly|Porsche|1:24||1|0|0||||0
@@ -59073,7 +59080,7 @@ PP64-001A|Peako|Peako|Mitsubishi|1:64||1|0|0||||0
 43623|Welly|Welly|Bentley|||1|0|0||||0
 43625C|Welly|Welly|Citroën|||1|0|0||||0
 43625H|Welly|Welly|Citroën|||1|0|0||||0
-43625H-NP-SB|Welly|Welly|Other|||1|0|0||||0
+43625H-NP-SB|Welly|Welly|Citroën|||1|0|0||||0
 43627|Welly|Welly|Mercedes-Benz|||1|0|0||||0
 43629|Welly|Welly|Hummer|||1|0|0||||0
 43630|Welly|Welly|Toyota|||1|0|0||||0
@@ -59740,6 +59747,94 @@ PP64-001A|Peako|Peako|Mitsubishi|1:64||1|0|0||||0
 98878H|Welly|Welly|Citroën|||1|0|0||||0
 98879C|Welly|Welly|Mercedes-Benz|||1|0|0||||0
 98879H|Welly|Welly|Mercedes-Benz|||1|0|0||||0
+12810|Welly|Welly|BMW|1:18||1|0|0||||0
+43601|Welly|Welly|Other|||1|0|0||||0
+52033|Welly|Welly|Other|||1|0|0||||0
+52190|Welly|Welly|Mercedes-Benz|||1|0|0||||0
+52390|Welly|Welly|Other|||1|0|0||||0
+52590|Welly|Welly|Mercedes-Benz|||1|0|0||||0
+92010|Welly|Welly|Other|||1|0|0||||0
+92012|Welly|Welly|Volkswagen|||1|0|0||||0
+92650|Welly|Welly|Other|||1|0|0||||0
+92651|Welly|Welly|Other|||1|0|0||||0
+92652|Welly|Welly|Other|||1|0|0||||0
+92652X|Welly|Welly|Other|||1|0|0||||0
+92654|Welly|Welly|Other|||1|0|0||||0
+92655|Welly|Welly|Other|||1|0|0||||0
+92657|Welly|Welly|Other|||1|0|0||||0
+92659|Welly|Welly|Other|||1|0|0||||0
+92660|Welly|Welly|Other|||1|0|0||||0
+92670|Welly|Welly|Other|||1|0|0||||0
+92711|Welly|Welly|Other|||1|0|0||||0
+92712|Welly|Welly|Other|||1|0|0||||0
+92713|Welly|Welly|Other|||1|0|0||||0
+92714|Welly|Welly|Other|||1|0|0||||0
+92715|Welly|Welly|Volkswagen|||1|0|0||||0
+92715FE|Welly|Welly|Volkswagen|||1|0|0||||0
+92715GP|Welly|Welly|Volkswagen|||1|0|0||||0
+92715SA|Welly|Welly|Volkswagen|||1|0|0||||0
+92715UP|Welly|Welly|Volkswagen|||1|0|0||||0
+92715USF|Welly|Welly|Volkswagen|||1|0|0||||0
+92716|Welly|Welly|Volkswagen|||1|0|0||||0
+92716SA|Welly|Welly|Volkswagen|||1|0|0||||0
+92717|Welly|Welly|Toyota|||1|0|0||||0
+92719|Welly|Welly|Lamborghini|||1|0|0||||0
+92720|Welly|Welly|Volvo|||1|0|0||||0
+92721|Welly|Welly|Range Rover|||1|0|0||||0
+92722|Welly|Welly|Jaguar|||1|0|0||||0
+92723|Welly|Welly|Citroën|||1|0|0||||0
+92723SA|Welly|Welly|Citroën|||1|0|0||||0
+92724|Welly|Welly|Fiat|||1|0|0||||0
+92724SA|Welly|Welly|Fiat|||1|0|0||||0
+92725|Welly|Welly|Toyota|||1|0|0||||0
+92726|Welly|Welly|Ford|||1|0|0||||0
+92727|Welly|Welly|Trabant|||1|0|0||||0
+92728|Welly|Welly|Mitsubishi|||1|0|0||||0
+92729|Welly|Welly|Subaru|||1|0|0||||0
+92730|Welly|Welly|Other|||1|0|0||||0
+92731|Welly|Welly|Renault|||1|0|0||||0
+92732|Welly|Welly|Honda|||1|0|0||||0
+92733|Welly|Welly|Volkswagen|||1|0|0||||0
+92734|Welly|Welly|Volkswagen|||1|0|0||||0
+92734FE|Welly|Welly|Volkswagen|||1|0|0||||0
+92734GP|Welly|Welly|Volkswagen|||1|0|0||||0
+92734UP|Welly|Welly|Volkswagen|||1|0|0||||0
+92734USF|Welly|Welly|Volkswagen|||1|0|0||||0
+92735|Welly|Welly|Volkswagen|||1|0|0||||0
+92735FE|Welly|Welly|Volkswagen|||1|0|0||||0
+92735GP|Welly|Welly|Volkswagen|||1|0|0||||0
+92735UP|Welly|Welly|Volkswagen|||1|0|0||||0
+92735USF|Welly|Welly|Volkswagen|||1|0|0||||0
+92736|Welly|Welly|Toyota|||1|0|0||||0
+92737|Welly|Welly|Dodge|||1|0|0||||0
+92739|Welly|Welly|Lexus|||1|0|0||||0
+92740|Welly|Welly|Acura|||1|0|0||||0
+92741|Welly|Welly|BMW|||1|0|0||||0
+92742|Welly|Welly|BMW|||1|0|0||||0
+92743|Welly|Welly|MINI|||1|0|0||||0
+92744|Welly|Welly|MINI|||1|0|0||||0
+92745|Welly|Welly|Porsche|||1|0|0||||0
+92746|Welly|Welly|Porsche|||1|0|0||||0
+92747|Welly|Welly|Porsche|||1|0|0||||0
+95948|Welly|Welly|Other|||1|0|0||||0
+99060|Welly|Welly|MINI|||1|0|0||||0
+99440|Welly|Welly|Other|||1|0|0||||0
+99797|Welly|Welly|Other|||1|0|0||||0
+99910|Welly|Welly|Other|||1|0|0||||0
+99930C|Welly|Welly|Other|||1|0|0||||0
+99930H|Welly|Welly|Other|||1|0|0||||0
+AV98835|Welly|Welly|Other|||1|0|0||||0
+AV98836|Welly|Welly|Other|||1|0|0||||0
+AV98837|Welly|Welly|Other|||1|0|0||||0
+AV98839|Welly|Welly|Other|||1|0|0||||0
+AV98840|Welly|Welly|Other|||1|0|0||||0
+AV98841|Welly|Welly|Other|||1|0|0||||0
+AV98842|Welly|Welly|Other|||1|0|0||||0
+AV98843|Welly|Welly|Other|||1|0|0||||0
+AV98844|Welly|Welly|Other|||1|0|0||||0
+AV98845|Welly|Welly|Other|||1|0|0||||0
+AV98846|Welly|Welly|Other|||1|0|0||||0
+AV98847|Welly|Welly|Other|||1|0|0||||0
 120601205|Minichamps 1/12|Minichamps|Maserati|1:12||1|0|0||||0
 120601298|Minichamps 1/12|Minichamps|Maserati|1:12||1|0|0||||0
 120960022|Minichamps 1/12|Minichamps|Ferrari|1:12||1|0|0||||0
