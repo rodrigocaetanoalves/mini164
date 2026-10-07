@@ -76110,6 +76110,9 @@ AMC008667|Norev|Norev|Citroën|1:43||1|0|0||||0
 20MICO901|Norev|Norev|Peugeot|1:43||1|0|0||||0
 19MICO904|Norev|Norev|Peugeot|1:43||1|0|0||||0
 19MICO903|Norev|Norev|Peugeot|1:43||1|0|0||||0
+A1800126|ACME|ACME|Oldsmobile|||1|0|0||||0
+AWDC023|Auto World|Auto World|Other|||1|0|0||||0
+AWSS129|Auto World|Auto World|Chevrolet|||1|0|0||||0
 41002|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71001|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71002|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
@@ -76295,7 +76298,7 @@ AMC008667|Norev|Norev|Citroën|1:43||1|0|0||||0
 86411|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 86436|Greenlight|Greenlight|Other|1:64||1|0|0||||0
 86442|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-86491|Greenlight|Greenlight|Other|1:64||1|0|0||||0
+86491|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
 86492|Greenlight|Greenlight|Other|1:64||1|0|0||||0
 86515|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
 86522|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
@@ -76315,84 +76318,48 @@ AMC008667|Norev|Norev|Citroën|1:43||1|0|0||||0
 88061|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 88062|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 88063|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL13560|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
-GL13567|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
-GL84072|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
-GL62010-B|Greenlight|Greenlight|Mercury|1:64||1|0|0||||0
-GL62010-A|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL12909|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL86083|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL12996|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL44742|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL13574|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL84071|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
-GL84103|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
-GL44990-F|Greenlight|Greenlight|Other|1:64||1|0|0||||0
-GL30552|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL44780-A|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL44840-B|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
-GL44650-C|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
-GL30550|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL2020003|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL2020001|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL30546|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL30093|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL30481|Greenlight|Greenlight|Volkswagen|1:64||1|0|0||||0
-GL36120-F|Greenlight|Greenlight|Volkswagen|1:64||1|0|0||||0
-GL41125-E|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL41130-D|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL41125-C|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL44780-F|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL44965-F|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
-GL13532|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL19098|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
-GL13684|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL84221|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL29887|Greenlight|Greenlight|Other|1:64||1|0|0||||0
-GL13541|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL31150-C|Greenlight|Greenlight|Bronco|1:64||1|0|0||||0
-GL13643|Greenlight|Greenlight|Other|1:64||1|0|0||||0
-GL86491|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
-GL86503|Greenlight|Greenlight|Other|1:64||1|0|0||||0
-GL12950|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
-GL30556|Greenlight|Greenlight|Volkswagen|1:64||1|0|0||||0
-GL86643|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL86642|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL30523|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
-GL13537|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL2020002|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL30547|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL13622|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL13616|Greenlight|Greenlight|Buick|1:64||1|0|0||||0
-GL19109|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL30530|Greenlight|Greenlight|Other|1:64||1|0|0||||0
-GL84036|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
-GL36120-B|Greenlight|Greenlight|Volkswagen|1:64||1|0|0||||0
-GL36120-D|Greenlight|Greenlight|Volkswagen|1:64||1|0|0||||0
-GL12949|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
-GL19092|Greenlight|Greenlight|Dodge|1:64||1|0|0||||0
-GL41140-E|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL13614|Greenlight|Greenlight|Dodge|1:64||1|0|0||||0
-GL19105|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
-GL86636|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL84092|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
-GL44740-B|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
-GL86617|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL13626|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL84171|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
-GL19053|Greenlight|Greenlight|Other|1:64||1|0|0||||0
-GL86615|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL84091|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
-GL44950-F|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL84173|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL86640|Greenlight|Greenlight|Mercedes-Benz|1:64||1|0|0||||0
-GL84098|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
-GL84037|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
-GL86639|Greenlight|Greenlight|Mercedes-Benz|1:64||1|0|0||||0
-GL12880|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL44940-E|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-GL86641|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
-GL13611|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+12909|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+86083|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+12996|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+13574|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+84071|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
+84103|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
+30552|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+30550|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+30546|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
+41125-E|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+44965-F|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
+13532|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
+19098|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
+84221|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+13541|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+13643|Greenlight|Greenlight|Other|1:64||1|0|0||||0
+86503|Greenlight|Greenlight|Other|1:64||1|0|0||||0
+12950|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
+13537|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+30547|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
+13622|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
+13616|Greenlight|Greenlight|Buick|1:64||1|0|0||||0
+19109|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
+84036|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
+12949|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
+19092|Greenlight|Greenlight|Dodge|1:64||1|0|0||||0
+13614|Greenlight|Greenlight|Dodge|1:64||1|0|0||||0
+19105|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
+86636|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+86617|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+13626|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+84171|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
+19053|Greenlight|Greenlight|Other|1:64||1|0|0||||0
+86615|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+84091|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
+84173|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+86640|Greenlight|Greenlight|Mercedes-Benz|1:64||1|0|0||||0
+84098|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
+84037|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
+86639|Greenlight|Greenlight|Mercedes-Benz|1:64||1|0|0||||0
+12880|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+44940-E|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 IND18035|IXO Models|IXO Models|Other|||1|0|0||||0
 IND18037|IXO Models|IXO Models|Other|||1|0|0||||0
 IND64029|IXO America INDYCAR|IXO Models|Other|1:64||1|0|0||||0
@@ -76403,8 +76370,6 @@ TR247-22|IXO Models|IXO Models|Peterbilt|||1|0|0||||0
 IXMOC341|IXO Models|IXO Models|Toyota|||1|0|0||||0
 IXRAC438|IXO Models|IXO Models|Ford|||1|0|0||||0
 IXTR179|IXO Models|IXO Models|Ford|||1|0|0||||0
-IXLM2003|IXO Models|IXO Models|Bentley|||1|0|0||||0
-IX64TR004|IXO Models|IXO Models|Kenworth|||1|0|0||||0
 IXW83431002|IXO Models|IXO Models|Kenworth|||1|0|0||||0
 11228-S07-B|M2 Machines|M2 Machines|Ford|||1|0|0||||0
 31500-HS16|M2 Machines|M2 Machines|Other|||1|0|0||||0
@@ -76416,6 +76381,7 @@ IXW83431002|IXO Models|IXO Models|Kenworth|||1|0|0||||0
 31500-HS64|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
 31500-HS66|M2 Machines|M2 Machines|Ford|||1|0|0||||0
 31500-HS69|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
+31500-HS72|M2 Machines|M2 Machines|Ford|||1|0|0||||0
 31500-HS73|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
 31500-HS76|M2 Machines|M2 Machines|Toyota|||1|0|0||||0
 31500-HS76-SP|M2 Machines|M2 Machines|Toyota|||1|0|0||||0
@@ -76425,6 +76391,7 @@ IXW83431002|IXO Models|IXO Models|Kenworth|||1|0|0||||0
 31500-HS80|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
 31500-HS81|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
 31500-HS81-SP|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+31500-HS84|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
 31600-GS11|M2 Machines|M2 Machines|Ford|||1|0|0||||0
 32500-112-E|M2 Machines|M2 Machines|Toyota|||1|0|0||||0
 34001-14-SET|M2 Machines|M2 Machines|Other|||1|1|0||||0
@@ -76455,20 +76422,8 @@ IXW83431002|IXO Models|IXO Models|Kenworth|||1|0|0||||0
 40300-S43-A|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
 40300-S43-B|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
 52500-A49-C|M2 Machines|M2 Machines|Dodge|||1|0|0||||0
-BC55007|Oxford Diecast 1/87|Oxford Diecast|Buick|1:87||1|0|0||||0
-BC55008|Oxford Diecast 1/87|Oxford Diecast|Buick|1:87||1|0|0||||0
-BE68001|Oxford Diecast 1/87|Oxford Diecast|Buick|1:87||1|0|0||||0
-CC61007|Oxford Diecast 1/87|Oxford Diecast|Chrysler|1:87||1|0|0||||0
-CI61006|Oxford Diecast 1/87|Oxford Diecast|Chevrolet|1:87||1|0|0||||0
-CSD61004|Oxford Diecast 1/87|Oxford Diecast|Cadillac|1:87||1|0|0||||0
-DP48004|Oxford Diecast 1/87|Oxford Diecast|Dodge|1:87||1|0|0||||0
-FA60001|Oxford Diecast 1/87|Oxford Diecast|Ford|1:87||1|0|0||||0
-FC64002|Oxford Diecast 1/87|Oxford Diecast|Ford|1:87||1|0|0||||0
-FF60001|Oxford Diecast 1/87|Oxford Diecast|Ford|1:87||1|0|0||||0
-FF60002|Oxford Diecast 1/87|Oxford Diecast|Ford|1:87||1|0|0||||0
-PC54004|Oxford Diecast 1/87|Oxford Diecast|Pontiac|1:87||1|0|0||||0
-PS59002|Oxford Diecast 1/87|Oxford Diecast|Plymouth|1:87||1|0|0||||0
-TH56008|Oxford Diecast 1/87|Oxford Diecast|Ford|1:87||1|0|0||||0
+212053172|Majorette Collection|Majorette|Other|||1|1|0||||0
+212053179|Majorette Collection|Majorette|Other|||1|1|0||||0
 76TCAB004CC|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 NTCAB007CC|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 NSHL01TK|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
@@ -76486,7 +76441,6 @@ N105003|Oxford Diecast|Oxford Diecast|Ford|||1|0|0||||0
 76VOL01BL|Oxford Diecast|Oxford Diecast|Volvo|||1|0|0||||0
 76TCAB012CC|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 NUT003-1|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
-VA001|Oxford Diecast|Oxford Diecast|Volvo|||1|0|0||||0
 76SHL09WF|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
 76SHL04WF|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 76SHL07WF|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
@@ -76502,7 +76456,6 @@ N105001|Oxford Diecast|Oxford Diecast|Ford|||1|0|0||||0
 76WHSNGCAB|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 76SCA03HB|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 76RM114CC|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
-LAN188004|Oxford Diecast|Oxford Diecast|Land Rover|||1|0|0||||0
 JAGXK150002|Oxford Diecast|Oxford Diecast|Jaguar|||1|0|0||||0
 NSHL03WF|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 76FT019CC|Oxford Diecast|Oxford Diecast|Ford|||1|0|0||||0
@@ -76516,9 +76469,6 @@ VOL07REC|Oxford Diecast|Oxford Diecast|Volvo|||1|0|0||||0
 76SET81|Oxford Diecast|Oxford Diecast|Rover|||1|0|0||||0
 SHL01WF|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 RM074|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
-WM006|Oxford Diecast|Oxford Diecast|Mercedes-Benz|||1|0|0||||0
-WM001|Oxford Diecast|Oxford Diecast|Mercedes-Benz|||1|0|0||||0
-WM002|Oxford Diecast|Oxford Diecast|Mercedes-Benz|||1|0|0||||0
 STOB024|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
 76SHL08WF|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
 76VW030CC|Oxford Diecast|Oxford Diecast|Volkswagen|||1|0|0||||0
@@ -76531,7 +76481,6 @@ STOB024|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
 76VOL03CL|Oxford Diecast|Oxford Diecast|Volvo|||1|0|0||||0
 76VWS008CC|Oxford Diecast|Oxford Diecast|Volkswagen|||1|0|0||||0
 LD001|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
-LAN188006|Oxford Diecast|Oxford Diecast|Land Rover|||1|0|0||||0
 NSHL16FR|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 NSHL04TK|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
 NSHL02WF|Oxford Diecast|Oxford Diecast|Scania|||1|0|0||||0
@@ -76554,6 +76503,7 @@ AC122|Oxford Diecast|Oxford Diecast|Jeep|||1|0|0||||0
 763CX002|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
 76ASV006CC|Oxford Diecast|Oxford Diecast|Other|||1|0|0||||0
 G-060-WB|HOBBY64|Tarmac Works|Toyota|1:64||1|0|0||||0
+T64S-022-MG|HOBBY64|Tarmac Works;Schuco|Porsche|1:64||1|0|0||||0
 T43-023-26BH77|HOBBY64|Tarmac Works|Mercedes-Benz|1:64||1|0|0||||0
 T18-009-26BH77|HOBBY64|Tarmac Works|Mercedes-Benz|1:64||1|0|0||||0
 T43-027-25MGP36|HOBBY64|Tarmac Works|Audi|1:64||1|0|0||||0
