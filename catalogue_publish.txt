@@ -4765,6 +4765,23 @@ MGT01394|Mini GT|Mini GT|Lamborghini|1:64||1|0|0||||0
 MGT01395|Mini GT|Mini GT|Bugatti|1:64||1|0|0||||0
 MGT01396|Mini GT|Mini GT|Aston Martin|1:64||1|0|0||||0
 MGT01413|Mini GT|Mini GT|Aston Martin|1:64||1|0|0||||0
+KHMG107|Kaidohouse|Mini GT|Datsun|1:64||1|0|0||||0
+KHMG307|Accessories|Mini GT|Other|1:64||1|0|0||||0
+MGT00024|Mini GT|Mini GT|Honda|1:64||1|0|0||||0
+MGT00024-MJ|Mini GT|Mini GT|Honda|1:64||1|0|0||||0
+MGT00026|Mini GT|Mini GT|Acura|1:64||1|0|0||||0
+MGT00030|Mini GT|Mini GT|Nissan|1:64||1|0|0||||0
+MGT00103-MJ|Mini GT|Mini GT|Nissan|1:64||1|0|0||||0
+MGT00158|Mini GT|Mini GT|Land Rover|1:64||1|0|0||||0
+MGT00293|Mini GT|Mini GT|Ford|1:64||1|0|0||||0
+MGT00307|Mini GT|Mini GT|Toyota|1:64||1|0|0|30|1||0
+MGT00384|Mini GT|Mini GT|Nissan|1:64||1|0|0|30|1||0
+MGT00446|Mini GT|Mini GT|Nissan|1:64||1|0|0||||0
+MGT01250|Mini GT|Mini GT|Toyota|1:64||1|0|0||||0
+MGT01251|Mini GT|Mini GT|Mazda|1:64||1|0|0||||0
+MGT01252-BL|Mini GT|Mini GT|Nissan|1:64||1|0|0||||0
+MGT01256-BL|Mini GT|Mini GT|Dodge|1:64||1|0|0||||0
+MGT01302-BL|Mini GT|Mini GT|Chevrolet|1:64||1|0|0|30|1||0
 26004|Mainline|Hot Wheels|Ford|1:64|Future Fleet 2000|1|0|0|6|1||0
 26005|Mainline|Hot Wheels|Pontiac|1:64|Future Fleet 2000|1|0|0|6|1||0
 26006|Mainline|Hot Wheels|Jeep|1:64|Future Fleet 2000|1|0|0|6|1||0
