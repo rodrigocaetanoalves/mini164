@@ -76110,46 +76110,88 @@ AMC008667|Norev|Norev|Citroën|1:43||1|0|0||||0
 20MICO901|Norev|Norev|Peugeot|1:43||1|0|0||||0
 19MICO904|Norev|Norev|Peugeot|1:43||1|0|0||||0
 19MICO903|Norev|Norev|Peugeot|1:43||1|0|0||||0
+41002|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71001|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71002|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71003|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71004|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71005|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71009|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71010|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71011|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71023|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71024|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71026|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71027|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
+71031|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
 71033|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71035|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71036|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71037|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71038|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
+71039|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71041|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71043|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71062|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
 71064|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71066|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71067|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71068|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
+71075|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71078|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
+71080|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
+71085|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71086|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
+71090|Diecast Masters|Diecast Masters|Western Star|||1|0|0||||0
 71100|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
 71105|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
 71106|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
-71128|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
+71108|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
+71119|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
+71126|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
+71128|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71130|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
 71131|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
 71132|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
+71134|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
 71136|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71137|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71138|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
-71149|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
-71161|Diecast Masters|Diecast Masters|Jeep|||1|0|0||||0
+71139|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
+71145|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
+71149|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71161|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71165|Diecast Masters|Diecast Masters|Jeep|||1|0|0||||0
+71166|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
+71167|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
+71168|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
+71171|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71173|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71174|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71181|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
+71182|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
+71183|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
 71212|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
-71213|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
+71213|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 71214|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
+71218|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
+71219|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
 71223|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
-71224|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
+71224|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+71231|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
+71232|Diecast Masters|Diecast Masters|Freightliner|||1|0|0||||0
 71233|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
+84400|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84402|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+84403|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+84405|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84414|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+84415|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84418|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84419|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
+84423|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
+84424|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
+84425|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
 84552CS|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84553|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84640CS|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
@@ -76161,23 +76203,40 @@ AMC008667|Norev|Norev|Citroën|1:43||1|0|0||||0
 84651|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84653|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84654|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+84661CS|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84662CS|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+84663CS|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 84664CS|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85030|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85129|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85246|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85247|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85299-BSC|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85508|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85521|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85528-BSC|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85542|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85548|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85559|Diecast Masters|Diecast Masters|Mitsubishi|||1|0|0||||0
 85587-MH|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85590-MH|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85652|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85654|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85665|Diecast Masters|Diecast Masters|Peterbilt|||1|0|0||||0
 85666|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85667|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85674|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85675|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85707|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85752|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85760|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85774|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85777|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85778|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85784|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85785|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85786|Diecast Masters|Diecast Masters|Kenworth|||1|0|0||||0
+85790|Diecast Masters|Diecast Masters|Other|||1|1|0||||0
 85791|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85792|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85793|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
@@ -76188,17 +76247,26 @@ AMC008667|Norev|Norev|Citroën|1:43||1|0|0||||0
 85798|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85799|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85914C|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85917|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85923|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85931|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85951|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+85952|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85953BGC|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 85955|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+91021|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
+91033|Diecast Masters|Diecast Masters|Jeep|||1|0|0||||0
+91034|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 91036|Diecast Masters|Diecast Masters|Other|||1|0|0||||0
 11303|Greenlight|Greenlight|Other|1:64||1|0|0||||0
 1131001|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 1131002|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 1131003|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+13521|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
 13560|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
+13567|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
+13605|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+13611|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 13645|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
 13683|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
 13684|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
@@ -76212,23 +76280,29 @@ AMC008667|Norev|Norev|Citroën|1:43||1|0|0||||0
 19130|Greenlight|Greenlight|Bronco|1:64||1|0|0||||0
 19143|Greenlight|Greenlight|Bronco|1:64||1|0|0||||0
 30515|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+43050-C|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+84072|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
 84092|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
 84105|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
 84112|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
 84152|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
 84201|Greenlight|Greenlight|Bronco|1:64||1|0|0||||0
 84202|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
+85513|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
+85541|Greenlight|Greenlight|Dodge|1:64||1|0|0||||0
 86044|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 86190|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
 86411|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-86436|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
+86436|Greenlight|Greenlight|Other|1:64||1|0|0||||0
 86442|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
-86491|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
-86492|Greenlight|Greenlight|Cadillac|1:64||1|0|0||||0
+86491|Greenlight|Greenlight|Other|1:64||1|0|0||||0
+86492|Greenlight|Greenlight|Other|1:64||1|0|0||||0
+86515|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
 86522|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 86575|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
 86616|Greenlight|Greenlight|Pontiac|1:64||1|0|0||||0
 86618|Greenlight|Greenlight|Buick|1:64||1|0|0||||0
+86620|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
 86637|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 86641|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
 86642|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
@@ -76238,6 +76312,7 @@ AMC008667|Norev|Norev|Citroën|1:43||1|0|0||||0
 88052|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 88053|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 88060-CASE-12|Greenlight|Greenlight|Other|1:64||1|1|0||||0
+88061|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 88062|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 88063|Greenlight|Greenlight|Chevrolet|1:64||1|0|0||||0
 GL13560|Greenlight|Greenlight|GMC|1:64||1|0|0||||0
@@ -76320,6 +76395,7 @@ GL86641|Greenlight|Greenlight|Plymouth|1:64||1|0|0||||0
 GL13611|Greenlight|Greenlight|Ford|1:64||1|0|0||||0
 IND18035|IXO Models|IXO Models|Other|||1|0|0||||0
 IND18037|IXO Models|IXO Models|Other|||1|0|0||||0
+IND64029|IXO America INDYCAR|IXO Models|Other|1:64||1|0|0||||0
 IND64035|IXO America INDYCAR|IXO Models|Other|1:64||1|0|0||||0
 IND64036|IXO America INDYCAR|IXO Models|Other|1:64||1|0|0||||0
 U43RDC002|IXO Models|IXO Models|Ford|||1|0|0||||0
@@ -76331,24 +76407,49 @@ IXLM2003|IXO Models|IXO Models|Bentley|||1|0|0||||0
 IX64TR004|IXO Models|IXO Models|Kenworth|||1|0|0||||0
 IXW83431002|IXO Models|IXO Models|Kenworth|||1|0|0||||0
 11228-S07-B|M2 Machines|M2 Machines|Ford|||1|0|0||||0
-31500-HS16|M2 Machines|M2 Machines|Ford|||1|0|0||||0
+31500-HS16|M2 Machines|M2 Machines|Other|||1|0|0||||0
 31500-HS28|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+31500-HS58|M2 Machines|M2 Machines|Bronco|||1|0|0||||0
 31500-HS59|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+31500-HS59-SP|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+31500-HS63|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
+31500-HS64|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+31500-HS66|M2 Machines|M2 Machines|Ford|||1|0|0||||0
+31500-HS69|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
+31500-HS73|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
 31500-HS76|M2 Machines|M2 Machines|Toyota|||1|0|0||||0
+31500-HS76-SP|M2 Machines|M2 Machines|Toyota|||1|0|0||||0
+31500-HS77|M2 Machines|M2 Machines|Pontiac|||1|0|0||||0
 31500-HS78|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+31500-HS78-SP|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+31500-HS80|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
 31500-HS81|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+31500-HS81-SP|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+31600-GS11|M2 Machines|M2 Machines|Ford|||1|0|0||||0
 32500-112-E|M2 Machines|M2 Machines|Toyota|||1|0|0||||0
 34001-14-SET|M2 Machines|M2 Machines|Other|||1|1|0||||0
 40300-112A|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
 40300-115A|M2 Machines|M2 Machines|Ford|||1|0|0||||0
+40300-121A|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
 40300-121B|M2 Machines|M2 Machines|Ford|||1|0|0||||0
 40300-125B|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
 40300-128B|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
 40300-129B|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
+40300-134A|M2 Machines|M2 Machines|Ford|||1|0|0||||0
+40300-134B|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
 40300-136-A|M2 Machines|M2 Machines|Plymouth|||1|0|0||||0
+40300-137-A|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
+40300-137-B|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+40300-138-A|M2 Machines|M2 Machines|Dodge|||1|0|0||||0
+40300-139-A|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
 40300-139-B|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
+40300-140-A|M2 Machines|M2 Machines|GMC|||1|0|0||||0
+40300-140-B|M2 Machines|M2 Machines|GMC|||1|0|0||||0
 40300-141-A|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
+40300-141-B|M2 Machines|M2 Machines|Datsun|||1|0|0||||0
 40300-142-A|M2 Machines|M2 Machines|Chevrolet|||1|0|0||||0
+40300-142-B|M2 Machines|M2 Machines|Ford|||1|0|0||||0
+40300-143-A|M2 Machines|M2 Machines|Ford|||1|0|0||||0
 40300-144-A|M2 Machines|M2 Machines|GMC|||1|0|0||||0
 40300-144-B|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
 40300-S43-A|M2 Machines|M2 Machines|Volkswagen|||1|0|0||||0
