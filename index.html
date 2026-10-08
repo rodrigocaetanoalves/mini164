@@ -2175,24 +2175,54 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
      anything this page controls, and when it is switched on the server answers a
      change with a demand for that nonce. That answer is handled here, so turning it on
      needs no further change to this code. */
-  async function setPassword(password, current){
-    if(!current) throw new Error("Type your current password first.");
-    if(!me || !me.email) throw new Error("Not signed in.");
-    const check = await fetch(A + "/token?grant_type=password", {
-      method: "POST",
-      headers: { "apikey": SUPA.key, "Content-Type": "application/json" },
-      body: JSON.stringify({ email: me.email, password: current })
-    });
-    if(!check.ok){
-      const t = await errText(check);
-      throw new Error(/invalid.*credential|invalid.*grant/i.test(t)
-        ? "That is not your current password."
-        : friendly(t));
+  /* AND A RESET IS NOT A CHANGE. THE WHOLE POINT IS THAT YOU DO NOT HAVE THE OLD ONE.
+     Reported by a member: "when someone forgets their password and they try to reset it,
+     they can't, because the app asks for the old password to do so." Confirmed, and it is
+     this function, called from two places that are not the same thing:
+
+       the account sheet, where somebody signed in chooses a new password. They have the old
+       one. Asking for it is right, for the reason above.
+
+       the gate after an emailed reset link, where `boot()` has taken a recovery token out of
+       the fragment and shown the "Choose a new password" form. That form called this with
+       ONE argument, so `current` was undefined and the first line threw "Type your current
+       password first." at the only person who by definition cannot type it. The second line
+       would have thrown too: the recovery path never calls getUser(), so `me` is null.
+
+     WHAT PROVES IDENTITY IN EACH CASE. Signed in, it is the old password, checked by the
+     authentication server with the same grant it uses to sign you in. In a reset, it is the
+     single-use recovery token the server emailed to the address on the account, which
+     `boot()` has already saved as the session - possession of that link IS the proof, and it
+     is the proof the whole feature rests on. So the recovery case skips the grant check
+     because there is nothing to check it with, not because the bar is lower.
+
+     Nothing about the signed-in path changes: it still cannot be used without the old
+     password, and a session left open on a shared machine still cannot be used to lock the
+     owner out. */
+  async function setPassword(password, current, viaRecovery){
+    if(!viaRecovery){
+      if(!current) throw new Error("Type your current password first.");
+      if(!me || !me.email) throw new Error("Not signed in.");
+      const check = await fetch(A + "/token?grant_type=password", {
+        method: "POST",
+        headers: { "apikey": SUPA.key, "Content-Type": "application/json" },
+        body: JSON.stringify({ email: me.email, password: current })
+      });
+      if(!check.ok){
+        const t = await errText(check);
+        throw new Error(/invalid.*credential|invalid.*grant/i.test(t)
+          ? "That is not your current password."
+          : friendly(t));
+      }
+      /* The check hands back a fresh session for this same account. Taking it keeps the
+         page signed in with a token minted seconds ago, which is what the rest of the
+         change runs against. */
+      try{ const j = await check.json(); if(j && j.access_token) saveSession(j); }catch(e){}
+    } else if(!loadSession()){
+      /* A reset form with no recovery token behind it cannot change anything, and saying so
+         is better than a PUT that comes back 401 with the server's own wording. */
+      throw new Error("That reset link has expired. Ask for a new one.");
     }
-    /* The check hands back a fresh session for this same account. Taking it keeps the
-       page signed in with a token minted seconds ago, which is what the rest of the
-       change runs against. */
-    try{ const j = await check.json(); if(j && j.access_token) saveSession(j); }catch(e){}
 
     let r = await req(A + "/user", { method:"PUT", body: JSON.stringify({ password }) });
     if(!r.ok){
@@ -2893,7 +2923,9 @@ const AUTH = (typeof SUPA === "object" && SUPA && SUPA.url) ? (function(){
           say("If that address has an account, a reset link is on its way.", "good");
         }
         else if(mode === "reset"){
-          await setPassword(pass);
+          /* true, explicitly: the emailed recovery token is the proof here, and there is
+             no old password to offer. See setPassword. */
+          await setPassword(pass, null, true);
           me = await getUser(); await start();
           app.toast("Password changed.");
         }
